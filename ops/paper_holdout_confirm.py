@@ -38,7 +38,8 @@ BOOTSTRAP_DRAWS = 2000
 BASELINES = ("area96", "area112")
 
 
-def ready_index(index_path: Path, prereg_commit: str) -> tuple[dict, VideoClipDataset]:
+def ready_index(index_path: Path, prereg_commit: str,
+                video_root: Path | None = None) -> tuple[dict, VideoClipDataset]:
     """Refuse any model evaluation before the exact index and protocol commit."""
     if len(prereg_commit) != 40 or any(c not in "0123456789abcdef" for c in prereg_commit):
         raise ValueError("a full preregistration commit SHA is required")
@@ -71,12 +72,18 @@ def ready_index(index_path: Path, prereg_commit: str) -> tuple[dict, VideoClipDa
             sources["selected_source_fingerprint"]
             or meta["selected_sources_sha256"] != sha256(sources_path)):
         raise ValueError("index is not the locked 1,000-source holdout")
+    if video_root is None:
+        raise ValueError("video root is required for the portable locked index")
+    resolved = []
     for row, source in zip(records, sources["selected"]):
-        path = Path(row["path"])
-        if (path.name != source["filename"] or not path.is_file()
+        if row["path"] != f"videos/{source['filename']}":
+            raise ValueError("non-portable or changed holdout video path")
+        path = video_root / row["path"]
+        if (not path.is_file()
                 or path.stat().st_size != source["bytes"]
                 or sha256(path) != source["video_sha256"]):
             raise ValueError(f"holdout video changed: {row['source_id']}")
+        resolved.append(str(path.resolve()))
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
     if (config["qps"] != list(QPS) or config["candidates"] != list(CANDIDATES)
             or config["models"] != list(MODELS)):
@@ -85,6 +92,8 @@ def ready_index(index_path: Path, prereg_commit: str) -> tuple[dict, VideoClipDa
                                frame_size=config["frame_size"],
                                temporal_stride=config["temporal_stride"],
                                train=False, return_metadata=True)
+    for row, path in zip(dataset.samples, resolved):
+        row["path"] = path
     return config, dataset
 
 
@@ -142,7 +151,7 @@ def write_records(path: Path, records: list[dict]) -> None:
 def primary(args) -> None:
     if not ffmpeg_available():
         raise ValueError("ffmpeg and ffprobe required")
-    config, dataset = ready_index(args.index, args.prereg_commit)
+    config, dataset = ready_index(args.index, args.prereg_commit, args.video_root)
     risk, frozen, policy = load_frozen(args.codec, config)
     manifest = {**manifest_base(args.index, args.prereg_commit,
                                 dataset, args.codec, args.shard),
@@ -176,7 +185,7 @@ def load_shard(path: Path, expected_stage: str, codec: str, shard: int) -> tuple
 def mc3(args) -> None:
     if not ffmpeg_available():
         raise ValueError("ffmpeg and ffprobe required")
-    config, dataset = ready_index(args.index, args.prereg_commit)
+    config, dataset = ready_index(args.index, args.prereg_commit, args.video_root)
     if kinetics_categories("mc3_18") != kinetics_categories("r3d_18"):
         raise ValueError("mc3 Kinetics labels differ")
     state, frozen, policy = load_frozen(args.codec, config)
@@ -253,7 +262,7 @@ def gate_this_codec(primary_points: dict) -> bool:
 
 
 def merge(args) -> None:
-    config, dataset = ready_index(args.index, args.prereg_commit)
+    config, dataset = ready_index(args.index, args.prereg_commit, args.video_root)
     state, frozen, policy = load_frozen(args.codec, config)
     expected = {**manifest_base(args.index, args.prereg_commit,
                                  dataset, args.codec, 0),
@@ -318,6 +327,8 @@ def main() -> None:
     for command in ("primary", "mc3", "merge"):
         p = sub.add_parser(command)
         p.add_argument("--index", type=Path, required=True)
+        p.add_argument("--video-root", type=Path, required=True,
+                       help="directory containing videos/ from the locked index")
         p.add_argument("--prereg-commit", required=True)
         p.add_argument("--codec", choices=("h264", "h265"), required=True)
         if command == "merge":

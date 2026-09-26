@@ -65,4 +65,5 @@ def test_index_joins_committed_id_to_canonical_kinetics_label(tmp_path, monkeypa
     index = json.loads(output.read_text(encoding="utf-8"))
     assert index["test"][0]["source_id"] == source_id
     assert index["test"][0]["label"] == 0
+    assert index["test"][0]["path"] == f"videos/{filename}"
     assert index["meta"]["locked_commit"] == "a" * 40

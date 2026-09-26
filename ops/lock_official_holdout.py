@@ -148,7 +148,7 @@ def build_index(lock_commit: str, ids_path: Path, sources_path: Path,
         if (not path.is_file() or path.stat().st_size != source["bytes"]
                 or sha256(path) != source["video_sha256"]):
             raise ValueError(f"video bytes differ from committed lock: {source_id}")
-        records.append({"path": str(path.resolve()),
+        records.append({"path": f"videos/{source['filename']}",
                         "label": class_maps[0][canonical], "class": label_name,
                         "source_id": source_id, "bytes": source["bytes"],
                         "video_sha256": source["video_sha256"]})
