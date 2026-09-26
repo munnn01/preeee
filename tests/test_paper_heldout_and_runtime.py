@@ -48,6 +48,21 @@ def test_runtime_summary_reports_per_clip_overhead():
     assert report["full_selector_s"]["mean"] == 8.
 
 
+def test_runtime_summary_keeps_separate_process_memory_and_all_trial_calls():
+    report = runtime_summary([
+        {"identity_only_s": 1., "full_selector_s": 6., "overhead_ratio": 6.,
+         "identity_peak_process_tree_rss_bytes": 100.,
+         "full_peak_process_tree_rss_bytes": 500., "memory_overhead_ratio": 5.},
+        {"identity_only_s": 2., "full_selector_s": 10., "overhead_ratio": 5.,
+         "identity_peak_process_tree_rss_bytes": 120.,
+         "full_peak_process_tree_rss_bytes": 600., "memory_overhead_ratio": 5.},
+    ])
+    assert report["identity_codec_calls_per_clip"] == len(QPS)
+    assert report["full_codec_calls_per_clip"] == len(QPS) * len(paper_runtime.CANDIDATES)
+    assert report["full_peak_process_tree_rss_bytes"]["median"] == 550.
+    assert report["memory_overhead_ratio"]["median"] == 5.
+
+
 class _FakeDataset:
     def __init__(self):
         self.samples = [{"path": "fake/class_clip.mp4"}]
