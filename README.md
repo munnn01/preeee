@@ -1,4 +1,4 @@
-# pre_updated_v2 — nén hướng nhiệm vụ cho Action Recognition và Object Detection
+# pre_processor — nén hướng nhiệm vụ cho Action Recognition và Object Detection
 
 Repo này nghiên cứu can thiệp miền pixel **trước codec chuẩn** để giảm bitrate mà vẫn giữ hiệu năng tác vụ. Hai đường đánh giá độc lập:
 
@@ -39,7 +39,7 @@ Các JSON tổng hợp [H.264](results/dual_codec_search_v2_confirm_1000/h264_re
 | H.264 | 0,1958 → 0,1886 | **−13,55%** | [−22,20%, −3,00%] |
 | H.265 | 0,2126 → 0,1973 | −7,81% | [−16,09%, +2,66%] |
 
-Ở cùng QP, mAP giảm nhẹ; BD-rate âm phản ánh tiết kiệm bit theo toàn đường rate–mAP. H.265 còn bất định vì khoảng bootstrap cắt 0. Pilot 100 ảnh này không phải xác nhận trên toàn COCO val2017 và không chứng minh một phương pháp chung cải thiện cả OD lẫn AR. Artifact đầy đủ nằm ở output Kaggle, **không** được đưa vào `results/` như kết quả chính.
+Ở cùng QP, mAP giảm nhẹ; BD-rate âm phản ánh tiết kiệm bit theo toàn đường rate–mAP. H.265 còn bất định vì khoảng bootstrap cắt 0. Pilot 100 ảnh này không phải xác nhận trên toàn COCO val2017 và không chứng minh một phương pháp chung cải thiện cả OD lẫn AR. JSON và record gốc được lưu trong [gói pilot OD](results/od_coco_pilot/README.md) để truy vết các số trên. Provenance của notebook lịch sử chưa đầy đủ, nên gói này **không** được dùng như kết quả xác nhận.
 
 ## Mã và tái lập
 
