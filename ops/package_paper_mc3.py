@@ -166,7 +166,8 @@ def main() -> None:
     parser.add_argument("--shard-root", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
     args = parser.parse_args()
-    commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=REPO,
+    commit = subprocess.check_output(["git", "-c",
+        f"safe.directory={REPO.as_posix()}", "rev-parse", "HEAD"], cwd=REPO,
                                      text=True).strip()
     report = package(args.source_dir, args.remerged_dir, args.shard_root,
                      args.out_dir, commit)

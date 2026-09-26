@@ -124,7 +124,8 @@ def main() -> None:
         "config_sha256_lf": hashlib.sha256(CONFIG.read_bytes().replace(
             b"\r\n", b"\n")).hexdigest(),
         "analysis_code_commit": subprocess.check_output(
-            ["git", "rev-parse", "HEAD"], cwd=REPO, text=True).strip()}
+            ["git", "-c", f"safe.directory={REPO.as_posix()}",
+             "rev-parse", "HEAD"], cwd=REPO, text=True).strip()}
     write_json(args.out, report)
     print(f"[{args.codec}] DEV n={len(rows)}; wrote {args.out}")
 
