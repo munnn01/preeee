@@ -310,6 +310,10 @@ def main():
                              "ram_bytes": psutil.virtual_memory().total,
                              "gpu": torch.cuda.get_device_name(0)
                              if torch.cuda.is_available() else None},
+                "threading": {"torch_num_threads": torch.get_num_threads(),
+                              "OMP_NUM_THREADS": os.environ.get("OMP_NUM_THREADS"),
+                              "OPENBLAS_NUM_THREADS":
+                              os.environ.get("OPENBLAS_NUM_THREADS")},
                 "memory_method": "5-ms sampled RSS of each worker plus its "
                                  "FFmpeg children; sampled peak is a lower bound",
                 "comparison": "identity: five encode/decode calls, no analyzer; "

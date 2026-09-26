@@ -37,3 +37,32 @@ def test_index_refuses_to_read_labels_before_lock(tmp_path, monkeypatch):
                          tmp_path / "missing_annotation.csv", tmp_path / "videos",
                          tmp_path / "index.json")
     assert not (tmp_path / "index.json").exists()
+
+
+def test_index_joins_committed_id_to_canonical_kinetics_label(tmp_path, monkeypatch):
+    source_id = "aaaaaaaaaaa"
+    filename = source_id + "_000000_000010.mp4"
+    videos = tmp_path / "videos"
+    videos.mkdir()
+    payload = b"fixed source bytes"
+    (videos / filename).write_bytes(payload)
+    annotation = tmp_path / "val.csv"
+    annotation.write_text(
+        "label,youtube_id,time_start,time_end\n"
+        f"abseiling,{source_id},0,10\n", encoding="utf-8")
+    sources_path = tmp_path / "selected_sources.json"
+    sources_path.write_text("{}", encoding="utf-8")
+    sources = {"annotation_sha256": lock.sha256(annotation),
+               "source": "synthetic K400 validation", "selected_ids_sha256": "test",
+               "selected_source_fingerprint": lock.id_fingerprint([source_id]),
+               "selected": [{"source_id": source_id, "filename": filename,
+                             "bytes": len(payload),
+                             "video_sha256": hashlib.sha256(payload).hexdigest()}]}
+    monkeypatch.setattr(lock, "committed_lock", lambda *args: ([source_id], sources))
+    output = tmp_path / "index.json"
+    lock.build_index("a" * 40, tmp_path / "ids", sources_path, annotation,
+                     videos, output)
+    index = json.loads(output.read_text(encoding="utf-8"))
+    assert index["test"][0]["source_id"] == source_id
+    assert index["test"][0]["label"] == 0
+    assert index["meta"]["locked_commit"] == "a" * 40
