@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -113,6 +114,18 @@ def package(source_dir: Path, remerged_dir: Path, shard_root: Path,
         source = json.loads(original_path.read_text(encoding="utf-8"))
         shard_provenance = validate_mc3(source, codec, expected_fingerprint,
                                         shard_root)
+        for item in shard_provenance:
+            shard = item["shard"]
+            raw_dir = out_dir / "raw" / codec / f"shard_{shard}"
+            raw_dir.mkdir(parents=True, exist_ok=True)
+            source_shard = shard_root / codec / f"shard_{shard}"
+            for filename, hash_key in (("manifest.json", "manifest_sha256"),
+                                       ("shard_records.jsonl", "records_sha256")):
+                copied = raw_dir / filename
+                shutil.copyfile(source_shard / filename, copied)
+                if sha256(copied) != item[hash_key]:
+                    raise ValueError("copied raw mc3 record differs from source")
+            item["committed_raw_dir"] = str(raw_dir.relative_to(out_dir)).replace("\\", "/")
         v2_path = OLD_V2 / f"{codec}_result.json"
         v2 = json.loads(v2_path.read_text(encoding="utf-8"))
         validate_v2(v2, codec, expected_fingerprint)
@@ -154,8 +167,9 @@ def package(source_dir: Path, remerged_dir: Path, shard_root: Path,
                              + "\n", encoding="utf-8")
     checksum_path = out_dir / "SHA256SUMS.txt"
     checksum_path.write_text("".join(
-        f"{sha256(path)}  {path.name}\n"
-        for path in sorted(out_dir.glob("*.json"))), encoding="utf-8")
+        f"{sha256(path)}  {path.relative_to(out_dir).as_posix()}\n"
+        for path in sorted(out_dir.rglob("*"))
+        if path.is_file() and path != checksum_path), encoding="utf-8")
     return combined
 
 
