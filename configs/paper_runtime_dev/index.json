@@ -1,0 +1,144 @@
+{
+  "val": [
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\tying knot (not on a tie)\\awNohBOJHgw.mp4",
+      "label": 369,
+      "class": "tying knot (not on a tie)",
+      "bytes": 450552,
+      "sequence_id": "tying knot (not on a tie)/awNohBOJHgw.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\drinking beer\\h0ea069drlc.mp4",
+      "label": 101,
+      "class": "drinking beer",
+      "bytes": 1209242,
+      "sequence_id": "drinking beer/h0ea069drlc.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\dribbling basketball\\uSMilNFMGTY.mp4",
+      "label": 99,
+      "class": "dribbling basketball",
+      "bytes": 4881125,
+      "sequence_id": "dribbling basketball/uSMilNFMGTY.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\jogging\\u_9OTjkL7D8.mp4",
+      "label": 168,
+      "class": "jogging",
+      "bytes": 574010,
+      "sequence_id": "jogging/u_9OTjkL7D8.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\swimming backstroke\\jI3i52BEMwg.mp4",
+      "label": 339,
+      "class": "swimming backstroke",
+      "bytes": 1087036,
+      "sequence_id": "swimming backstroke/jI3i52BEMwg.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\news anchoring\\K6TTpn3t6ag.mp4",
+      "label": 202,
+      "class": "news anchoring",
+      "bytes": 740483,
+      "sequence_id": "news anchoring/K6TTpn3t6ag.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\weaving basket\\NvaIZlHvN_M.mp4",
+      "label": 390,
+      "class": "weaving basket",
+      "bytes": 656203,
+      "sequence_id": "weaving basket/NvaIZlHvN_M.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\digging\\2zSBmewIxV0.mp4",
+      "label": 90,
+      "class": "digging",
+      "bytes": 555212,
+      "sequence_id": "digging/2zSBmewIxV0.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\tap dancing\\J8meqbE6gZI.mp4",
+      "label": 349,
+      "class": "tap dancing",
+      "bytes": 468234,
+      "sequence_id": "tap dancing/J8meqbE6gZI.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\taking a shower\\U-5QC_ezpLE.mp4",
+      "label": 347,
+      "class": "taking a shower",
+      "bytes": 565708,
+      "sequence_id": "taking a shower/U-5QC_ezpLE.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\passing American football (in game)\\et-lVSK-la4.mp4",
+      "label": 208,
+      "class": "passing American football (in game)",
+      "bytes": 433451,
+      "sequence_id": "passing American football (in game)/et-lVSK-la4.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\skateboarding\\WK4iVu_0wIk.mp4",
+      "label": 306,
+      "class": "skateboarding",
+      "bytes": 1177211,
+      "sequence_id": "skateboarding/WK4iVu_0wIk.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\golf chipping\\3N1GwK8oadI.mp4",
+      "label": 141,
+      "class": "golf chipping",
+      "bytes": 1054025,
+      "sequence_id": "golf chipping/3N1GwK8oadI.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\shaking head\\OslRvwb5h0o.mp4",
+      "label": 289,
+      "class": "shaking head",
+      "bytes": 296692,
+      "sequence_id": "shaking head/OslRvwb5h0o.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\picking fruit\\gRp3UjWkkK0.mp4",
+      "label": 214,
+      "class": "picking fruit",
+      "bytes": 1546500,
+      "sequence_id": "picking fruit/gRp3UjWkkK0.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\jumping into pool\\___dTOdxzXY.mp4",
+      "label": 172,
+      "class": "jumping into pool",
+      "bytes": 532628,
+      "sequence_id": "jumping into pool/___dTOdxzXY.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\rock scissors paper\\jDFnViSc30g.mp4",
+      "label": 279,
+      "class": "rock scissors paper",
+      "bytes": 425223,
+      "sequence_id": "rock scissors paper/jDFnViSc30g.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\shaving head\\dAry8tI-DnY.mp4",
+      "label": 292,
+      "class": "shaving head",
+      "bytes": 325258,
+      "sequence_id": "shaving head/dAry8tI-DnY.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\cleaning floor\\ltoeikYSp1g.mp4",
+      "label": 60,
+      "class": "cleaning floor",
+      "bytes": 1915038,
+      "sequence_id": "cleaning floor/ltoeikYSp1g.mp4"
+    },
+    {
+      "path": "D:\\STUDY\\LAB\\proxy_v3\\_paper_v2_audit\\runtime_dev_videos\\eating ice cream\\PU1DCcuxBqo.mp4",
+      "label": 115,
+      "class": "eating ice cream",
+      "bytes": 1372451,
+      "sequence_id": "eating ice cream/PU1DCcuxBqo.mp4"
+    }
+  ]
+}

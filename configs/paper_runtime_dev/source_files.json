@@ -1,0 +1,122 @@
+[
+  {
+    "sequence_id": "tying knot (not on a tie)/awNohBOJHgw.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/tying knot (not on a tie)/awNohBOJHgw.mp4",
+    "bytes": 450552,
+    "sha256": "707f5d812492a300092714fa88f07fb15efc61e9542a6b51690a1daa73ff01c3"
+  },
+  {
+    "sequence_id": "drinking beer/h0ea069drlc.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/drinking beer/h0ea069drlc.mp4",
+    "bytes": 1209242,
+    "sha256": "d33210b08f62e7b5e6f2c603f2e45d1807f5fc169896c4cd009d20dcb57bc21a"
+  },
+  {
+    "sequence_id": "dribbling basketball/uSMilNFMGTY.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/dribbling basketball/uSMilNFMGTY.mp4",
+    "bytes": 4881125,
+    "sha256": "80d30cfe101ddf500dd7b5e81172c3794b3717ab8223e9b12decb4fc8428bf3f"
+  },
+  {
+    "sequence_id": "jogging/u_9OTjkL7D8.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/jogging/u_9OTjkL7D8.mp4",
+    "bytes": 574010,
+    "sha256": "d22c0c4d1ec2ed0924b134bfbc29e81264befdce435147462a8918e8e508fdc9"
+  },
+  {
+    "sequence_id": "swimming backstroke/jI3i52BEMwg.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/swimming backstroke/jI3i52BEMwg.mp4",
+    "bytes": 1087036,
+    "sha256": "e9434b2541919b8bf2af8312aad484a5fa7e1c3b7ef475573f11720a2a759000"
+  },
+  {
+    "sequence_id": "news anchoring/K6TTpn3t6ag.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/news anchoring/K6TTpn3t6ag.mp4",
+    "bytes": 740483,
+    "sha256": "8cffd810cbca4d0d5f2069a6dca8b551bcace482ec424f683c8800f90b7eb0d6"
+  },
+  {
+    "sequence_id": "weaving basket/NvaIZlHvN_M.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/weaving basket/NvaIZlHvN_M.mp4",
+    "bytes": 656203,
+    "sha256": "79c09d8399c261b2da2982701f7fb326dc943b3a0e713100c9639976cfd41d87"
+  },
+  {
+    "sequence_id": "digging/2zSBmewIxV0.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/digging/2zSBmewIxV0.mp4",
+    "bytes": 555212,
+    "sha256": "4e299fdc8132ca027134320451144da3bca571585ec160e00455af5b6a4e738c"
+  },
+  {
+    "sequence_id": "tap dancing/J8meqbE6gZI.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/tap dancing/J8meqbE6gZI.mp4",
+    "bytes": 468234,
+    "sha256": "9bea861f6ae27531feb144b6e92bc61af70473b7adcea6e9ceb829e1de7dc931"
+  },
+  {
+    "sequence_id": "taking a shower/U-5QC_ezpLE.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/taking a shower/U-5QC_ezpLE.mp4",
+    "bytes": 565708,
+    "sha256": "f4fbcb1ba77287853fcb5c82923aaa89e4546729c3accdcaafc3c8faedb36a4a"
+  },
+  {
+    "sequence_id": "passing American football (in game)/et-lVSK-la4.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/passing American football (in game)/et-lVSK-la4.mp4",
+    "bytes": 433451,
+    "sha256": "058225ab653a7c843362ffdffc06362c6bfc6b4df424b543a1acca83a38dabe7"
+  },
+  {
+    "sequence_id": "skateboarding/WK4iVu_0wIk.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/skateboarding/WK4iVu_0wIk.mp4",
+    "bytes": 1177211,
+    "sha256": "e9c33e7831787b6346a127d7b77122c5ddbfcfca53a4651a86df86e8dfe15605"
+  },
+  {
+    "sequence_id": "golf chipping/3N1GwK8oadI.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/golf chipping/3N1GwK8oadI.mp4",
+    "bytes": 1054025,
+    "sha256": "1dada92c59153d093e63ddfb7c6f96a7953c16a0cc34c4ee119441b672fbb590"
+  },
+  {
+    "sequence_id": "shaking head/OslRvwb5h0o.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/shaking head/OslRvwb5h0o.mp4",
+    "bytes": 296692,
+    "sha256": "4013971d22b86e020fb0f7bdcdec8a9e5567a82ce57a52b3b0950ad3df751706"
+  },
+  {
+    "sequence_id": "picking fruit/gRp3UjWkkK0.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/picking fruit/gRp3UjWkkK0.mp4",
+    "bytes": 1546500,
+    "sha256": "b43aa606df55959b806589c1706dde0a26a493d253db8aaf34cb004b066aa16e"
+  },
+  {
+    "sequence_id": "jumping into pool/___dTOdxzXY.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/jumping into pool/___dTOdxzXY.mp4",
+    "bytes": 532628,
+    "sha256": "fc460b9481391b75369e59aa6cd51f025a57a672c1d188d5b488dd25eb524409"
+  },
+  {
+    "sequence_id": "rock scissors paper/jDFnViSc30g.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/rock scissors paper/jDFnViSc30g.mp4",
+    "bytes": 425223,
+    "sha256": "10dfa682b20cf1df6b3785a6b83aa933b61c767fd068314cf6cc5b9296f488ed"
+  },
+  {
+    "sequence_id": "shaving head/dAry8tI-DnY.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/shaving head/dAry8tI-DnY.mp4",
+    "bytes": 325258,
+    "sha256": "f2500b592f78b3dd98b4402c1f831e4670562388ebd9fdf10691fd63f79b340e"
+  },
+  {
+    "sequence_id": "cleaning floor/ltoeikYSp1g.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/cleaning floor/ltoeikYSp1g.mp4",
+    "bytes": 1915038,
+    "sha256": "980467c2a3f36efcc83731ab108638f305f46d48fa0ab1356318a954c53ab38a"
+  },
+  {
+    "sequence_id": "eating ice cream/PU1DCcuxBqo.mp4",
+    "kaggle_path": "cleaned_final/kinetics400_5per/kinetics400_5per/train/eating ice cream/PU1DCcuxBqo.mp4",
+    "bytes": 1372451,
+    "sha256": "24a6030b47619cf77c2bd272dd700d62d97013df9d0322eb96e629d0c486f716"
+  }
+]
