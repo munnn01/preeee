@@ -1,0 +1,193 @@
+{
+  "scope": "replication on previously inspected V1/V2 TEST",
+  "test_fingerprint": "aae3888f3ae34d08",
+  "n_source_videos": 1000,
+  "bootstrap_unit": "source video",
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20260924,
+  "audit_code_commit": "0ee51d50dbf7ebc89c29686439f7aba7abf092c2",
+  "rows": [
+    {
+      "codec": "h264",
+      "analyzer": "r2plus1d_18",
+      "metrics": {
+        "bd_rate_top1_pct": -22.00614079337472,
+        "bd_accuracy_top1": 0.10402013683740212,
+        "mean_same_qp_rate_ratio": 0.8690801665409644,
+        "min_same_qp_top1_gap": 0.008000000000000007,
+        "bd_accuracy_top1_pp": 10.402013683740211
+      },
+      "bootstrap": {
+        "bd_rate_top1_pct": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -23.851287729205712,
+            -20.24220051871136
+          ]
+        },
+        "bd_accuracy_top1_pp": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            9.420017766446438,
+            11.375880068294707
+          ]
+        }
+      },
+      "result_file": "results/dual_codec_search_v2_confirm_1000/h264_result.json",
+      "result_sha256": "52aabb9a63464b39842e394479e301b1842df05b6a1ccb4111c68a5c677c1286"
+    },
+    {
+      "codec": "h264",
+      "analyzer": "r3d_18",
+      "metrics": {
+        "bd_rate_top1_pct": -14.466232158740066,
+        "bd_accuracy_top1": 0.060943093398369626,
+        "mean_same_qp_rate_ratio": 0.8690801665409644,
+        "min_same_qp_top1_gap": 0.007000000000000006,
+        "bd_accuracy_top1_pp": 6.094309339836963
+      },
+      "bootstrap": {
+        "bd_rate_top1_pct": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -15.694841804211915,
+            -13.210321848387359
+          ]
+        },
+        "bd_accuracy_top1_pp": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            5.502254955079714,
+            6.721897214470812
+          ]
+        }
+      },
+      "result_file": "results/dual_codec_search_v2_confirm_1000/h264_result.json",
+      "result_sha256": "52aabb9a63464b39842e394479e301b1842df05b6a1ccb4111c68a5c677c1286"
+    },
+    {
+      "codec": "h264",
+      "analyzer": "mc3_18",
+      "metrics": {
+        "bd_rate_top1_pct": -3.884346771134728,
+        "bd_accuracy_top1_pp": 1.432679022775267,
+        "min_same_qp_top1_gap_pp": -4.0000000000000036
+      },
+      "bootstrap": {
+        "bd_rate_top1_pct": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -6.01614137855033,
+            -1.6207212442308643
+          ]
+        },
+        "bd_accuracy_top1_pp": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            0.5087866618602968,
+            2.2896458629080416
+          ]
+        }
+      },
+      "result_file": "h264_result.json",
+      "result_sha256": "b1358a60eae398d5b72656c6747319af2f933c420a4c8a3728fd31902711e565"
+    },
+    {
+      "codec": "h265",
+      "analyzer": "r2plus1d_18",
+      "metrics": {
+        "bd_rate_top1_pct": -14.029053144325188,
+        "bd_accuracy_top1": 0.09923084469768376,
+        "mean_same_qp_rate_ratio": 0.910480407074376,
+        "min_same_qp_top1_gap": 0.029000000000000026,
+        "bd_accuracy_top1_pp": 9.923084469768376
+      },
+      "bootstrap": {
+        "bd_rate_top1_pct": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -15.388021066205326,
+            -12.770199495648903
+          ]
+        },
+        "bd_accuracy_top1_pp": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            8.949975264491462,
+            10.951294087755011
+          ]
+        }
+      },
+      "result_file": "results/dual_codec_search_v2_confirm_1000/h265_result.json",
+      "result_sha256": "c0fbb81131abeb79916b2ddb0196eafbe0694596fc6c0eef6380f791c716e72e"
+    },
+    {
+      "codec": "h265",
+      "analyzer": "r3d_18",
+      "metrics": {
+        "bd_rate_top1_pct": -8.719218701858821,
+        "bd_accuracy_top1": 0.055263650645773627,
+        "mean_same_qp_rate_ratio": 0.910480407074376,
+        "min_same_qp_top1_gap": 0.007000000000000006,
+        "bd_accuracy_top1_pp": 5.526365064577362
+      },
+      "bootstrap": {
+        "bd_rate_top1_pct": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -9.622792687605374,
+            -7.8208077159522
+          ]
+        },
+        "bd_accuracy_top1_pp": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            4.870234576589524,
+            6.184039999959394
+          ]
+        }
+      },
+      "result_file": "results/dual_codec_search_v2_confirm_1000/h265_result.json",
+      "result_sha256": "c0fbb81131abeb79916b2ddb0196eafbe0694596fc6c0eef6380f791c716e72e"
+    },
+    {
+      "codec": "h265",
+      "analyzer": "mc3_18",
+      "metrics": {
+        "bd_rate_top1_pct": -2.0978233065152674,
+        "bd_accuracy_top1_pp": 1.0767023764287218,
+        "min_same_qp_top1_gap_pp": -3.8999999999999924
+      },
+      "bootstrap": {
+        "bd_rate_top1_pct": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -3.6763721784057894,
+            -0.6205149445491961
+          ]
+        },
+        "bd_accuracy_top1_pp": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            0.09471713687722222,
+            2.106912782706058
+          ]
+        }
+      },
+      "result_file": "h265_result.json",
+      "result_sha256": "22066e758458e8b5ce32e3bdfa8eaf1d56d08b87cbf8f054c14c07002f21f720"
+    }
+  ]
+}

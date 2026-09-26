@@ -22,6 +22,12 @@ BD-rate ở đây áp dụng phép so sánh đường rate–quality kiểu Bjø
 
 Các JSON tổng hợp [H.264](results/dual_codec_search_v2_confirm_1000/h264_result.json) và [H.265](results/dual_codec_search_v2_confirm_1000/h265_result.json) giữ curve, fingerprint và control đồng thời để kiểm toán. Gói kết quả V1 riêng đã được bỏ khỏi nhánh hiện tại; mã và cấu hình V1 cần cho mẫu ghép cặp vẫn được giữ. Những lần Kaggle lỗi không được đưa vào `results/`.
 
+Đã [gộp và kiểm toán analyzer thứ ba `mc3_18`](results/paper_mc3_v2_confirmed/README.md) trên **chính TEST cũ**: BD-rate Top-1 là −3,88% [−6,02%, −1,62%] với H.264 và −2,10% [−3,68%, −0,62%] với H.265, 2.000 bootstrap theo video nguồn. Hai file tái tạo từ bốn shard khớp byte-for-byte với artifact lịch sử; raw record và hash đã được lưu. Kết quả này cho thấy mức tiết kiệm chuyển sang `mc3_18` nhỏ hơn hai analyzer phát triển V2-C, không giải quyết thiếu holdout dữ liệu.
+
+[So sánh với `area96` và `area112` cố định trên DEV](results/paper_downscale_dev/README.md) dùng 200 video ghép cặp mỗi codec. V2-C tốt hơn cả hai downscale thuần ở cả hai analyzer chính trong hai codec, theo BD-rate trực tiếp với CI 95%. Đây là ablation **trên DEV đã dùng trong phát triển**, không phải bằng chứng xác nhận trên TEST mới.
+
+**Holdout độc lập: CHƯA ĐO; gate trên holdout: CHƯA XÁC NHẬN.** [Bản preregistration](docs/PREREGISTRATION.md) vẫn là dự thảo. [Kiểm toán nguồn holdout](docs/HOLDOUT_SPLIT.md) tìm thấy Kinetics-400 validation chính thức có 19.906 source ID, không trùng hai dataset Kinetics cũ ở mức ID; 1.000 video cuối còn phải qua kiểm tra giải mã và được commit trước lượt chấm đầu tiên. [Chi phí runtime toàn bộ năm QP](docs/RUNTIME_COST.md) cũng CHƯA ĐO. Không diễn giải các phép trên tập cũ như kết quả holdout mới.
+
 ## Kiểm tra ảnh ghép cặp và OD
 
 [Notebook Kinetics cuối cùng](https://www.kaggle.com/code/qktttttttttt/paper-ar-visual-20260924) đã hoàn tất trên CPU: tám clip được chọn bằng hash ID trước khi xem nhãn/kết quả, cùng tám ID cho hai codec, cùng QP 40 và các frame 4/8/12. Panel gồm nguồn, codec-only và stream V2-C; bpp mã hóa lại khớp chính xác cache gốc. Ảnh được phóng bằng nearest-neighbor để hiển thị, không làm đổi pixel mã hóa. **Tám clip chỉ để minh họa**, không thay phép đo Top-1 trên 1.000 clip.
@@ -39,10 +45,10 @@ Các JSON tổng hợp [H.264](results/dual_codec_search_v2_confirm_1000/h264_re
 
 - [Thiết kế và giới hạn nghiên cứu](docs/PAPER_VALIDATION_PLAN.md): phép so sánh cố định, bootstrap ghép cặp, phép thử analyzer thứ ba và chi phí chạy còn phải đo.
 - [Policy và runner V2](ops/dual_codec_search_confirm_1000.py), [tạo panel Kinetics](ops/paper_ar_visual.py), [OD pilot và panel COCO](ops/probe_background_suppression.py).
-- [Phân tích ablation](ops/paper_validation.py), [runner `mc3_18` chưa đo](ops/paper_heldout_mc3.py), [runner thời gian chạy chưa đo](ops/paper_runtime.py). Có mã không đồng nghĩa đã có kết quả thực nghiệm.
+- [Phân tích ablation](ops/paper_validation.py), [runner `mc3_18`](ops/paper_heldout_mc3.py), [runner thời gian chạy](ops/paper_runtime.py), và [baseline downscaling DEV](ops/paper_dev_downscale.py). Có mã không đồng nghĩa đã có kết quả thực nghiệm cho holdout hay runtime đầy đủ.
 - [Cell Kaggle AR](kaggle/paper_ar_visual_cell.sh), [cell Kaggle OD](kaggle/paper_coco_visual_cell.sh) và [công cụ tạo notebook riêng tư](ops/push_paper_visual.py). Cell trong repo này clone `munnn01/pre_updated_v2` tại commit được chỉ định. Hai notebook hoàn tất ở trên được chạy từ bản phát triển `test_pre` với cùng logic đánh giá; không được gọi là lượt chạy lại trên commit repo này.
 
-Các bước cần làm trước khi tuyên bố khả năng tổng quát: đánh giá bitstream đã chọn bằng analyzer thứ ba chưa tham gia phát triển, thử trên nguồn video mới tách hẳn, và đo chi phí của **toàn bộ** sáu phép encode/decode cùng suy luận tại encoder. Chưa có số liệu cho ba bước đó.
+Trước khi tuyên bố khả năng tổng quát, cần hoàn tất lượt đánh giá duy nhất trên 1.000 video nguồn mới đã khóa và đo chi phí của **toàn bộ** sáu phép encode/decode cùng suy luận tại encoder. Bằng chứng `mc3_18` hiện chỉ nằm trên TEST cũ.
 
 ## Tài liệu tham khảo
 

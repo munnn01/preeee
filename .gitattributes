@@ -1,3 +1,8 @@
 results/codec_search_ar_confirm_1000/*.json text eol=lf
 results/codec_search_ar_confirm_1000/*.tar.gz binary
 kaggle/dual_codec_search_cell.sh text eol=lf
+results/paper_mc3_v2_confirmed/** -text
+results/paper_downscale_dev/** -text
+results/holdout_confirm/** -text
+results/paper_runtime_v2_full/** -text
+configs/holdout_source_audit/** -text

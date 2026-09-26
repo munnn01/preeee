@@ -1,0 +1,27 @@
+{
+  "status": "preflight",
+  "source": "official CVDF Kinetics-400 validation",
+  "salt": "v2c-holdout-20260927",
+  "annotation_sha256": "358eaf47e7f80ebf9b17d49eb0635ad5e0fdab98a9cbd75ffdd2ee5d5e5b6944",
+  "archive_path_list_sha256": "7c75bab47da18ba747e8bdd826bec9139672336fd3431caa71ff563473080e77",
+  "legacy_inventories": [
+    {
+      "path": "kineticscleaned_source_inventory.json",
+      "sha256": "5b20994cb225eba604b0446cb166e19fbb118891aff787401eda4539cd03a045"
+    },
+    {
+      "path": "rohanmallick_kinetics_source_inventory.json",
+      "sha256": "4af8f090d153667e0e0db34f5ccfb5cc49c9370fc168ba8e456330424379bb62"
+    }
+  ],
+  "source_audit": {
+    "annotation_rows": 19906,
+    "excluded_source_overlap": 0,
+    "eligible_sources": 19906,
+    "eligible_fingerprint": "cf7db1c5e23b6f399d2fb087d2f91d55fd8009eb4b2ce6ce53e77f513bf575ff"
+  },
+  "candidate_limit": 2000,
+  "target": 1000,
+  "code_commit": "6493418c54398b58b45118266d15155db3f85dc7",
+  "candidate_ids_sha256": "b3dfc5ab1957c8fd9bf81b09dbdb369564159493585c2172c1b0f77b79cc8fb6"
+}
