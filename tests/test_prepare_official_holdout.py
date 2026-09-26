@@ -2,9 +2,11 @@
 
 import csv
 import json
+import hashlib
 
 import pytest
 
+from ops import prepare_official_holdout as holdout
 from ops.prepare_official_holdout import (archive_urls, id_fingerprint,
                                           load_exclusion, ranked_ids)
 
@@ -45,3 +47,27 @@ def test_archive_list_rejects_unexpected_source(tmp_path):
     path.write_text("https://example.org/part_0.tar.gz\n", encoding="utf-8")
     with pytest.raises(ValueError, match="archive list"):
         archive_urls(path)
+
+
+def test_archive_part_resume_verifies_retained_bytes(tmp_path, monkeypatch):
+    (tmp_path / "parts").mkdir()
+    calls = []
+
+    def fake_stream(url, candidate_ids, out_dir):
+        calls.append(url)
+        videos = out_dir / "videos"
+        videos.mkdir()
+        payload = b"video bytes"
+        (videos / "aaaaaaaaaaa_000000_000010.mp4").write_bytes(payload)
+        return {"url": url, "retained": [{"filename":
+                "aaaaaaaaaaa_000000_000010.mp4", "bytes": len(payload),
+                "sha256": hashlib.sha256(payload).hexdigest()}]}
+
+    monkeypatch.setattr(holdout, "stream_archive", fake_stream)
+    url = "https://s3.amazonaws.com/kinetics/400/val/part_0.tar.gz"
+    assert holdout.archive_part(0, url, {"aaaaaaaaaaa"}, tmp_path)[0] == 0
+    assert holdout.archive_part(0, url, {"aaaaaaaaaaa"}, tmp_path)[0] == 0
+    assert calls == [url]
+    (tmp_path / "videos/aaaaaaaaaaa_000000_000010.mp4").write_bytes(b"changed")
+    with pytest.raises(ValueError, match="missing or changed"):
+        holdout.archive_part(0, url, {"aaaaaaaaaaa"}, tmp_path)

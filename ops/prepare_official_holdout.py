@@ -10,6 +10,7 @@ exact selected IDs and index must still be committed before evaluation.
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import csv
 import hashlib
 import json
@@ -168,6 +169,28 @@ def preflight(ranked: list[str], candidate_limit: int, target: int,
             "complete": len(selected) == target}
 
 
+def archive_part(number: int, url: str, candidate_ids: set[str],
+                 out_dir: Path) -> tuple[int, dict]:
+    """Resume a verified part or stream one official archive independently."""
+    path = out_dir / "parts" / f"part_{number:02d}.json"
+    if path.exists():
+        result = json.loads(path.read_text(encoding="utf-8"))
+        if result.get("url") != url:
+            raise ValueError("stale archive-part manifest")
+        for row in result.get("retained", []):
+            video = out_dir / "videos" / row["filename"]
+            if (not video.is_file() or video.stat().st_size != row["bytes"]
+                    or sha256(video) != row["sha256"]):
+                raise ValueError(f"archive-part video missing or changed: {video}")
+    else:
+        result = stream_archive(url, candidate_ids, out_dir)
+        temporary = path.with_suffix(".json.partial")
+        temporary.write_text(json.dumps(result, indent=2) + "\n",
+                             encoding="utf-8")
+        temporary.replace(path)
+    return number, result
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--annotation", type=Path, required=True)
@@ -176,10 +199,14 @@ def main() -> None:
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--candidate-limit", type=int, default=2000)
     parser.add_argument("--target", type=int, default=1000)
+    parser.add_argument("--workers", type=int, default=1,
+                        help="parallel official archives; each part is independently hashed")
     parser.add_argument("--download", action="store_true")
     args = parser.parse_args()
     if args.target != 1000 or args.candidate_limit < args.target:
         raise ValueError("frozen target is 1,000; candidate limit must cover it")
+    if not 1 <= args.workers <= 8:
+        raise ValueError("workers must be between 1 and 8")
     excluded: set[str] = set()
     for path in args.exclude_inventory:
         excluded |= load_exclusion(path)
@@ -210,20 +237,14 @@ def main() -> None:
     parts_dir = args.out_dir / "parts"
     parts_dir.mkdir(exist_ok=True)
     candidate_ids = set(ranked[:args.candidate_limit])
-    for number, url in enumerate(urls):
-        path = parts_dir / f"part_{number:02d}.json"
-        if path.exists():
-            result = json.loads(path.read_text(encoding="utf-8"))
-            if result.get("url") != url:
-                raise ValueError("stale archive-part manifest")
-        else:
-            result = stream_archive(url, candidate_ids, args.out_dir)
-            temporary = path.with_suffix(".json.partial")
-            temporary.write_text(json.dumps(result, indent=2) + "\n",
-                                 encoding="utf-8")
-            temporary.replace(path)
-        print(f"[holdout-preflight] archive {number + 1}/{len(urls)} "
-              f"retained={len(result['retained'])}", flush=True)
+    with ThreadPoolExecutor(max_workers=args.workers) as executor:
+        futures = [executor.submit(archive_part, number, url, candidate_ids,
+                                   args.out_dir)
+                   for number, url in enumerate(urls)]
+        for future in as_completed(futures):
+            number, result = future.result()
+            print(f"[holdout-preflight] archive {number + 1}/{len(urls)} "
+                  f"retained={len(result['retained'])}", flush=True)
     selection = preflight(ranked, args.candidate_limit, args.target, args.out_dir)
     (args.out_dir / "preflight_selection.json").write_text(
         json.dumps({**plan, **selection}, indent=2) + "\n", encoding="utf-8")
