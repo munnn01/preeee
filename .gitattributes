@@ -3,6 +3,7 @@ results/codec_search_ar_confirm_1000/*.tar.gz binary
 kaggle/dual_codec_search_cell.sh text eol=lf
 kaggle/paper_runtime_full_cell.sh text eol=lf
 kaggle/paper_holdout_confirm_cell.sh text eol=lf
+kaggle/paper_holdout_v4_cell.sh text eol=lf
 results/paper_mc3_v2_confirmed/** -text
 results/paper_downscale_dev/** -text
 results/holdout_confirm/** -text

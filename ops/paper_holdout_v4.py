@@ -49,7 +49,8 @@ BASELINES = ("area96", "area112")
 LOCKED_CODE = ("ops/paper_holdout_v4.py", "ops/v4_dev_policy.py",
                "ops/v4_frozen.py", "ops/lock_v4_holdout.py",
                "ops/dual_codec_search.py", "ops/paper_heldout_mc3.py",
-               "src/metrics/bd_rate.py")
+               "src/metrics/bd_rate.py", "kaggle/paper_holdout_v4_cell.sh",
+               "ops/push_paper_holdout_v4.py")
 
 
 def ready_index(index_path: Path, prereg_commit: str,
@@ -126,6 +127,8 @@ def manifest_base(index_path: Path, prereg_commit: str,
             "preregistration_commit": prereg_commit,
             "preregistration_sha256": sha256(PREREG),
             "freeze_manifest_sha256": sha256(MANIFEST),
+            "notebook_template_sha256": sha256(
+                REPO / "kaggle/paper_holdout_v4_cell.sh"),
             "dev_result_sha256": cfg["dev_result_sha256"],
             "model_sha256": cfg["model_sha256"],
             "v2_comparator_policy_sha256_bytes":
