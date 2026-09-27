@@ -21,6 +21,9 @@ def test_holdout_notebook_is_private_and_commit_pinned():
     assert "ops.paper_holdout_confirm primary" in source
     assert "ops.paper_holdout_confirm mc3" in source
     assert "--prereg-commit" in source
+    assert "holdout_manifest.json" in source
+    assert "videos.zip" in source
+    assert "archive.namelist() == expected" in source
 
 
 @pytest.mark.parametrize("dataset,codec,shard", [
