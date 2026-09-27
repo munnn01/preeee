@@ -1,0 +1,7 @@
+# Frozen V4 selector
+
+`manifest.json` fixes both calibration-selected V4 policies, fitted model bytes, original V2-C comparator bytes, design, DEV source fingerprints and strict holdout gate. The models are stored once, in the committed [`results/v4_dev_policy/models/`](../../results/v4_dev_policy/models/) directory, and are referenced by path and SHA-256. The manifest is to be committed before any V4 holdout label index or analyzer evaluation exists.
+
+H.265 passed the preregistered DEV go/no-go, so a new source-disjoint V4 holdout is justified. H.264 failed the DEV same-QP guard. Both calibration-selected codec policies are frozen unchanged for the two-codec holdout specified in [PREREGISTRATION_V4.md](../../docs/PREREGISTRATION_V4.md); the H.264 DEV failure must remain visible in every interpretation. Neither codec may be modified using old TEST, V2 holdout, `mc3_18`, or a future V4 holdout result.
+
+The historical pilot cache stored V2-C JSON with different line endings from the repository copy. The raw-byte SHA-256 of the repository H.264/H.265 frozen policies is `613506cb70ef01d1e0c45103a1a8f7ed43a82b6023e7dfc2b808f8d0f768a3df` / `0d39061a0b8de838c60553a6b112a40db4c64975ddea0f19137d6fda183fa2dc`; the cache SHA-256 was `c1cc53880ec320c1f60951adcccd4045fb1ac8881ae3ddfa5d5741d662b82985` / `10a97a207506791e6cdf40b6cf30d9521ff97ba3d34a9201dae198f777f3fc1c`. Parsed JSON objects were verified identical for each codec. The manifest records the repository's actual raw-byte hashes.

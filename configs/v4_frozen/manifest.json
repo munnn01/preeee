@@ -1,0 +1,76 @@
+{
+  "experiment": "v4_correctness_selector_frozen_before_new_holdout",
+  "preregistration_commit": "17b036c6fb5819e67751dfd3be83193eb1097be9",
+  "analysis_code_commit": "3b0d8dec587aa974adf0fd51a54d472def04a475",
+  "dev_result_commit": "5096c40647663d2dc3ddd763afa31ac0f17d9bb7",
+  "bootstrap_seed": 20260928,
+  "bootstrap_draws": 2000,
+  "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+  "development_source_fingerprints": {
+    "fit": "4c12443af5c0ef44dc5143217ab00b146e0d9090607c49393487d5decd4e4bb1",
+    "calibration": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "dev": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258"
+  },
+  "design": {
+    "qps": [30, 35, 40, 45, 50],
+    "candidates": ["identity128", "area112", "area96", "area112_up128", "blur020_128", "blur040_128"],
+    "primary_analyzers": ["r2plus1d_18", "r3d_18"],
+    "transfer_analyzer": "mc3_18",
+    "frames": 16,
+    "frame_size": 128,
+    "temporal_stride": 2,
+    "preset": "medium",
+    "holdout_gate": "At least one codec: both primary analyzers BD-rate Top-1 < -15% and BD-accuracy > 0 against identity128"
+  },
+  "codecs": {
+    "h264": {
+      "calibration_promoted": true,
+      "dev_go_no_go": false,
+      "dev_guard_failure": "r3d_18 minimum same-QP Top-1 gap -2.00 pp; preregistered limit >= -1.00 pp",
+      "policy": {
+        "mode": "P4",
+        "thresholds_low": {"r2plus1d_18": -0.05, "r3d_18": -0.05},
+        "thresholds_high": {"r2plus1d_18": -0.05, "r3d_18": -0.05}
+      },
+      "policy_digest": "9a432122bda2dae48aa8b415411ab408163edb69acc20a4103c73feb954b51b1",
+      "dev_result_path": "results/v4_dev_policy/h264_result.json",
+      "dev_result_sha256": "9a270b88068e8d33b4fc38a75cfd9c78b0430feb8e04875958b52f04a8ad66b4",
+      "model_paths": {
+        "r2plus1d_18": "results/v4_dev_policy/models/h264/r2plus1d_18.joblib",
+        "r3d_18": "results/v4_dev_policy/models/h264/r3d_18.joblib"
+      },
+      "model_sha256": {
+        "r2plus1d_18": "860d42272b1a1761d0dfe47fb443f478022d108461c639a56edb30ce9f7bf4d9",
+        "r3d_18": "a7da778ad2193950ae40fa7c9174e811e6e9034e2dece11687da8813bad0c020"
+      },
+      "v2_comparator_policy_path": "configs/dual_codec_search_v2_frozen/h264/frozen_policy.json",
+      "v2_comparator_policy_sha256_bytes": "613506cb70ef01d1e0c45103a1a8f7ed43a82b6023e7dfc2b808f8d0f768a3df",
+      "v2_comparator_risk_path": "configs/dual_codec_search_v2_frozen/h264/risk_model.json",
+      "v2_comparator_risk_sha256_bytes": "204a75eaa340607e0a68fc485403ae06213c7e75833f0f35c2d1075f78936c24"
+    },
+    "h265": {
+      "calibration_promoted": true,
+      "dev_go_no_go": true,
+      "policy": {
+        "mode": "P4",
+        "thresholds_low": {"r2plus1d_18": 0.0, "r3d_18": -0.05},
+        "thresholds_high": {"r2plus1d_18": -0.05, "r3d_18": -0.05}
+      },
+      "policy_digest": "477aba58f42353f7d9008bcc4253524af1ca7c9c99fdeb29f89c94ec1f9da1aa",
+      "dev_result_path": "results/v4_dev_policy/h265_result.json",
+      "dev_result_sha256": "7584acf9faed41f05feecdfce585915a23acd59f0e90184d44c1e26ac4ff383b",
+      "model_paths": {
+        "r2plus1d_18": "results/v4_dev_policy/models/h265/r2plus1d_18.joblib",
+        "r3d_18": "results/v4_dev_policy/models/h265/r3d_18.joblib"
+      },
+      "model_sha256": {
+        "r2plus1d_18": "915a054bbd516d01442a3a554629d443f1ee84c32736f5ee15b2baadf773fd2b",
+        "r3d_18": "e09459dad0e905912dc172348b584860536a0ca949061818599504d89843dd6a"
+      },
+      "v2_comparator_policy_path": "configs/dual_codec_search_v2_frozen/h265/frozen_policy.json",
+      "v2_comparator_policy_sha256_bytes": "0d39061a0b8de838c60553a6b112a40db4c64975ddea0f19137d6fda183fa2dc",
+      "v2_comparator_risk_path": "configs/dual_codec_search_v2_frozen/h265/risk_model.json",
+      "v2_comparator_risk_sha256_bytes": "bfe88bf3e523d45e0c566695843d1ee5d33731c5c2358e12a3cdc778d500ffeb"
+    }
+  }
+}
