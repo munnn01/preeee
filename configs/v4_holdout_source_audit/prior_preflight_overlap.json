@@ -1,0 +1,10 @@
+{
+  "scope": "ID-only supplemental audit; no labels, bytes or model outcomes",
+  "v4_candidate_ids_sha256": "2b07de362a2e6e07239da024106dfc6f498e4b4b2ea9cf696afd8aa79bbd1485",
+  "v2_candidate_ids_sha256": "3aec724136a42399e0e68f35747a6210aef833404d0d707e51e086659343b3d4",
+  "v2_selected_ids_sha256": "7f4d583812cd0bc20335aeaf2f62520ad8a9c32aa8c3f7d591df39c2a1852bc4",
+  "v4_candidate_count": 2000,
+  "v4_candidate_in_v2_byte_only_preflight_count": 104,
+  "v4_candidate_in_v2_evaluated_holdout_count": 0,
+  "method": "set intersection of source-ID text files; no video content or result used"
+}
