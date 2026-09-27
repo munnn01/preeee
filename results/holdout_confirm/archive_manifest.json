@@ -1,0 +1,46 @@
+{
+  "purpose": "Downloaded Kaggle output archives for the four completed, preregistered holdout shards. These SHA-256 values identify the original archives; the committed raw records and manifests are extracted copies verified by ops/package_paper_holdout_confirm.py.",
+  "preregistration_commit": "4730d07df1e9593b56f475ccc395315358f9a49c",
+  "evaluation_code_commit": "4730d07df1e9593b56f475ccc395315358f9a49c",
+  "analysis_code_commit": "27f3cc6c52fa6685b3da6a887fa0458fb810b4b4",
+  "source_fingerprint": "ea86e9ba66b2fe3143a891619ae34ae036c7f065ea083f4b076b53263e9c668d",
+  "index_sha256": "f0f7bd7d56b3b5345886e5be6027c1b1958a9b74efd79ec464eaec096302ec57",
+  "config_sha256_lf": "7161844038eb90a6ad3c2739865736484643249c50cc4cc648cafddf287232c0",
+  "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+  "bootstrap_seed": 20260924,
+  "bootstrap_draws": 2000,
+  "archives": [
+    {
+      "codec": "h264",
+      "shard": 0,
+      "notebook": "shungg05/paper-v2c-holdout-h264-s0-4730d07",
+      "file": "paper_holdout_h264_shard0.tgz",
+      "bytes": 5911765,
+      "sha256": "43d0427fdb5e1152915073254fce85479a8cd2aefb70cb28a7f488147a8be299"
+    },
+    {
+      "codec": "h264",
+      "shard": 1,
+      "notebook": "dieulinhh/paper-v2c-holdout-h264-s1-4730d07",
+      "file": "paper_holdout_h264_shard1.tgz",
+      "bytes": 5918046,
+      "sha256": "9b732efa4e8f9efa9959d9a736bbe66abad9149e86feb331a203a1e256cf7e50"
+    },
+    {
+      "codec": "h265",
+      "shard": 0,
+      "notebook": "huolgggnuyen/paper-v2c-holdout-h265-s0-4730d07",
+      "file": "paper_holdout_h265_shard0.tgz",
+      "bytes": 5928367,
+      "sha256": "e798edc7d55f0c18b3a30dcadb376fba2980a7a788dd6f2a59907fa23a25a13a"
+    },
+    {
+      "codec": "h265",
+      "shard": 1,
+      "notebook": "huolgggnuyen/paper-v2c-holdout-h265-s1-4730d07",
+      "file": "paper_holdout_h265_shard1.tgz",
+      "bytes": 5937507,
+      "sha256": "f104f5c59dd959025b0d3baac92eda34570a58ad3bdf38560e891a64b0d0eaa0"
+    }
+  ]
+}

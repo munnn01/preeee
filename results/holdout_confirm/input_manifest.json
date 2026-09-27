@@ -1,0 +1,15 @@
+{
+  "scope": "private Kaggle transfer of one preregistered holdout, no labels",
+  "preregistration_commit": "4730d07df1e9593b56f475ccc395315358f9a49c",
+  "id_lock_commit": "c12f422ed85f8a4a61319fe169724c115f663f74",
+  "index_sha256": "f0f7bd7d56b3b5345886e5be6027c1b1958a9b74efd79ec464eaec096302ec57",
+  "selected_sources_sha256": "5509f8b766a9c3a51b4d8cbe2838bb62e5bbf7088d8875ce028126913d92d9f0",
+  "source_fingerprint": "ea86e9ba66b2fe3143a891619ae34ae036c7f065ea083f4b076b53263e9c668d",
+  "source_count": 1000,
+  "source_video_bytes": 1550181537,
+  "zip_bytes": 1550329559,
+  "zip_sha256": "88283abf8adda3fcdbf3db8bac95abb7bcb617918e9633e6e7f2a310b54629d4",
+  "seed": null,
+  "bootstrap_unit": "source video",
+  "bootstrap_draws_after_merge": 2000
+}

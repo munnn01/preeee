@@ -7,7 +7,22 @@ Repo này nghiên cứu can thiệp miền pixel **trước codec chuẩn** đ�
 
 ## Kết quả AR được giữ trong `results/`
 
-[Gói V2-C 1.000 clip](results/dual_codec_search_v2_confirm_1000/README.md) là gói kết quả chính duy nhất trong thư mục `results/`. Cùng 1.000 clip TEST được ghép cặp giữa hai codec, năm QP `30,35,40,45,50`, và 2.000 lần bootstrap theo **video nguồn**; BD-rate được tính sau khi gộp hai shard 500 clip, không lấy trung bình BD-rate của shard.
+**Xác nhận trên holdout 1.000 source video mới: KHÔNG ĐẠT gate đặt trước.** H.264 đạt −19,70% trên `r2plus1d_18` nhưng chỉ −12,52% trên `r3d_18`; H.265 lần lượt là −13,53% và −9,08%. Gate yêu cầu **cả hai** analyzer có point estimate BD-rate Top-1 **< −15%** và BD-accuracy > 0 ở ít nhất một codec. Policy V2-C, tập ID và phép phân tích đã khóa trước khi chấm. [Báo cáo holdout](docs/RESULTS_HOLDOUT_CONFIRM.md), [JSON H.264](results/holdout_confirm/h264_result.json) và [JSON H.265](results/holdout_confirm/h265_result.json) có đủ CI 95%, đường cong, đối chứng và provenance.
+
+| Codec | Analyzer | BD-rate Top-1 trên holdout | CI 95% theo source video |
+|---|---|---:|---:|
+| H.264 | `r2plus1d_18` | −19,70% | [−22,17%; −17,06%] |
+| H.264 | `r3d_18` | −12,52% | [−14,46%; −10,45%] |
+| H.264 | `mc3_18` | −2,29% | [−5,23%; +0,69%] |
+| H.265 | `r2plus1d_18` | −13,53% | [−15,27%; −11,52%] |
+| H.265 | `r3d_18` | −9,08% | [−10,47%; −7,67%] |
+| H.265 | `mc3_18` | −1,99% | [−4,35%; +0,21%] |
+
+Holdout này tách **source ID** khỏi các inventory lịch sử đã kiểm toán nhưng vẫn thuộc Kinetics-400; nó chưa kiểm tra chuyển sang dataset khác. Tám so sánh ghép cặp trực tiếp với `area96` và `area112` cố định đều ưu tiên V2-C, nhưng không làm gate chính đạt. `mc3_18` có CI BD-rate chứa 0 ở cả codec. [Kiểm toán tập](docs/HOLDOUT_SPLIT.md) và [preregistration](docs/PREREGISTRATION.md) là các bản đã khóa trước lượt chạy.
+
+### Replication trên TEST cũ đã xem
+
+[Gói V2-C 1.000 clip TEST cũ](results/dual_codec_search_v2_confirm_1000/README.md) dùng cùng 1.000 clip được ghép cặp giữa hai codec, năm QP `30,35,40,45,50`, và 2.000 lần bootstrap theo **video nguồn**; BD-rate được tính sau khi gộp hai shard 500 clip, không lấy trung bình BD-rate của shard. Các số sau **không** thuộc holdout mới.
 
 BD-rate ở đây áp dụng phép so sánh đường rate–quality kiểu Bjøntegaard [6] với **Top-1** (hoặc mAP ở pilot OD) làm quality; tài liệu gốc dùng PSNR. Hai codec tương ứng chuẩn ITU-T H.264 và H.265 [7, 8].
 
@@ -18,15 +33,15 @@ BD-rate ở đây áp dụng phép so sánh đường rate–quality kiểu Bjø
 | H.265 | `r2plus1d_18` | −14,03% | [−15,39%, −12,77%] | +9,92 |
 | H.265 | `r3d_18` | −8,72% | [−9,62%, −7,82%] | +5,53 |
 
-**Quyết định theo tiêu chí đặt trước:** chưa đạt yêu cầu cả hai analyzer đều có BD-rate Top-1 **< −15%** ở ít nhất một codec. H.264 gần nhất nhưng `r3d_18` còn thiếu 0,53 điểm phần trăm. Cả hai analyzer đều tham gia phát triển policy; hơn nữa TEST này đã được xem trong nghiên cứu V1. Đây là phép so sánh ghép cặp trên tập đã biết, **không phải** kiểm chứng độc lập trên holdout mới.
+**Quyết định trên TEST cũ:** cũng không đạt yêu cầu cả hai analyzer đều có BD-rate Top-1 **< −15%** ở ít nhất một codec. H.264 gần nhất nhưng `r3d_18` còn thiếu 0,53 điểm phần trăm. Cả hai analyzer đều tham gia phát triển policy; TEST này đã được xem trong nghiên cứu V1. Đây là replication trên tập đã biết, tách khỏi kết luận holdout mới ở trên.
 
 Các JSON tổng hợp [H.264](results/dual_codec_search_v2_confirm_1000/h264_result.json) và [H.265](results/dual_codec_search_v2_confirm_1000/h265_result.json) giữ curve, fingerprint và control đồng thời để kiểm toán. Gói kết quả V1 riêng đã được bỏ khỏi nhánh hiện tại; mã và cấu hình V1 cần cho mẫu ghép cặp vẫn được giữ. Những lần Kaggle lỗi không được đưa vào `results/`.
 
-Đã [gộp và kiểm toán analyzer thứ ba `mc3_18`](results/paper_mc3_v2_confirmed/README.md) trên **chính TEST cũ**: BD-rate Top-1 là −3,88% [−6,02%, −1,62%] với H.264 và −2,10% [−3,68%, −0,62%] với H.265, 2.000 bootstrap theo video nguồn. Hai file tái tạo từ bốn shard khớp byte-for-byte với artifact lịch sử; raw record và hash đã được lưu. Kết quả này cho thấy mức tiết kiệm chuyển sang `mc3_18` nhỏ hơn hai analyzer phát triển V2-C, không giải quyết thiếu holdout dữ liệu.
+Đã [gộp và kiểm toán analyzer thứ ba `mc3_18`](results/paper_mc3_v2_confirmed/README.md) trên **chính TEST cũ**: BD-rate Top-1 là −3,88% [−6,02%, −1,62%] với H.264 và −2,10% [−3,68%, −0,62%] với H.265, 2.000 bootstrap theo video nguồn. Hai file tái tạo từ bốn shard khớp byte-for-byte với artifact lịch sử; raw record và hash đã được lưu. Kết quả này không thay kết quả `mc3_18` trên holdout mới.
 
-[So sánh với `area96` và `area112` cố định trên DEV](results/paper_downscale_dev/README.md) dùng 200 video ghép cặp mỗi codec. V2-C tốt hơn cả hai downscale thuần ở cả hai analyzer chính trong hai codec, theo BD-rate trực tiếp với CI 95%. Đây là ablation **trên DEV đã dùng trong phát triển**, không phải bằng chứng xác nhận trên TEST mới.
+[So sánh với `area96` và `area112` cố định trên DEV](results/paper_downscale_dev/README.md) dùng 200 video ghép cặp mỗi codec. V2-C tốt hơn cả hai downscale thuần ở cả hai analyzer chính trong hai codec, theo BD-rate trực tiếp với CI 95%. Đây là ablation **trên DEV đã dùng trong phát triển**; so sánh xác nhận mới nằm trong [báo cáo holdout](docs/RESULTS_HOLDOUT_CONFIRM.md).
 
-**Holdout độc lập: CHƯA ĐO; gate trên holdout: CHƯA XÁC NHẬN.** [Preregistration](docs/PREREGISTRATION.md) và [index của 1.000 source video](configs/holdout_source_audit/index.json) đã khóa trong Git, chờ người dùng duyệt trước khi chấm. [Kiểm toán nguồn](docs/HOLDOUT_SPLIT.md) xác nhận các ID official Kinetics-400 validation không trùng hai dataset Kinetics cũ ở mức ID; đây là tách nguồn trong cùng họ Kinetics, chưa phải chuyển miền. [Chi phí runtime toàn bộ năm QP](docs/RUNTIME_COST.md) đã đo trên 20 clip DEV: overhead trung vị ghép cặp 7.351× (H.264) và 7.066× (H.265), gồm đủ 30 lần encode/decode và suy luận phía encoder mỗi clip. Không diễn giải các phép trên tập cũ như kết quả holdout mới.
+[Chi phí runtime toàn bộ năm QP](docs/RUNTIME_COST.md) đã đo trên 20 clip DEV: overhead trung vị ghép cặp 7,351× (H.264) và 7,066× (H.265), gồm đủ 30 lần encode/decode và suy luận phía encoder mỗi clip. Đây là một giới hạn thực tế của policy hiện tại.
 
 ## Kiểm tra ảnh ghép cặp và OD
 
@@ -43,12 +58,12 @@ Các JSON tổng hợp [H.264](results/dual_codec_search_v2_confirm_1000/h264_re
 
 ## Mã và tái lập
 
-- [Thiết kế và giới hạn nghiên cứu](docs/PAPER_VALIDATION_PLAN.md): phép so sánh cố định, bootstrap ghép cặp, phép thử analyzer thứ ba và chi phí chạy còn phải đo.
+- [Thiết kế và giới hạn nghiên cứu](docs/PAPER_VALIDATION_PLAN.md), [preregistration đã khóa](docs/PREREGISTRATION.md) và [báo cáo holdout](docs/RESULTS_HOLDOUT_CONFIRM.md): tách nguồn, gate, bootstrap ghép cặp và kết quả xác nhận âm tính.
 - [Policy và runner V2](ops/dual_codec_search_confirm_1000.py), [tạo panel Kinetics](ops/paper_ar_visual.py), [OD pilot và panel COCO](ops/probe_background_suppression.py).
-- [Phân tích ablation](ops/paper_validation.py), [runner `mc3_18`](ops/paper_heldout_mc3.py), [runner thời gian chạy](ops/paper_runtime.py), và [baseline downscaling DEV](ops/paper_dev_downscale.py). Có mã không đồng nghĩa đã có kết quả thực nghiệm cho holdout hay runtime đầy đủ.
+- [Runner holdout đã khóa](ops/paper_holdout_confirm.py), [gói record/provenance](ops/package_paper_holdout_confirm.py), [phân tích ablation](ops/paper_validation.py), [runner `mc3_18`](ops/paper_heldout_mc3.py), [runner thời gian chạy](ops/paper_runtime.py) và [baseline downscaling DEV](ops/paper_dev_downscale.py).
 - [Cell Kaggle AR](kaggle/paper_ar_visual_cell.sh), [cell Kaggle OD](kaggle/paper_coco_visual_cell.sh) và [công cụ tạo notebook riêng tư](ops/push_paper_visual.py). Cell trong repo này clone `munnn01/pre_updated_v2` tại commit được chỉ định. Hai notebook hoàn tất ở trên được chạy từ bản phát triển `test_pre` với cùng logic đánh giá; không được gọi là lượt chạy lại trên commit repo này.
 
-Trước khi tuyên bố khả năng tổng quát, cần hoàn tất lượt đánh giá duy nhất trên 1.000 video nguồn mới đã khóa và đo chi phí của **toàn bộ** sáu phép encode/decode cùng suy luận tại encoder. Bằng chứng `mc3_18` hiện chỉ nằm trên TEST cũ.
+Kết quả này phù hợp để báo cáo như một **nghiên cứu xác nhận âm tính/replication**: policy tốt hơn downscale cố định trên nguồn Kinetics đã khóa, nhưng trượt gate hai analyzer, lợi ích trên `mc3_18` chưa rõ và overhead encoder cao. Chưa có bằng chứng chuyển miền sang dataset video khác hoặc chứng cứ OD toàn COCO val2017.
 
 ## Tài liệu tham khảo
 

@@ -1,0 +1,83 @@
+{
+  "experiment": "v2c_source_disjoint_holdout_package",
+  "preregistration_commit": "4730d07df1e9593b56f475ccc395315358f9a49c",
+  "id_lock_commit": "c12f422ed85f8a4a61319fe169724c115f663f74",
+  "packaging_code_commit": "27f3cc6c52fa6685b3da6a887fa0458fb810b4b4",
+  "source_fingerprint": "ea86e9ba66b2fe3143a891619ae34ae036c7f065ea083f4b076b53263e9c668d",
+  "index_sha256": "f0f7bd7d56b3b5345886e5be6027c1b1958a9b74efd79ec464eaec096302ec57",
+  "input_manifest_sha256": "a0d1ff84c8545d3e760c7cba4200c593ffe2dbd8b375c28530bd3c310789d9ac",
+  "input_zip_sha256": "88283abf8adda3fcdbf3db8bac95abb7bcb617918e9633e6e7f2a310b54629d4",
+  "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+  "bootstrap_seed": 20260924,
+  "bootstrap_draws": 2000,
+  "shards": [
+    {
+      "account": "shungg05",
+      "codec": "h264",
+      "shard": 0,
+      "dataset": "shungg05/paper-v2c-holdout-1000-4730d07",
+      "notebook": "shungg05/paper-v2c-holdout-h264-s0-4730d07",
+      "notebook_sha256": "a160abab6a7247b00478f9321e41905b7144a3d5ec1aa8a36053507f750fb96c",
+      "primary": {
+        "manifest_sha256": "3f480874eaa75fa1e056e79a23f0c3faece9d9e646695b640ff074d7d79fc96b",
+        "records_sha256": "da85d8d8a39fc5fd88cdfb99b421e667074660bc1aadbbd712a817647dbaadc9"
+      },
+      "mc3": {
+        "manifest_sha256": "e389a08bd4044862e70389d85ba4209a3f61e5a579815e8c618e96e1c38daa77",
+        "records_sha256": "0fd79a8a99195c23209669f8eaab3f42d5a71a734d5da68dc34fb30cd7f6bdcd"
+      }
+    },
+    {
+      "account": "dieulinhh",
+      "codec": "h264",
+      "shard": 1,
+      "dataset": "dieulinhh/paper-v2c-holdout-1000-4730d07",
+      "notebook": "dieulinhh/paper-v2c-holdout-h264-s1-4730d07",
+      "notebook_sha256": "6571dc3ef083011e559dd7e7efa3b00e78578bca270ce3011cdf2cbeded3ed4f",
+      "primary": {
+        "manifest_sha256": "5f861663582aa2a5589e6230f71d794e6ce64baa1cb3e86703a2dea14b6c17ca",
+        "records_sha256": "a68371d5324e2775beb3b8c7af01b2a167ff9a82034594e1fdbddcde257fe4a0"
+      },
+      "mc3": {
+        "manifest_sha256": "6422201be2153f8b22fb3b43b2c9f5d760878a10ca7bd220a51baff2a1b6ea46",
+        "records_sha256": "958113b201ca624d7ba4ff8f648e091d85e2afb24f671696df610d73bfcd608a"
+      }
+    },
+    {
+      "account": "huolgggnuyen",
+      "codec": "h265",
+      "shard": 0,
+      "dataset": "huolgggnuyen/paper-v2c-holdout-1000-4730d07",
+      "notebook": "huolgggnuyen/paper-v2c-holdout-h265-s0-4730d07",
+      "notebook_sha256": "46aa0844518fb0ec9cfdfab4a3691c8be24d8d1597e26a6d6484e3637628d802",
+      "primary": {
+        "manifest_sha256": "c7cc623a9a5c278c62960ce06ec75781d949e32750d43d55a3794d7554cae70a",
+        "records_sha256": "8b8cced350d6ba843388ce95f6bb4ee97b5a80b243702bc86f42b83a404ab417"
+      },
+      "mc3": {
+        "manifest_sha256": "1c49fe81d976d8dd9b3b1c63547d046954c083d422d51059baa8f1f1605e09ff",
+        "records_sha256": "692fc5e901e0c01476d3016988e872f3e4a112256c1347ae8f7ec30cf9be4bc3"
+      }
+    },
+    {
+      "account": "huolgggnuyen",
+      "codec": "h265",
+      "shard": 1,
+      "dataset": "huolgggnuyen/paper-v2c-holdout-1000-4730d07",
+      "notebook": "huolgggnuyen/paper-v2c-holdout-h265-s1-4730d07",
+      "notebook_sha256": "cc89bf64f5c14a8f751274604e02ef14edbc086e74838eb46249dcbb0c51720b",
+      "primary": {
+        "manifest_sha256": "80c0ad506e8c8d70775b5a8bb7dc7a10d580614c6f27b693dd18fde7a9595791",
+        "records_sha256": "bdd971f9354297965e82c7f38bedd318efb301356f157c64065a09ab938b3bc3"
+      },
+      "mc3": {
+        "manifest_sha256": "fa6c3fe43058643f40244bace15d66f5099038c329dfaca75b97dfddd9a9d321",
+        "records_sha256": "a3c6fb2cf7c8c94bf9c1e11f32464ae99f6d8d02498d79926cf378ef199b9d71"
+      }
+    }
+  ],
+  "results": {
+    "h264": "ab2183c1e3851abf0a704624fdfaf1de26d8b5199227b6559d747738b9c36f47",
+    "h265": "7b7125f3623ac0a38fc177dc6ff995cb340eb467d02dfe0feb5c6931bdb78f80"
+  }
+}

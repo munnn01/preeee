@@ -1,0 +1,16 @@
+{
+  "id": "huolgggnuyen/paper-v2c-holdout-h265-s0-4730d07",
+  "title": "paper-v2c-holdout-h265-s0-4730d07",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "huolgggnuyen/paper-v2c-holdout-1000-4730d07"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}
