@@ -23,8 +23,10 @@ LOCK_COMMIT = "c12f422ed85f8a4a61319fe169724c115f663f74"
 FINGERPRINT = "ea86e9ba66b2fe3143a891619ae34ae036c7f065ea083f4b076b53263e9c668d"
 SEED = 20260924
 DRAWS = 2000
-ASSIGNMENTS = (("shungg05", "h264", 0), ("dieulinhh", "h264", 1),
-               ("huolgggnuyen", "h265", 0), ("baooo25r", "h265", 1))
+ASSIGNMENTS = (("shungg05", "h264", 0, "shungg05"),
+               ("dieulinhh", "h264", 1, "dieulinhh"),
+               ("huolgggnuyen", "h265", 0, "huolgggnuyen"),
+               ("huolgggnuyen", "h265", 1, "huolgggnuyen_h265_s1"))
 STAGES = (("primary", "primary_six_candidate"),
           ("mc3", "independent_mc3_selected_stream"))
 
@@ -97,7 +99,7 @@ def package(raw_root: Path, notebook_root: Path, input_manifest_path: Path,
                   "bootstrap_seed": SEED, "bootstrap_draws": DRAWS,
                   "shards": [], "results": {}}
     shutil.copyfile(input_manifest_path, out_dir / "input_manifest.json")
-    for account, codec, shard in ASSIGNMENTS:
+    for account, codec, shard, notebook_folder in ASSIGNMENTS:
         source = raw_root / f"{codec}_shard{shard}"
         expected = index["test"][shard::2]
         expected_ids = [clip_id(row) for row in expected]
@@ -116,8 +118,8 @@ def package(raw_root: Path, notebook_root: Path, input_manifest_path: Path,
                 key = "manifest_sha256" if filename == "manifest.json" else "records_sha256"
                 if sha256(target_dir / filename) != hashes[folder][key]:
                     raise ValueError("raw shard changed while copying")
-        notebook_source = notebook_root / account
-        notebook_target = out_dir / "notebooks" / account
+        notebook_source = notebook_root / notebook_folder
+        notebook_target = out_dir / "notebooks" / notebook_folder
         notebook_target.mkdir(parents=True, exist_ok=True)
         for filename in ("notebook.ipynb", "kernel-metadata.json"):
             shutil.copyfile(notebook_source / filename, notebook_target / filename)
