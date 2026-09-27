@@ -1,0 +1,158 @@
+{
+  "experiment": "v4_dev_oracle_screen",
+  "codec": "h265",
+  "plan_commit": "16e7cdf78b85d91328bb60f1237c4768d2a5a6ae",
+  "analysis_code_commit": "1901af876b904c6e8849e220b5b31fa2b0a49e64",
+  "input_provenance": {
+    "pilot_manifest_sha256": "949aeb782844ec40fcda56854fc814e482c59f53fdf063b61835e9ef615c041e",
+    "pilot_index_sha256": "1a7adb6ad3aac2fa3fc93767c9567e49441b35f7ad6375fe7e1949ef0507acb2",
+    "dev_cache_tree_sha256": "959740cd8491fc78891310dcde00549b7007039d1b31392f77d735f2ee9d005a",
+    "dev_source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258"
+  },
+  "bootstrap_unit": "source video; point estimate only",
+  "bootstrap_seed": null,
+  "bootstrap_draws": 0,
+  "n": 200,
+  "n_video_qp": 1000,
+  "nonidentity_feasible_rows": 927,
+  "rate_saving_feasible_rows": 925,
+  "nonidentity_feasible_fraction": 0.927,
+  "rate_saving_feasible_fraction": 0.925,
+  "choices": {
+    "area96": 730,
+    "area112": 106,
+    "identity128": 75,
+    "area112_up128": 28,
+    "blur040_128": 38,
+    "blur020_128": 23
+  },
+  "analyzers": {
+    "r2plus1d_18": {
+      "metrics": {
+        "bd_rate_top1_pct": -18.12040671060181,
+        "bd_accuracy_top1": 0.1372086346205856,
+        "mean_same_qp_rate_ratio": 0.852252380184653,
+        "min_same_qp_top1_gap": 0.0049999999999999906,
+        "bd_accuracy_top1_pp": 13.72086346205856
+      },
+      "anchor_curve": {
+        "30": {
+          "bpp": 0.303433837890625,
+          "top1": 0.76,
+          "n": 200
+        },
+        "35": {
+          "bpp": 0.19704681396484375,
+          "top1": 0.625,
+          "n": 200
+        },
+        "40": {
+          "bpp": 0.13901138305664062,
+          "top1": 0.47,
+          "n": 200
+        },
+        "45": {
+          "bpp": 0.10696365356445313,
+          "top1": 0.205,
+          "n": 200
+        },
+        "50": {
+          "bpp": 0.09106521606445313,
+          "top1": 0.085,
+          "n": 200
+        }
+      },
+      "trial_curve": {
+        "30": {
+          "bpp": 0.22224151611328125,
+          "top1": 0.795,
+          "n": 200
+        },
+        "35": {
+          "bpp": 0.15764923095703126,
+          "top1": 0.665,
+          "n": 200
+        },
+        "40": {
+          "bpp": 0.11989791870117188,
+          "top1": 0.51,
+          "n": 200
+        },
+        "45": {
+          "bpp": 0.09790191650390626,
+          "top1": 0.23,
+          "n": 200
+        },
+        "50": {
+          "bpp": 0.08660247802734375,
+          "top1": 0.09,
+          "n": 200
+        }
+      }
+    },
+    "r3d_18": {
+      "metrics": {
+        "bd_rate_top1_pct": -15.678681037603614,
+        "bd_accuracy_top1": 0.10320340084071729,
+        "mean_same_qp_rate_ratio": 0.852252380184653,
+        "min_same_qp_top1_gap": 0.015,
+        "bd_accuracy_top1_pp": 10.320340084071729
+      },
+      "anchor_curve": {
+        "30": {
+          "bpp": 0.303433837890625,
+          "top1": 0.705,
+          "n": 200
+        },
+        "35": {
+          "bpp": 0.19704681396484375,
+          "top1": 0.635,
+          "n": 200
+        },
+        "40": {
+          "bpp": 0.13901138305664062,
+          "top1": 0.465,
+          "n": 200
+        },
+        "45": {
+          "bpp": 0.10696365356445313,
+          "top1": 0.315,
+          "n": 200
+        },
+        "50": {
+          "bpp": 0.09106521606445313,
+          "top1": 0.1,
+          "n": 200
+        }
+      },
+      "trial_curve": {
+        "30": {
+          "bpp": 0.22224151611328125,
+          "top1": 0.72,
+          "n": 200
+        },
+        "35": {
+          "bpp": 0.15764923095703126,
+          "top1": 0.66,
+          "n": 200
+        },
+        "40": {
+          "bpp": 0.11989791870117188,
+          "top1": 0.495,
+          "n": 200
+        },
+        "45": {
+          "bpp": 0.09790191650390626,
+          "top1": 0.33,
+          "n": 200
+        },
+        "50": {
+          "bpp": 0.08660247802734375,
+          "top1": 0.115,
+          "n": 200
+        }
+      }
+    }
+  },
+  "interpretation": "Label-aware optimistic DEV reference; not a deployable policy."
+}

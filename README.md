@@ -22,6 +22,8 @@ Holdout này tách **source ID** khỏi các inventory lịch sử đã kiểm t
 
 Nghiên cứu [V3 chỉ trên DEV](results/v3_dev_policy/README.md) đã preregister một lưới 81 policy ngưỡng rủi ro riêng cho từng analyzer. Không codec nào đạt margin cải thiện calibration đã khóa để thăng cấp policy; V2-C vẫn là fallback, và **holdout V3 CHƯA ĐO**. Lỗi ví dụ tuple V2-C H.265 trong preregistration V3 được [ghi amendment](docs/PREREGISTRATION_V3_AMENDMENT_001.md) sau lượt DEV, không sửa kết quả hay quy tắc chọn.
 
+[Oracle chẩn đoán trên DEV](results/v4_dev_oracle/README.md) dùng nhãn thật để chọn candidate không làm mất dự đoán đúng: BD-rate tham khảo đạt −27,39%/−26,54% ở H.264 và −18,12%/−15,68% ở H.265 trên hai analyzer. Đây **không phải policy triển khai được hoặc kết quả holdout**; nó chỉ cho thấy bộ sáu candidate có dư địa để nghiên cứu một selector không đọc nhãn.
+
 ### Replication trên TEST cũ đã xem
 
 [Gói V2-C 1.000 clip TEST cũ](results/dual_codec_search_v2_confirm_1000/README.md) dùng cùng 1.000 clip được ghép cặp giữa hai codec, năm QP `30,35,40,45,50`, và 2.000 lần bootstrap theo **video nguồn**; BD-rate được tính sau khi gộp hai shard 500 clip, không lấy trung bình BD-rate của shard. Các số sau **không** thuộc holdout mới.

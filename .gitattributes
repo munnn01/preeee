@@ -7,6 +7,7 @@ results/paper_mc3_v2_confirmed/** -text
 results/paper_downscale_dev/** -text
 results/holdout_confirm/** -text
 results/v3_dev_policy/** -text
+results/v4_dev_oracle/** -text
 results/paper_runtime_v2_full/** -text
 results/od_coco_pilot/** -text
 configs/holdout_source_audit/** -text
