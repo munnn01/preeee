@@ -1,6 +1,6 @@
 # V4 holdout source audit
 
-**Trạng thái hiện tại: đã khóa ID và SHA-256 của 1.000 video; index có nhãn và mọi kết quả analyzer đều CHƯA ĐO.** Policy V4 đã khóa trong `configs/v4_frozen/manifest.json` trước khi stream video hoặc đọc nhãn cho V4. Commit của bước khóa ID này phải có trước khi code tạo index đọc nhãn.
+**Trạng thái hiện tại: đã khóa ID, SHA-256 video và index có nhãn của 1.000 video; mọi kết quả analyzer đều CHƯA ĐO.** Policy V4 đã khóa trong `configs/v4_frozen/manifest.json` trước khi stream video hoặc đọc nhãn cho V4. Commit khóa ID/video `969d2f2d71575e61e95ea2849f533d4a56e522fa` đã được đẩy lên GitHub **trước** khi code tạo index đọc nhãn.
 
 Nguồn là official CVDF Kinetics-400 validation, cùng annotation và danh sách 20 archive đã kiểm toán cho V2. SHA-256 annotation là `358eaf47e7f80ebf9b17d49eb0635ad5e0fdab98a9cbd75ffdd2ee5d5e5b6944`; SHA-256 danh sách archive là `7c75bab47da18ba747e8bdd826bec9139672336fd3431caa71ff563473080e77`. Code tạo plan nằm ở commit `944de5a24f75f2c65a23ffb03e66e036b73c18c2`. Chỉ cột `youtube_id` được dùng để xếp hạng; code không truy cập cột nhãn, không chạy codec/analyzer và không đọc kết quả V2 holdout.
 
@@ -22,4 +22,6 @@ Preflight 20 archive đã hoàn tất. SHA-256 của **mọi archive nén** kh�
 
 [selected_ids.txt](../configs/v4_holdout_source_audit/selected_ids.txt) có SHA-256 `db5918598a0891094ab190e6c44c34377dc84d6852303e9ceb7dc8938295b223`. Fingerprint source ID theo thứ tự là `b72321eecafe6f81368ae22e5352f04305094634aaca2a378bac12b7cc60822b`. [selected_sources.json](../configs/v4_holdout_source_audit/selected_sources.json) có SHA-256 `c772272c1fac3ad312856e17e081ede05441cc59e4849451fdd78a937deeb149` và khóa SHA-256/byte của từng video. Tập này giao 0 ID với 28.625 ID lịch sử, 800 ID phát triển, và 1.000 ID holdout V2 đã đánh giá; kiểm tra giao được thực hiện từ candidate plan đã commit và thứ tự chọn trong preflight. Đây là disjoint theo source ID, không chứng minh tuyệt đối không có bản đăng lại cùng nội dung dưới ID khác.
 
-Bước tiếp theo là commit các file ID/video hash này **trước** khi xây index có nhãn. Nếu kiểm tra commit hoặc SHA-256 không khớp, dừng đánh giá và giữ kết quả V4 holdout ở trạng thái **CHƯA ĐO**.
+[index.json](../configs/v4_holdout_source_audit/index.json) được tạo **sau** commit khóa ID bằng cột nhãn và thời gian của annotation official đã khóa. Index chứa 1.000 record theo đúng thứ tự ID đã commit, tên file, nhãn K400, SHA-256 và số byte video; SHA-256 của index là `995969ffdc943976400c67337ca3d27c95370f22040f64e2fa43169e08efe8e2`. Code xác nhận commit khóa ID trước khi truy cập nhãn và kiểm lại hash từng video. Tập nhãn này tương thích thứ tự lớp của cả `r2plus1d_18`, `r3d_18` và `mc3_18`; nhãn không được dùng để sửa danh sách ID, policy hay ngưỡng.
+
+Bước tiếp theo là commit index và tài liệu này **trước** khi chạy analyzer trên holdout. Nếu kiểm tra commit hoặc SHA-256 không khớp, dừng đánh giá và giữ kết quả V4 holdout ở trạng thái **CHƯA ĐO**.
