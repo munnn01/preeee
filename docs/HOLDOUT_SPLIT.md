@@ -1,6 +1,6 @@
 # Holdout source audit and split
 
-**Trạng thái: đang kiểm tra giải mã; chưa khóa 1.000 clip, chưa chạy đánh giá holdout.** File này ghi phần kiểm toán ID đã hoàn tất. Phần danh sách video cuối, fingerprint và index sẽ được bổ sung bằng một commit **trước** khi chạy V2-C trên holdout.
+**Trạng thái: đã khóa 1.000 source video chỉ bằng ID và kiểm tra giải mã trong commit chứa file này; chưa tạo index nhãn và chưa chạy đánh giá holdout.** Danh sách và SHA video dưới đây được commit trước khi mã tạo index được phép đọc nhãn. Bản preregistration hoàn chỉnh và index sẽ được commit tiếp theo, trước lượt đánh giá đầu tiên.
 
 ## Nguồn ứng viên
 
@@ -21,12 +21,21 @@ Kaggle API được phân trang đến trang cuối để lấy danh sách **to�
 
 Toàn bộ 10.800 source ID của `kineticscleaned` nằm trong danh sách 28.625 ID của `kinetics-train-5per`. Vì vậy hợp hai nguồn lịch sử có 28.625 source ID; giao với 19.906 ID official validation bằng **0**. Điều này bao phủ canonical TRAIN/VAL/TEST, mẫu V1/V2 TEST fingerprint `aae3888f3ae34d08`, và các thư mục sibling của `kinetics-train-5per` từng được dùng trong đánh giá E4. Kiểm tra bằng source ID mạnh hơn kiểm tra `<class>/<filename>`; vẫn không thể loại trừ video bị đổi ID hoặc re-encode từ cùng cảnh khi không có toàn bộ byte/video lịch sử.
 
-Danh sách ứng viên theo hash đầu tiên gồm 2.000 ID, lưu ở `configs/holdout_source_audit/official_val_candidate_ids.txt`; SHA-256 của tập ID sắp xếp là `b3dfc5ab1957c8fd9bf81b09dbdb369564159493585c2172c1b0f77b79cc8fb6`. `candidate_plan.json` ghi hash nguồn và code commit `6493418c54398b58b45118266d15155db3f85dc7`. Đây là **ứng viên để kiểm tra giải mã**, chưa phải tập TEST cuối. Nếu 2.000 ứng viên không cho đủ 1.000 video đọc được, trạng thái là **CHƯA ĐO** và giao thức phải được xử lý trước bất kỳ đánh giá nào; không thay bằng đuôi TEST cũ.
+Danh sách ứng viên theo hash đầu tiên gồm 2.000 ID, lưu ở `configs/holdout_source_audit/official_val_candidate_ids.txt`; SHA-256 của tập ID sắp xếp là `b3dfc5ab1957c8fd9bf81b09dbdb369564159493585c2172c1b0f77b79cc8fb6`. `candidate_plan.json` ghi hash nguồn và commit lập kế hoạch ban đầu `6493418c54398b58b45118266d15155db3f85dc7`. Đây là ứng viên để kiểm tra giải mã, không phải tập TEST cuối.
+
+## Kết quả kiểm tra video và khóa ID
+
+Đã stream đủ **20/20 archive chính thức**, tổng **30.354.517.239 byte nén**, tính SHA-256 trên từng luồng archive và giữ lại **1.998/2.000** video ứng viên. [Manifest của 20 archive](../configs/holdout_source_audit/archive_parts/) ghi SHA-256 của archive và từng video được giữ; [SHA256SUMS](../configs/holdout_source_audit/archive_parts/SHA256SUMS.txt) của các manifest có SHA-256 `18c42aaa54d04ce8c5440491acb9211814cf031fc20e20d32dd88347e5ded188`. Tất cả 1.000 video được chọn xuất hiện **đúng một lần** trong manifest archive với cùng kích thước và SHA-256. Hai ID trước mốc chọn thứ 1.000 không có video đọc được; chúng được ghi cùng lý do trong [preflight_selection.json](../configs/holdout_source_audit/preflight_selection.json).
+
+Lần kiểm tra cuối chạy bằng code commit `2fd930cb5273d516b461791b395b46689b778fdb`; SHA-256 [preflight_selection.json](../configs/holdout_source_audit/preflight_selection.json) là `caeb697bce1c561ccc57242356e48ceb54510431077da9ac787a5825305c465f`. Bản kiểm tra ban đầu có cùng **toàn bộ 1.000 record được chọn và danh sách thất bại**; lần cuối được chạy lại để manifest chỉ commit code đã chứa bản vá retry mạng. Lượt này chỉ đọc ID, byte video và frame đầu để kiểm tra giải mã, không đọc nhãn hay chạy analyzer.
+
+Quy tắc đã chốt chọn **1.000 source ID đầu tiên đọc được trong thứ tự hash**, mỗi source đúng một video. Fingerprint SHA-256 của tập ID đã sắp xếp: `ea86e9ba66b2fe3143a891619ae34ae036c7f065ea083f4b076b53263e9c668d`. SHA-256 [selected_ids.txt](../configs/holdout_source_audit/selected_ids.txt) là `7f4d583812cd0bc20335aeaf2f62520ad8a9c32aa8c3f7d591df39c2a1852bc4`; SHA-256 [selected_sources.json](../configs/holdout_source_audit/selected_sources.json) là `5509f8b766a9c3a51b4d8cbe2838bb62e5bbf7088d8875ce028126913d92d9f0`. Hai file này chứa ID, tên và hash video, **không chứa nhãn**. Giao của 1.000 ID với hợp 28.625 ID lịch sử bằng **0** vì chúng được chọn từ tập eligible đã trừ toàn bộ inventory và giao nguồn chính thức với các inventory cũng bằng 0.
+
+Đây là **source-disjoint trong cùng họ Kinetics-400**, không phải external-domain holdout. Kiểm toán theo ID không loại trừ một cảnh bị đổi ID hoặc re-encode trong kho lịch sử; thiếu byte đầy đủ của mọi video lịch sử nên không tuyên bố chắc chắn ở mức cảnh. Không dùng nhãn để cân bằng lớp và không thay clip theo bitrate hay kết quả Top-1.
 
 ## Điều kiện còn thiếu trước khi mở holdout
 
-1. Stream archive chính thức, giữ các video ứng viên theo ID, đối chiếu tên member với annotation và kiểm tra giải mã mà không chạy analyzer.
-2. Chọn đúng 1.000 source ID đọc được đầu tiên trong thứ tự hash đã chốt; lưu tên clip, SHA-256 video, fingerprint danh sách 1.000 ID và index nhãn Kinetics-400 đã xác minh.
-3. Commit `docs/PREREGISTRATION.md` đã điền đủ, file này và index/list cuối trước lượt đánh giá holdout đầu tiên. Sau commit đó mới chạy hai codec × ba analyzer một lần.
+1. Dùng commit khóa ID chứa file này để tạo index nhãn Kinetics-400 đã xác minh; ghi SHA-256 index và commit khóa ID vào bản preregistration.
+2. Commit `docs/PREREGISTRATION.md` hoàn chỉnh, bản cập nhật file này và index trước lượt đánh giá holdout đầu tiên. Sau khi người dùng duyệt bản khóa cuối, mới chạy hai codec × ba analyzer một lần.
 
 Các kết quả `mc3_18` trên TEST cũ và downscaling trên DEV không tham gia bước chọn 1.000 ID.

@@ -1,0 +1,590 @@
+{
+  "url": "https://s3.amazonaws.com/kinetics/400/val/part_9.tar.gz",
+  "compressed_bytes": 1527227822,
+  "compressed_sha256": "11144ceebeb1b07ed010daa357815f2d5edb2e2c28c91d7d9993c67cf6a9d616",
+  "members_seen": 1000,
+  "retained": [
+    {
+      "source_id": "UIBh572A7oA",
+      "filename": "UIBh572A7oA_000098_000108.mp4",
+      "bytes": 593844,
+      "sha256": "0f76e16edfc7347373e741dda7f4b541658985421d64b743fcede50ee46de209"
+    },
+    {
+      "source_id": "Sff3YVASTkA",
+      "filename": "Sff3YVASTkA_000125_000135.mp4",
+      "bytes": 1215018,
+      "sha256": "c96ad3cf541aaa434143922cf5bc587571494c117e9332bd93c74b7ff052ce8b"
+    },
+    {
+      "source_id": "UBwqZVYdaLo",
+      "filename": "UBwqZVYdaLo_000006_000016.mp4",
+      "bytes": 1274258,
+      "sha256": "2cfca9f88a98240601fb6041c721d6ba9564f1f2377485c8cc2333c6a0cb1667"
+    },
+    {
+      "source_id": "RzSZUa7Myc0",
+      "filename": "RzSZUa7Myc0_000327_000337.mp4",
+      "bytes": 417130,
+      "sha256": "2806418c90a877130966ff7459317c7b3c0b6cfcdb1a43a41bc6ba6b8e1a4928"
+    },
+    {
+      "source_id": "T1Zzd_6eo8w",
+      "filename": "T1Zzd_6eo8w_000006_000016.mp4",
+      "bytes": 725172,
+      "sha256": "e5765665c3dabefccaaab8d9f49e6b9deabc7d318b211dd6e42651d144468446"
+    },
+    {
+      "source_id": "RI_zqr3ZDhk",
+      "filename": "RI_zqr3ZDhk_000002_000012.mp4",
+      "bytes": 1781748,
+      "sha256": "4646420de2ce91c7e71ba1ef61764ee752fd35e2ba07cf7005d8cf990138482d"
+    },
+    {
+      "source_id": "Rqt_9QVfvec",
+      "filename": "Rqt_9QVfvec_000023_000033.mp4",
+      "bytes": 355125,
+      "sha256": "557586a6adbef5541c1f172e794ee0cd8ae9d78e0009e47ae8696f7b12df6e8c"
+    },
+    {
+      "source_id": "TsbgnTL4vfM",
+      "filename": "TsbgnTL4vfM_000118_000128.mp4",
+      "bytes": 2092198,
+      "sha256": "1e9caba755371af7894dc62d88223478819cd6cd3ce57b0a567453b79b6f75f1"
+    },
+    {
+      "source_id": "ROnZVxdQlMI",
+      "filename": "ROnZVxdQlMI_000059_000069.mp4",
+      "bytes": 748665,
+      "sha256": "a009a3faefc8963a67d9c1e9b2a69550961077ca320f6abf0c48bd627672dd96"
+    },
+    {
+      "source_id": "T8ZVEf34K94",
+      "filename": "T8ZVEf34K94_000091_000101.mp4",
+      "bytes": 1016774,
+      "sha256": "e6ca1d3319295322bc24e8e505e0dc648d6180529686ba3c2199eac131969afc"
+    },
+    {
+      "source_id": "S8sXdqGwrAg",
+      "filename": "S8sXdqGwrAg_000030_000040.mp4",
+      "bytes": 1345707,
+      "sha256": "705067fcd87e18b3b06f22251d039425847139e6bd9c6ea4ca95f5e0b2401904"
+    },
+    {
+      "source_id": "SKKrGB_WLsE",
+      "filename": "SKKrGB_WLsE_000206_000216.mp4",
+      "bytes": 2680143,
+      "sha256": "52db26b43d306c40a53af8328aa805f1791d83a5933d301616ca2b8ea72b6632"
+    },
+    {
+      "source_id": "U7uqHiP55oo",
+      "filename": "U7uqHiP55oo_000152_000162.mp4",
+      "bytes": 510884,
+      "sha256": "b1bbf576b20f1a61322ee81b2090ca8600d522a8a2e04c791fba7322caa213a2"
+    },
+    {
+      "source_id": "RSFPNoAqd2w",
+      "filename": "RSFPNoAqd2w_000055_000065.mp4",
+      "bytes": 876077,
+      "sha256": "3d1704b7827015017bbdb4a3c1d16c9b9fa8f3d384e7c1c2571b2562fb8f4599"
+    },
+    {
+      "source_id": "STS-nvgZWWM",
+      "filename": "STS-nvgZWWM_000011_000021.mp4",
+      "bytes": 404433,
+      "sha256": "144e0602cda419d274544a70b5a8b4f1fa6f1b1f58a1a7e3ff10feda7b4dc018"
+    },
+    {
+      "source_id": "TPUC9BMKDVY",
+      "filename": "TPUC9BMKDVY_000218_000228.mp4",
+      "bytes": 906167,
+      "sha256": "b5e3f1c872891da05d9277c26e7f0a1a08a4111a7bb81e08d6b56e639703644e"
+    },
+    {
+      "source_id": "TKyLZ-iODkM",
+      "filename": "TKyLZ-iODkM_000085_000095.mp4",
+      "bytes": 4337530,
+      "sha256": "a4024cd8f7659ee8d430f886ad715d84666609ba08eb32db54ebd0474b212558"
+    },
+    {
+      "source_id": "RtDDK_Q-Qrw",
+      "filename": "RtDDK_Q-Qrw_000001_000011.mp4",
+      "bytes": 720945,
+      "sha256": "509d4b3d4e9f7da6cef1e24e139375ed00f1d9c315f51f925f577dde304941b1"
+    },
+    {
+      "source_id": "T97WL2cKD6M",
+      "filename": "T97WL2cKD6M_000015_000025.mp4",
+      "bytes": 326726,
+      "sha256": "81d7f6c18dc1773d8460dfeb8881d648ba2b6a06be174518d0fd01a06f539266"
+    },
+    {
+      "source_id": "SCCwinI-9gA",
+      "filename": "SCCwinI-9gA_000002_000012.mp4",
+      "bytes": 2800008,
+      "sha256": "e28a16d6e7134e6c0bed918393e8f463eeccf55da946144b6b8d1bb0132ce3db"
+    },
+    {
+      "source_id": "SGp4zW--_rY",
+      "filename": "SGp4zW--_rY_000179_000189.mp4",
+      "bytes": 1133055,
+      "sha256": "475bde251229c318e021b777f5eac5f045b06ac1340a236edb5a061b3ad173fa"
+    },
+    {
+      "source_id": "U1TgcKdAa7s",
+      "filename": "U1TgcKdAa7s_000024_000034.mp4",
+      "bytes": 1017248,
+      "sha256": "17f05e37f912491815632526fcb8efdfb705867b790a0acdb9d627e5fecb672f"
+    },
+    {
+      "source_id": "TelmEV6gyBA",
+      "filename": "TelmEV6gyBA_000043_000053.mp4",
+      "bytes": 1084636,
+      "sha256": "5a8f971d31ee1a622e738aae9baf885b329defac7a218d66c142344a6ff00ee5"
+    },
+    {
+      "source_id": "RdamAcdVqpM",
+      "filename": "RdamAcdVqpM_000010_000020.mp4",
+      "bytes": 510233,
+      "sha256": "7cb4392da385584dbf3f9bc6f7e930a1bcb5531fdd877c8add7b4df61d1f0f84"
+    },
+    {
+      "source_id": "Rpoud452BOY",
+      "filename": "Rpoud452BOY_000041_000051.mp4",
+      "bytes": 720994,
+      "sha256": "9eed660788935a7c4d07a8fa3d48ff405b486b0f351340321bcc471c759a4f53"
+    },
+    {
+      "source_id": "TlPB2ZIfe3o",
+      "filename": "TlPB2ZIfe3o_000198_000208.mp4",
+      "bytes": 6745189,
+      "sha256": "5ce81f091ce836d1c1865dc52c1201c0b87e36bfc148c32c8bddb82a192a272a"
+    },
+    {
+      "source_id": "UBpjzW3sfDY",
+      "filename": "UBpjzW3sfDY_000003_000013.mp4",
+      "bytes": 654711,
+      "sha256": "4dcd53d9109d41a7bc51fe11881d3462395044f6d080216c4bc11b6cff3bdbcb"
+    },
+    {
+      "source_id": "T69-7T9DomU",
+      "filename": "T69-7T9DomU_000077_000087.mp4",
+      "bytes": 532137,
+      "sha256": "75099d822d43ad43825a8fa6923f8cbe7e9c1f421e3be6bdd9dbb67feafab4e4"
+    },
+    {
+      "source_id": "S7uOf9mBFR4",
+      "filename": "S7uOf9mBFR4_000031_000041.mp4",
+      "bytes": 408316,
+      "sha256": "e975fa864423472cdbdaf335615d6d09987c7fb62ba19567fab1ed0ad841fa95"
+    },
+    {
+      "source_id": "U6emWTjz4gE",
+      "filename": "U6emWTjz4gE_000195_000205.mp4",
+      "bytes": 2701715,
+      "sha256": "cf773467885b755452dbcd9aa587ad004c6b4ac9edadd40c3e292dc433633806"
+    },
+    {
+      "source_id": "S7N6GWfVnMw",
+      "filename": "S7N6GWfVnMw_000014_000024.mp4",
+      "bytes": 927509,
+      "sha256": "84dfdc09b2766618e3db56f7b215505d5b77dc5086359bdd220702fc870d7f32"
+    },
+    {
+      "source_id": "SCgNSfmR7n4",
+      "filename": "SCgNSfmR7n4_000040_000050.mp4",
+      "bytes": 1215668,
+      "sha256": "fd64ee01ea90aeddd31dbfc7388b268f85334224ed5f89e44840a50dc36261fd"
+    },
+    {
+      "source_id": "RTQvpQx4LYs",
+      "filename": "RTQvpQx4LYs_000004_000014.mp4",
+      "bytes": 392595,
+      "sha256": "97bf0575fee09683dce46261a456286f5003fdcb41ab10674b427ea2e837b2f1"
+    },
+    {
+      "source_id": "UK9r7mu9A-s",
+      "filename": "UK9r7mu9A-s_000483_000493.mp4",
+      "bytes": 3339860,
+      "sha256": "7235300a1f6c8847057e2f26db70c5d75e588819213b4256c957b8257a1e59c1"
+    },
+    {
+      "source_id": "TyWiE--4zpM",
+      "filename": "TyWiE--4zpM_000323_000333.mp4",
+      "bytes": 1833592,
+      "sha256": "1c06353e81bcad7796869677423552eb0fe48a8a509e0954b1a62a07f080cfbf"
+    },
+    {
+      "source_id": "TWmdOEATyG4",
+      "filename": "TWmdOEATyG4_000018_000028.mp4",
+      "bytes": 526754,
+      "sha256": "089f39c385d3fadf3f393054a2eda1427e013db04e61ec7c82e5850f8f54355b"
+    },
+    {
+      "source_id": "TivdDgi6sXE",
+      "filename": "TivdDgi6sXE_000003_000013.mp4",
+      "bytes": 1011863,
+      "sha256": "a847a82e38039b9f29919f9c176da6991d05ebbe7854b291b6dc0ee2b1fb6b0f"
+    },
+    {
+      "source_id": "T3nHYMukZM4",
+      "filename": "T3nHYMukZM4_000000_000010.mp4",
+      "bytes": 545340,
+      "sha256": "ceb69e7cbbebf8eabb173f5d4a4463fbc0a279972bf4ca9c1838b10b56da49fd"
+    },
+    {
+      "source_id": "U9zVE_D9kRI",
+      "filename": "U9zVE_D9kRI_000003_000013.mp4",
+      "bytes": 2395031,
+      "sha256": "98e5d6a6f0e0906381de4bd5dff4d553c606ddb164e54da732bfc1ea3bc8673a"
+    },
+    {
+      "source_id": "TrgEFiyajaE",
+      "filename": "TrgEFiyajaE_000176_000186.mp4",
+      "bytes": 806113,
+      "sha256": "b44218703e599ff2933ae171fdef722d745178fabe87210da1b699df54b8f2af"
+    },
+    {
+      "source_id": "RUGkk5BguZg",
+      "filename": "RUGkk5BguZg_000013_000023.mp4",
+      "bytes": 4005061,
+      "sha256": "73703f5f0dc4f9e4137fcdfab8e606a6eb35ba00c2c068f6b4df9f23de26ec15"
+    },
+    {
+      "source_id": "S1fQycdwCGU",
+      "filename": "S1fQycdwCGU_000004_000014.mp4",
+      "bytes": 425024,
+      "sha256": "fe0870675250b1bb7addc14d81634779b64b91aea610c642d16d40760999cad2"
+    },
+    {
+      "source_id": "TYswWLWSFcY",
+      "filename": "TYswWLWSFcY_000045_000055.mp4",
+      "bytes": 5621392,
+      "sha256": "0a130fa55e9a2495d68c12e67c02ff0620f4443fc325d2022196f36710f2c19c"
+    },
+    {
+      "source_id": "SJT3X4weECE",
+      "filename": "SJT3X4weECE_000056_000066.mp4",
+      "bytes": 675464,
+      "sha256": "ebfefff1c0ada95b9779d5d3d0881086cc35920e7a11a6e62a0bfc12cd503d2e"
+    },
+    {
+      "source_id": "RnktUd6GQKs",
+      "filename": "RnktUd6GQKs_000153_000163.mp4",
+      "bytes": 685452,
+      "sha256": "771a174bdf64980fa9d16c8580c79557c30076ba03ad17e6f78bf8c5792d7e16"
+    },
+    {
+      "source_id": "SMYnr3k6QjQ",
+      "filename": "SMYnr3k6QjQ_000052_000062.mp4",
+      "bytes": 3034341,
+      "sha256": "bc6781d46191f896414f1bb0edf92f1428362ae0a99f1509cf3d1d7e52eac0aa"
+    },
+    {
+      "source_id": "TZ742md0dsQ",
+      "filename": "TZ742md0dsQ_000023_000033.mp4",
+      "bytes": 717684,
+      "sha256": "0f97910b703e3e210fe20235e48efec91c1818057bb1ecef589e1c19b3254b14"
+    },
+    {
+      "source_id": "TWDGO5E3jQw",
+      "filename": "TWDGO5E3jQw_000006_000016.mp4",
+      "bytes": 423365,
+      "sha256": "fbba53870f7da9e29d7ac86fa622c252bee11f4d52ddb5b6ff951533614fb770"
+    },
+    {
+      "source_id": "T2_sXGK3ZJA",
+      "filename": "T2_sXGK3ZJA_000003_000013.mp4",
+      "bytes": 305143,
+      "sha256": "7f5fc5e0acf20dbc27b682563e73d80b4bfad2876f9bb066f7da6d4a23034349"
+    },
+    {
+      "source_id": "RYns_nLvZYo",
+      "filename": "RYns_nLvZYo_000944_000954.mp4",
+      "bytes": 2733946,
+      "sha256": "a8ed2cc56f6fdaeb0362c17d05dc40bd0b6480879a628a9bb1476d58bad2fa4a"
+    },
+    {
+      "source_id": "SRyVKfynpEM",
+      "filename": "SRyVKfynpEM_000010_000020.mp4",
+      "bytes": 407575,
+      "sha256": "fb6a12610e936238dc204da265efc1150d4fef73233924a0a2c36b9d676f458d"
+    },
+    {
+      "source_id": "SgGVnt1K8_M",
+      "filename": "SgGVnt1K8_M_000002_000012.mp4",
+      "bytes": 2576814,
+      "sha256": "fbbac11cf420fe87c5c4146f37bf52c2dace24fd0b1181b58311456144c640bc"
+    },
+    {
+      "source_id": "TW5L62wvnHo",
+      "filename": "TW5L62wvnHo_000752_000762.mp4",
+      "bytes": 1124167,
+      "sha256": "28adb5232c64b1b67a9b9e62588318d873d4643c4e872aa0f167ecfbc30c0f48"
+    },
+    {
+      "source_id": "SvhKWMPUnrs",
+      "filename": "SvhKWMPUnrs_000081_000091.mp4",
+      "bytes": 1793827,
+      "sha256": "44dae31795bfdd5b06f42ca8c435bb2c601b990ea093b3456d7d7fff9774ddd2"
+    },
+    {
+      "source_id": "RsKWxtQRseg",
+      "filename": "RsKWxtQRseg_000122_000132.mp4",
+      "bytes": 3893241,
+      "sha256": "6bc024d7dac955cf8b66060fdd872893622998ff67dc07e3cf2d9f99aa2c7cce"
+    },
+    {
+      "source_id": "RLsCOVZdpjQ",
+      "filename": "RLsCOVZdpjQ_000186_000196.mp4",
+      "bytes": 1000449,
+      "sha256": "3956b063d361f2efee39e03904c57b496138db8fa21508e9ad5e233f4938026f"
+    },
+    {
+      "source_id": "S72rhDECjqg",
+      "filename": "S72rhDECjqg_000088_000098.mp4",
+      "bytes": 582564,
+      "sha256": "6dfb900b6c88c1fb55ba3b8b03752c1624e8d9af790e93f967bc07538dae47db"
+    },
+    {
+      "source_id": "SOrv-rX3Xmo",
+      "filename": "SOrv-rX3Xmo_000013_000023.mp4",
+      "bytes": 418990,
+      "sha256": "d303a8b3e27a66b4c186f343df7a1a71a635bff299513bb073e86b0bbef75078"
+    },
+    {
+      "source_id": "Re7HnlVTrqA",
+      "filename": "Re7HnlVTrqA_000175_000185.mp4",
+      "bytes": 4921240,
+      "sha256": "e994755218ec9b7fb704b32572ba0e04d6a877e330971acd0853362e572073b9"
+    },
+    {
+      "source_id": "STfNHm18eL4",
+      "filename": "STfNHm18eL4_000003_000013.mp4",
+      "bytes": 1415063,
+      "sha256": "d53b857d23163f4833c7a5d48c47aae4790a3894719c19ccf9e648fe063db793"
+    },
+    {
+      "source_id": "SkLHP01gnYA",
+      "filename": "SkLHP01gnYA_000015_000025.mp4",
+      "bytes": 277671,
+      "sha256": "30558622b9ed09c0c834a1ad9b18ad5f3b4ce844753af5928333551dd165346d"
+    },
+    {
+      "source_id": "SAY7B3MTE6Y",
+      "filename": "SAY7B3MTE6Y_000046_000056.mp4",
+      "bytes": 1469270,
+      "sha256": "651cdd41dadb62c636b284022e52c167aad085ba9d8de8c4a65859c0063d5c4b"
+    },
+    {
+      "source_id": "T5swxGOG2KY",
+      "filename": "T5swxGOG2KY_000004_000014.mp4",
+      "bytes": 435468,
+      "sha256": "ccb10bf442b4149028ff96c7a6bfd109af6ff822cb8e5382b113fd54df527ca1"
+    },
+    {
+      "source_id": "RsiyfT6ursA",
+      "filename": "RsiyfT6ursA_000019_000029.mp4",
+      "bytes": 3813496,
+      "sha256": "0700d1bf231308addf71aab4081dc4768eb1f6bf7f3c5afe7eb994dae320736d"
+    },
+    {
+      "source_id": "Rq9Snez4c_0",
+      "filename": "Rq9Snez4c_0_000230_000240.mp4",
+      "bytes": 1944508,
+      "sha256": "b94ea71a61d88bddfd713c7ce5516ca8845b9e96390f1864dc71cf390062720d"
+    },
+    {
+      "source_id": "SXk_o2WnEJw",
+      "filename": "SXk_o2WnEJw_000000_000010.mp4",
+      "bytes": 2882766,
+      "sha256": "8d2cbaf3bfba4cc009d3decaf7548aea9239f11894366bc06230390306af68fb"
+    },
+    {
+      "source_id": "TNkot064mgY",
+      "filename": "TNkot064mgY_000007_000017.mp4",
+      "bytes": 1016057,
+      "sha256": "cc36715bc2d11a96935b9654b65f87fca5fea2afe97e1a1d72858137b47cd2c7"
+    },
+    {
+      "source_id": "RZKv4wa64no",
+      "filename": "RZKv4wa64no_000377_000387.mp4",
+      "bytes": 5392185,
+      "sha256": "9264254e9812572ab289a052527b6ea133d777325a51c18429cc4e2794ca345e"
+    },
+    {
+      "source_id": "SwxIDPITYtg",
+      "filename": "SwxIDPITYtg_000070_000080.mp4",
+      "bytes": 969278,
+      "sha256": "8b699037fbab1405443fb5e1d45e02a4d3060b62f29900b4d42abb2686c15dfb"
+    },
+    {
+      "source_id": "Saln9xBX_NE",
+      "filename": "Saln9xBX_NE_000148_000158.mp4",
+      "bytes": 2613170,
+      "sha256": "a19641344c333caf2bdd60d8e19d9dcbdef928c777f8c8d9654d2034435eb435"
+    },
+    {
+      "source_id": "RPlMCAibE8c",
+      "filename": "RPlMCAibE8c_000339_000349.mp4",
+      "bytes": 1250218,
+      "sha256": "dd8ecfcb561da83b2713c09b0693f3317130af49a6cc82e79fbe6f335aeb2778"
+    },
+    {
+      "source_id": "Ss-LZsjZRH8",
+      "filename": "Ss-LZsjZRH8_000005_000015.mp4",
+      "bytes": 390580,
+      "sha256": "976013ed57777b0913a13aa2f867cf633965fe28da5874a516866f8d3cb4287a"
+    },
+    {
+      "source_id": "U1-9Zhid0rs",
+      "filename": "U1-9Zhid0rs_000110_000120.mp4",
+      "bytes": 6344608,
+      "sha256": "7cf526d5e6f691397467ed8aac67e79f74687251ec7bc27b0900409a92446cd5"
+    },
+    {
+      "source_id": "SmUy9KN9PeY",
+      "filename": "SmUy9KN9PeY_000102_000112.mp4",
+      "bytes": 2691482,
+      "sha256": "1e37f42b6e5e34a064af1e0fcdcf1a94551ccb46f7cda563e978b1aef825aa03"
+    },
+    {
+      "source_id": "Tf8UWEa5zbc",
+      "filename": "Tf8UWEa5zbc_000196_000206.mp4",
+      "bytes": 826794,
+      "sha256": "db926a2082ca024c004bfbf0e3820c9f820339f2430b88f8004642fc06d6e7b5"
+    },
+    {
+      "source_id": "RMahlVAEt8U",
+      "filename": "RMahlVAEt8U_000038_000048.mp4",
+      "bytes": 3219662,
+      "sha256": "460b29ef0997a18df9c0e552f5cfdb2b4482ddaf33e22467408a1812e2108ead"
+    },
+    {
+      "source_id": "U6THcz2Qt3Q",
+      "filename": "U6THcz2Qt3Q_000199_000209.mp4",
+      "bytes": 3372880,
+      "sha256": "0d6a42d93889036817e836a8a19d6022c201e07300fab797c7126cf8e24f67a2"
+    },
+    {
+      "source_id": "Rfihil7FhJ0",
+      "filename": "Rfihil7FhJ0_000000_000010.mp4",
+      "bytes": 3285638,
+      "sha256": "57a53134a4b73ddadb48a2d205afb064e7b6e7e6dbec85f5a7a25d433f5263a7"
+    },
+    {
+      "source_id": "TgNlb96kMC8",
+      "filename": "TgNlb96kMC8_000532_000542.mp4",
+      "bytes": 741308,
+      "sha256": "4b9685bcd5cd9c716f50ca8f75198543ba92696c5611a0c3536f640d0a570818"
+    },
+    {
+      "source_id": "TPaAsf45awI",
+      "filename": "TPaAsf45awI_000018_000028.mp4",
+      "bytes": 420972,
+      "sha256": "4675c8fedf1e812e55b53d30dd1f3103d8cd8aa225fad45145518e3d7fcce95e"
+    },
+    {
+      "source_id": "U9ulxegfHko",
+      "filename": "U9ulxegfHko_000025_000035.mp4",
+      "bytes": 3113716,
+      "sha256": "b386366ca7a62969f16127a792fe57ea7276881dbeef1882b6077f3848bb714b"
+    },
+    {
+      "source_id": "Tmr3oMQrQik",
+      "filename": "Tmr3oMQrQik_000052_000062.mp4",
+      "bytes": 1025918,
+      "sha256": "a93a5bc12c516551a5f802cf924ae4f08bd83953878a234ebf3ab6e5ba1599ca"
+    },
+    {
+      "source_id": "RSaClwb3VtM",
+      "filename": "RSaClwb3VtM_000080_000090.mp4",
+      "bytes": 482707,
+      "sha256": "bc49f1944c4a4736223c46bfeef87791907d31ed6ed907e8ff38b3ec673509ec"
+    },
+    {
+      "source_id": "SUxNeqHvUkg",
+      "filename": "SUxNeqHvUkg_000006_000016.mp4",
+      "bytes": 1123313,
+      "sha256": "1eae5ac69e5a4b690e064b83eb602092f15818f55bf91195248c712134d8a99c"
+    },
+    {
+      "source_id": "Rgq23X-xnc0",
+      "filename": "Rgq23X-xnc0_000239_000249.mp4",
+      "bytes": 1056923,
+      "sha256": "dcd611533e2690915d1ac7775c39aa7b4015945b0f1aeadf8fd4b5149ba9b8c4"
+    },
+    {
+      "source_id": "RLYzsL-bk_Y",
+      "filename": "RLYzsL-bk_Y_000004_000014.mp4",
+      "bytes": 2419268,
+      "sha256": "096ff2382337f9fab313e37fec7c5a9f1c68dc7cc3a9c7c1014c7b7d06c3d1c0"
+    },
+    {
+      "source_id": "Re9Ek656Ka8",
+      "filename": "Re9Ek656Ka8_000021_000031.mp4",
+      "bytes": 3876818,
+      "sha256": "17926b86bb5d0115eb0898cf0275fa6b72567e85b9d8b60c4d05c3c731a2f80b"
+    },
+    {
+      "source_id": "S7AxMyAOQCc",
+      "filename": "S7AxMyAOQCc_000031_000041.mp4",
+      "bytes": 1309685,
+      "sha256": "3b958094351f8210540e3f5b038d2a731e839b4881ea8f1c91eab310bf9784b2"
+    },
+    {
+      "source_id": "TSHY23SOf5U",
+      "filename": "TSHY23SOf5U_000104_000114.mp4",
+      "bytes": 638531,
+      "sha256": "f4282fc3988bfc5b8a26f179f11bbce2f2c3175c3e6dcbf445cb142e34203f33"
+    },
+    {
+      "source_id": "RpBJ9ymW6Dg",
+      "filename": "RpBJ9ymW6Dg_000058_000068.mp4",
+      "bytes": 1377348,
+      "sha256": "3ccc764caf1a9a65c496dc4594589a11534816e9d0b22ab22019a059dcf8ccc2"
+    },
+    {
+      "source_id": "SBnWW6zj4Rg",
+      "filename": "SBnWW6zj4Rg_000031_000041.mp4",
+      "bytes": 1168347,
+      "sha256": "160b4a109d70f4efa86fc03504da12ff7e8777a3e0290a16873fb3c25bc6405b"
+    },
+    {
+      "source_id": "TNCpJ0EhfjY",
+      "filename": "TNCpJ0EhfjY_000088_000098.mp4",
+      "bytes": 836082,
+      "sha256": "f67cd67a29fd5ed23c20c4441e54ccede63d4f0f2c54c69eae8190213568ed1e"
+    },
+    {
+      "source_id": "S-EKsrJFMpk",
+      "filename": "S-EKsrJFMpk_000027_000037.mp4",
+      "bytes": 334998,
+      "sha256": "0108be82217142ff2d80b9b7a8851c2703f58693603ac6fec05dc8d2ef28c936"
+    },
+    {
+      "source_id": "SKZqCF74dao",
+      "filename": "SKZqCF74dao_000015_000025.mp4",
+      "bytes": 705447,
+      "sha256": "8278fde02053e9d5715dda44d11e41951761d254c282bb544f390753cefb5f92"
+    },
+    {
+      "source_id": "RGNDT-pUWyU",
+      "filename": "RGNDT-pUWyU_000085_000095.mp4",
+      "bytes": 643734,
+      "sha256": "a84879c6b9fb72f08f85e8827c9cd2952d8abc80bce4c7991565c88e0def8387"
+    },
+    {
+      "source_id": "RtqAxHQ2oLg",
+      "filename": "RtqAxHQ2oLg_000001_000011.mp4",
+      "bytes": 1628335,
+      "sha256": "5caa449cf5e7dce054f9cc85329d2b4ca164f6f6ec01616641c1b42895a1921c"
+    },
+    {
+      "source_id": "TApj5pZpIbw",
+      "filename": "TApj5pZpIbw_000113_000123.mp4",
+      "bytes": 2967731,
+      "sha256": "72904025ec03664d8d6d44176519856bd8229fef3423f74c625db55eae1f0dc7"
+    }
+  ]
+}
