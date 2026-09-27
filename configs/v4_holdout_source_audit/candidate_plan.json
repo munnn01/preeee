@@ -1,0 +1,37 @@
+{
+  "status": "metadata_only",
+  "source": "official CVDF Kinetics-400 validation",
+  "salt": "v4-source-holdout-20260927",
+  "annotation_sha256": "358eaf47e7f80ebf9b17d49eb0635ad5e0fdab98a9cbd75ffdd2ee5d5e5b6944",
+  "archive_path_list_sha256": "7c75bab47da18ba747e8bdd826bec9139672336fd3431caa71ff563473080e77",
+  "legacy_inventories": [
+    {
+      "path": "kineticscleaned_source_inventory.json",
+      "sha256": "5b20994cb225eba604b0446cb166e19fbb118891aff787401eda4539cd03a045"
+    },
+    {
+      "path": "rohanmallick_kinetics_source_inventory.json",
+      "sha256": "4af8f090d153667e0e0db34f5ccfb5cc49c9370fc168ba8e456330424379bb62"
+    }
+  ],
+  "development_manifest_sha256": "c0d1b50d941c790803e1281a5634058f165aa7329ac2849825559635e17d6e67",
+  "development_source_count": 800,
+  "development_source_fingerprints": {
+    "fit": "4c12443af5c0ef44dc5143217ab00b146e0d9090607c49393487d5decd4e4bb1",
+    "calibration": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "dev": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258"
+  },
+  "v2_holdout_ids_sha256": "7f4d583812cd0bc20335aeaf2f62520ad8a9c32aa8c3f7d591df39c2a1852bc4",
+  "v2_holdout_source_count": 1000,
+  "official_source_count": 19906,
+  "historical_source_count": 28625,
+  "official_historical_overlap": 0,
+  "official_development_overlap": 0,
+  "official_v2_holdout_overlap": 1000,
+  "eligible_source_count": 18906,
+  "eligible_source_fingerprint": "ae708989d7dd133fa4ba1176baaa97cd0e76e676abbcbbd02b3b86e54f107def",
+  "candidate_limit": 2000,
+  "target": 1000,
+  "candidate_ids_fingerprint": "a8804ab6a1f390054f39303d4580f83e273dab3d20a4434ecded8c6357691368",
+  "code_commit": "944de5a24f75f2c65a23ffb03e66e036b73c18c2"
+}
