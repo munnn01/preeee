@@ -1,0 +1,417 @@
+#!/usr/bin/env python
+"""One-shot V4 confirmation on a new, committed source-disjoint holdout.
+
+Primary shards encode all six candidates and score the two development
+analyzers. Independent mc3 shards score only identity and the already selected
+V4 stream. Merge builds whole-1,000-source curves before bootstrap.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import platform
+import subprocess
+import time
+from pathlib import Path
+
+import cv2
+import numpy as np
+import torch
+import torchvision
+
+from ops.codec_search_ar import QPS
+from ops.dual_codec_search import (bootstrap, collect, digest, metrics, prepare,
+                                   selected_arrays, validate_row, write_json)
+from ops.dual_codec_search_confirm_1000 import CONFIG as V2_CONFIG, load_frozen
+from ops.lock_v4_holdout import (IDS_REL, INDEX_REL, REPO, SOURCES_REL,
+                                 committed_lock, git, sha256)
+from ops.paper_heldout_mc3 import (compare as mc3_compare,
+                                   curves as mc3_curves, timed_inference)
+from ops.paper_holdout_confirm import gate_this_codec, put_manifest, write_records
+from ops.paper_validation import fixed_arrays
+from ops.prepare_v4_holdout import v2_holdout_ids
+from ops.rcts_pilot import clip_id
+from ops.v4_dev_policy import (predicted_measurements, select_probability,
+                               selected_arrays_v4)
+from ops.v4_frozen import MANIFEST, frozen_manifest, load_frozen_v4
+from src.codecs.standard import StandardCodec, ffmpeg_available
+from src.data.video_dataset import VideoClipDataset
+from src.models.codec_search import CANDIDATES, make_candidates, normalized_bpp
+from src.models.dual_codec_search import MODELS, observations, risk_features
+from src.tasks.action_recognition import ActionRecognitionAnalyzer, kinetics_categories
+
+EXPERIMENT = "v4_new_source_disjoint_holdout"
+PREREG = REPO / "docs/PREREGISTRATION_V4.md"
+SPLIT = REPO / "docs/HOLDOUT_SPLIT_V4.md"
+SEED = 20260928
+DRAWS = 2000
+BASELINES = ("area96", "area112")
+LOCKED_CODE = ("ops/paper_holdout_v4.py", "ops/v4_dev_policy.py",
+               "ops/v4_frozen.py", "ops/lock_v4_holdout.py",
+               "ops/dual_codec_search.py", "ops/paper_heldout_mc3.py",
+               "src/metrics/bd_rate.py")
+
+
+def ready_index(index_path: Path, prereg_commit: str,
+                video_root: Path) -> tuple[dict, VideoClipDataset]:
+    if (len(prereg_commit) != 40 or
+            any(c not in "0123456789abcdef" for c in prereg_commit)):
+        raise ValueError("full V4 preregistration/index commit required")
+    subprocess.run(["git", "-c", f"safe.directory={REPO.as_posix()}",
+                    "merge-base", "--is-ancestor", prereg_commit, "HEAD"],
+                   cwd=REPO, check=True)
+    frozen = frozen_manifest()
+    for rel, path in (("docs/PREREGISTRATION_V4.md", PREREG),
+                      ("docs/HOLDOUT_SPLIT_V4.md", SPLIT),
+                      (INDEX_REL, index_path),
+                      ("configs/v4_frozen/manifest.json", MANIFEST)):
+        if git("show", f"{prereg_commit}:{rel}") != path.read_bytes().replace(b"\r\n", b"\n"):
+            raise ValueError(f"V4 protocol/index differs from commit: {rel}")
+    for rel in LOCKED_CODE:
+        if git("show", f"{prereg_commit}:{rel}") != (
+                REPO / rel).read_bytes().replace(b"\r\n", b"\n"):
+            raise ValueError(f"V4 evaluation code differs from commit: {rel}")
+    index = json.loads(index_path.read_text(encoding="utf-8"))
+    meta = index["meta"]
+    ids, sources = committed_lock(meta["locked_commit"],
+                                  REPO / IDS_REL, REPO / SOURCES_REL)
+    rows = index.get("test", [])
+    if (len(rows) != 1000 or [row["source_id"] for row in rows] != ids
+            or set(ids) & v2_holdout_ids()
+            or meta["selected_source_fingerprint"] !=
+               sources["selected_source_fingerprint"]
+            or meta["selected_sources_sha256"] != sha256(REPO / SOURCES_REL)
+            or meta["clips"] != 1000):
+        raise ValueError("V4 index is not the locked new 1,000-source holdout")
+    candidate_ids = (REPO / "configs/v4_holdout_source_audit/candidate_ids.txt")
+    if (sha256(candidate_ids) != sources["candidate_ids_sha256"]
+            or not set(ids).issubset(set(candidate_ids.read_text().splitlines()))):
+        raise ValueError("V4 selected IDs are outside the locked candidate plan")
+    resolved = []
+    for row, source in zip(rows, sources["selected"]):
+        if row["path"] != f"videos/{source['filename']}":
+            raise ValueError("V4 index has changed video path")
+        path = video_root / row["path"]
+        if (not path.is_file() or path.stat().st_size != source["bytes"]
+                or sha256(path) != source["video_sha256"]):
+            raise ValueError(f"V4 video bytes differ from source lock: {row['source_id']}")
+        resolved.append(str(path.resolve()))
+    design = frozen["design"]
+    if (design["qps"] != list(QPS) or design["candidates"] != list(CANDIDATES)
+            or design["primary_analyzers"] != list(MODELS)
+            or design["transfer_analyzer"] != "mc3_18"):
+        raise ValueError("V4 codec/analyzer design changed")
+    dataset = VideoClipDataset(index_path, split="test", num_frames=design["frames"],
+                               frame_size=design["frame_size"],
+                               temporal_stride=design["temporal_stride"],
+                               train=False, return_metadata=True)
+    for row, path in zip(dataset.samples, resolved):
+        row["path"] = path
+    return design, dataset
+
+
+def manifest_base(index_path: Path, prereg_commit: str,
+                  dataset: VideoClipDataset, codec: str, shard: int) -> dict:
+    frozen = frozen_manifest()
+    cfg = frozen["codecs"][codec]
+    indices = [i for i in range(1000) if i % 2 == shard]
+    meta = json.loads(index_path.read_text(encoding="utf-8"))["meta"]
+    return {"experiment": EXPERIMENT, "codec": codec,
+            "shard": shard, "shards": 2, "n": 500,
+            "sample_ids": [clip_id(dataset.samples[i]) for i in indices],
+            "source_ids": [dataset.samples[i]["source_id"] for i in indices],
+            "source_fingerprint": meta["selected_source_fingerprint"],
+            "index_sha256": sha256(index_path),
+            "selected_sources_sha256": sha256(REPO / SOURCES_REL),
+            "preregistration_commit": prereg_commit,
+            "preregistration_sha256": sha256(PREREG),
+            "freeze_manifest_sha256": sha256(MANIFEST),
+            "dev_result_sha256": cfg["dev_result_sha256"],
+            "model_sha256": cfg["model_sha256"],
+            "v2_comparator_policy_sha256_bytes":
+            cfg["v2_comparator_policy_sha256_bytes"],
+            "v2_comparator_risk_sha256_bytes":
+            cfg["v2_comparator_risk_sha256_bytes"],
+            "policy": cfg["policy"], "policy_digest": cfg["policy_digest"],
+            "code_commit": git("rev-parse", "HEAD").decode().strip(),
+            "qps": list(QPS), "candidates": list(CANDIDATES),
+            "primary_analyzers": list(MODELS), "transfer_analyzer": "mc3_18",
+            "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+            "bootstrap_seed": SEED, "bootstrap_draws": DRAWS,
+            "inference_seed": 53,
+            "versions": {"python": platform.python_version(),
+                         "torch": torch.__version__,
+                         "torchvision": torchvision.__version__}}
+
+
+def load_shard(path: Path, stage: str, codec: str, shard: int) -> tuple[dict, list]:
+    manifest = json.loads((path / "manifest.json").read_text(encoding="utf-8"))
+    records = [json.loads(line) for line in
+               (path / "shard_records.jsonl").read_text(encoding="utf-8").splitlines()]
+    if (manifest["experiment"] != EXPERIMENT or manifest["stage"] != stage
+            or manifest["codec"] != codec or manifest["shard"] != shard
+            or len(records) != 500
+            or [row["sequence_id"] for row in records] != manifest["sample_ids"]):
+        raise ValueError("incomplete or mismatched V4 holdout shard")
+    return manifest, records
+
+
+def primary(args) -> None:
+    if not ffmpeg_available():
+        raise ValueError("ffmpeg and ffprobe required")
+    design, dataset = ready_index(args.index, args.prereg_commit, args.video_root)
+    manifest = {**manifest_base(args.index, args.prereg_commit,
+                                dataset, args.codec, args.shard),
+                "stage": "primary_six_candidate"}
+    put_manifest(args.out_dir, manifest)
+    torch.manual_seed(53)
+    torch.set_num_threads(2)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    analyzers = {name: ActionRecognitionAnalyzer(name, clip_size=112).freeze().to(device)
+                 for name in MODELS}
+    codec = StandardCodec(args.codec, preset=design["preset"], strict_decode=True)
+    indices = [i for i in range(1000) if i % 2 == args.shard]
+    rows = collect(dataset, indices, analyzers, codec, args.out_dir,
+                   "holdout_primary_v4", digest(manifest))
+    write_records(args.out_dir / "shard_records.jsonl", rows)
+    print(f"[V4 primary] {args.codec} shard={args.shard} records={len(rows)}")
+
+
+def v4_selected_index(item: dict, models: dict, policy: dict) -> int:
+    obs = observations(item["candidates"])
+    features = np.stack([risk_features(obs, i, item["qp"])
+                         for i in range(len(obs))])
+    probabilities = np.stack([models[name].predict_proba(features)[:, 1]
+                              for name in MODELS], axis=1)
+    return select_probability(obs, probabilities, item["qp"], policy)
+
+
+def evaluate_mc3_clip(dataset: VideoClipDataset, index: int, cache: dict,
+                      models: dict, policy: dict,
+                      analyzer: ActionRecognitionAnalyzer,
+                      codec: StandardCodec) -> dict:
+    source, label, meta = dataset[index]
+    if meta["sequence_id"] != cache["sequence_id"]:
+        raise ValueError("V4 primary and mc3 video IDs disagree")
+    cap = cv2.VideoCapture(dataset.samples[index]["path"])
+    ok, _ = cap.read()
+    cap.release()
+    if not ok:
+        raise ValueError(f"undecodable V4 source: {meta['sequence_id']}")
+    rgb = (source.permute(1, 2, 3, 0).numpy() * 255).round().astype(np.uint8)
+    variants = make_candidates(rgb)
+    measurements = []
+    for item in cache["measurements"]:
+        qp = item["qp"]
+        picked = v4_selected_index(item, models, policy)
+        chosen = item["candidates"][picked]
+        streams = {}
+        for arm, name in (("anchor", "identity128"), ("trial", chosen["name"])):
+            if name in streams:
+                reused = dict(streams[name])
+                reused.update({"encode_decode_s": 0.0, "inference_s": 0.0,
+                               "reused_from_anchor": True})
+                streams[arm] = reused
+                continue
+            candidate = variants[name]
+            _t, h, w, _ = candidate.shape
+            start = time.perf_counter()
+            reconstructed, native_bpp = codec._encode_decode_clip(candidate, qp=qp)
+            encode_decode_s = time.perf_counter() - start
+            prediction, inference_s = timed_inference(analyzer, reconstructed)
+            value = {"name": name, "bpp": normalized_bpp(native_bpp, h, w),
+                     "correct": bool(prediction == label),
+                     "encode_decode_s": encode_decode_s,
+                     "inference_s": inference_s,
+                     "cached_bpp": (chosen["bpp"] if arm == "trial" else
+                                    item["candidates"][0]["bpp"])}
+            streams[name] = value
+            streams[arm] = value
+        measurements.append({"qp": qp, "chosen": chosen["name"],
+                             "anchor": streams["anchor"], "trial": streams["trial"]})
+    return {"sequence_id": meta["sequence_id"], "measurements": measurements}
+
+
+def mc3(args) -> None:
+    if not ffmpeg_available():
+        raise ValueError("ffmpeg and ffprobe required")
+    design, dataset = ready_index(args.index, args.prereg_commit, args.video_root)
+    if kinetics_categories("mc3_18") != kinetics_categories("r3d_18"):
+        raise ValueError("mc3 Kinetics labels differ")
+    policy, models = load_frozen_v4(args.codec)
+    primary_manifest, primary_rows = load_shard(
+        args.primary_dir, "primary_six_candidate", args.codec, args.shard)
+    manifest = {**manifest_base(args.index, args.prereg_commit,
+                                dataset, args.codec, args.shard),
+                "stage": "independent_mc3_v4_selected_stream",
+                "primary_records_sha256": sha256(args.primary_dir / "shard_records.jsonl")}
+    for key in ("sample_ids", "source_ids", "index_sha256", "policy_digest",
+                "model_sha256", "preregistration_commit", "source_fingerprint"):
+        if primary_manifest[key] != manifest[key]:
+            raise ValueError(f"V4 mc3/primary provenance differs: {key}")
+    put_manifest(args.out_dir, manifest)
+    by_id = {row["sequence_id"]: row for row in primary_rows}
+    torch.manual_seed(53)
+    torch.set_num_threads(2)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    analyzer = ActionRecognitionAnalyzer("mc3_18", clip_size=112).freeze().to(device)
+    codec = StandardCodec(args.codec, preset=design["preset"], strict_decode=True)
+    records = []
+    for number, index in enumerate(i for i in range(1000) if i % 2 == args.shard):
+        key = clip_id(dataset.samples[index])
+        cache = by_id[key]
+        validate_row(cache, key, args.codec, digest(primary_manifest))
+        path = args.out_dir / "cache" / f"clip_{number:04d}.json"
+        if path.exists():
+            record = json.loads(path.read_text(encoding="utf-8"))
+        else:
+            record = evaluate_mc3_clip(dataset, index, cache, models, policy,
+                                       analyzer, codec)
+            for item in record["measurements"]:
+                for arm in ("anchor", "trial"):
+                    if abs(item[arm]["bpp"] - item[arm]["cached_bpp"]) > 1e-9:
+                        raise ValueError("V4 mc3 re-encode differs from primary cache")
+            write_json(path, record)
+        if record["sequence_id"] != key:
+            raise ValueError("stale V4 mc3 video cache")
+        records.append(record)
+        print(f"[V4 mc3] {args.codec} shard={args.shard} {number + 1}/500",
+              flush=True)
+    write_records(args.out_dir / "shard_records.jsonl", records)
+
+
+def merged_rows(paths: list[Path], stage: str, codec: str,
+                expected: dict) -> tuple[list, list]:
+    if len(paths) != 2:
+        raise ValueError("exactly two V4 shard directories required")
+    bundles = [load_shard(path, stage, codec, shard)
+               for shard, path in enumerate(paths)]
+    for shard, (manifest, _) in enumerate(bundles):
+        for key in ("index_sha256", "preregistration_commit", "source_fingerprint",
+                    "policy_digest", "freeze_manifest_sha256", "model_sha256",
+                    "bootstrap_seed", "bootstrap_draws"):
+            if manifest[key] != expected[key]:
+                raise ValueError(f"V4 shard provenance mismatch: {key}")
+        if (manifest["sample_ids"] != expected["all_sample_ids"][shard::2]
+                or manifest["source_ids"] != expected["all_source_ids"][shard::2]):
+            raise ValueError("V4 shard IDs differ from locked index")
+    by_id = {row["sequence_id"]: row for _, rows in bundles for row in rows}
+    if len(by_id) != 1000:
+        raise ValueError("V4 merge requires 1,000 distinct sources")
+    return [by_id[key] for key in expected["all_sample_ids"]], [m for m, _ in bundles]
+
+
+def summarize_mc3_v4(records: list[dict]) -> dict:
+    anchor, trial = mc3_curves(records)
+    point = mc3_compare(anchor, trial)
+    rng = np.random.default_rng(SEED)
+    samples = {key: [] for key in ("bd_rate_top1_pct", "bd_accuracy_top1_pp")}
+    for _ in range(DRAWS):
+        picked = [records[i] for i in rng.integers(0, len(records), len(records))]
+        a, b = mc3_curves(picked)
+        metric = mc3_compare(a, b)
+        for key, values in samples.items():
+            if np.isfinite(metric[key]):
+                values.append(metric[key])
+    intervals = {key: {"valid_draws": len(values), "requested_draws": DRAWS,
+                       "ci95": np.percentile(values, [2.5, 97.5]).tolist()
+                       if values else None}
+                 for key, values in samples.items()}
+    return {"n": len(records), "model": "mc3_18", "anchor_curve": anchor,
+            "trial_curve": trial, "metrics": point, "bootstrap": intervals,
+            "bootstrap_seed": SEED,
+            "bootstrap_unit": "source video; QPs and arms paired"}
+
+
+def merge(args) -> None:
+    _design, dataset = ready_index(args.index, args.prereg_commit, args.video_root)
+    policy, models = load_frozen_v4(args.codec)
+    config = json.loads(V2_CONFIG.read_text(encoding="utf-8"))
+    state, _frozen, old_policy = load_frozen(args.codec, config)
+    expected = {**manifest_base(args.index, args.prereg_commit,
+                                 dataset, args.codec, 0),
+                "all_sample_ids": [clip_id(row) for row in dataset.samples],
+                "all_source_ids": [row["source_id"] for row in dataset.samples]}
+    primary_rows, primary_manifests = merged_rows(
+        args.primary_dir, "primary_six_candidate", args.codec, expected)
+    mc3_rows, mc3_manifests = merged_rows(
+        args.mc3_dir, "independent_mc3_v4_selected_stream", args.codec, expected)
+    if [r["sequence_id"] for r in primary_rows] != [r["sequence_id"] for r in mc3_rows]:
+        raise ValueError("V4 primary and mc3 videos are not paired")
+    old_prepared = prepare(primary_rows, state)
+    identity, _ = selected_arrays(old_prepared, {"mode": "identity"})
+    old, old_choices = selected_arrays(old_prepared, old_policy)
+    prepared = predicted_measurements(primary_rows, models)
+    new, new_choices = selected_arrays_v4(prepared, policy)
+    for raw, independent in zip(primary_rows, mc3_rows):
+        for item, check in zip(raw["measurements"], independent["measurements"]):
+            chosen = item["candidates"][v4_selected_index(item, models, policy)]["name"]
+            if check["qp"] != item["qp"] or check["chosen"] != chosen:
+                raise ValueError("mc3 stream differs from V4 frozen selection")
+    arms = {"V2-C": (old, old_choices), "V4": (new, new_choices)}
+    for name in BASELINES:
+        arms[name] = fixed_arrays(primary_rows, name)
+    comparisons = {}
+    for name, (array, choices) in arms.items():
+        comparisons[f"{name}_vs_identity"] = {
+            "analyzers": metrics(identity, array),
+            "bootstrap": bootstrap(identity, array, DRAWS, SEED),
+            "choices": choices}
+    comparisons["V4_vs_V2-C"] = {"analyzers": metrics(old, new),
+                                  "bootstrap": bootstrap(old, new, DRAWS, SEED)}
+    for name in BASELINES:
+        comparisons[f"V4_vs_{name}"] = {
+            "analyzers": metrics(arms[name][0], new),
+            "bootstrap": bootstrap(arms[name][0], new, DRAWS, SEED)}
+    report = {"experiment": EXPERIMENT, "codec": args.codec, "n": 1000,
+              "source_fingerprint": expected["source_fingerprint"],
+              "index_sha256": expected["index_sha256"],
+              "freeze_manifest_sha256": expected["freeze_manifest_sha256"],
+              "preregistration_commit": args.prereg_commit,
+              "analysis_code_commit": git("rev-parse", "HEAD").decode().strip(),
+              "bootstrap_unit": expected["bootstrap_unit"],
+              "bootstrap_seed": SEED, "bootstrap_draws": DRAWS,
+              "policy": policy, "policy_digest": digest(policy),
+              "model_sha256": expected["model_sha256"],
+              "point_gate_this_codec": gate_this_codec(
+                  comparisons["V4_vs_identity"]["analyzers"]),
+              "primary_shard_manifests": primary_manifests,
+              "mc3_shard_manifests": mc3_manifests,
+              "raw_record_sha256": {
+                  "primary": [sha256(path / "shard_records.jsonl")
+                              for path in args.primary_dir],
+                  "mc3": [sha256(path / "shard_records.jsonl")
+                          for path in args.mc3_dir]},
+              "comparisons": comparisons,
+              "mc3_vs_identity": summarize_mc3_v4(mc3_rows)}
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    write_json(args.out, report)
+    args.out.with_suffix(".sha256").write_text(
+        f"{sha256(args.out)}  {args.out.name}\n", encoding="utf-8")
+    print(f"[V4 merge] {args.codec} 1,000 paired source videos")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest="command", required=True)
+    for command in ("primary", "mc3", "merge"):
+        p = sub.add_parser(command)
+        p.add_argument("--index", type=Path, required=True)
+        p.add_argument("--video-root", type=Path, required=True)
+        p.add_argument("--prereg-commit", required=True)
+        p.add_argument("--codec", choices=("h264", "h265"), required=True)
+        if command == "merge":
+            p.add_argument("--primary-dir", type=Path, action="append", required=True)
+            p.add_argument("--mc3-dir", type=Path, action="append", required=True)
+            p.add_argument("--out", type=Path, required=True)
+        else:
+            p.add_argument("--shard", type=int, choices=(0, 1), required=True)
+            p.add_argument("--out-dir", type=Path, required=True)
+            if command == "mc3":
+                p.add_argument("--primary-dir", type=Path, required=True)
+    args = parser.parse_args()
+    {"primary": primary, "mc3": mc3, "merge": merge}[args.command](args)
+
+
+if __name__ == "__main__":
+    main()
