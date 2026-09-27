@@ -26,7 +26,7 @@ Các JSON tổng hợp [H.264](results/dual_codec_search_v2_confirm_1000/h264_re
 
 [So sánh với `area96` và `area112` cố định trên DEV](results/paper_downscale_dev/README.md) dùng 200 video ghép cặp mỗi codec. V2-C tốt hơn cả hai downscale thuần ở cả hai analyzer chính trong hai codec, theo BD-rate trực tiếp với CI 95%. Đây là ablation **trên DEV đã dùng trong phát triển**, không phải bằng chứng xác nhận trên TEST mới.
 
-**Holdout độc lập: CHƯA ĐO; gate trên holdout: CHƯA XÁC NHẬN.** [Bản preregistration](docs/PREREGISTRATION.md) vẫn là dự thảo. [Kiểm toán nguồn holdout](docs/HOLDOUT_SPLIT.md) tìm thấy Kinetics-400 validation chính thức có 19.906 source ID, không trùng hai dataset Kinetics cũ ở mức ID; 1.000 video cuối còn phải qua kiểm tra giải mã và được commit trước lượt chấm đầu tiên. [Chi phí runtime toàn bộ năm QP](docs/RUNTIME_COST.md) cũng CHƯA ĐO. Không diễn giải các phép trên tập cũ như kết quả holdout mới.
+**Holdout độc lập: CHƯA ĐO; gate trên holdout: CHƯA XÁC NHẬN.** [Bản preregistration](docs/PREREGISTRATION.md) vẫn là dự thảo. [Kiểm toán nguồn holdout](docs/HOLDOUT_SPLIT.md) tìm thấy Kinetics-400 validation chính thức có 19.906 source ID, không trùng hai dataset Kinetics cũ ở mức ID; 1.000 video cuối còn phải qua kiểm tra giải mã và được commit trước lượt chấm đầu tiên. [Chi phí runtime toàn bộ năm QP](docs/RUNTIME_COST.md) đã đo trên 20 clip DEV: overhead trung vị ghép cặp 7.351× (H.264) và 7.066× (H.265), gồm đủ 30 lần encode/decode và suy luận phía encoder mỗi clip. Không diễn giải các phép trên tập cũ như kết quả holdout mới.
 
 ## Kiểm tra ảnh ghép cặp và OD
 

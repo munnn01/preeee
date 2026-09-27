@@ -17,6 +17,8 @@ import json
 import re
 import subprocess
 import tarfile
+import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -183,7 +185,16 @@ def archive_part(number: int, url: str, candidate_ids: set[str],
                     or sha256(video) != row["sha256"]):
                 raise ValueError(f"archive-part video missing or changed: {video}")
     else:
-        result = stream_archive(url, candidate_ids, out_dir)
+        # An interrupted archive has no committed part manifest. Re-read it
+        # from byte zero so the compressed SHA-256 still covers the full source.
+        for attempt in range(5):
+            try:
+                result = stream_archive(url, candidate_ids, out_dir)
+                break
+            except (TimeoutError, ConnectionError, urllib.error.URLError):
+                if attempt == 4:
+                    raise
+                time.sleep(min(2 ** attempt, 8))
         temporary = path.with_suffix(".json.partial")
         temporary.write_text(json.dumps(result, indent=2) + "\n",
                              encoding="utf-8")

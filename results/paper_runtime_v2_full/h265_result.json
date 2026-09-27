@@ -1,0 +1,4266 @@
+{
+  "manifest": {
+    "experiment": "dual_v2_full_runtime",
+    "codec": "h265",
+    "split": "val",
+    "clips": 20,
+    "sample_ids": [
+      "tying knot (not on a tie)/awNohBOJHgw.mp4",
+      "drinking beer/h0ea069drlc.mp4",
+      "dribbling basketball/uSMilNFMGTY.mp4",
+      "jogging/u_9OTjkL7D8.mp4",
+      "swimming backstroke/jI3i52BEMwg.mp4",
+      "news anchoring/K6TTpn3t6ag.mp4",
+      "weaving basket/NvaIZlHvN_M.mp4",
+      "digging/2zSBmewIxV0.mp4",
+      "tap dancing/J8meqbE6gZI.mp4",
+      "taking a shower/U-5QC_ezpLE.mp4",
+      "passing American football (in game)/et-lVSK-la4.mp4",
+      "skateboarding/WK4iVu_0wIk.mp4",
+      "golf chipping/3N1GwK8oadI.mp4",
+      "shaking head/OslRvwb5h0o.mp4",
+      "picking fruit/gRp3UjWkkK0.mp4",
+      "jumping into pool/___dTOdxzXY.mp4",
+      "rock scissors paper/jDFnViSc30g.mp4",
+      "shaving head/dAry8tI-DnY.mp4",
+      "cleaning floor/ltoeikYSp1g.mp4",
+      "eating ice cream/PU1DCcuxBqo.mp4"
+    ],
+    "sample_fingerprint": "22e6fde29d8629ed726745b9be05f211b3528239899a8198768c37270ccbc834",
+    "sample_ids_sha256": "3e6e1dd4570b702bb3e0dddc9d25e9afb1c1faa043b6dab9099e7f53f58f740e",
+    "index_sha256": "1a7adb6ad3aac2fa3fc93767c9567e49441b35f7ad6375fe7e1949ef0507acb2",
+    "config_sha256_lf": "7161844038eb90a6ad3c2739865736484643249c50cc4cc648cafddf287232c0",
+    "code_commit": "c7c5f92b73d60b7f0679b0e9b2d3919ec1037913",
+    "frozen_policy_sha256": "582efbc14f41f0dba9da2856a6d028a55575a8644f097c5b31538a92931e0adf",
+    "risk_sha256": "9fe9e7c96ce339883f410b7b96f37ac01bcc9b4bf2b65febb002593919e26a93",
+    "policy": {
+      "mode": "C",
+      "primary": {
+        "kl": 0.1,
+        "feature": 0.05,
+        "confidence": 0.6
+      },
+      "risk_low_qp": 0.2,
+      "risk_high_qp": 0.1
+    },
+    "qps": [
+      30,
+      35,
+      40,
+      45,
+      50
+    ],
+    "candidates": [
+      "identity128",
+      "area112",
+      "area96",
+      "area112_up128",
+      "blur020_128",
+      "blur040_128"
+    ],
+    "models": [
+      "r2plus1d_18",
+      "r3d_18"
+    ],
+    "versions": {
+      "python": "3.12.13",
+      "torch": "2.10.0+cu128",
+      "torchvision": "0.25.0+cu128",
+      "psutil": "5.9.5",
+      "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+    },
+    "hardware": {
+      "cpu": "x86_64",
+      "logical_cpus": 4,
+      "ram_bytes": 33659383808,
+      "gpu": "Tesla T4"
+    },
+    "threading": {
+      "torch_num_threads": 2,
+      "OMP_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "2"
+    },
+    "memory_method": "5-ms sampled RSS of each worker plus its FFmpeg children; sampled peak is a lower bound",
+    "comparison": "identity: five encode/decode calls, no analyzer; full: 30 encode/decode calls plus two frozen analyzers and policy selection"
+  },
+  "summary": {
+    "n": 20,
+    "unit": "one 16-frame source clip at all five QPs",
+    "scope": "separate identity/full worker processes; paired order-balanced wall time excludes model startup/download; full arm includes all FFmpeg launches and encoder analyzers; sampled process-tree RSS includes resident model weights",
+    "identity_only_s": {
+      "median": 1.751821257500012,
+      "mean": 1.7977578645499848,
+      "p95": 1.9695737773000077
+    },
+    "full_selector_s": {
+      "median": 12.68167702249994,
+      "mean": 12.677426766549994,
+      "p95": 13.305512777050092
+    },
+    "overhead_ratio": {
+      "median": 7.066023059893714,
+      "mean": 7.072202398009739,
+      "p95": 7.52233442217416
+    },
+    "identity_peak_process_tree_rss_bytes": {
+      "median": 816343040.0,
+      "mean": 815037030.4,
+      "p95": 822338969.6
+    },
+    "full_peak_process_tree_rss_bytes": {
+      "median": 1248868352.0,
+      "mean": 1245660979.2,
+      "p95": 1249575731.2
+    },
+    "memory_overhead_ratio": {
+      "median": 1.5296763671194333,
+      "mean": 1.528327106031944,
+      "p95": 1.5362876581873242
+    },
+    "peak_rss_sampling_interval_ms": 5,
+    "identity_codec_calls_per_clip": 5,
+    "full_codec_calls_per_clip": 30
+  },
+  "records": [
+    {
+      "sequence_id": "tying knot (not on a tie)/awNohBOJHgw.mp4",
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3772505310000156,
+              "both_analyzers_s": 0.08773362899995618
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3323543650000147,
+              "both_analyzers_s": 0.0869342720000077
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3100217670000234,
+              "both_analyzers_s": 0.08238617500001055
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3628848629999766,
+              "both_analyzers_s": 0.08155518799998163
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.35975502299999107,
+              "both_analyzers_s": 0.08158798099998421
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3938633740000341,
+              "both_analyzers_s": 0.08175697500001888
+            }
+          ],
+          "selector_s": 0.0007022249999977248
+        },
+        {
+          "qp": 35,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3590588619999835,
+              "both_analyzers_s": 0.0817330119999724
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3081178660000319,
+              "both_analyzers_s": 0.08687561300001789
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3092877579999822,
+              "both_analyzers_s": 0.08231478099997958
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.33392181800002163,
+              "both_analyzers_s": 0.08155788300007316
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3464346949999708,
+              "both_analyzers_s": 0.08152172599994856
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32634445500002585,
+              "both_analyzers_s": 0.08161424000002171
+            }
+          ],
+          "selector_s": 0.0005064260000153809
+        },
+        {
+          "qp": 40,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34906175200001144,
+              "both_analyzers_s": 0.08178470800004334
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.31155801799997107,
+              "both_analyzers_s": 0.08732306299998527
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30202274200001966,
+              "both_analyzers_s": 0.08271029799999496
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3485940670000218,
+              "both_analyzers_s": 0.08150910000000522
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.31643275900000845,
+              "both_analyzers_s": 0.08152295499996853
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3465438150000182,
+              "both_analyzers_s": 0.08149482200002467
+            }
+          ],
+          "selector_s": 0.0005685659999699055
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31400257999996484,
+              "both_analyzers_s": 0.08147885599998972
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3154271849999759,
+              "both_analyzers_s": 0.09839872800000649
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.31349876000001586,
+              "both_analyzers_s": 0.09853339399995775
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3375811820000081,
+              "both_analyzers_s": 0.09889086100002942
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.307926157000054,
+              "both_analyzers_s": 0.09671343400003707
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3094996849999916,
+              "both_analyzers_s": 0.08923421299994061
+            }
+          ],
+          "selector_s": 0.0003093299999932242
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30215138200003366,
+              "both_analyzers_s": 0.08333920199999056
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.29523848600001656,
+              "both_analyzers_s": 0.08234244499999477
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3095763470000179,
+              "both_analyzers_s": 0.08230062899997392
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3254986009999925,
+              "both_analyzers_s": 0.08288985600000842
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32012519900001735,
+              "both_analyzers_s": 0.09538062699999728
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3440999900000179,
+              "both_analyzers_s": 0.09901358499996604
+            }
+          ],
+          "selector_s": 0.00031142599999611775
+        }
+      ],
+      "identity_only_s": 1.7298061630000348,
+      "full_selector_s": 12.998200499000006,
+      "overhead_ratio": 7.514252623806697,
+      "identity_peak_process_tree_rss_bytes": 786034688,
+      "full_peak_process_tree_rss_bytes": 1183408128,
+      "memory_overhead_ratio": 1.5055418622950136,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.07544462500004556,
+      "full_decode_s": 0.0752825170000051,
+      "candidate_generation_s": 0.030519341000001532,
+      "clean_analyzers_s": 0.3250497619999919
+    },
+    {
+      "sequence_id": "drinking beer/h0ea069drlc.mp4",
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3384254970000029,
+              "both_analyzers_s": 0.09682213299998921
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.32723575099998925,
+              "both_analyzers_s": 0.08239061899996614
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3037610480000126,
+              "both_analyzers_s": 0.08090077800005702
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.31911633999999367,
+              "both_analyzers_s": 0.08170420900000863
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32237058699996624,
+              "both_analyzers_s": 0.08149753700001838
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32190875099996674,
+              "both_analyzers_s": 0.08154593699998713
+            }
+          ],
+          "selector_s": 0.00034929500003499925
+        },
+        {
+          "qp": 35,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3383104999999773,
+              "both_analyzers_s": 0.08758353199999647
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3065068349999933,
+              "both_analyzers_s": 0.08084335200004489
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3015148270000054,
+              "both_analyzers_s": 0.08115302900000643
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.31622116799997,
+              "both_analyzers_s": 0.08152900900000759
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.313465371999996,
+              "both_analyzers_s": 0.08147709599995778
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30821155000001,
+              "both_analyzers_s": 0.08754181199998357
+            }
+          ],
+          "selector_s": 0.00039319000001114546
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31229979700003696,
+              "both_analyzers_s": 0.0814604079999981
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3072768119999978,
+              "both_analyzers_s": 0.08089561700001013
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3142757589999974,
+              "both_analyzers_s": 0.08099330599998211
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3179387380000094,
+              "both_analyzers_s": 0.08151870400001826
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32068208099997264,
+              "both_analyzers_s": 0.08745324100004837
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3236199070000225,
+              "both_analyzers_s": 0.08175577599996586
+            }
+          ],
+          "selector_s": 0.00041463700000576864
+        },
+        {
+          "qp": 45,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.37878770600002554,
+              "both_analyzers_s": 0.08160301099997014
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30722989700001335,
+              "both_analyzers_s": 0.0808895449999909
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3000843000000373,
+              "both_analyzers_s": 0.08114319000003434
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3306747719999521,
+              "both_analyzers_s": 0.08794731099993669
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3382974890000128,
+              "both_analyzers_s": 0.08185104800003273
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3282885819999706,
+              "both_analyzers_s": 0.08164870899997823
+            }
+          ],
+          "selector_s": 0.00039118300003337936
+        },
+        {
+          "qp": 50,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.32763901199996326,
+              "both_analyzers_s": 0.08179459800004452
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3202709610000056,
+              "both_analyzers_s": 0.08133524899994882
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29034844899996415,
+              "both_analyzers_s": 0.09831477100004804
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30258866600001966,
+              "both_analyzers_s": 0.09707564400002866
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3138278380000088,
+              "both_analyzers_s": 0.09711678700000448
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3094000199999982,
+              "both_analyzers_s": 0.09719136500001468
+            }
+          ],
+          "selector_s": 0.0004485619999741175
+        }
+      ],
+      "identity_only_s": 1.915367023999977,
+      "full_selector_s": 12.633039875999941,
+      "overhead_ratio": 6.595623563371995,
+      "identity_peak_process_tree_rss_bytes": 811802624,
+      "full_peak_process_tree_rss_bytes": 1246232576,
+      "memory_overhead_ratio": 1.5351423352876474,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.3116696000000161,
+      "full_decode_s": 0.3062640499999816,
+      "candidate_generation_s": 0.028172680000011496,
+      "clean_analyzers_s": 0.0990046250000205
+    },
+    {
+      "sequence_id": "dribbling basketball/uSMilNFMGTY.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3388253900000109,
+              "both_analyzers_s": 0.09923624300000711
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.31022112699997706,
+              "both_analyzers_s": 0.08269797599996309
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.34127881400002025,
+              "both_analyzers_s": 0.08121375300004274
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3309639299999958,
+              "both_analyzers_s": 0.08174287799994318
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32522135900001103,
+              "both_analyzers_s": 0.08178370699994275
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3105146829999512,
+              "both_analyzers_s": 0.08191403600005742
+            }
+          ],
+          "selector_s": 0.0003869789999839668
+        },
+        {
+          "qp": 35,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30966418399998474,
+              "both_analyzers_s": 0.08826385200001141
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3065414369999644,
+              "both_analyzers_s": 0.08246710699995674
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29798581699998294,
+              "both_analyzers_s": 0.0809731710000392
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3176600580000013,
+              "both_analyzers_s": 0.08171353599993836
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32709935600001927,
+              "both_analyzers_s": 0.08149444399998629
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3160129110000298,
+              "both_analyzers_s": 0.0816198800000052
+            }
+          ],
+          "selector_s": 0.00045349300000907533
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3115008980000198,
+              "both_analyzers_s": 0.0877598700000135
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30336211700000604,
+              "both_analyzers_s": 0.08096161100002064
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29321078300000636,
+              "both_analyzers_s": 0.08097520400002622
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30795634000003247,
+              "both_analyzers_s": 0.0815145730000495
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30769910800000844,
+              "both_analyzers_s": 0.08153976400001284
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30699468400001706,
+              "both_analyzers_s": 0.08790695099997947
+            }
+          ],
+          "selector_s": 0.0003877160000342883
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.29267829499997333,
+              "both_analyzers_s": 0.0912920290000443
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3045315819999814,
+              "both_analyzers_s": 0.0967359680000186
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2993251590000341,
+              "both_analyzers_s": 0.0983335690000331
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.2984398059999762,
+              "both_analyzers_s": 0.09891848799998115
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30709838000001355,
+              "both_analyzers_s": 0.09898802999998679
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.29846320600006493,
+              "both_analyzers_s": 0.09893999300004452
+            }
+          ],
+          "selector_s": 0.00037659399993117404
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.29372102799993627,
+              "both_analyzers_s": 0.0988851589999058
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.29843044999995527,
+              "both_analyzers_s": 0.0984137059999739
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.27448219699999754,
+              "both_analyzers_s": 0.0985005600000477
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3170729590000292,
+              "both_analyzers_s": 0.09898581199990986
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.31786367100005464,
+              "both_analyzers_s": 0.098884183999985
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3081877680000389,
+              "both_analyzers_s": 0.09896847200002412
+            }
+          ],
+          "selector_s": 0.00046746199996050564
+        }
+      ],
+      "identity_only_s": 1.7879986729999473,
+      "full_selector_s": 12.39251451499996,
+      "overhead_ratio": 6.930941673579377,
+      "identity_peak_process_tree_rss_bytes": 816316416,
+      "full_peak_process_tree_rss_bytes": 1248882688,
+      "memory_overhead_ratio": 1.5299002488760436,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.2256201939999869,
+      "full_decode_s": 0.21679435599997987,
+      "candidate_generation_s": 0.02869257899999411,
+      "clean_analyzers_s": 0.0992886789999261
+    },
+    {
+      "sequence_id": "jogging/u_9OTjkL7D8.mp4",
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3747807150000426,
+              "both_analyzers_s": 0.0685213259999955
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3507769550000148,
+              "both_analyzers_s": 0.06831881099992643
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.33082258199999615,
+              "both_analyzers_s": 0.06812315000013314
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.37531130600007145,
+              "both_analyzers_s": 0.06865123700004006
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.38394904299991595,
+              "both_analyzers_s": 0.08322944600001847
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3679339220000202,
+              "both_analyzers_s": 0.0936967979999963
+            }
+          ],
+          "selector_s": 0.00051120999989962
+        },
+        {
+          "qp": 35,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34808634099999836,
+              "both_analyzers_s": 0.09277868299989223
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.32579824300000837,
+              "both_analyzers_s": 0.08239811600003577
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3207158470000877,
+              "both_analyzers_s": 0.08115385899998273
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3448001159999876,
+              "both_analyzers_s": 0.08153217400001722
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3390525569999454,
+              "both_analyzers_s": 0.0814755569999761
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.345278803000042,
+              "both_analyzers_s": 0.08146379699996942
+            }
+          ],
+          "selector_s": 0.0005117550000477422
+        },
+        {
+          "qp": 40,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.33572487800006456,
+              "both_analyzers_s": 0.09662575599998036
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3187450009999111,
+              "both_analyzers_s": 0.0983303270000988
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3161274889999959,
+              "both_analyzers_s": 0.09838739400004215
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3385349510000424,
+              "both_analyzers_s": 0.09475843400002759
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.36063643299996784,
+              "both_analyzers_s": 0.08318981000002168
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32989613000006557,
+              "both_analyzers_s": 0.08141830399995342
+            }
+          ],
+          "selector_s": 0.0005249769999409182
+        },
+        {
+          "qp": 45,
+          "chosen": "blur020_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3277724769999395,
+              "both_analyzers_s": 0.081568156000003
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30511368999998467,
+              "both_analyzers_s": 0.08092703500005882
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.32090469600007054,
+              "both_analyzers_s": 0.0810657640000727
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3564034219999712,
+              "both_analyzers_s": 0.08786386900010257
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.31476832399994237,
+              "both_analyzers_s": 0.09548527699996612
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3496792409999898,
+              "both_analyzers_s": 0.09886616300002515
+            }
+          ],
+          "selector_s": 0.00036336300001948985
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3051611390000062,
+              "both_analyzers_s": 0.09485351599994374
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3246131559999412,
+              "both_analyzers_s": 0.08865376200003539
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3026170439999305,
+              "both_analyzers_s": 0.08229846999995516
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3176680750000287,
+              "both_analyzers_s": 0.08165494699994724
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3278137859999788,
+              "both_analyzers_s": 0.08193911200010007
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3124501680000549,
+              "both_analyzers_s": 0.08191206100002546
+            }
+          ],
+          "selector_s": 0.0004016519999368029
+        }
+      ],
+      "identity_only_s": 1.8399031359999753,
+      "full_selector_s": 12.865029042999936,
+      "overhead_ratio": 6.992231705723941,
+      "identity_peak_process_tree_rss_bytes": 810864640,
+      "full_peak_process_tree_rss_bytes": 1249591296,
+      "memory_overhead_ratio": 1.5410602884348243,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.05191206399990733,
+      "full_decode_s": 0.04506487699995887,
+      "candidate_generation_s": 0.02716072099997291,
+      "clean_analyzers_s": 0.0848661009999887
+    },
+    {
+      "sequence_id": "swimming backstroke/jI3i52BEMwg.mp4",
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.33453966500007937,
+              "both_analyzers_s": 0.09932226700004776
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.32325049799999306,
+              "both_analyzers_s": 0.09880465899993851
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29789274099994145,
+              "both_analyzers_s": 0.09893483400003333
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3137915239999529,
+              "both_analyzers_s": 0.09933986999999433
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3231034760000284,
+              "both_analyzers_s": 0.09137727399991036
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3193560230000685,
+              "both_analyzers_s": 0.08339530199998535
+            }
+          ],
+          "selector_s": 0.00038883000001987966
+        },
+        {
+          "qp": 35,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31715154100004384,
+              "both_analyzers_s": 0.08191086299996186
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3220398580000392,
+              "both_analyzers_s": 0.08126056800006154
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29381527699990784,
+              "both_analyzers_s": 0.08120121400008884
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.33153776199992535,
+              "both_analyzers_s": 0.08214187900011893
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3488124309999421,
+              "both_analyzers_s": 0.08794678799995381
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32071998200001417,
+              "both_analyzers_s": 0.0819020729999238
+            }
+          ],
+          "selector_s": 0.0005558359999895401
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3080530480000334,
+              "both_analyzers_s": 0.08186297500003548
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.29257801299991115,
+              "both_analyzers_s": 0.08140242499996475
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2895982649999951,
+              "both_analyzers_s": 0.08111219399984293
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30448818200000005,
+              "both_analyzers_s": 0.08738943299999846
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3207024649999539,
+              "both_analyzers_s": 0.08296409600006882
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31050680400005604,
+              "both_analyzers_s": 0.08154121600000508
+            }
+          ],
+          "selector_s": 0.00036252799998237606
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3141869220000899,
+              "both_analyzers_s": 0.08164979000002859
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3068614590000607,
+              "both_analyzers_s": 0.08086946199989598
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30578475400000116,
+              "both_analyzers_s": 0.08105493899995508
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.292737633999991,
+              "both_analyzers_s": 0.08836759999996957
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.2939166669999622,
+              "both_analyzers_s": 0.09894227799998134
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.2980359639999506,
+              "both_analyzers_s": 0.09898698900008185
+            }
+          ],
+          "selector_s": 0.0003398249999690961
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.2944356749999315,
+              "both_analyzers_s": 0.09905693099995005
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2980413510000517,
+              "both_analyzers_s": 0.0983876060000739
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2772421550000672,
+              "both_analyzers_s": 0.09830583700011175
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.2967446820000532,
+              "both_analyzers_s": 0.08930672099995718
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.2940279819999887,
+              "both_analyzers_s": 0.08751342900006875
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.2840644190000603,
+              "both_analyzers_s": 0.08172045100002379
+            }
+          ],
+          "selector_s": 0.00043855499995970604
+        }
+      ],
+      "identity_only_s": 1.7443222130000322,
+      "full_selector_s": 12.258697956999981,
+      "overhead_ratio": 7.027771512418248,
+      "identity_peak_process_tree_rss_bytes": 816369664,
+      "full_peak_process_tree_rss_bytes": 1248784384,
+      "memory_overhead_ratio": 1.5296800445539338,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.17761161900000388,
+      "full_decode_s": 0.16083488100002796,
+      "candidate_generation_s": 0.028334466000046632,
+      "clean_analyzers_s": 0.09973328599994602
+    },
+    {
+      "sequence_id": "news anchoring/K6TTpn3t6ag.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.37231545700001334,
+              "both_analyzers_s": 0.08603111399997942
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.33712733200002276,
+              "both_analyzers_s": 0.08533851499987577
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3708160730000145,
+              "both_analyzers_s": 0.08256460899997364
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.36348934199997984,
+              "both_analyzers_s": 0.08153316000004907
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3807889290000048,
+              "both_analyzers_s": 0.08159036199992897
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3678996310000002,
+              "both_analyzers_s": 0.08146218500007762
+            }
+          ],
+          "selector_s": 0.0005689090000942087
+        },
+        {
+          "qp": 35,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34850123000001076,
+              "both_analyzers_s": 0.08175436500005162
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.31875933899993925,
+              "both_analyzers_s": 0.08701188599991383
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.31013058999997156,
+              "both_analyzers_s": 0.08232386100007716
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3420731880000858,
+              "both_analyzers_s": 0.08178827300002922
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.36200850600005197,
+              "both_analyzers_s": 0.08158290899996246
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32968156000004,
+              "both_analyzers_s": 0.08163208600012695
+            }
+          ],
+          "selector_s": 0.0005354850000003353
+        },
+        {
+          "qp": 40,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.32842443399999866,
+              "both_analyzers_s": 0.08160844299993641
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30643828600000234,
+              "both_analyzers_s": 0.09834332900004483
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30879679000008764,
+              "both_analyzers_s": 0.09832952600004319
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.33100078499990104,
+              "both_analyzers_s": 0.09896487399998932
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3283540800000537,
+              "both_analyzers_s": 0.09906971999998859
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31729999100002715,
+              "both_analyzers_s": 0.08300872399991022
+            }
+          ],
+          "selector_s": 0.0005208079999192705
+        },
+        {
+          "qp": 45,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3408239579999872,
+              "both_analyzers_s": 0.08164478200001213
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.33478129100001297,
+              "both_analyzers_s": 0.08094008000000485
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30448644499995225,
+              "both_analyzers_s": 0.08091554299994641
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32685059899995395,
+              "both_analyzers_s": 0.08159274000013284
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3143075890000091,
+              "both_analyzers_s": 0.08757147999995141
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3118048960000124,
+              "both_analyzers_s": 0.0815868170000158
+            }
+          ],
+          "selector_s": 0.0005421820000037769
+        },
+        {
+          "qp": 50,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3072817119999627,
+              "both_analyzers_s": 0.08165344300005017
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2953703670000323,
+              "both_analyzers_s": 0.08088496700008818
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29658611499996823,
+              "both_analyzers_s": 0.08114412800011905
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3164660610000283,
+              "both_analyzers_s": 0.08779476100005468
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.2966605010000194,
+              "both_analyzers_s": 0.08290086200008773
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32043954499999927,
+              "both_analyzers_s": 0.08292161500003203
+            }
+          ],
+          "selector_s": 0.0005068499999651976
+        }
+      ],
+      "identity_only_s": 1.8714220749999413,
+      "full_selector_s": 12.781338516999995,
+      "overhead_ratio": 6.829746580284619,
+      "identity_peak_process_tree_rss_bytes": 822300672,
+      "full_peak_process_tree_rss_bytes": 1248829440,
+      "memory_overhead_ratio": 1.5187017140124628,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.12800876899996183,
+      "full_decode_s": 0.1262741630000619,
+      "candidate_generation_s": 0.02570954400005121,
+      "clean_analyzers_s": 0.09887814199998957
+    },
+    {
+      "sequence_id": "weaving basket/NvaIZlHvN_M.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.43750249099991834,
+              "both_analyzers_s": 0.08318098800009466
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.4046719680000024,
+              "both_analyzers_s": 0.08095363099994302
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3569304520000287,
+              "both_analyzers_s": 0.0808260720001499
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.39735729900007755,
+              "both_analyzers_s": 0.0814782180000293
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.4121792920000189,
+              "both_analyzers_s": 0.08153702600009183
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.4089294569999993,
+              "both_analyzers_s": 0.09493632199996682
+            }
+          ],
+          "selector_s": 0.0004346960000702893
+        },
+        {
+          "qp": 35,
+          "chosen": "blur020_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3927445199999511,
+              "both_analyzers_s": 0.08311914500006878
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.4157649039999569,
+              "both_analyzers_s": 0.0809944220000034
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.350367690999974,
+              "both_analyzers_s": 0.08102591199997278
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.40020874900005765,
+              "both_analyzers_s": 0.08175700499998584
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.36372093600004973,
+              "both_analyzers_s": 0.08681662799995138
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.37811109800009035,
+              "both_analyzers_s": 0.09900849800010292
+            }
+          ],
+          "selector_s": 0.0003907139999910214
+        },
+        {
+          "qp": 40,
+          "chosen": "area112_up128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3563056760000336,
+              "both_analyzers_s": 0.08293712500005768
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3301121150000199,
+              "both_analyzers_s": 0.0810267599999861
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3409959739999522,
+              "both_analyzers_s": 0.08084309200000916
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3616222570000218,
+              "both_analyzers_s": 0.0817484039998817
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3589602089999744,
+              "both_analyzers_s": 0.08147001600002568
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.35101131900000837,
+              "both_analyzers_s": 0.08779259200002798
+            }
+          ],
+          "selector_s": 0.00045593300001200987
+        },
+        {
+          "qp": 45,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3601123329999609,
+              "both_analyzers_s": 0.08185937799987641
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.32304750800005877,
+              "both_analyzers_s": 0.08097025300014593
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.313449543000047,
+              "both_analyzers_s": 0.08101056500015602
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.34983516199997666,
+              "both_analyzers_s": 0.08151448900014202
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.35303237400000853,
+              "both_analyzers_s": 0.09082689200010918
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.34467152199999873,
+              "both_analyzers_s": 0.09876266300000225
+            }
+          ],
+          "selector_s": 0.0005822930000931592
+        },
+        {
+          "qp": 50,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3396602770000072,
+              "both_analyzers_s": 0.08752621500002533
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3260008329999664,
+              "both_analyzers_s": 0.08092987999987145
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3115606360000811,
+              "both_analyzers_s": 0.0809618399999863
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32303859600006035,
+              "both_analyzers_s": 0.0815075490000936
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32612609400007386,
+              "both_analyzers_s": 0.0814876719999802
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31606099299995094,
+              "both_analyzers_s": 0.08755000299993299
+            }
+          ],
+          "selector_s": 0.00046046700003898877
+        }
+      ],
+      "identity_only_s": 1.9146638960000928,
+      "full_selector_s": 13.602298098000006,
+      "overhead_ratio": 7.104274607369181,
+      "identity_peak_process_tree_rss_bytes": 823066624,
+      "full_peak_process_tree_rss_bytes": 1249574912,
+      "memory_overhead_ratio": 1.5181941237359662,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.05018711900004291,
+      "full_decode_s": 0.050107853999975305,
+      "candidate_generation_s": 0.029097280999963004,
+      "clean_analyzers_s": 0.09936776100016687
+    },
+    {
+      "sequence_id": "digging/2zSBmewIxV0.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3507238880000614,
+              "both_analyzers_s": 0.0982360590001008
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3266804479999337,
+              "both_analyzers_s": 0.09838870499993391
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.32280216300000575,
+              "both_analyzers_s": 0.09235576100002163
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3697118899999623,
+              "both_analyzers_s": 0.08286206599996149
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.33893825800009836,
+              "both_analyzers_s": 0.08162398900003609
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.35062550800000736,
+              "both_analyzers_s": 0.08151931700001569
+            }
+          ],
+          "selector_s": 0.00033693699992909387
+        },
+        {
+          "qp": 35,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.32593206499996086,
+              "both_analyzers_s": 0.0814909709999938
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3161491710000064,
+              "both_analyzers_s": 0.08100872699992578
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3041037899999992,
+              "both_analyzers_s": 0.09825469099996553
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32081324400007816,
+              "both_analyzers_s": 0.09892953899998247
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3292017859999987,
+              "both_analyzers_s": 0.09891519400002835
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3073763920000374,
+              "both_analyzers_s": 0.09895165499995073
+            }
+          ],
+          "selector_s": 0.00043778600002042367
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.33003687300004003,
+              "both_analyzers_s": 0.094703969999955
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3108472640000173,
+              "both_analyzers_s": 0.08232594799994786
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29719061399998736,
+              "both_analyzers_s": 0.08093187100007526
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30610605399999713,
+              "both_analyzers_s": 0.08156170699987797
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3158954640000502,
+              "both_analyzers_s": 0.08147165200000472
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32956707100004223,
+              "both_analyzers_s": 0.08175292399994305
+            }
+          ],
+          "selector_s": 0.0003538509999998496
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30933103299992126,
+              "both_analyzers_s": 0.08710403899999619
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30802525500007505,
+              "both_analyzers_s": 0.0841025779999427
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3175455539999348,
+              "both_analyzers_s": 0.08380969900008495
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3075481609999997,
+              "both_analyzers_s": 0.08437658700006523
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.315187485000024,
+              "both_analyzers_s": 0.08479339199993774
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3072078180000517,
+              "both_analyzers_s": 0.08431570499999452
+            }
+          ],
+          "selector_s": 0.0004445820000000822
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30073102799997287,
+              "both_analyzers_s": 0.08449632700001075
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3227889130000676,
+              "both_analyzers_s": 0.095022264000022
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.31072130699999434,
+              "both_analyzers_s": 0.0986973090000447
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.31132017099992026,
+              "both_analyzers_s": 0.09098730599998817
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.2980448849999675,
+              "both_analyzers_s": 0.08298297399994681
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.2962165139999797,
+              "both_analyzers_s": 0.0829334080000308
+            }
+          ],
+          "selector_s": 0.00036657299995113135
+        }
+      ],
+      "identity_only_s": 1.6981286149999733,
+      "full_selector_s": 12.463000281000063,
+      "overhead_ratio": 7.339255796593628,
+      "identity_peak_process_tree_rss_bytes": 813199360,
+      "full_peak_process_tree_rss_bytes": 1249103872,
+      "memory_overhead_ratio": 1.5360364671216662,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.07517251799993119,
+      "full_decode_s": 0.06252828200001659,
+      "candidate_generation_s": 0.02560096499996689,
+      "clean_analyzers_s": 0.08252754300008291
+    },
+    {
+      "sequence_id": "tap dancing/J8meqbE6gZI.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3823026080000318,
+              "both_analyzers_s": 0.08301344200015137
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.33061962900001163,
+              "both_analyzers_s": 0.08235885299995971
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3289306490000854,
+              "both_analyzers_s": 0.08245393400000012
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3537842019999289,
+              "both_analyzers_s": 0.0829223999999158
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.36807544400005554,
+              "both_analyzers_s": 0.08151068500001202
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3684365069999558,
+              "both_analyzers_s": 0.08152826200000618
+            }
+          ],
+          "selector_s": 0.0003757349999204962
+        },
+        {
+          "qp": 35,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3371124380000765,
+              "both_analyzers_s": 0.08153777100005755
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.359282549999989,
+              "both_analyzers_s": 0.08100782200006051
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3094271979999803,
+              "both_analyzers_s": 0.09275329700005841
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.35827398099991115,
+              "both_analyzers_s": 0.09940911000001051
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3245316590000584,
+              "both_analyzers_s": 0.08284361200003332
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.33350616799998534,
+              "both_analyzers_s": 0.08174713899995822
+            }
+          ],
+          "selector_s": 0.0003937330000098882
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.35462348800001564,
+              "both_analyzers_s": 0.08162681800001792
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3051131429999714,
+              "both_analyzers_s": 0.0809630289999177
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3090971809999701,
+              "both_analyzers_s": 0.08087401099987801
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3169485180000038,
+              "both_analyzers_s": 0.0894528790000777
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.31985603999999057,
+              "both_analyzers_s": 0.08336009299989655
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30728287399995224,
+              "both_analyzers_s": 0.08200455999997303
+            }
+          ],
+          "selector_s": 0.0003456250000226646
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.321216445999994,
+              "both_analyzers_s": 0.08161813399999573
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3017022609999458,
+              "both_analyzers_s": 0.08095509300005688
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3014644849999968,
+              "both_analyzers_s": 0.08086308800000097
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3053224819999514,
+              "both_analyzers_s": 0.08755923800003984
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3240961010000092,
+              "both_analyzers_s": 0.0816345089999686
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30089492900003734,
+              "both_analyzers_s": 0.08182966300000771
+            }
+          ],
+          "selector_s": 0.000362366999979713
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.29486368300001686,
+              "both_analyzers_s": 0.08146255599990582
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.28897816400001375,
+              "both_analyzers_s": 0.08096107800008667
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29361629100003483,
+              "both_analyzers_s": 0.08393821200002094
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30808174599997074,
+              "both_analyzers_s": 0.09086489000003439
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.28781350199994904,
+              "both_analyzers_s": 0.0946518160000096
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.2886596889999282,
+              "both_analyzers_s": 0.09894764299997405
+            }
+          ],
+          "selector_s": 0.0003511799999387222
+        }
+      ],
+      "identity_only_s": 1.72543503899999,
+      "full_selector_s": 12.50535503499998,
+      "overhead_ratio": 7.247653346745355,
+      "identity_peak_process_tree_rss_bytes": 816095232,
+      "full_peak_process_tree_rss_bytes": 1248739328,
+      "memory_overhead_ratio": 1.5301392276728802,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.06909572199992908,
+      "full_decode_s": 0.06567255200002364,
+      "candidate_generation_s": 0.028060363000008692,
+      "clean_analyzers_s": 0.09901664799997434
+    },
+    {
+      "sequence_id": "taking a shower/U-5QC_ezpLE.mp4",
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3371492640000042,
+              "both_analyzers_s": 0.07530319400007102
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.32059243000003335,
+              "both_analyzers_s": 0.07472211300012077
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.31095636600002763,
+              "both_analyzers_s": 0.07473916799995095
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3467746649999981,
+              "both_analyzers_s": 0.07527055700006713
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3816206809999585,
+              "both_analyzers_s": 0.09904668900003344
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3362093069999901,
+              "both_analyzers_s": 0.08436263800001598
+            }
+          ],
+          "selector_s": 0.00043236699991666683
+        },
+        {
+          "qp": 35,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.32102267800007667,
+              "both_analyzers_s": 0.0815996549998772
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3101834220000228,
+              "both_analyzers_s": 0.08086453199996413
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29524458200000936,
+              "both_analyzers_s": 0.08101207400000021
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32581260400002066,
+              "both_analyzers_s": 0.08149953100007679
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.34082378000005065,
+              "both_analyzers_s": 0.08755615599989142
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.337627651000048,
+              "both_analyzers_s": 0.08146358199996939
+            }
+          ],
+          "selector_s": 0.00047987400000693015
+        },
+        {
+          "qp": 40,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3262772749999385,
+              "both_analyzers_s": 0.0815271420000272
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3041626699999824,
+              "both_analyzers_s": 0.0810209300001361
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3133906069999739,
+              "both_analyzers_s": 0.08105382999997346
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32628417699993406,
+              "both_analyzers_s": 0.08768248000001222
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3193167980000453,
+              "both_analyzers_s": 0.08154366299993399
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3178831339999988,
+              "both_analyzers_s": 0.08151888399993368
+            }
+          ],
+          "selector_s": 0.0004237970000531277
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3052372579999201,
+              "both_analyzers_s": 0.08146994700007326
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30816052000000127,
+              "both_analyzers_s": 0.08091654500015011
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.31064362600000095,
+              "both_analyzers_s": 0.08713627800011636
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3248069920000489,
+              "both_analyzers_s": 0.08299518499995884
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32488270999999713,
+              "both_analyzers_s": 0.0815788809999276
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30342047499993896,
+              "both_analyzers_s": 0.08142495300000974
+            }
+          ],
+          "selector_s": 0.00039617699997052114
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3021479520000412,
+              "both_analyzers_s": 0.08159066000007442
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.28717367699994156,
+              "both_analyzers_s": 0.08111770099992555
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30095209300009174,
+              "both_analyzers_s": 0.08748470399996222
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.29939856700002565,
+              "both_analyzers_s": 0.08314831599989247
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32730668200008495,
+              "both_analyzers_s": 0.08179879599993001
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3472114109999893,
+              "both_analyzers_s": 0.08153344300001208
+            }
+          ],
+          "selector_s": 0.00041619000000991946
+        }
+      ],
+      "identity_only_s": 1.7107926340000859,
+      "full_selector_s": 12.348143207999897,
+      "overhead_ratio": 7.217790726119807,
+      "identity_peak_process_tree_rss_bytes": 819609600,
+      "full_peak_process_tree_rss_bytes": 1248854016,
+      "memory_overhead_ratio": 1.5237181409295353,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.050027481000029184,
+      "full_decode_s": 0.05894481600000745,
+      "candidate_generation_s": 0.02712614000006397,
+      "clean_analyzers_s": 0.09331325099992682
+    },
+    {
+      "sequence_id": "passing American football (in game)/et-lVSK-la4.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "blur040_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.37019315500003813,
+              "both_analyzers_s": 0.08305400099993676
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.32992068999999447,
+              "both_analyzers_s": 0.08238421999999446
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.35056243199994697,
+              "both_analyzers_s": 0.08264326699998037
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.33775241000000733,
+              "both_analyzers_s": 0.08290221499999006
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3733149360000425,
+              "both_analyzers_s": 0.08146916400005466
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3592596450000656,
+              "both_analyzers_s": 0.08167675699985466
+            }
+          ],
+          "selector_s": 0.0004231749999235035
+        },
+        {
+          "qp": 35,
+          "chosen": "blur040_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34338453899999877,
+              "both_analyzers_s": 0.08161572099993464
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3268366080000078,
+              "both_analyzers_s": 0.08096949800005859
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3120496279999543,
+              "both_analyzers_s": 0.09838872799991805
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3407614390000617,
+              "both_analyzers_s": 0.09900515299989365
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3532539079999424,
+              "both_analyzers_s": 0.09924497499991958
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.33977580800001306,
+              "both_analyzers_s": 0.08284371000002011
+            }
+          ],
+          "selector_s": 0.00041274099999100144
+        },
+        {
+          "qp": 40,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3265163840000014,
+              "both_analyzers_s": 0.08154366099995514
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.38220187800004624,
+              "both_analyzers_s": 0.08110320000002957
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29801252799995837,
+              "both_analyzers_s": 0.08106681700007812
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3390590689999726,
+              "both_analyzers_s": 0.0814335510001456
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3197266539999646,
+              "both_analyzers_s": 0.09893842299993594
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.326548119999984,
+              "both_analyzers_s": 0.09892766999996638
+            }
+          ],
+          "selector_s": 0.0003922210000837367
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3369025130000409,
+              "both_analyzers_s": 0.09894960100007211
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3020187670000496,
+              "both_analyzers_s": 0.0823247559999345
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2967748620000066,
+              "both_analyzers_s": 0.08114622800007965
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30508473399993363,
+              "both_analyzers_s": 0.08152369600009024
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.31261545100005605,
+              "both_analyzers_s": 0.08156451700006073
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31245523199993386,
+              "both_analyzers_s": 0.0816389240000035
+            }
+          ],
+          "selector_s": 0.0006061310000404774
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.29889180999998644,
+              "both_analyzers_s": 0.08995880300005865
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.29532331899997644,
+              "both_analyzers_s": 0.09846626800003833
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2866534709999087,
+              "both_analyzers_s": 0.09842851499990957
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30692626700010806,
+              "both_analyzers_s": 0.09903752299999269
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.2988328659999979,
+              "both_analyzers_s": 0.09898810100003175
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30739567000000534,
+              "both_analyzers_s": 0.09900726700004725
+            }
+          ],
+          "selector_s": 0.00031968899997991684
+        }
+      ],
+      "identity_only_s": 1.7239488289999372,
+      "full_selector_s": 12.73031416899994,
+      "overhead_ratio": 7.384392132094081,
+      "identity_peak_process_tree_rss_bytes": 819437568,
+      "full_peak_process_tree_rss_bytes": 1248829440,
+      "memory_overhead_ratio": 1.5240080376690759,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.06876374199998736,
+      "full_decode_s": 0.06593774600003144,
+      "candidate_generation_s": 0.028775072000030377,
+      "clean_analyzers_s": 0.09911293400000432
+    },
+    {
+      "sequence_id": "skateboarding/WK4iVu_0wIk.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.35571336100008466,
+              "both_analyzers_s": 0.0990008169999328
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3448004200000696,
+              "both_analyzers_s": 0.08687957100005406
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.4074241710000024,
+              "both_analyzers_s": 0.08235532999992756
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3568583219999937,
+              "both_analyzers_s": 0.08291647000010016
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3580819930000416,
+              "both_analyzers_s": 0.08291779800003951
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3618784199999254,
+              "both_analyzers_s": 0.08155635599996458
+            }
+          ],
+          "selector_s": 0.0005413239999825237
+        },
+        {
+          "qp": 35,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3478617549999399,
+              "both_analyzers_s": 0.08152637399996365
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3292707339999197,
+              "both_analyzers_s": 0.08101537900006406
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.331809632000045,
+              "both_analyzers_s": 0.08108555499995873
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3541586290000396,
+              "both_analyzers_s": 0.09315697799991085
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.34000922900008845,
+              "both_analyzers_s": 0.09876096000004964
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.34187862800001767,
+              "both_analyzers_s": 0.08764925499997389
+            }
+          ],
+          "selector_s": 0.0004519330000221089
+        },
+        {
+          "qp": 40,
+          "chosen": "blur040_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3560304040000801,
+              "both_analyzers_s": 0.08304366199990909
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3114924950000386,
+              "both_analyzers_s": 0.08090029800007414
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.31427698499999224,
+              "both_analyzers_s": 0.08093953000013698
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32965461799994955,
+              "both_analyzers_s": 0.0814394590000802
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3330252460000338,
+              "both_analyzers_s": 0.08152118200007408
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3309783189999962,
+              "both_analyzers_s": 0.0875004470000249
+            }
+          ],
+          "selector_s": 0.00043000000005122274
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3382598029999144,
+              "both_analyzers_s": 0.08596232799993686
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3037247570000545,
+              "both_analyzers_s": 0.08531530499988094
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30198486500000854,
+              "both_analyzers_s": 0.08533509500000491
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32873050099999546,
+              "both_analyzers_s": 0.08605562299999292
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3292210790000354,
+              "both_analyzers_s": 0.09886902400000963
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3178602029998956,
+              "both_analyzers_s": 0.0990329930000371
+            }
+          ],
+          "selector_s": 0.0006617020000021512
+        },
+        {
+          "qp": 50,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3265250730000844,
+              "both_analyzers_s": 0.09913143100004618
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.32314530699989064,
+              "both_analyzers_s": 0.08232738899994274
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.32431193700006133,
+              "both_analyzers_s": 0.08093355399989832
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32421924400000535,
+              "both_analyzers_s": 0.08162755499995455
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32706815300002745,
+              "both_analyzers_s": 0.08169980200000282
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3148236360000283,
+              "both_analyzers_s": 0.08163231100002122
+            }
+          ],
+          "selector_s": 0.00040598500004307425
+        }
+      ],
+      "identity_only_s": 1.9042085549999683,
+      "full_selector_s": 13.02704011000003,
+      "overhead_ratio": 6.841183480556438,
+      "identity_peak_process_tree_rss_bytes": 814780416,
+      "full_peak_process_tree_rss_bytes": 1249357824,
+      "memory_overhead_ratio": 1.5333675177583062,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.1679139650000252,
+      "full_decode_s": 0.15718836500002453,
+      "candidate_generation_s": 0.029998230000046533,
+      "clean_analyzers_s": 0.09892060000004221
+    },
+    {
+      "sequence_id": "golf chipping/3N1GwK8oadI.mp4",
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3326707329999863,
+              "both_analyzers_s": 0.08797439199997825
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.33333329599997796,
+              "both_analyzers_s": 0.09640928299995721
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3154688409999835,
+              "both_analyzers_s": 0.09837010700005067
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3223685469999964,
+              "both_analyzers_s": 0.0989536990000488
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3280584149999868,
+              "both_analyzers_s": 0.0860081949999767
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.34342166700002963,
+              "both_analyzers_s": 0.08289692000005289
+            }
+          ],
+          "selector_s": 0.0004084079999984169
+        },
+        {
+          "qp": 35,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31231288799995127,
+              "both_analyzers_s": 0.08150228500005596
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3067265409999891,
+              "both_analyzers_s": 0.08101535599996623
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3023806560000821,
+              "both_analyzers_s": 0.08100947399998404
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.31766731100003653,
+              "both_analyzers_s": 0.08158411900001283
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.310049213999946,
+              "both_analyzers_s": 0.08754335000003266
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3120102799999813,
+              "both_analyzers_s": 0.08173838300001535
+            }
+          ],
+          "selector_s": 0.0004908440000690462
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3018765799999983,
+              "both_analyzers_s": 0.08147143699989101
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.29225799599998936,
+              "both_analyzers_s": 0.08089056000005712
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2989904479999268,
+              "both_analyzers_s": 0.08090716100002737
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3146671910000123,
+              "both_analyzers_s": 0.08961854699998639
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3086307910000414,
+              "both_analyzers_s": 0.09892827999999554
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3104758980000497,
+              "both_analyzers_s": 0.09889691900002617
+            }
+          ],
+          "selector_s": 0.0003550030000951665
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.2980576709999241,
+              "both_analyzers_s": 0.09902502600004937
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30259900100008963,
+              "both_analyzers_s": 0.09840426499988553
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3203150120000373,
+              "both_analyzers_s": 0.09832999799994013
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.31164324799999576,
+              "both_analyzers_s": 0.0893021529999487
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32218080600000576,
+              "both_analyzers_s": 0.08300423900004716
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3098889599999666,
+              "both_analyzers_s": 0.0815584659999331
+            }
+          ],
+          "selector_s": 0.0004758780000884144
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3001070369999752,
+              "both_analyzers_s": 0.08162321399993289
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.28781092700000954,
+              "both_analyzers_s": 0.08091203100002531
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3051837140000089,
+              "both_analyzers_s": 0.0809277649999558
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.29713839900000494,
+              "both_analyzers_s": 0.0828670680000414
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.2991099490000124,
+              "both_analyzers_s": 0.09884109800009355
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30526850399996874,
+              "both_analyzers_s": 0.09707003599999098
+            }
+          ],
+          "selector_s": 0.00034315899995362997
+        }
+      ],
+      "identity_only_s": 1.759320301999992,
+      "full_selector_s": 12.335736687000008,
+      "overhead_ratio": 7.011649142556228,
+      "identity_peak_process_tree_rss_bytes": 818229248,
+      "full_peak_process_tree_rss_bytes": 1249243136,
+      "memory_overhead_ratio": 1.5267642155954806,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.17166265100001965,
+      "full_decode_s": 0.16210119000004397,
+      "candidate_generation_s": 0.02789998100001867,
+      "clean_analyzers_s": 0.08150423299991871
+    },
+    {
+      "sequence_id": "shaking head/OslRvwb5h0o.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "blur040_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3423658000000387,
+              "both_analyzers_s": 0.08361103099991851
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3304214620000039,
+              "both_analyzers_s": 0.08288333600000897
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3018417310000814,
+              "both_analyzers_s": 0.08260022599995409
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.33096860099999503,
+              "both_analyzers_s": 0.08332467799993992
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.31956604100003005,
+              "both_analyzers_s": 0.09945625499995003
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.35330331799991654,
+              "both_analyzers_s": 0.09945754500006387
+            }
+          ],
+          "selector_s": 0.000601239999923564
+        },
+        {
+          "qp": 35,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34669920700002876,
+              "both_analyzers_s": 0.08400901599998178
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2961526660000118,
+              "both_analyzers_s": 0.08145845100000315
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29955165900003067,
+              "both_analyzers_s": 0.08128320599985273
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.31159912299995085,
+              "both_analyzers_s": 0.08188703899998018
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3128907130000016,
+              "both_analyzers_s": 0.08205702399993697
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31449788499992337,
+              "both_analyzers_s": 0.08748716500008413
+            }
+          ],
+          "selector_s": 0.00042822599993996846
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31549408700004733,
+              "both_analyzers_s": 0.08349246500006302
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3033416579999084,
+              "both_analyzers_s": 0.08123524199993426
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29868933700004163,
+              "both_analyzers_s": 0.08121741099989777
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3038474889999634,
+              "both_analyzers_s": 0.08178864699993937
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3353245910000169,
+              "both_analyzers_s": 0.08184855899992272
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31754994200002784,
+              "both_analyzers_s": 0.09452623200002108
+            }
+          ],
+          "selector_s": 0.0004351530000121784
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3042615690000048,
+              "both_analyzers_s": 0.09980800099992848
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3060843880000448,
+              "both_analyzers_s": 0.09879589399997712
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.28479434400003356,
+              "both_analyzers_s": 0.0944619969999394
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30663384199999655,
+              "both_analyzers_s": 0.09508794099997431
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3030568059999723,
+              "both_analyzers_s": 0.09512057899996762
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.301575529000047,
+              "both_analyzers_s": 0.09515877700005149
+            }
+          ],
+          "selector_s": 0.0004057349999584403
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.2922865159999901,
+              "both_analyzers_s": 0.09742024699994545
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2969328320000386,
+              "both_analyzers_s": 0.0984828739999557
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2900624520000292,
+              "both_analyzers_s": 0.09838431599996511
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.2938797860000477,
+              "both_analyzers_s": 0.09907953599997654
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3209183750000193,
+              "both_analyzers_s": 0.0992241980001154
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.29781821200003833,
+              "both_analyzers_s": 0.09907806900002925
+            }
+          ],
+          "selector_s": 0.000698201999966841
+        }
+      ],
+      "identity_only_s": 1.6388982599999053,
+      "full_selector_s": 12.29848193700002,
+      "overhead_ratio": 7.504115561755938,
+      "identity_peak_process_tree_rss_bytes": 818352128,
+      "full_peak_process_tree_rss_bytes": 1249271808,
+      "memory_overhead_ratio": 1.5265699999499482,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.04129133199990065,
+      "full_decode_s": 0.04074761800006854,
+      "candidate_generation_s": 0.028096580000010363,
+      "clean_analyzers_s": 0.09932682299995577
+    },
+    {
+      "sequence_id": "picking fruit/gRp3UjWkkK0.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.39534123099997487,
+              "both_analyzers_s": 0.08302689200002078
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.36253416499994273,
+              "both_analyzers_s": 0.08247261800011074
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.4127294240000765,
+              "both_analyzers_s": 0.08239331799995853
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.4072533739999926,
+              "both_analyzers_s": 0.08154257700005019
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.38271281800007273,
+              "both_analyzers_s": 0.08149256100000457
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.373891120000053,
+              "both_analyzers_s": 0.0814514120000922
+            }
+          ],
+          "selector_s": 0.0004119239999909041
+        },
+        {
+          "qp": 35,
+          "chosen": "blur040_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3812837689999924,
+              "both_analyzers_s": 0.08337437300008332
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3432778519999147,
+              "both_analyzers_s": 0.09673853699996471
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.33201850800003285,
+              "both_analyzers_s": 0.09839121600009548
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.38404094600002736,
+              "both_analyzers_s": 0.08432313200000863
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3510436070000651,
+              "both_analyzers_s": 0.08156959799998731
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3709441280000192,
+              "both_analyzers_s": 0.0816309449999153
+            }
+          ],
+          "selector_s": 0.00039114399999107263
+        },
+        {
+          "qp": 40,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3409772420000081,
+              "both_analyzers_s": 0.08153157300000657
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3424379880000288,
+              "both_analyzers_s": 0.0811161289999518
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3315684849999343,
+              "both_analyzers_s": 0.08692666800004645
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3311388079999915,
+              "both_analyzers_s": 0.08302711500004989
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.35267238299991277,
+              "both_analyzers_s": 0.08155580000004647
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.36336783600006584,
+              "both_analyzers_s": 0.08148356000003787
+            }
+          ],
+          "selector_s": 0.0004540449999694829
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34720052200009377,
+              "both_analyzers_s": 0.08162913300009222
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3057262840000021,
+              "both_analyzers_s": 0.08098122300009436
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30157188499993026,
+              "both_analyzers_s": 0.0983257790001062
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3088020840000354,
+              "both_analyzers_s": 0.0989032039999529
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32066998699997384,
+              "both_analyzers_s": 0.09925125799998114
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32789802399997825,
+              "both_analyzers_s": 0.09930799500000376
+            }
+          ],
+          "selector_s": 0.00043922899999415677
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3018899830000237,
+              "both_analyzers_s": 0.0831027520000589
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30910633999997117,
+              "both_analyzers_s": 0.08089873200003694
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.307648888000017,
+              "both_analyzers_s": 0.08089043400002538
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.31667092100008176,
+              "both_analyzers_s": 0.08146209599999565
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3056762390000358,
+              "both_analyzers_s": 0.08158069200010232
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3101669389999415,
+              "both_analyzers_s": 0.09076874700008375
+            }
+          ],
+          "selector_s": 0.0003873200000725774
+        }
+      ],
+      "identity_only_s": 1.9638844300000073,
+      "full_selector_s": 13.289892497000096,
+      "overhead_ratio": 6.767145914487466,
+      "identity_peak_process_tree_rss_bytes": 817278976,
+      "full_peak_process_tree_rss_bytes": 1249382400,
+      "memory_overhead_ratio": 1.5287098245385429,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.19683556799998314,
+      "full_decode_s": 0.17539060700005393,
+      "candidate_generation_s": 0.026848943999993935,
+      "clean_analyzers_s": 0.09904411900004106
+    },
+    {
+      "sequence_id": "jumping into pool/___dTOdxzXY.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3947042799999281,
+              "both_analyzers_s": 0.08454591800000344
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.34940963000008196,
+              "both_analyzers_s": 0.08398735299999771
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3332221530000652,
+              "both_analyzers_s": 0.08403346199997941
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3898918899999444,
+              "both_analyzers_s": 0.08291319500006011
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3590238719999661,
+              "both_analyzers_s": 0.08151627899997038
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3620118449999836,
+              "both_analyzers_s": 0.08170099099993422
+            }
+          ],
+          "selector_s": 0.000505069000041658
+        },
+        {
+          "qp": 35,
+          "chosen": "blur040_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3885226290000219,
+              "both_analyzers_s": 0.08170174499991845
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3629357470000514,
+              "both_analyzers_s": 0.08104306699999597
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3116725759999781,
+              "both_analyzers_s": 0.08710391600004641
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.34340406400008305,
+              "both_analyzers_s": 0.08296419800001331
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3619948849999446,
+              "both_analyzers_s": 0.08291123700007574
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3316809339999054,
+              "both_analyzers_s": 0.08295749699993848
+            }
+          ],
+          "selector_s": 0.00043370100001993706
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3472290839999914,
+              "both_analyzers_s": 0.08316981300004045
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3155994560000863,
+              "both_analyzers_s": 0.08092185599991808
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.32212566100008644,
+              "both_analyzers_s": 0.08106295100003535
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3420620000000554,
+              "both_analyzers_s": 0.08157371099991906
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32596397899999374,
+              "both_analyzers_s": 0.08153277600001729
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32059608699989894,
+              "both_analyzers_s": 0.08748394800011283
+            }
+          ],
+          "selector_s": 0.0003847150001092814
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3190476120000767,
+              "both_analyzers_s": 0.08151620499995715
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30386007699996753,
+              "both_analyzers_s": 0.08095763200003603
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.28484618499999215,
+              "both_analyzers_s": 0.08092532799992114
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30288007499996183,
+              "both_analyzers_s": 0.0814934610000364
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3046949860000723,
+              "both_analyzers_s": 0.08747237100010352
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3039912340000228,
+              "both_analyzers_s": 0.08439799600012066
+            }
+          ],
+          "selector_s": 0.00035534400001324684
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31884696700001314,
+              "both_analyzers_s": 0.08429703099989183
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.29712911300009637,
+              "both_analyzers_s": 0.08383095199997115
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.282723046000001,
+              "both_analyzers_s": 0.0840228780000416
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.33310098599997673,
+              "both_analyzers_s": 0.09186493699996845
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.33457282000006217,
+              "both_analyzers_s": 0.09904558199991698
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30446651700003713,
+              "both_analyzers_s": 0.0892910090000214
+            }
+          ],
+          "selector_s": 0.0003319520000104603
+        }
+      ],
+      "identity_only_s": 1.718890250999948,
+      "full_selector_s": 12.754758580000043,
+      "overhead_ratio": 7.420344942081139,
+      "identity_peak_process_tree_rss_bytes": 817041408,
+      "full_peak_process_tree_rss_bytes": 1248804864,
+      "memory_overhead_ratio": 1.5284474590546089,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.07213396299994201,
+      "full_decode_s": 0.06179354899995815,
+      "candidate_generation_s": 0.026372209999976803,
+      "clean_analyzers_s": 0.0990974889999734
+    },
+    {
+      "sequence_id": "rock scissors paper/jDFnViSc30g.mp4",
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3492213010000569,
+              "both_analyzers_s": 0.07883184400009213
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.35648159200002283,
+              "both_analyzers_s": 0.0783519089999345
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3242506049999747,
+              "both_analyzers_s": 0.07825828899990483
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32601384899999175,
+              "both_analyzers_s": 0.07887735799999973
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.321176747000095,
+              "both_analyzers_s": 0.08764463799991518
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3150241370000231,
+              "both_analyzers_s": 0.08156793199998447
+            }
+          ],
+          "selector_s": 0.0004289139999400504
+        },
+        {
+          "qp": 35,
+          "chosen": "blur020_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3156324169999607,
+              "both_analyzers_s": 0.08160120100001222
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30687458700003845,
+              "both_analyzers_s": 0.08106502000009641
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.32197211699997297,
+              "both_analyzers_s": 0.08089574399991761
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32864603900009115,
+              "both_analyzers_s": 0.08768801600001552
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32116503500003546,
+              "both_analyzers_s": 0.08152238299999226
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3198097690000168,
+              "both_analyzers_s": 0.08177292900006705
+            }
+          ],
+          "selector_s": 0.00038675600001170096
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31889960499995595,
+              "both_analyzers_s": 0.08181590600008803
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3101672109999072,
+              "both_analyzers_s": 0.08096800599992093
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30824210999992374,
+              "both_analyzers_s": 0.08694812200008073
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32549787400000696,
+              "both_analyzers_s": 0.08286201299995355
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3161697619999586,
+              "both_analyzers_s": 0.08161427700008517
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32738973599998644,
+              "both_analyzers_s": 0.0815943549999929
+            }
+          ],
+          "selector_s": 0.0004321620000382609
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30605429100000947,
+              "both_analyzers_s": 0.081558811999912
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3018609009999409,
+              "both_analyzers_s": 0.08101135700007944
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.28281908699989344,
+              "both_analyzers_s": 0.08696758700000373
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32119873800002097,
+              "both_analyzers_s": 0.08298481999997875
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30425986099999136,
+              "both_analyzers_s": 0.08156479100000524
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3073344740000721,
+              "both_analyzers_s": 0.08151805600004991
+            }
+          ],
+          "selector_s": 0.00043848000007074006
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3048859010000342,
+              "both_analyzers_s": 0.08151351300000442
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3047434019999855,
+              "both_analyzers_s": 0.08084786300003088
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3158853119999776,
+              "both_analyzers_s": 0.08690280200005418
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.29485858700002154,
+              "both_analyzers_s": 0.0830131679998658
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30822028400007184,
+              "both_analyzers_s": 0.08296512100002928
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3059258289999889,
+              "both_analyzers_s": 0.08338169399996787
+            }
+          ],
+          "selector_s": 0.00040123700000549434
+        }
+      ],
+      "identity_only_s": 1.7160886949999394,
+      "full_selector_s": 12.213597475999904,
+      "overhead_ratio": 7.117113183943173,
+      "identity_peak_process_tree_rss_bytes": 813195264,
+      "full_peak_process_tree_rss_bytes": 1248743424,
+      "memory_overhead_ratio": 1.535600955000151,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.072406813999919,
+      "full_decode_s": 0.07075753499998427,
+      "candidate_generation_s": 0.030489031999991312,
+      "clean_analyzers_s": 0.08038771099995756
+    },
+    {
+      "sequence_id": "shaving head/dAry8tI-DnY.mp4",
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.32639348200007134,
+              "both_analyzers_s": 0.0832221020000361
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.31887925000000905,
+              "both_analyzers_s": 0.08099185900005068
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.33371594799996274,
+              "both_analyzers_s": 0.08108258599997953
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3194633140000178,
+              "both_analyzers_s": 0.08145031500009736
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3388547800000197,
+              "both_analyzers_s": 0.08150137600000562
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3374339360000249,
+              "both_analyzers_s": 0.09370490499998141
+            }
+          ],
+          "selector_s": 0.0004730009999320828
+        },
+        {
+          "qp": 35,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3366080669999292,
+              "both_analyzers_s": 0.09911004599996431
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.31848374499998044,
+              "both_analyzers_s": 0.09866604799992729
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3217666749999353,
+              "both_analyzers_s": 0.08697182199989584
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.32530395200001294,
+              "both_analyzers_s": 0.08305756699985523
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3265931930000079,
+              "both_analyzers_s": 0.08158765999996831
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3473538530000724,
+              "both_analyzers_s": 0.08144800399998076
+            }
+          ],
+          "selector_s": 0.0005005719999644498
+        },
+        {
+          "qp": 40,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.310840700999961,
+              "both_analyzers_s": 0.08165550300009272
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3062543300000016,
+              "both_analyzers_s": 0.08100187799993819
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3171112359999597,
+              "both_analyzers_s": 0.08700175700005275
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.34003123100001176,
+              "both_analyzers_s": 0.08412528799999563
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.320537202999958,
+              "both_analyzers_s": 0.08179729699998006
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3069415309998931,
+              "both_analyzers_s": 0.08160424300001523
+            }
+          ],
+          "selector_s": 0.00048780199995235307
+        },
+        {
+          "qp": 45,
+          "chosen": "blur020_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.32010041099999853,
+              "both_analyzers_s": 0.08162422700002026
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.31421997600000395,
+              "both_analyzers_s": 0.08092794800006686
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3044663409999657,
+              "both_analyzers_s": 0.08721332299990081
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3079388989999643,
+              "both_analyzers_s": 0.08347183499995481
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.302508681000063,
+              "both_analyzers_s": 0.08189003199993294
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3447588670001096,
+              "both_analyzers_s": 0.08204549299989594
+            }
+          ],
+          "selector_s": 0.00044659500008492614
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3265687580000076,
+              "both_analyzers_s": 0.0818462360000467
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.31675316700000167,
+              "both_analyzers_s": 0.08132230799992612
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30051957499995297,
+              "both_analyzers_s": 0.08723427500001435
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3218534220000038,
+              "both_analyzers_s": 0.08198219700000209
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30976252899995416,
+              "both_analyzers_s": 0.08192818100008026
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3118090049999864,
+              "both_analyzers_s": 0.08213868199993613
+            }
+          ],
+          "selector_s": 0.00040919699995356495
+        }
+      ],
+      "identity_only_s": 1.6204835209999828,
+      "full_selector_s": 12.438650971000015,
+      "overhead_ratio": 7.675888591155965,
+      "identity_peak_process_tree_rss_bytes": 816295936,
+      "full_peak_process_tree_rss_bytes": 1248665600,
+      "memory_overhead_ratio": 1.529672689684933,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.05811369200000627,
+      "full_decode_s": 0.05570324100006019,
+      "candidate_generation_s": 0.03212833600002796,
+      "clean_analyzers_s": 0.09931926100011879
+    },
+    {
+      "sequence_id": "cleaning floor/ltoeikYSp1g.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.40906161400005203,
+              "both_analyzers_s": 0.08333360599999651
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.31962051900006827,
+              "both_analyzers_s": 0.08278563499993652
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.33757238099997267,
+              "both_analyzers_s": 0.08276368300005288
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.34859787499999584,
+              "both_analyzers_s": 0.08286807900003623
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3449838329999011,
+              "both_analyzers_s": 0.08157863999997517
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3509383909999997,
+              "both_analyzers_s": 0.08161858899984509
+            }
+          ],
+          "selector_s": 0.00037094800006798323
+        },
+        {
+          "qp": 35,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.32864602600000126,
+              "both_analyzers_s": 0.08160131200008891
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.320627798999908,
+              "both_analyzers_s": 0.08100779899996269
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3101368549999961,
+              "both_analyzers_s": 0.08696973799987973
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3495653710000397,
+              "both_analyzers_s": 0.08294162300001062
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.33805244999996376,
+              "both_analyzers_s": 0.08292002999996839
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3230834060000234,
+              "both_analyzers_s": 0.08297534799999084
+            }
+          ],
+          "selector_s": 0.00035186799993880413
+        },
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.314396945999988,
+              "both_analyzers_s": 0.08297647000006236
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3174067569999579,
+              "both_analyzers_s": 0.09843563499998709
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.300007284000003,
+              "both_analyzers_s": 0.09838620099992568
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3362836090000201,
+              "both_analyzers_s": 0.09892352800011395
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3090399620000426,
+              "both_analyzers_s": 0.08292951699991136
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3240065950000144,
+              "both_analyzers_s": 0.08176130399999693
+            }
+          ],
+          "selector_s": 0.000315655000008519
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3021383049999713,
+              "both_analyzers_s": 0.08148971099990376
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.29989958300006947,
+              "both_analyzers_s": 0.08101515199996356
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3043018099999699,
+              "both_analyzers_s": 0.080946891999929
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30237979200001064,
+              "both_analyzers_s": 0.08890454300001238
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.31117130200004794,
+              "both_analyzers_s": 0.09902313999998569
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3207053690000521,
+              "both_analyzers_s": 0.09940084200002275
+            }
+          ],
+          "selector_s": 0.00046710300000540883
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34137709900005575,
+              "both_analyzers_s": 0.09309784399999899
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3003419300000587,
+              "both_analyzers_s": 0.08226486700016267
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3019486919999963,
+              "both_analyzers_s": 0.0811740799999825
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3028839250000601,
+              "both_analyzers_s": 0.08160629399992558
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3007123739999997,
+              "both_analyzers_s": 0.08168706799995107
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3156967730000133,
+              "both_analyzers_s": 0.08152599199991073
+            }
+          ],
+          "selector_s": 0.00042676500004290574
+        }
+      ],
+      "identity_only_s": 2.077671376000012,
+      "full_selector_s": 12.866348736000077,
+      "overhead_ratio": 6.192677477595477,
+      "identity_peak_process_tree_rss_bytes": 813699072,
+      "full_peak_process_tree_rss_bytes": 1249492992,
+      "memory_overhead_ratio": 1.5355713616937736,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.39661890599995786,
+      "full_decode_s": 0.39024130100006005,
+      "candidate_generation_s": 0.027556759999924907,
+      "clean_analyzers_s": 0.09964599700003873
+    },
+    {
+      "sequence_id": "eating ice cream/PU1DCcuxBqo.mp4",
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 30,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.379253048999999,
+              "both_analyzers_s": 0.08283800999993218
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3401966819999416,
+              "both_analyzers_s": 0.08107482299999447
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.34656261500003893,
+              "both_analyzers_s": 0.0809413100000711
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.36076890799995454,
+              "both_analyzers_s": 0.0815539870000066
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3451562269999613,
+              "both_analyzers_s": 0.08161558599988439
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.36140358400007244,
+              "both_analyzers_s": 0.08748418499999389
+            }
+          ],
+          "selector_s": 0.0004120940000120754
+        },
+        {
+          "qp": 35,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34289337099994555,
+              "both_analyzers_s": 0.0815742519999958
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3257511329999261,
+              "both_analyzers_s": 0.08100130100001479
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3193338380000341,
+              "both_analyzers_s": 0.08087947099988924
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.35857290799992825,
+              "both_analyzers_s": 0.08158153900001253
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3345700610000222,
+              "both_analyzers_s": 0.09795440000004874
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.33030781399997977,
+              "both_analyzers_s": 0.09884911600011037
+            }
+          ],
+          "selector_s": 0.00038475099995594064
+        },
+        {
+          "qp": 40,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34162538999999015,
+              "both_analyzers_s": 0.09104615399996874
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30577210800004195,
+              "both_analyzers_s": 0.08233064899991405
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.31254226499993365,
+              "both_analyzers_s": 0.08105471600003966
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3045749599999681,
+              "both_analyzers_s": 0.08145673399997122
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.31843309699991096,
+              "both_analyzers_s": 0.08174047700003939
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3204834859999437,
+              "both_analyzers_s": 0.08169984500000282
+            }
+          ],
+          "selector_s": 0.0003966900000023088
+        },
+        {
+          "qp": 45,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.32644056699996327,
+              "both_analyzers_s": 0.0876922669999658
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2920150400000239,
+              "both_analyzers_s": 0.08096590600007403
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29635325499998544,
+              "both_analyzers_s": 0.0809005779999552
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.310467577000054,
+              "both_analyzers_s": 0.08147707999989962
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.314205367999989,
+              "both_analyzers_s": 0.08163817399997697
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.32836236299999655,
+              "both_analyzers_s": 0.09583980200000042
+            }
+          ],
+          "selector_s": 0.00045188700005383
+        },
+        {
+          "qp": 50,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3158998930000507,
+              "both_analyzers_s": 0.09698696800001017
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.297661531000017,
+              "both_analyzers_s": 0.0824366409999584
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29604015600000366,
+              "both_analyzers_s": 0.08233183600009397
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.300272884999913,
+              "both_analyzers_s": 0.08298006300003635
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3056260000000748,
+              "both_analyzers_s": 0.08297025700005634
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31610086899991074,
+              "both_analyzers_s": 0.08949120299996594
+            }
+          ],
+          "selector_s": 0.0004502460000139763
+        }
+      ],
+      "identity_only_s": 1.8939236039999514,
+      "full_selector_s": 12.746097138999971,
+      "overhead_ratio": 6.72999539795603,
+      "identity_peak_process_tree_rss_bytes": 816771072,
+      "full_peak_process_tree_rss_bytes": 1249427456,
+      "memory_overhead_ratio": 1.5297156067740851,
+      "full_peak_gpu_reserved_bytes": 442499072,
+      "identity_codec_calls": 5,
+      "full_codec_calls": 30,
+      "identity_decode_s": 0.2655555410000261,
+      "full_decode_s": 0.23208320699995966,
+      "candidate_generation_s": 0.030690217000028497,
+      "clean_analyzers_s": 0.09928550600000108
+    }
+  ]
+}

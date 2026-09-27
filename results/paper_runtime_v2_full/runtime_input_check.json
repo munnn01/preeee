@@ -1,0 +1,28 @@
+{
+  "sample_ids": [
+    "tying knot (not on a tie)/awNohBOJHgw.mp4",
+    "drinking beer/h0ea069drlc.mp4",
+    "dribbling basketball/uSMilNFMGTY.mp4",
+    "jogging/u_9OTjkL7D8.mp4",
+    "swimming backstroke/jI3i52BEMwg.mp4",
+    "news anchoring/K6TTpn3t6ag.mp4",
+    "weaving basket/NvaIZlHvN_M.mp4",
+    "digging/2zSBmewIxV0.mp4",
+    "tap dancing/J8meqbE6gZI.mp4",
+    "taking a shower/U-5QC_ezpLE.mp4",
+    "passing American football (in game)/et-lVSK-la4.mp4",
+    "skateboarding/WK4iVu_0wIk.mp4",
+    "golf chipping/3N1GwK8oadI.mp4",
+    "shaking head/OslRvwb5h0o.mp4",
+    "picking fruit/gRp3UjWkkK0.mp4",
+    "jumping into pool/___dTOdxzXY.mp4",
+    "rock scissors paper/jDFnViSc30g.mp4",
+    "shaving head/dAry8tI-DnY.mp4",
+    "cleaning floor/ltoeikYSp1g.mp4",
+    "eating ice cream/PU1DCcuxBqo.mp4"
+  ],
+  "sample_fingerprint": "22e6fde29d8629ed726745b9be05f211b3528239899a8198768c37270ccbc834",
+  "source_files_sha256": "36e11ee65108b834c4b2878c06c5b435773e29f02c62c2e8e41f39c01cd71551",
+  "index_sha256": "1a7adb6ad3aac2fa3fc93767c9567e49441b35f7ad6375fe7e1949ef0507acb2",
+  "source_check": "20/20 SHA-256 matched"
+}

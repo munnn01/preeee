@@ -71,3 +71,23 @@ def test_archive_part_resume_verifies_retained_bytes(tmp_path, monkeypatch):
     (tmp_path / "videos/aaaaaaaaaaa_000000_000010.mp4").write_bytes(b"changed")
     with pytest.raises(ValueError, match="missing or changed"):
         holdout.archive_part(0, url, {"aaaaaaaaaaa"}, tmp_path)
+
+
+def test_archive_part_retries_transient_timeout_before_committing(tmp_path,
+                                                                 monkeypatch):
+    (tmp_path / "parts").mkdir()
+    calls = []
+    monkeypatch.setattr(holdout.time, "sleep", lambda seconds: None)
+
+    def fake_stream(url, candidate_ids, out_dir):
+        calls.append(url)
+        if len(calls) == 1:
+            raise TimeoutError("connection stalled")
+        return {"url": url, "retained": [], "compressed_sha256": "verified"}
+
+    monkeypatch.setattr(holdout, "stream_archive", fake_stream)
+    url = "https://s3.amazonaws.com/kinetics/400/val/part_0.tar.gz"
+    _, report = holdout.archive_part(0, url, set(), tmp_path)
+    assert len(calls) == 2
+    assert report["compressed_sha256"] == "verified"
+    assert json.loads((tmp_path / "parts/part_00.json").read_text()) == report
