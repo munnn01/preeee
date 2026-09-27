@@ -13,4 +13,5 @@ results/paper_runtime_v2_full/** -text
 results/od_coco_pilot/** -text
 configs/holdout_source_audit/** -text
 configs/v4_frozen/** -text
+configs/v4_holdout_source_audit/** -text
 configs/paper_runtime_dev/** -text
