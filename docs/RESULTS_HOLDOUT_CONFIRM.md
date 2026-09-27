@@ -1,6 +1,6 @@
 # Xác nhận V2-C trên holdout nguồn mới
 
-**Trạng thái: CHƯA ĐO. Gate holdout: CHƯA XÁC NHẬN.** Chưa có index 1.000 source video và fingerprint được commit. `docs/PREREGISTRATION.md` vẫn là dự thảo. Theo giao thức đã đặt trước, không chạy đánh giá cho đến khi danh sách cuối, `docs/HOLDOUT_SPLIT.md` và preregistration hoàn chỉnh được commit.
+**Trạng thái: CHƯA ĐO. Gate holdout: CHƯA XÁC NHẬN.** [Tập 1.000 source video](HOLDOUT_SPLIT.md), [index nhãn](../configs/holdout_source_audit/index.json) và [preregistration](PREREGISTRATION.md) đã được khóa trước khi chấm. Chưa chạy mô hình trên holdout; sẽ chỉ chạy sau khi người dùng duyệt bản preregistration cuối. Fingerprint nguồn `ea86e9ba66b2fe3143a891619ae34ae036c7f065ea083f4b076b53263e9c668d`, SHA-256 index `f0f7bd7d56b3b5345886e5be6027c1b1958a9b74efd79ec464eaec096302ec57`.
 
 | Codec | Analyzer | BD-rate Top-1 so với identity | CI 95%, 2.000 bootstrap theo video nguồn |
 |---|---|---:|---:|

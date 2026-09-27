@@ -1,6 +1,6 @@
 # Holdout source audit and split
 
-**Trạng thái: đã khóa 1.000 source video chỉ bằng ID và kiểm tra giải mã trong commit chứa file này; chưa tạo index nhãn và chưa chạy đánh giá holdout.** Danh sách và SHA video dưới đây được commit trước khi mã tạo index được phép đọc nhãn. Bản preregistration hoàn chỉnh và index sẽ được commit tiếp theo, trước lượt đánh giá đầu tiên.
+**Trạng thái: 1.000 source video đã khóa theo ID trong commit `c12f422ed85f8a4a61319fe169724c115f663f74`; index nhãn đã tạo và chưa chạy đánh giá holdout.** Danh sách và SHA video được commit trước khi mã tạo index đọc nhãn. Bản preregistration hoàn chỉnh và index được commit cùng bản cập nhật tài liệu này, trước lượt đánh giá đầu tiên.
 
 ## Nguồn ứng viên
 
@@ -31,11 +31,13 @@ Lần kiểm tra cuối chạy bằng code commit `2fd930cb5273d516b461791b395b4
 
 Quy tắc đã chốt chọn **1.000 source ID đầu tiên đọc được trong thứ tự hash**, mỗi source đúng một video. Fingerprint SHA-256 của tập ID đã sắp xếp: `ea86e9ba66b2fe3143a891619ae34ae036c7f065ea083f4b076b53263e9c668d`. SHA-256 [selected_ids.txt](../configs/holdout_source_audit/selected_ids.txt) là `7f4d583812cd0bc20335aeaf2f62520ad8a9c32aa8c3f7d591df39c2a1852bc4`; SHA-256 [selected_sources.json](../configs/holdout_source_audit/selected_sources.json) là `5509f8b766a9c3a51b4d8cbe2838bb62e5bbf7088d8875ce028126913d92d9f0`. Hai file này chứa ID, tên và hash video, **không chứa nhãn**. Giao của 1.000 ID với hợp 28.625 ID lịch sử bằng **0** vì chúng được chọn từ tập eligible đã trừ toàn bộ inventory và giao nguồn chính thức với các inventory cũng bằng 0.
 
+Sau commit ID-only `c12f422ed85f8a4a61319fe169724c115f663f74`, `ops/lock_official_holdout.py index` mới đọc annotation và tạo [index.json](../configs/holdout_source_audit/index.json) gồm đúng 1.000 record, path tương đối `videos/<filename>`, nhãn Kinetics-400 và SHA-256 từng video. SHA-256 index `f0f7bd7d56b3b5345886e5be6027c1b1958a9b74efd79ec464eaec096302ec57`. Builder xác nhận nhãn có trong cùng thứ tự 400 lớp của `r2plus1d_18`, `r3d_18` và `mc3_18`, tên file khớp ID/khoảng thời gian annotation, và byte video khớp manifest đã commit. Chưa suy luận analyzer trên bất kỳ video holdout nào.
+
 Đây là **source-disjoint trong cùng họ Kinetics-400**, không phải external-domain holdout. Kiểm toán theo ID không loại trừ một cảnh bị đổi ID hoặc re-encode trong kho lịch sử; thiếu byte đầy đủ của mọi video lịch sử nên không tuyên bố chắc chắn ở mức cảnh. Không dùng nhãn để cân bằng lớp và không thay clip theo bitrate hay kết quả Top-1.
 
 ## Điều kiện còn thiếu trước khi mở holdout
 
-1. Dùng commit khóa ID chứa file này để tạo index nhãn Kinetics-400 đã xác minh; ghi SHA-256 index và commit khóa ID vào bản preregistration.
-2. Commit `docs/PREREGISTRATION.md` hoàn chỉnh, bản cập nhật file này và index trước lượt đánh giá holdout đầu tiên. Sau khi người dùng duyệt bản khóa cuối, mới chạy hai codec × ba analyzer một lần.
+1. Người dùng duyệt bản `docs/PREREGISTRATION.md` cuối đã commit, gồm commit khóa ID và SHA-256 index ở trên.
+2. Sau khi được duyệt, chạy hai codec × ba analyzer đúng một lần theo giao thức đã khóa; không dùng kết quả để thay policy, tập, đối chứng hay gate.
 
 Các kết quả `mc3_18` trên TEST cũ và downscaling trên DEV không tham gia bước chọn 1.000 ID.

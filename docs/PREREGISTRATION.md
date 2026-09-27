@@ -1,6 +1,6 @@
 # Preregistration — V2-C independent source holdout
 
-**Trạng thái: bản dự thảo để duyệt. `PREREGISTRATION_LOCKED: false`.** Nguồn ứng viên đã được kiểm toán ở mức metadata; danh sách 1.000 source ID cuối chưa khóa. Không chạy bất kỳ đánh giá holdout nào cho đến khi các trường `CHƯA CHỐT` bên dưới được điền, kiểm toán và commit trước lượt đánh giá đầu tiên. Mọi thay đổi giao thức sau commit phải có amendment ghi thời điểm và lý do; không được dùng kết quả holdout để quyết định amendment.
+**Trạng thái: giao thức cuối đã khóa trong Git để người dùng duyệt. `PREREGISTRATION_LOCKED: true`.** Commit khóa ID trước khi đọc nhãn là `c12f422ed85f8a4a61319fe169724c115f663f74`; index và bản giao thức này được commit **trước bất kỳ đánh giá mô hình nào trên holdout**. Chưa chạy đánh giá holdout. Mọi thay đổi giao thức sau commit phải có amendment ghi thời điểm và lý do; không được dùng kết quả holdout để quyết định amendment.
 
 ## Câu hỏi và tiêu chí đặt trước
 
@@ -29,7 +29,9 @@ Chỉ dùng ID nguồn để chia tập. Chuẩn hóa source ID từ ID video g�
 
 Sau khi loại trùng nguồn, kiểm tra file đọc được trước khi chốt mẫu. Xếp các source ID hợp lệ tăng dần theo `SHA256("v2c-holdout-20260927\0" + source_id)`; dùng 1.000 source ID đầu. Một video nguồn chỉ đóng góp một clip. Không cân bằng lớp bằng nhãn; không thay video dựa trên bitrate, Top-1 hoặc hình ảnh. Cùng 1.000 ID và cùng thứ tự được dùng cho hai codec và ba analyzer.
 
-Danh sách 1.000 ID, số lượng loại trùng, fingerprint SHA-256 của danh sách ID đã sắp xếp, SHA-256 index và commit chốt: **CHƯA CHỐT**. Hai nghìn ID ứng viên đã được chốt chỉ từ source ID bằng salt `v2c-holdout-20260927` trước khi đọc nhãn; preflight archive đang kiểm tra byte và giải mã. `ops/lock_official_holdout.py` yêu cầu commit danh sách ID và SHA video **trước** khi nó cho phép tạo index nhãn; runner `ops/paper_holdout_confirm.py` yêu cầu commit bản preregistration có `PREREGISTRATION_LOCKED: true`, split và index khớp byte. Nếu không có đủ 1.000 nguồn hợp lệ hoặc không chứng minh được disjoint, kết quả holdout = **CHƯA ĐO**. Không thay bằng phần còn lại của TEST cũ hay một tập đã xem. `docs/HOLDOUT_SPLIT.md` sẽ ghi phương pháp, nguồn, số clip, fingerprint và bằng chứng disjoint; file này cùng bản preregistration đã hoàn chỉnh phải được commit trước đánh giá.
+Hai nghìn ID ứng viên được chốt chỉ từ source ID bằng salt `v2c-holdout-20260927` trước khi đọc nhãn. Cả 20 archive chính thức đã được stream và băm; 1.998 video ứng viên có file, hai ID thiếu file trước mốc chọn. Danh sách cuối gồm **1.000 source ID đọc được đầu tiên theo thứ tự hash**, một clip mỗi source, không cân bằng nhãn. Giao source ID giữa 19.906 ID official validation và hợp 28.625 ID lịch sử đã kiểm toán bằng **0**; số ID loại trùng trong tập official trước khi chọn là **0**. Fingerprint SHA-256 của 1.000 ID đã sắp xếp là `ea86e9ba66b2fe3143a891619ae34ae036c7f065ea083f4b076b53263e9c668d`. SHA-256 `selected_ids.txt` là `7f4d583812cd0bc20335aeaf2f62520ad8a9c32aa8c3f7d591df39c2a1852bc4`; SHA-256 `selected_sources.json` là `5509f8b766a9c3a51b4d8cbe2838bb62e5bbf7088d8875ce028126913d92d9f0`; SHA-256 index nhãn là `f0f7bd7d56b3b5345886e5be6027c1b1958a9b74efd79ec464eaec096302ec57`. Index dùng path tương đối `videos/<filename>` và được tạo **sau** commit khóa ID `c12f422ed85f8a4a61319fe169724c115f663f74`. [Kiểm toán split](HOLDOUT_SPLIT.md) và [manifest nguồn](../configs/holdout_source_audit/selected_sources.json) ghi chi tiết hash archive/video, hai ID thiếu và giới hạn tách nguồn.
+
+`ops/lock_official_holdout.py` yêu cầu commit danh sách ID và SHA video trước khi nó đọc nhãn để tạo index. Runner `ops/paper_holdout_confirm.py` từ chối đánh giá nếu bản preregistration, split, index, mã chấm hoặc byte của bất kỳ video nào khác với commit khóa. Nếu dữ liệu thay đổi hoặc không còn chứng minh được disjoint, kết quả holdout = **CHƯA ĐO**. Không thay bằng phần còn lại của TEST cũ hay một tập đã xem.
 
 ## Đối chứng và phép phân tích
 
@@ -43,7 +45,7 @@ Phân tích chính gồm bốn phép đo: hai analyzer chính × hai codec. Hai 
 
 ## Ranh giới replication và runtime
 
-Hai JSON V2 cũ và phép đánh giá `mc3_18` trên fingerprint `aae3888f3ae34d08` là replication trên TEST đã xem. Chúng không được nhập chung với holdout mới và không tham gia bất kỳ lựa chọn nào cho nghiên cứu này. JSON `mc3_18` đã gộp hiện có ngoài repo phải được kiểm toán lại từ record, hash và manifest trước khi công bố trong `results/paper_mc3_v2_confirmed/`.
+Hai JSON V2 cũ và phép đánh giá `mc3_18` trên fingerprint `aae3888f3ae34d08` là replication trên TEST đã xem. Chúng không được nhập chung với holdout mới và không tham gia bất kỳ lựa chọn nào cho nghiên cứu này. JSON `mc3_18` đã được kiểm toán từ record, hash và manifest, rồi lưu trong [gói replication TEST cũ](../results/paper_mc3_v2_confirmed/).
 
 Benchmark runtime dùng clip DEV cố định bằng hash, cùng phần cứng cho hai arm và thứ tự arm cân bằng theo ID. Full arm tính mọi trial encode/decode, sinh candidate, suy luận encoder và lựa chọn; identity arm tính chi phí encode/decode identity-only. Ghi wall-time, peak RAM của cây tiến trình kể cả FFmpeg, peak GPU memory nếu dùng GPU, phiên bản FFmpeg/Torch, CPU/GPU, số clip, số QP, thời gian tuyệt đối và tỉ lệ overhead. Runtime không phải phép đo holdout.
 
@@ -51,6 +53,6 @@ OD COCO hiện là pilot 100 ảnh với intervention khác V2-C; không dùng �
 
 ## Provenance và quy tắc báo cáo
 
-Mỗi JSON có code commit, preregistration commit, SHA-256 config/policy/index, fingerprint nguồn, seed, bootstrap unit và requested/valid draws. SHA-256 của chính JSON kết quả nằm trong `SHA256SUMS.txt` cùng commit phát hành để tránh self-hash đệ quy. Giữ record và manifest gốc.
+Mỗi JSON **holdout** phải có code commit, preregistration commit, SHA-256 config/policy/index, fingerprint nguồn, seed, bootstrap unit và requested/valid draws. SHA-256 của chính JSON kết quả nằm trong `SHA256SUMS.txt` cùng commit phát hành để tránh self-hash đệ quy. Giữ record và manifest gốc.
 
 Nếu gate trượt, viết rõ **KHÔNG ĐẠT** và trình bày như nghiên cứu replication/negative. Nếu chưa có holdout hợp lệ hoặc lượt chạy chưa xong, viết **CHƯA ĐO**. Không suy đoán số, không sửa ngưỡng, không tuyên bố tổng quát hóa sang tập nguồn hay tác vụ chưa được kiểm chứng.
