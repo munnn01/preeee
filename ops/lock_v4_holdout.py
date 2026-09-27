@@ -42,6 +42,14 @@ def verify_ranked_selection(ranked: list[str], selected: list[dict],
         raise ValueError("V4 selection deviates from hash rank")
 
 
+def matches_locked_metadata(selection: dict, locked_plan: dict) -> bool:
+    """Preflight advances status while every locked source field stays fixed."""
+    return (selection.get("status") == "preflight"
+            and {key: selection.get(key) for key in locked_plan if key != "status"}
+            == {key: value for key, value in locked_plan.items()
+                if key != "status"})
+
+
 def lock_ids(selection_path: Path, annotation: Path, archive_paths: Path,
              legacy: list[Path], dev_manifest: Path, videos: Path,
              ids_out: Path, sources_out: Path) -> dict:
@@ -58,12 +66,11 @@ def lock_ids(selection_path: Path, annotation: Path, archive_paths: Path,
             or ranked != locked_ids_path.read_text(encoding="utf-8").splitlines()):
         raise ValueError("V4 source plan changed after metadata lock")
     selection = json.loads(selection_path.read_text(encoding="utf-8"))
-    if (selection.get("status") != "preflight"
+    if (not matches_locked_metadata(selection, locked_plan)
             or selection.get("salt") != SALT
             or selection.get("complete") is not True
             or selection.get("target") != 1000
-            or selection.get("candidate_limit") != 2000
-            or {k: selection.get(k) for k in locked_plan} != locked_plan):
+            or selection.get("candidate_limit") != 2000):
         raise ValueError("V4 preflight does not match locked metadata")
     selected = selection["selected"]
     failures = selection["failures_before_target"]
