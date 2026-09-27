@@ -24,6 +24,8 @@ Nghiên cứu [V3 chỉ trên DEV](results/v3_dev_policy/README.md) đã preregi
 
 [Oracle chẩn đoán trên DEV](results/v4_dev_oracle/README.md) dùng nhãn thật để chọn candidate không làm mất dự đoán đúng: BD-rate tham khảo đạt −27,39%/−26,54% ở H.264 và −18,12%/−15,68% ở H.265 trên hai analyzer. Đây **không phải policy triển khai được hoặc kết quả holdout**; nó chỉ cho thấy bộ sáu candidate có dư địa để nghiên cứu một selector không đọc nhãn.
 
+[Policy V4 trên FIT/CALIBRATION/DEV](results/v4_dev_policy/README.md) dùng hai mô hình xác suất đúng với 41 feature không nhãn cho mỗi codec. Cả hai codec được thăng cấp theo CALIBRATION; H.265 qua quy tắc go/no-go trên DEV, còn H.264 trượt guard same-QP của `r3d_18` (−2,00 điểm % so với ngưỡng ≥−1,00). V4 **chưa có holdout mới: CHƯA ĐO**. Không dùng kết quả holdout V2 đã công bố để fit hoặc chọn V4; [giao thức V4](docs/PREREGISTRATION_V4.md) khóa một tập xác nhận mới tách source ID.
+
 ### Replication trên TEST cũ đã xem
 
 [Gói V2-C 1.000 clip TEST cũ](results/dual_codec_search_v2_confirm_1000/README.md) dùng cùng 1.000 clip được ghép cặp giữa hai codec, năm QP `30,35,40,45,50`, và 2.000 lần bootstrap theo **video nguồn**; BD-rate được tính sau khi gộp hai shard 500 clip, không lấy trung bình BD-rate của shard. Các số sau **không** thuộc holdout mới.
