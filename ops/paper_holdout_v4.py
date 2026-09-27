@@ -50,7 +50,8 @@ LOCKED_CODE = ("ops/paper_holdout_v4.py", "ops/v4_dev_policy.py",
                "ops/v4_frozen.py", "ops/lock_v4_holdout.py",
                "ops/dual_codec_search.py", "ops/paper_heldout_mc3.py",
                "src/metrics/bd_rate.py", "kaggle/paper_holdout_v4_cell.sh",
-               "ops/push_paper_holdout_v4.py")
+               "ops/push_paper_holdout_v4.py",
+               "ops/package_v4_holdout_dataset.py")
 
 
 def ready_index(index_path: Path, prereg_commit: str,
