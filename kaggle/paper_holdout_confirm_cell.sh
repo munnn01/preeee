@@ -31,10 +31,10 @@ python -c 'import torch, torchvision, cv2; print("torch",torch.__version__,"torc
 ffmpeg -hide_banner -encoders 2>/dev/null | grep -E 'libx264|libx265'
 
 INPUT_ROOT="/kaggle/input/$DATASET_SLUG"
-if [ ! -f "$INPUT_ROOT/videos.zip" ]; then
+if [ ! -f "$INPUT_ROOT/holdout_manifest.json" ]; then
   INPUT_ROOT="/kaggle/input/datasets/$DATASET_OWNER/$DATASET_SLUG"
 fi
-test -f "$INPUT_ROOT/videos.zip" || { echo 'Locked video dataset missing' >&2; exit 2; }
+test -f "$INPUT_ROOT/holdout_manifest.json" || { echo 'Locked video manifest missing' >&2; exit 2; }
 VIDEO_ROOT=/kaggle/working/locked_holdout
 export INPUT_ROOT VIDEO_ROOT REF
 python - <<'PY'
@@ -63,13 +63,26 @@ assert manifest['index_sha256'] == sha(index_path)
 assert manifest['selected_sources_sha256'] == sha(sources_path)
 assert manifest['source_fingerprint'] == sources['selected_source_fingerprint']
 assert manifest['source_count'] == len(sources['selected']) == 1000
-assert sha(root / 'videos.zip') == manifest['zip_sha256']
 expected = ['videos/' + row['filename'] for row in sources['selected']]
-with zipfile.ZipFile(root / 'videos.zip') as archive:
-    assert archive.namelist() == expected
-    archive.extractall(target)
-print('[holdout-input] archive SHA and 1000 video names verified')
+if (root / 'videos.zip').is_file():
+    assert sha(root / 'videos.zip') == manifest['zip_sha256']
+    with zipfile.ZipFile(root / 'videos.zip') as archive:
+        assert archive.namelist() == expected
+        archive.extractall(target)
+    video_root = target
+else:
+    # Kaggle expands uploaded ZIPs under a directory named after the ZIP.
+    candidates = [root, root / 'videos']
+    matching = [candidate for candidate in candidates
+                if (candidate / expected[0]).is_file()]
+    assert len(matching) == 1, 'Kaggle video mount layout changed'
+    video_root = matching[0]
+actual = sorted(path.name for path in (video_root / 'videos').glob('*.mp4'))
+assert actual == sorted(row['filename'] for row in sources['selected'])
+Path('/kaggle/working/locked_video_root.txt').write_text(str(video_root))
+print('[holdout-input] manifest and 1000 video names verified; runner will check every video SHA')
 PY
+VIDEO_ROOT="$(cat /kaggle/working/locked_video_root.txt)"
 test -d "$VIDEO_ROOT/videos"
 
 python -m ops.paper_holdout_confirm primary \
