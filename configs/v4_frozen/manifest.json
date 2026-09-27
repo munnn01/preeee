@@ -45,8 +45,10 @@
       },
       "v2_comparator_policy_path": "configs/dual_codec_search_v2_frozen/h264/frozen_policy.json",
       "v2_comparator_policy_sha256_bytes": "613506cb70ef01d1e0c45103a1a8f7ed43a82b6023e7dfc2b808f8d0f768a3df",
+      "v2_comparator_policy_sha256_git_blob": "c1cc53880ec320c1f60951adcccd4045fb1ac8881ae3ddfa5d5741d662b82985",
       "v2_comparator_risk_path": "configs/dual_codec_search_v2_frozen/h264/risk_model.json",
-      "v2_comparator_risk_sha256_bytes": "204a75eaa340607e0a68fc485403ae06213c7e75833f0f35c2d1075f78936c24"
+      "v2_comparator_risk_sha256_bytes": "204a75eaa340607e0a68fc485403ae06213c7e75833f0f35c2d1075f78936c24",
+      "v2_comparator_risk_sha256_git_blob": "a9b80d9578ab7f74b1da28c45caa15f5f36f36d3c9fb27a69261b915059f4166"
     },
     "h265": {
       "calibration_promoted": true,
@@ -69,8 +71,10 @@
       },
       "v2_comparator_policy_path": "configs/dual_codec_search_v2_frozen/h265/frozen_policy.json",
       "v2_comparator_policy_sha256_bytes": "0d39061a0b8de838c60553a6b112a40db4c64975ddea0f19137d6fda183fa2dc",
+      "v2_comparator_policy_sha256_git_blob": "10a97a207506791e6cdf40b6cf30d9521ff97ba3d34a9201dae198f777f3fc1c",
       "v2_comparator_risk_path": "configs/dual_codec_search_v2_frozen/h265/risk_model.json",
-      "v2_comparator_risk_sha256_bytes": "bfe88bf3e523d45e0c566695843d1ee5d33731c5c2358e12a3cdc778d500ffeb"
+      "v2_comparator_risk_sha256_bytes": "bfe88bf3e523d45e0c566695843d1ee5d33731c5c2358e12a3cdc778d500ffeb",
+      "v2_comparator_risk_sha256_git_blob": "7b630bce3638f365048d8d2d4d918cf38d4c0f962a4370e875878e600f66c5c1"
     }
   }
 }

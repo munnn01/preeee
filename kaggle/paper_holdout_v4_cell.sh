@@ -4,6 +4,9 @@ export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS=2
 export OPENBLAS_NUM_THREADS=2
 REF="__REF__"
+# The private video datasets were uploaded under the original, committed index.
+# Only the comparator newline verifier changed in REF; index/video bytes are fixed.
+DATASET_REF="78c1124d092d70ba11f3ed664194e4f747f5e3a8"
 CODEC="__CODEC__"
 SHARD="__SHARD__"
 DATASET_OWNER="__DATASET_OWNER__"
@@ -26,6 +29,7 @@ trap finish EXIT
 git clone -q https://github.com/munnn01/preeee.git "$REPO"
 git -C "$REPO" checkout -q "$REF"
 test "$(git -C "$REPO" rev-parse HEAD)" = "$REF"
+git -C "$REPO" merge-base --is-ancestor "$DATASET_REF" "$REF"
 cd "$REPO"
 python -m pip install -q 'scikit-learn==1.8.0'
 python -c 'import sklearn,torch,torchvision,cv2; print("sklearn",sklearn.__version__,"torch",torch.__version__,"torchvision",torchvision.__version__,"cuda",torch.cuda.is_available()); assert sklearn.__version__=="1.8.0" and torch.cuda.is_available()'
@@ -37,11 +41,12 @@ if [ ! -f "$INPUT_ROOT/v4_holdout_manifest.json" ]; then
 fi
 test -f "$INPUT_ROOT/v4_holdout_manifest.json" || { echo 'Locked V4 video manifest missing' >&2; exit 2; }
 VIDEO_ROOT=/kaggle/working/locked_v4_holdout
-export INPUT_ROOT VIDEO_ROOT REF
+export INPUT_ROOT VIDEO_ROOT REF DATASET_REF
 python - <<'PY'
 import hashlib
 import json
 import os
+import subprocess
 import zipfile
 from pathlib import Path
 
@@ -52,18 +57,19 @@ sources_path = Path('configs/v4_holdout_source_audit/selected_sources.json')
 sources = json.loads(sources_path.read_text())
 index_path = Path('configs/v4_holdout_source_audit/index.json')
 index = json.loads(index_path.read_text())
-freeze_path = Path('configs/v4_frozen/manifest.json')
 def sha(path):
     value = hashlib.sha256()
     with path.open('rb') as stream:
         for block in iter(lambda: stream.read(1024 * 1024), b''):
             value.update(block)
     return value.hexdigest()
-assert manifest['preregistration_commit'] == os.environ['REF']
+assert manifest['preregistration_commit'] == os.environ['DATASET_REF']
 assert manifest['id_lock_commit'] == index['meta']['locked_commit']
 assert manifest['index_sha256'] == sha(index_path)
 assert manifest['selected_sources_sha256'] == sha(sources_path)
-assert manifest['freeze_manifest_sha256'] == sha(freeze_path)
+original_freeze = subprocess.check_output([
+    'git', 'show', os.environ['DATASET_REF'] + ':configs/v4_frozen/manifest.json'])
+assert manifest['freeze_manifest_sha256'] == hashlib.sha256(original_freeze).hexdigest()
 assert manifest['source_fingerprint'] == sources['selected_source_fingerprint']
 assert manifest['source_count'] == len(sources['selected']) == 1000
 expected = ['videos/' + row['filename'] for row in sources['selected']]

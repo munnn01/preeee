@@ -13,6 +13,8 @@ def test_v4_notebook_pins_commit_codec_shard_and_private_dataset():
     script = book["cells"][0]["source"]
     script = "".join(script) if isinstance(script, list) else script
     assert commit in script
+    assert 'DATASET_REF="78c1124d092d70ba11f3ed664194e4f747f5e3a8"' in script
+    assert "merge-base --is-ancestor" in script
     assert 'CODEC="h264"' in script
     assert 'SHARD="0"' in script
     assert "ops.paper_holdout_v4 primary" in script

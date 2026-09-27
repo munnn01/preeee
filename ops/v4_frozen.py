@@ -5,6 +5,7 @@ after the manifest has been committed and the holdout index has been locked.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 import subprocess
@@ -16,6 +17,15 @@ from ops.dual_codec_search import digest
 from src.models.dual_codec_search import MODELS
 
 MANIFEST = REPO / "configs/v4_frozen/manifest.json"
+
+
+def comparator_bytes_match(working: bytes, git_blob: bytes,
+                           working_sha: str, git_blob_sha: str) -> bool:
+    """Accept only the two recorded Git/Windows newline encodings."""
+    actual = hashlib.sha256(working).hexdigest()
+    return (hashlib.sha256(git_blob).hexdigest() == git_blob_sha
+            and actual in {working_sha, git_blob_sha}
+            and working.replace(b"\r\n", b"\n") == git_blob)
 
 
 def frozen_manifest(path: Path = MANIFEST) -> dict:
@@ -54,7 +64,13 @@ def frozen_manifest(path: Path = MANIFEST) -> dict:
         for key in ("policy", "risk"):
             path_key = f"v2_comparator_{key}_path"
             sha_key = f"v2_comparator_{key}_sha256_bytes"
-            if file_sha256(REPO / cfg[path_key]) != cfg[sha_key]:
+            blob_sha_key = f"v2_comparator_{key}_sha256_git_blob"
+            relative_path = cfg[path_key]
+            blob = subprocess.check_output(
+                ["git", "-c", f"safe.directory={REPO.as_posix()}",
+                 "show", f"HEAD:{relative_path}"], cwd=REPO)
+            if not comparator_bytes_match((REPO / relative_path).read_bytes(),
+                                          blob, cfg[sha_key], cfg[blob_sha_key]):
                 raise ValueError(f"{codec} V2 comparator {key} changed")
         if set(cfg["model_paths"]) != set(MODELS):
             raise ValueError(f"{codec} model names changed")
