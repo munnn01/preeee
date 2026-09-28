@@ -1,0 +1,618 @@
+{
+  "experiment": "v7_h265_mc3_reused_dev_diagnostic",
+  "scope": "exploratory reused DEV; no independent holdout",
+  "codec": "h265",
+  "n": 200,
+  "source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258",
+  "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+  "selection_sha256": "74404de548e85587fad3c0108697780c6ef94108b160cfd17d2926c5163eacec",
+  "v7_result_sha256": "7026c427f92574508db966d61e082018e0c18a66c50592d24d9c2fe9046c742c",
+  "preregistration_commit": "53a1ad44c9c659829d97046e117e9d50928dada1",
+  "analysis_code_commit": "4b948bbf3414bd0cc42c908ca2d795a1a2919c6e",
+  "bootstrap_seed": 20261004,
+  "bootstrap_draws": 2000,
+  "bootstrap_unit": "source video; all QPs and three arms paired",
+  "shard_manifests": [
+    {
+      "experiment": "v7_h265_mc3_reused_dev_diagnostic",
+      "scope": "reused DEV; diagnostic only",
+      "codec": "h265",
+      "stage": "mc3",
+      "shard": 0,
+      "shards": 4,
+      "n": 50,
+      "source_ids": [
+        "baby waking up/eQKpgoez_d4.mp4",
+        "riding mule/KiIvQ24j_FM.mp4",
+        "balloon blowing/inx5TP2Qq0o.mp4",
+        "tai chi/FC_ltVf65K8.mp4",
+        "tossing coin/dDUrjTB6CHM.mp4",
+        "catching or throwing frisbee/wfUgbtpzH2M.mp4",
+        "exercising with an exercise ball/gAoczaJ6j0Y.mp4",
+        "barbequing/kbyKHGagm3Q.mp4",
+        "assembling computer/5diChJFerXo.mp4",
+        "playing tennis/zk88K6i7WEY.mp4",
+        "eating watermelon/BLb8hqBRZ68.mp4",
+        "reading book/Qjy8IoqV0K0.mp4",
+        "spinning poi/rCztI5vaKAo.mp4",
+        "windsurfing/eHtqXf1c6lU.mp4",
+        "feeding birds/DssK8C9eesY.mp4",
+        "playing harp/BNxCrW1drg0.mp4",
+        "cooking chicken/BeRd0bat6cc.mp4",
+        "crawling baby/RguUqvR1HY0.mp4",
+        "hula hooping/O7mNxRWzyII.mp4",
+        "side kick/ysQ__lRAKJ4.mp4",
+        "playing ice hockey/I9EB201_yAc.mp4",
+        "folding clothes/93M5vRuJP0c.mp4",
+        "playing clarinet/Afct6DPTqKA.mp4",
+        "busking/7L1rGWHL1uE.mp4",
+        "spray painting/f_F-g-viudE.mp4",
+        "recording music/9s2kaWXAMYw.mp4",
+        "juggling soccer ball/bIHVR_EA1KA.mp4",
+        "sticking tongue out/rGS3Me0BhpI.mp4",
+        "drop kicking/iZjzxQmlk-Y.mp4",
+        "dying hair/CJI25uRmaf4.mp4",
+        "high jump/RO08GTKS4y8.mp4",
+        "making jewelry/otsow2c6HqI.mp4",
+        "playing poker/eYGSJZsrCv0.mp4",
+        "making a sandwich/UglMfMIInNU.mp4",
+        "dunking basketball/Bhezvty7Fk4.mp4",
+        "crying/Ux2iImyAiL4.mp4",
+        "air drumming/0ETN_KBzW_c.mp4",
+        "cleaning floor/168M5NZnVQ0.mp4",
+        "massaging person's head/ap9nDFioQuM.mp4",
+        "beatboxing/ZmgpqCTjpLw.mp4",
+        "playing basketball/hDUkhLUBsvk.mp4",
+        "opening bottle/GktH-M49k90.mp4",
+        "cleaning windows/1nlR2DtRulg.mp4",
+        "riding camel/72uQ3Szbeqc.mp4",
+        "bench pressing/mW1oYPdTYg8.mp4",
+        "building shed/q2lFB35eBrw.mp4",
+        "swinging on something/hiUlICwrksI.mp4",
+        "scuba diving/DANaztErVkU.mp4",
+        "skiing crosscountry/LtIyXmbyh3w.mp4",
+        "playing piano/ErtbQI7biXo.mp4"
+      ],
+      "shard_fingerprint": "418f691a33e0ec506dfbe62013117b3aa1d5319c80f8ec2c38cf5f9299c20266",
+      "source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258",
+      "selection_sha256": "74404de548e85587fad3c0108697780c6ef94108b160cfd17d2926c5163eacec",
+      "preregistration_commit": "53a1ad44c9c659829d97046e117e9d50928dada1",
+      "code_commit": "4b948bbf3414bd0cc42c908ca2d795a1a2919c6e",
+      "records_sha256": "7214a8e8aa7a4c194ed8e5f1785566942dd2fdfe477233223a5d9d63ad6631e6",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "analyzer": "mc3_18",
+      "bootstrap_unit": "source video; all QPs and arms paired",
+      "bootstrap_seed": 20261004,
+      "bootstrap_draws": 2000,
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    },
+    {
+      "experiment": "v7_h265_mc3_reused_dev_diagnostic",
+      "scope": "reused DEV; diagnostic only",
+      "codec": "h265",
+      "stage": "mc3",
+      "shard": 1,
+      "shards": 4,
+      "n": 50,
+      "source_ids": [
+        "brushing teeth/ieWZqKXLBtU.mp4",
+        "cutting watermelon/Fw-VFwm3Xd4.mp4",
+        "hopscotch/zDuofHpA4V4.mp4",
+        "abseiling/h4fxmyfMgdU.mp4",
+        "krumping/wLa6jrTq4zc.mp4",
+        "gargling/CAbsylhtHz8.mp4",
+        "curling hair/4tR7PwD8814.mp4",
+        "tying knot (not on a tie)/awNohBOJHgw.mp4",
+        "changing oil/kLvw_MLJ2Gg.mp4",
+        "passing American football (not in game)/IXSjToh3v8Y.mp4",
+        "trapezing/OXi23HSXa74.mp4",
+        "pushing car/EPkem-Pf4T4.mp4",
+        "making pizza/K3usv393W0g.mp4",
+        "cutting pineapple/LS_EO0GGB9g.mp4",
+        "digging/2zSBmewIxV0.mp4",
+        "using computer/qguB0vzznNM.mp4",
+        "salsa dancing/6CpEacCWFog.mp4",
+        "catching or throwing softball/cwUUsAFVkc4.mp4",
+        "swimming breast stroke/2gnZ2LS15z0.mp4",
+        "using segway/7Yo6fxRoMRM.mp4",
+        "tickling/gYi-zhyyPZk.mp4",
+        "picking fruit/UWdnjeamabM.mp4",
+        "checking tires/yLjldw8cbLw.mp4",
+        "eating burger/yaVN5BAdQFY.mp4",
+        "carrying baby/VsBBBpmayz4.mp4",
+        "exercising arm/hp-iwhJ47wI.mp4",
+        "tapping pen/eSzMw-cQg7I.mp4",
+        "climbing tree/_ilSnteBoZc.mp4",
+        "bungee jumping/P1HYBq_wBaI.mp4",
+        "planting trees/BV5Lo-2NWjQ.mp4",
+        "paragliding/brWpMhiVuVI.mp4",
+        "rock climbing/PM4qE8xKREw.mp4",
+        "smoking hookah/aSU04g-DQt0.mp4",
+        "feeding goats/sIID3aUZkpk.mp4",
+        "passing American football (in game)/et-lVSK-la4.mp4",
+        "skiing (not slalom or crosscountry)/s4oAs-MlJJo.mp4",
+        "belly dancing/dU7W4hlzNnI.mp4",
+        "shearing sheep/M9MxETBhyoE.mp4",
+        "getting a tattoo/rqiaWhRrnGk.mp4",
+        "frying vegetables/waftMBC0qi4.mp4",
+        "squat/oTYQxAr9dEg.mp4",
+        "riding mountain bike/LaEaKWkXxUY.mp4",
+        "playing bagpipes/RH_CWnSfLJw.mp4",
+        "situp/Hs1Uyjfou94.mp4",
+        "bookbinding/y6VCdA3F8vw.mp4",
+        "skateboarding/WK4iVu_0wIk.mp4",
+        "front raises/EpJCgC_R4Vs.mp4",
+        "waxing back/7fV8aavq0_E.mp4",
+        "laughing/TDo8-Npsya4.mp4",
+        "pole vault/tdWCdFR4Veo.mp4"
+      ],
+      "shard_fingerprint": "3a0debf56f2a2a7e4fc9106451dbe98b5ab31f9e644e4cdb397d48a9aaab5644",
+      "source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258",
+      "selection_sha256": "74404de548e85587fad3c0108697780c6ef94108b160cfd17d2926c5163eacec",
+      "preregistration_commit": "53a1ad44c9c659829d97046e117e9d50928dada1",
+      "code_commit": "4b948bbf3414bd0cc42c908ca2d795a1a2919c6e",
+      "records_sha256": "7a23fd71f5749283a2e5497f80023d04163c41378f157aefd3e1c8916a2d2245",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "analyzer": "mc3_18",
+      "bootstrap_unit": "source video; all QPs and arms paired",
+      "bootstrap_seed": 20261004,
+      "bootstrap_draws": 2000,
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    },
+    {
+      "experiment": "v7_h265_mc3_reused_dev_diagnostic",
+      "scope": "reused DEV; diagnostic only",
+      "codec": "h265",
+      "stage": "mc3",
+      "shard": 2,
+      "shards": 4,
+      "n": 50,
+      "source_ids": [
+        "shining shoes/9dI9L5Ukzzw.mp4",
+        "washing hair/XPpWs3ykurs.mp4",
+        "playing paintball/8bM5PhOfOXU.mp4",
+        "parkour/k6Iavy1hqOI.mp4",
+        "dancing charleston/zJtzzrrGnKQ.mp4",
+        "parasailing/2tkUTtleTUU.mp4",
+        "ironing/zi8UgeG79ec.mp4",
+        "drinking beer/owahEqTQQY0.mp4",
+        "training dog/jPrywzYKe7s.mp4",
+        "clapping/ZZ4fMRs0tKU.mp4",
+        "golf chipping/hcluQ4WTFio.mp4",
+        "weaving basket/6ByuTGam1EY.mp4",
+        "making snowman/LWwUsSx7oQc.mp4",
+        "running on treadmill/9ScAzNBxMmY.mp4",
+        "pull ups/_M8NHO7tb1I.mp4",
+        "washing hands/c4Xm2O3TdlM.mp4",
+        "kitesurfing/COKYCPVGsGA.mp4",
+        "playing didgeridoo/1-mo1IALh-w.mp4",
+        "swimming backstroke/FHgaXxRyFHE.mp4",
+        "hitting baseball/OLR9psfaJEw.mp4",
+        "playing trumpet/slupGPbZj18.mp4",
+        "throwing axe/NHoR8EXwG-4.mp4",
+        "hammer throw/DCgUSPjsO6g.mp4",
+        "diving cliff/hIkOu0MBfqA.mp4",
+        "blowing out candles/HjjsVmLOdBU.mp4",
+        "playing chess/4pkcNBnMvBg.mp4",
+        "shaving head/dAry8tI-DnY.mp4",
+        "sneezing/7_F4tbYzkxE.mp4",
+        "ice skating/wrBLt_UgOW0.mp4",
+        "unboxing/pfX9EGotlLI.mp4",
+        "playing harmonica/nt1mybFPT5I.mp4",
+        "massaging feet/uxdeWNcS944.mp4",
+        "dancing ballet/Z1JiXEfJOOs.mp4",
+        "sanding floor/2sf9V5CAwuE.mp4",
+        "contact juggling/uvEo2EW96Hc.mp4",
+        "wrapping present/TkAhZkxIRf0.mp4",
+        "news anchoring/ytQ-NuRPA7A.mp4",
+        "hockey stop/zzuDOjpXMFI.mp4",
+        "eating doughnuts/GXcgP-XFg6k.mp4",
+        "high kick/fTvdEd_d7Sw.mp4",
+        "pumping gas/G3dqXbeaNRI.mp4",
+        "blasting sand/8iXJ6WsV_vo.mp4",
+        "riding scooter/GOcnyjrSvq8.mp4",
+        "milking cow/cKSNx4ddEeg.mp4",
+        "playing violin/NIU57BCtNRo.mp4",
+        "capoeira/aL1PY_tUhzs.mp4",
+        "eating chips/A-lZdNl2nyE.mp4",
+        "motorcycling/jlk-H-MBkJs.mp4",
+        "giving or receiving award/LUkrMckP4EI.mp4",
+        "playing cards/jXe8GoVXJJs.mp4"
+      ],
+      "shard_fingerprint": "44d8408775c000d2e8395a77d69aca8f38d75f0b2c652953e459248b9b28e61e",
+      "source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258",
+      "selection_sha256": "74404de548e85587fad3c0108697780c6ef94108b160cfd17d2926c5163eacec",
+      "preregistration_commit": "53a1ad44c9c659829d97046e117e9d50928dada1",
+      "code_commit": "4b948bbf3414bd0cc42c908ca2d795a1a2919c6e",
+      "records_sha256": "9cdf2ecc6c0443a17b621e82daefe96a87eb9ec0d567e08e5fafd0a21d156b02",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "analyzer": "mc3_18",
+      "bootstrap_unit": "source video; all QPs and arms paired",
+      "bootstrap_seed": 20261004,
+      "bootstrap_draws": 2000,
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    },
+    {
+      "experiment": "v7_h265_mc3_reused_dev_diagnostic",
+      "scope": "reused DEV; diagnostic only",
+      "codec": "h265",
+      "stage": "mc3",
+      "shard": 3,
+      "shards": 4,
+      "n": 50,
+      "source_ids": [
+        "blowing glass/ErxfbEOQKyI.mp4",
+        "clean and jerk/lS1P08lIWwo.mp4",
+        "catching fish/Yj6DX_xI_oQ.mp4",
+        "push up/yKrfksh_LEk.mp4",
+        "breading or breadcrumbing/v1BwBEImd3A.mp4",
+        "sweeping floor/CP9Vtimdqsg.mp4",
+        "arm wrestling/q9maulxK5g8.mp4",
+        "riding unicycle/Yl4jp9CJRfU.mp4",
+        "cleaning toilet/i2fGjarN5o8.mp4",
+        "shooting goal (soccer)/rsERHkV-a0E.mp4",
+        "snatch weight lifting/za-hmcb0o9M.mp4",
+        "hoverboarding/F1qF6tpEi2c.mp4",
+        "climbing a rope/72AMAiJl1I8.mp4",
+        "strumming guitar/6jGrxnQHPt8.mp4",
+        "tossing salad/ehJz4bOF6Tg.mp4",
+        "canoeing or kayaking/pWPE3g-pUtA.mp4",
+        "trimming trees/GOZOxne2xM8.mp4",
+        "swinging legs/QlGuTasXzhI.mp4",
+        "doing nails/qbh3RW1P5MA.mp4",
+        "sled dog racing/neKDSh3srL4.mp4",
+        "playing trombone/Vh-XSIyJ5dA.mp4",
+        "changing wheel/1NlFT4HqIJ0.mp4",
+        "bobsledding/cvkbk2iB718.mp4",
+        "bandaging/W4dstLcSRK4.mp4",
+        "applying cream/WKTvvkTnCME.mp4",
+        "flying kite/h60kYB7Y_dc.mp4",
+        "fixing hair/VCIBafLalv8.mp4",
+        "taking a shower/U-5QC_ezpLE.mp4",
+        "applauding/GBG55ZwGS-Y.mp4",
+        "stretching arm/06yuBTzN910.mp4",
+        "playing accordion/xIA1WHNU9KI.mp4",
+        "dancing gangnam style/B_Qd1F-hCDk.mp4",
+        "playing cymbals/uYaqkql_wmM.mp4",
+        "snowboarding/cD8q_AVpeic.mp4",
+        "flipping pancake/EEavl6D9eJg.mp4",
+        "deadlifting/DXo98HMtgEY.mp4",
+        "water sliding/3ELeJOLh5z8.mp4",
+        "gymnastics tumbling/1G4gMYXyZL4.mp4",
+        "robot dancing/E2MzmexxKTs.mp4",
+        "playing monopoly/0Jc-IEqcZts.mp4",
+        "egg hunting/AqnIKZwlPmw.mp4",
+        "cooking on campfire/OsCiSXF_H6s.mp4",
+        "long jump/Kb66JQ-mpmU.mp4",
+        "jetskiing/JwjgsJ0NLzE.mp4",
+        "slapping/y9GR17Y-NG8.mp4",
+        "crossing river/nTFkutS5mmI.mp4",
+        "playing cricket/bkctN-GqbvI.mp4",
+        "presenting weather forecast/uj8vIfs7knA.mp4",
+        "surfing water/Q6-lQLHi1E4.mp4",
+        "playing guitar/FRyP-eiVsEI.mp4"
+      ],
+      "shard_fingerprint": "41b4b9d8ee600657625e6df89d444ff06cd2125e792f5f547e8874f4639a2793",
+      "source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258",
+      "selection_sha256": "74404de548e85587fad3c0108697780c6ef94108b160cfd17d2926c5163eacec",
+      "preregistration_commit": "53a1ad44c9c659829d97046e117e9d50928dada1",
+      "code_commit": "4b948bbf3414bd0cc42c908ca2d795a1a2919c6e",
+      "records_sha256": "4d94eb087b9044b6de78952e37e7ca529e01a1ba545a575032cf8401a8b33896",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "analyzer": "mc3_18",
+      "bootstrap_unit": "source video; all QPs and arms paired",
+      "bootstrap_seed": 20261004,
+      "bootstrap_draws": 2000,
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    }
+  ],
+  "shard_records_sha256": [
+    "7214a8e8aa7a4c194ed8e5f1785566942dd2fdfe477233223a5d9d63ad6631e6",
+    "7a23fd71f5749283a2e5497f80023d04163c41378f157aefd3e1c8916a2d2245",
+    "9cdf2ecc6c0443a17b621e82daefe96a87eb9ec0d567e08e5fafd0a21d156b02",
+    "4d94eb087b9044b6de78952e37e7ca529e01a1ba545a575032cf8401a8b33896"
+  ],
+  "comparisons": {
+    "V6_vs_identity": {
+      "n": 200,
+      "model": "mc3_18",
+      "anchor_arm": "identity",
+      "trial_arm": "v6",
+      "anchor_curve": {
+        "30": {
+          "n": 200,
+          "bpp": 0.303433837890625,
+          "top1": 0.725
+        },
+        "35": {
+          "n": 200,
+          "bpp": 0.19704681396484375,
+          "top1": 0.63
+        },
+        "40": {
+          "n": 200,
+          "bpp": 0.13901138305664062,
+          "top1": 0.5
+        },
+        "45": {
+          "n": 200,
+          "bpp": 0.10696365356445313,
+          "top1": 0.275
+        },
+        "50": {
+          "n": 200,
+          "bpp": 0.09106521606445313,
+          "top1": 0.095
+        }
+      },
+      "trial_curve": {
+        "30": {
+          "n": 200,
+          "bpp": 0.23407150268554688,
+          "top1": 0.665
+        },
+        "35": {
+          "n": 200,
+          "bpp": 0.16497451782226563,
+          "top1": 0.57
+        },
+        "40": {
+          "n": 200,
+          "bpp": 0.126871337890625,
+          "top1": 0.46
+        },
+        "45": {
+          "n": 200,
+          "bpp": 0.10328338623046875,
+          "top1": 0.285
+        },
+        "50": {
+          "n": 200,
+          "bpp": 0.09034469604492187,
+          "top1": 0.11
+        }
+      },
+      "metrics": {
+        "bd_rate_top1_pct": -2.019926890110435,
+        "bd_accuracy_top1_pp": 1.0254350728419726,
+        "min_same_qp_top1_gap_pp": -6.000000000000005
+      },
+      "bootstrap": {
+        "bd_rate_top1_pct": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -6.003527169626191,
+            1.447727530581156
+          ]
+        },
+        "bd_accuracy_top1_pp": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -1.2760808606301735,
+            3.469892176525666
+          ]
+        }
+      }
+    },
+    "V7_vs_identity": {
+      "n": 200,
+      "model": "mc3_18",
+      "anchor_arm": "identity",
+      "trial_arm": "v7",
+      "anchor_curve": {
+        "30": {
+          "n": 200,
+          "bpp": 0.303433837890625,
+          "top1": 0.725
+        },
+        "35": {
+          "n": 200,
+          "bpp": 0.19704681396484375,
+          "top1": 0.63
+        },
+        "40": {
+          "n": 200,
+          "bpp": 0.13901138305664062,
+          "top1": 0.5
+        },
+        "45": {
+          "n": 200,
+          "bpp": 0.10696365356445313,
+          "top1": 0.275
+        },
+        "50": {
+          "n": 200,
+          "bpp": 0.09106521606445313,
+          "top1": 0.095
+        }
+      },
+      "trial_curve": {
+        "30": {
+          "n": 200,
+          "bpp": 0.228248291015625,
+          "top1": 0.655
+        },
+        "35": {
+          "n": 200,
+          "bpp": 0.16264114379882813,
+          "top1": 0.555
+        },
+        "40": {
+          "n": 200,
+          "bpp": 0.12653350830078125,
+          "top1": 0.45
+        },
+        "45": {
+          "n": 200,
+          "bpp": 0.10386703491210937,
+          "top1": 0.275
+        },
+        "50": {
+          "n": 200,
+          "bpp": 0.09084274291992188,
+          "top1": 0.1
+        }
+      },
+      "metrics": {
+        "bd_rate_top1_pct": -0.458569180974544,
+        "bd_accuracy_top1_pp": 0.04966274904002325,
+        "min_same_qp_top1_gap_pp": -7.499999999999996
+      },
+      "bootstrap": {
+        "bd_rate_top1_pct": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -4.194785013727444,
+            2.914067335400682
+          ]
+        },
+        "bd_accuracy_top1_pp": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -2.226564561704735,
+            2.417833525058647
+          ]
+        }
+      }
+    },
+    "V7_vs_V6": {
+      "n": 200,
+      "model": "mc3_18",
+      "anchor_arm": "v6",
+      "trial_arm": "v7",
+      "anchor_curve": {
+        "30": {
+          "n": 200,
+          "bpp": 0.23407150268554688,
+          "top1": 0.665
+        },
+        "35": {
+          "n": 200,
+          "bpp": 0.16497451782226563,
+          "top1": 0.57
+        },
+        "40": {
+          "n": 200,
+          "bpp": 0.126871337890625,
+          "top1": 0.46
+        },
+        "45": {
+          "n": 200,
+          "bpp": 0.10328338623046875,
+          "top1": 0.285
+        },
+        "50": {
+          "n": 200,
+          "bpp": 0.09034469604492187,
+          "top1": 0.11
+        }
+      },
+      "trial_curve": {
+        "30": {
+          "n": 200,
+          "bpp": 0.228248291015625,
+          "top1": 0.655
+        },
+        "35": {
+          "n": 200,
+          "bpp": 0.16264114379882813,
+          "top1": 0.555
+        },
+        "40": {
+          "n": 200,
+          "bpp": 0.12653350830078125,
+          "top1": 0.45
+        },
+        "45": {
+          "n": 200,
+          "bpp": 0.10386703491210937,
+          "top1": 0.275
+        },
+        "50": {
+          "n": 200,
+          "bpp": 0.09084274291992188,
+          "top1": 0.1
+        }
+      },
+      "metrics": {
+        "bd_rate_top1_pct": 1.6969740302992031,
+        "bd_accuracy_top1_pp": -1.029926648418515,
+        "min_same_qp_top1_gap_pp": -1.4999999999999902
+      },
+      "bootstrap": {
+        "bd_rate_top1_pct": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -0.7696004710015564,
+            4.330516406671479
+          ]
+        },
+        "bd_accuracy_top1_pp": {
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "ci95": [
+            -2.676947664813353,
+            0.4989596915501636
+          ]
+        }
+      }
+    }
+  }
+}

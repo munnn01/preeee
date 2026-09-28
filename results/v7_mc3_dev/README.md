@@ -1,0 +1,7 @@
+# V7 H.265 `mc3_18` reused-DEV diagnostic package
+
+The [preregistered DEV diagnostic](../../docs/PREREGISTRATION_V7_MC3_DEV.md) used the frozen [200-source, 5-QP selection](../../configs/v7_mc3_dev_selection.json) and four private Kaggle shards. The [merged JSON](mc3_h265_dev_result.json) reports direct V7 versus V6 BD-rate Top-1 **+1.70%**, 95% CI [−0.77%, +4.33%]. V7 versus identity is −0.46% [−4.19%, +2.91%]. This does not demonstrate improved `mc3_18` transfer. The split is reused DEV; V7 new holdout is **CHƯA ĐO**. See the [full result report](../../docs/RESULTS_V7_MC3_DEV.md).
+
+`mc3_h265_dev_result.json` SHA-256: `03210936fc1d9eb88324f3b3066756a811ae43c914d2f75c8181d9c9aec8e25d`. An independent merge with reordered shard arguments reproduced the same byte hash. Analysis code commit: `4b948bbf3414bd0cc42c908ca2d795a1a2919c6e`; preregistration commit: `53a1ad44c9c659829d97046e117e9d50928dada1`; selection SHA-256: `74404de548e85587fad3c0108697780c6ef94108b160cfd17d2926c5163eacec`. Bootstrap: 2,000 source-video resamples, seed `20261004`, all QPs/arms paired.
+
+`archives/` contains the exact four downloaded Kaggle tarballs. `raw/shard*/` contains the unchanged manifest, 50-source JSONL, worker run log and Kaggle kernel log for each job. [archive_manifest.json](archive_manifest.json) binds their SHA-256 hashes, account/notebook identities, and recomputation result. [SHA256SUMS.txt](SHA256SUMS.txt) covers every committed package file except itself. No original video bytes are included.

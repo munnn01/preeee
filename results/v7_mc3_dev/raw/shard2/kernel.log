@@ -1,0 +1,80 @@
+[{"stream_name":"stderr","time":6.299863696,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.299960277,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.299965343,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.299967866,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.900819653,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.900869288,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.900875765,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.900879957,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":239.135419731,"data":"torch 2.10.0+cu128 torchvision 0.25.0+cu128 opencv 4.13.0 cuda True\n"}
+,{"stream_name":"stdout","time":239.135484564,"data":" V..... libx265              libx265 H.265 / HEVC (codec hevc)\n"}
+,{"stream_name":"stdout","time":239.135489648,"data":"/kaggle/working/pre_processor/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stdout","time":239.13549386,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stdout","time":239.135498077,"data":"Downloading: \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth\n"}
+,{"stream_name":"stdout","time":239.135501981,"data":"\r  0%|          | 0.00/44.7M [00:00\u003c?, ?B/s]\r 42%|████▏     | 18.9M/44.7M [00:00\u003c00:00, 197MB/s]\r 85%|████████▍ | 37.8M/44.7M [00:00\u003c00:00, 189MB/s]\r100%|██████████| 44.7M/44.7M [00:00\u003c00:00, 193MB/s]\n"}
+,{"stream_name":"stdout","time":239.135508278,"data":"[V7 mc3 DEV] shard=2 1/50\n"}
+,{"stream_name":"stdout","time":239.135511762,"data":"[V7 mc3 DEV] shard=2 2/50\n"}
+,{"stream_name":"stdout","time":239.135515229,"data":"[V7 mc3 DEV] shard=2 3/50\n"}
+,{"stream_name":"stdout","time":239.135518598,"data":"[V7 mc3 DEV] shard=2 4/50\n"}
+,{"stream_name":"stdout","time":239.13552211,"data":"[V7 mc3 DEV] shard=2 5/50\n"}
+,{"stream_name":"stdout","time":239.135525451,"data":"[V7 mc3 DEV] shard=2 6/50\n"}
+,{"stream_name":"stdout","time":239.135528747,"data":"[V7 mc3 DEV] shard=2 7/50\n"}
+,{"stream_name":"stdout","time":239.135532044,"data":"[V7 mc3 DEV] shard=2 8/50\n"}
+,{"stream_name":"stdout","time":239.135535406,"data":"[V7 mc3 DEV] shard=2 9/50\n"}
+,{"stream_name":"stdout","time":239.13553877,"data":"[V7 mc3 DEV] shard=2 10/50\n"}
+,{"stream_name":"stdout","time":239.13554211,"data":"[V7 mc3 DEV] shard=2 11/50\n"}
+,{"stream_name":"stdout","time":239.135545412,"data":"[V7 mc3 DEV] shard=2 12/50\n"}
+,{"stream_name":"stdout","time":239.135548801,"data":"[V7 mc3 DEV] shard=2 13/50\n"}
+,{"stream_name":"stdout","time":239.135552151,"data":"[V7 mc3 DEV] shard=2 14/50\n"}
+,{"stream_name":"stdout","time":239.135555495,"data":"[V7 mc3 DEV] shard=2 15/50\n"}
+,{"stream_name":"stdout","time":239.135558815,"data":"[V7 mc3 DEV] shard=2 16/50\n"}
+,{"stream_name":"stdout","time":239.135562121,"data":"[V7 mc3 DEV] shard=2 17/50\n"}
+,{"stream_name":"stdout","time":239.135565426,"data":"[V7 mc3 DEV] shard=2 18/50\n"}
+,{"stream_name":"stdout","time":239.135568757,"data":"[V7 mc3 DEV] shard=2 19/50\n"}
+,{"stream_name":"stdout","time":239.135581251,"data":"[V7 mc3 DEV] shard=2 20/50\n"}
+,{"stream_name":"stdout","time":239.135584131,"data":"[V7 mc3 DEV] shard=2 21/50\n"}
+,{"stream_name":"stdout","time":239.135586789,"data":"[V7 mc3 DEV] shard=2 22/50\n"}
+,{"stream_name":"stdout","time":239.135589332,"data":"[V7 mc3 DEV] shard=2 23/50\n"}
+,{"stream_name":"stdout","time":239.135591883,"data":"[V7 mc3 DEV] shard=2 24/50\n"}
+,{"stream_name":"stdout","time":239.135594452,"data":"[V7 mc3 DEV] shard=2 25/50\n"}
+,{"stream_name":"stdout","time":239.135597047,"data":"[V7 mc3 DEV] shard=2 26/50\n"}
+,{"stream_name":"stdout","time":239.135599601,"data":"[V7 mc3 DEV] shard=2 27/50\n"}
+,{"stream_name":"stdout","time":239.135602155,"data":"[V7 mc3 DEV] shard=2 28/50\n"}
+,{"stream_name":"stdout","time":239.135604712,"data":"[V7 mc3 DEV] shard=2 29/50\n"}
+,{"stream_name":"stdout","time":239.135607307,"data":"[V7 mc3 DEV] shard=2 30/50\n"}
+,{"stream_name":"stdout","time":239.135609873,"data":"[V7 mc3 DEV] shard=2 31/50\n"}
+,{"stream_name":"stdout","time":239.135612434,"data":"[V7 mc3 DEV] shard=2 32/50\n"}
+,{"stream_name":"stdout","time":239.13561499,"data":"[V7 mc3 DEV] shard=2 33/50\n"}
+,{"stream_name":"stdout","time":239.135617551,"data":"[V7 mc3 DEV] shard=2 34/50\n"}
+,{"stream_name":"stdout","time":239.135620103,"data":"[V7 mc3 DEV] shard=2 35/50\n"}
+,{"stream_name":"stdout","time":239.135622672,"data":"[V7 mc3 DEV] shard=2 36/50\n"}
+,{"stream_name":"stdout","time":239.135625247,"data":"[V7 mc3 DEV] shard=2 37/50\n"}
+,{"stream_name":"stdout","time":239.135627825,"data":"[V7 mc3 DEV] shard=2 38/50\n"}
+,{"stream_name":"stdout","time":239.135630387,"data":"[V7 mc3 DEV] shard=2 39/50\n"}
+,{"stream_name":"stdout","time":239.135632936,"data":"[V7 mc3 DEV] shard=2 40/50\n"}
+,{"stream_name":"stdout","time":239.135635538,"data":"[V7 mc3 DEV] shard=2 41/50\n"}
+,{"stream_name":"stdout","time":239.1356381,"data":"[V7 mc3 DEV] shard=2 42/50\n"}
+,{"stream_name":"stdout","time":239.135640666,"data":"[V7 mc3 DEV] shard=2 43/50\n"}
+,{"stream_name":"stdout","time":239.13568019,"data":"[V7 mc3 DEV] shard=2 44/50\n"}
+,{"stream_name":"stdout","time":239.135685184,"data":"[V7 mc3 DEV] shard=2 45/50\n"}
+,{"stream_name":"stdout","time":239.135689531,"data":"[V7 mc3 DEV] shard=2 46/50\n"}
+,{"stream_name":"stdout","time":239.135693858,"data":"[V7 mc3 DEV] shard=2 47/50\n"}
+,{"stream_name":"stdout","time":239.135698246,"data":"[V7 mc3 DEV] shard=2 48/50\n"}
+,{"stream_name":"stdout","time":239.135702547,"data":"[V7 mc3 DEV] shard=2 49/50\n"}
+,{"stream_name":"stdout","time":239.135707067,"data":"[V7 mc3 DEV] shard=2 50/50\n"}
+,{"stream_name":"stdout","time":239.135711042,"data":"{\n"}
+,{"stream_name":"stdout","time":239.135720969,"data":"  \"shard\": 2,\n"}
+,{"stream_name":"stdout","time":239.135724789,"data":"  \"records\": 50,\n"}
+,{"stream_name":"stdout","time":239.13573029,"data":"  \"records_sha256\": \"9cdf2ecc6c0443a17b621e82daefe96a87eb9ec0d567e08e5fafd0a21d156b02\"\n"}
+,{"stream_name":"stdout","time":239.135733569,"data":"}\n"}
+,{"stream_name":"stdout","time":239.135736104,"data":"[done] V7 mc3 reused-DEV diagnostic shard=2\n"}
+,{"stream_name":"stdout","time":239.135738835,"data":"[exit] rc=0 shard=2 artifact=v7_mc3_dev_shard2.tgz\n"}
+,{"stream_name":"stderr","time":241.625163372,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":241.625201531,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":241.7756698,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":241.775710504,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":242.469994836,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":242.780439175,"data":"[NbConvertApp] Writing 6060 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":245.237287322,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":245.672022736,"data":"[NbConvertApp] Writing 282439 bytes to __results__.html\n"}
+]
