@@ -1,0 +1,26 @@
+# V7 H.265 development protocol: pixel proxy with frozen V6 event models
+
+This protocol is fixed before implementing or running V7. Earlier V2/V4/V6 TEST and holdout results, including `mc3_18`, have been seen and motivated this study. Those sources and all `mc3_18` outputs are excluded from V7 fitting, selection and calibration. The reused V2 pilot CAL/DEV sources make this a **development experiment**, not independent confirmation. A V7 confirmation requires a separately locked, source-disjoint holdout and one evaluation after freezing the policy. A truly unseen-analyzer claim would additionally require a fourth compatible analyzer. The original two-primary-analyzer gate (<−15% BD-rate Top-1 and positive BD-accuracy at one codec) remains unchanged; the user-requested V7 engineering target is <−10% for both primaries at H.265.
+
+## Frozen inputs and scope
+
+H.265 only. Use the original V2 pilot **CALIBRATION 200** and **DEV 200** source IDs in `configs/v7_dev_proxy_plan.json` (SHA-256 `5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2`), copied without labels from the locked H.265 pilot manifest. CAL fingerprint: `ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721`; DEV: `6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258`. The private pilot archive SHA-256 is `fba0149d3320398c92ecfd51a194e365b4b04832f8d4334110be19569fc15c17`. Every cached stage, V2 policy/risk model, V6 policy and its four frozen event-model files must pass the existing manifest SHA checks before analysis. Use the six original candidates, five QPs 30/35/40/45/50 and the frozen V6 choice as the comparator. No new candidate or codec configuration is introduced in this study.
+
+Pixel proxy extraction reads **only the 400 planned CAL/DEV source video bytes** from the same Kinetics cleaned source used by the pilot. Resolve each exact `class/file.mp4` ID uniquely; reject missing, duplicate or undecodable files. Decode deterministic 16 frames at 128×128 with stride 2 and centered temporal crop exactly as `VideoClipDataset._read_clip(train=False)`; no labels are read. Recreate six pre-codec candidates with `make_candidates`. Resize each candidate to 128×128 with `INTER_LINEAR` for the proxy only; the codec selection still uses the original candidate stream and its cached bpp. Compute grayscale float frames in 0–255 and the following two label-free errors against the source, clipping each to [0,2]:
+
+- `spatial = mean(abs(Laplacian(candidate)-Laplacian(source))) / max(mean(abs(Laplacian(source))), 1)`;
+- `temporal = mean(abs(diff_t(candidate)-diff_t(source))) / max(mean(abs(diff_t(source))), 1)`.
+
+The candidate proxy is `max(spatial, temporal)`. Identity must be zero. This is a **pre-codec hypothesis** about preservation of spatial and temporal information, not a measured `mc3_18` feature or outcome. The worker records source video SHA-256, proxy values, exact IDs, code commit and plan hash; no labels, TEST or holdout data.
+
+## Selection on CALIBRATION
+
+Load frozen V6 event models and compute its existing choice per source and QP. For candidate `i` and analyzer `a`, let `e(i,a)=p(gain)-p(harm)` versus V2-C, using only those frozen models. The fixed V7 grid is `threshold ∈ {0, -0.02}` and `pixel_weight ∈ {0.25, 0.5, 1.0, 2.0}`: eight policies. The V6 choice is always admissible. Another candidate is admissible only if its measured bpp is no greater than identity and `e(i,a)-e(V6,a) >= threshold` for **both** primary analyzers. Choose the admissible candidate minimizing `log(bpp/identity_bpp) + pixel_weight * proxy`, with the existing six-candidate order breaking ties. Selection never reads correctness.
+
+Calculate full CAL curves before BD-rate. A grid policy is feasible only if, for **each** primary analyzer, BD-rate Top-1 versus identity is strictly <−10%, BD-accuracy >0, worst same-QP Top-1 gap ≥−1 percentage point, and BD-rate is at most frozen V6's CAL value +1.00 percentage point. It must also have a strictly smaller mean pixel proxy than V6 over CAL sources and QPs. Select the feasible grid point with smallest mean proxy; tie-break by lower worse primary BD-rate, lower sum of primary BD-rates, then threshold and weight ascending. If none is feasible, report a negative CAL result and stop before inspecting DEV correctness.
+
+## DEV and reporting
+
+After fixing one CAL policy, evaluate it once on the 200 DEV sources. Report identity, V2-C, V6 and V7 full curves; direct paired V7 versus V6 and V7 versus identity BD-rate, BD-accuracy and worst same-QP gaps for both primaries. Use 2,000 percentile bootstrap resamples with seed `20261003`, unit **source video**, keeping QPs and arms paired. Bootstrap the paired per-source mean pixel proxy difference as well. DEV go/no-go requires the same primary and proxy conditions as CAL; a pass permits a later preregistration proposal only. A failed condition is a developmental negative. `mc3_18` is not run in this protocol and no result is inferred for it.
+
+All outputs must include code/preregistration commits, config and source fingerprints, source-video hashes, input cache/model/proxy hashes, seed, unit, resamples and result SHA-256. Keep old result artifacts unchanged. Do not change `src/metrics/bd_rate.py` or its bootstrap implementation.

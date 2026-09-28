@@ -23,3 +23,5 @@ configs/v4_holdout_source_audit/** -text
 configs/v5_dev_cache_manifest.json -text
 configs/paper_runtime_dev/** -text
 results/paper_holdout_v6/** -text
+configs/v7_dev_proxy_plan.json -text
+results/v7_dev_transfer/** -text
