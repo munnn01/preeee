@@ -1,5 +1,6 @@
 import pytest
 
+from ops import push_v5_dev_agreement
 from ops.push_v5_dev_agreement import payload
 
 
@@ -21,3 +22,15 @@ def test_private_dataset_must_belong_to_notebook_account():
     with pytest.raises(ValueError, match="owned"):
         payload("a" * 40, "shungg05", "v5-dev-test",
                 "dieulinhh/v5-dev-cache-20260928")
+
+
+def test_upload_progress_is_safe_for_windows_console(monkeypatch, capsys):
+    class Response:
+        returncode = 0
+        stdout = "uploaded ▍"
+        stderr = ""
+
+    monkeypatch.setattr(push_v5_dev_agreement.subprocess, "run",
+                        lambda *args, **kwargs: Response())
+    push_v5_dev_agreement.invoke(["kaggle"], {})
+    assert "uploaded \\u258d" in capsys.readouterr().out

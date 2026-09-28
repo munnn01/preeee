@@ -50,7 +50,7 @@ def invoke(command: list[str], environment: dict) -> None:
                             check=False)
     output = (result.stdout + result.stderr).strip()
     if output:
-        print(output, flush=True)
+        print(output.encode("ascii", "backslashreplace").decode("ascii"), flush=True)
     if result.returncode:
         raise SystemExit(result.returncode)
 
@@ -100,7 +100,7 @@ def main() -> None:
                             errors="replace", env=environment, check=False)
     output = (result.stdout + result.stderr).strip()
     if output:
-        print(output, flush=True)
+        print(output.encode("ascii", "backslashreplace").decode("ascii"), flush=True)
     if result.returncode or "successfully pushed" not in output.lower():
         raise SystemExit(result.returncode or 1)
 
