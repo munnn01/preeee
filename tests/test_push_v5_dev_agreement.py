@@ -14,6 +14,7 @@ def test_private_cpu_notebook_is_pinned_to_dev_only_runner():
     assert meta["dataset_sources"] == ["shungg05/v5-dev-cache-20260928"]
     assert f'REF="{commit}"' in source
     assert "python -m ops.v5_dev_agreement" in source
+    assert "Kaggle-extracted cache found" in source
     assert "ops.paper_holdout_v4" not in source
     assert "ops.paper_heldout_mc3" not in source
 

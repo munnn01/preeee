@@ -20,6 +20,7 @@ from src.models.dual_codec_search import MODELS
 
 PREREG_COMMIT = "bca2f7ce26c8b741c124d878a714495b4897c789"
 FROZEN_MANIFEST_SHA256 = "c59d6e4fa4e7837e9f86cd418af0b1c1afcd75adae490ae4e8b3bc3eed45f06f"
+DEV_CACHE_MANIFEST_SHA256 = "5064f454b3602fe2d7e8c0adaff09c4a990622b836978d8d3c0b7c1a46b8fd9d"
 SEED = 20260929
 DRAWS = 2000
 TOLERANCE_PP = 1.0
@@ -53,6 +54,25 @@ def load_frozen_v4() -> tuple[dict, str]:
             or set(manifest.get("codecs", {})) != {"h264", "h265"}):
         raise ValueError("unexpected frozen V4 manifest")
     return manifest, digest
+
+
+def load_locked_dev_cache() -> tuple[dict, str]:
+    path = REPO / "configs/v5_dev_cache_manifest.json"
+    digest = file_sha256(path)
+    if digest != DEV_CACHE_MANIFEST_SHA256:
+        raise ValueError("V5 DEV cache manifest SHA-256 changed")
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    if (manifest.get("preregistration_commit") != PREREG_COMMIT
+            or set(manifest.get("input_provenance", {})) != {"h264", "h265"}):
+        raise ValueError("unexpected V5 DEV cache manifest")
+    return manifest, digest
+
+
+def verify_loaded_cache(loaded: dict, locked: dict) -> None:
+    """Reject changed manifest, policy, risk file or any FIT/CAL/DEV cache byte."""
+    for codec in ("h264", "h265"):
+        if loaded[codec][5] != locked["input_provenance"][codec]:
+            raise ValueError(f"{codec} DEV cache provenance differs from committed lock")
 
 
 def load_models(codec: str, manifest: dict) -> tuple[dict, dict]:
@@ -189,8 +209,10 @@ def run(roots: dict[str, Path], out_dir: Path) -> dict:
     if set(roots) != {"h264", "h265"} or out_dir.exists():
         raise ValueError("both codecs required and output directory must be new")
     frozen, frozen_sha = load_frozen_v4()
+    locked_cache, locked_cache_sha = load_locked_dev_cache()
     loaded = {codec: load_development(roots[codec], codec)
               for codec in ("h264", "h265")}
+    verify_loaded_cache(loaded, locked_cache)
     if loaded["h264"][5]["source_fingerprints"] != loaded["h265"][5]["source_fingerprints"]:
         raise ValueError("development source differs by codec")
     reports = {}
@@ -209,6 +231,8 @@ def run(roots: dict[str, Path], out_dir: Path) -> dict:
             "preregistration_commit": PREREG_COMMIT,
             "analysis_code_commit": code_commit,
             "frozen_v4_manifest_sha256": frozen_sha,
+            "dev_cache_manifest_sha256": locked_cache_sha,
+            "dev_cache_archive_sha256": locked_cache["archive_sha256"],
             "frozen_v4_model_sha256": model_hashes,
             "input_provenance": provenance,
             "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",

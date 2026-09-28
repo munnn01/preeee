@@ -3,7 +3,7 @@ import copy
 import numpy as np
 import pytest
 
-from ops.v5_dev_agreement import is_feasible, select_guarded
+from ops.v5_dev_agreement import is_feasible, select_guarded, verify_loaded_cache
 from src.models.dual_codec_search import MODELS
 
 
@@ -56,3 +56,15 @@ def test_calibration_bound_is_per_analyzer_and_inclusive_at_one_point():
     assert is_feasible(trial, old)
     trial[MODELS[1]]["metrics"]["bd_rate_top1_pct"] = -8.99
     assert not is_feasible(trial, old)
+
+
+def test_changed_dev_cache_tree_is_rejected_before_calibration():
+    expected = {"cache_tree_sha256": {"fit": "a", "calibration": "b", "dev": "c"}}
+    locked = {"input_provenance": {codec: copy.deepcopy(expected)
+                                   for codec in ("h264", "h265")}}
+    loaded = {codec: [None] * 5 + [copy.deepcopy(expected)]
+              for codec in ("h264", "h265")}
+    verify_loaded_cache(loaded, locked)
+    loaded["h265"][5]["cache_tree_sha256"]["dev"] = "changed"
+    with pytest.raises(ValueError, match="h265 DEV cache provenance"):
+        verify_loaded_cache(loaded, locked)
