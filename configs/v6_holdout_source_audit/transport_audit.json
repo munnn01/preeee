@@ -1,0 +1,13 @@
+{
+  "complete": true,
+  "selected": 1000,
+  "selected_source_fingerprint": "269998dbd77c69b5a990f637506d7e1f4f6af4f9e59c38058d000a44535ce918",
+  "preflight_selection_sha256": "258edf02bd203d93828b1d16523159964006245118181b718949ddd0dba53668",
+  "tar_sha256": {
+    "v6_archive_0_5.tar": "9866b28f2b4bd7cc8d96b4592fa2988c6569619df92f2ef6b6ee62c9f6ac9230",
+    "v6_archive_5_10.tar": "78d7c86227783a3528685ab4724931c3007b8d63e46345b9075c5d6930ef6041",
+    "v6_archive_10_15.tar": "1e4c5fb05801afd2ba8a215ef6be3b4508fd85aa9e6ce5f59b7a9bbfdaf0c048",
+    "v6_archive_15_20.tar": "e8d374d591c9abb0c73320afac32418a8f29d744f4a8cab7163028c5868b10de"
+  },
+  "video_count": 1995
+}
