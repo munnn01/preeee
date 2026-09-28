@@ -1,0 +1,12 @@
+/kaggle/working/pre_processor/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\-'
+  \-> content/QP mixture + safety gate
+{
+  "h264": {
+    "selected": true,
+    "go_no_go_this_codec": false
+  },
+  "h265": {
+    "selected": true,
+    "go_no_go_this_codec": true
+  }
+}

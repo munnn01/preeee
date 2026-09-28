@@ -1,0 +1,34 @@
+[{"stream_name":"stderr","time":9.305553152,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.305630325,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.305639674,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.305646122,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.089543658,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.089582059,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.089594763,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.089598289,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":80.052563733,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.9/8.9 MB 54.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":80.052619546,"data":"sklearn 1.8.0\n"}
+,{"stream_name":"stdout","time":80.052627403,"data":"[V6 DEV input] Kaggle-extracted cache found; runner checks every stage hash\n"}
+,{"stream_name":"stdout","time":80.05263307,"data":"/kaggle/working/pre_processor/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stdout","time":80.052638632,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stdout","time":80.052644502,"data":"{\n"}
+,{"stream_name":"stdout","time":80.052649629,"data":"  \"h264\": {\n"}
+,{"stream_name":"stdout","time":80.052655134,"data":"    \"selected\": true,\n"}
+,{"stream_name":"stdout","time":80.052661022,"data":"    \"go_no_go_this_codec\": false\n"}
+,{"stream_name":"stdout","time":80.052666868,"data":"  },\n"}
+,{"stream_name":"stdout","time":80.052672531,"data":"  \"h265\": {\n"}
+,{"stream_name":"stdout","time":80.052677965,"data":"    \"selected\": true,\n"}
+,{"stream_name":"stdout","time":80.052683075,"data":"    \"go_no_go_this_codec\": true\n"}
+,{"stream_name":"stdout","time":80.052688892,"data":"  }\n"}
+,{"stream_name":"stdout","time":80.052694756,"data":"}\n"}
+,{"stream_name":"stdout","time":80.052701408,"data":"[done] V6 FIT/CAL/DEV only; no mc3 or holdout outcome\n"}
+,{"stream_name":"stdout","time":80.052708075,"data":"[exit] rc=0 artifact=v6_dev_residual.tgz\n"}
+,{"stream_name":"stderr","time":83.251720028,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":83.251762067,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":83.464054645,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":83.464111915,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":84.243911576,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":84.618988649,"data":"[NbConvertApp] Writing 6975 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":87.570973274,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":88.089776379,"data":"[NbConvertApp] Writing 284478 bytes to __results__.html\n"}
+]

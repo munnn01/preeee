@@ -13,6 +13,7 @@ results/v3_dev_policy/** -text
 results/v4_dev_oracle/** -text
 results/v4_dev_policy/** -text
 results/v5_dev_agreement/** -text
+results/v6_dev_residual/** -text
 results/paper_holdout_v4/** -text
 results/paper_runtime_v2_full/** -text
 results/od_coco_pilot/** -text
