@@ -2,10 +2,14 @@
 
 Repo này nghiên cứu can thiệp miền pixel **trước codec chuẩn** để giảm bitrate mà vẫn giữ hiệu năng tác vụ. Hai đường đánh giá độc lập:
 
-- **AR / Kinetics:** chọn một trong sáu biểu diễn clip bằng policy V2-C đã khóa; mã hóa H.264 hoặc H.265, giải mã, rồi đo Top-1 bằng hai mạng `r2plus1d_18` và `r3d_18` đóng băng. Kinetics và họ mạng video này được mô tả trong [1, 3]; phiên bản trọng số dùng qua TorchVision xem [4].
+- **AR / Kinetics:** chọn một trong sáu biểu diễn clip bằng policy đã khóa; mã hóa H.264 hoặc H.265, giải mã, rồi đo Top-1 bằng hai mạng `r2plus1d_18` và `r3d_18` đóng băng, cùng `mc3_18` độc lập. Kinetics và họ mạng video này được mô tả trong [1, 3]; phiên bản trọng số dùng qua TorchVision xem [4].
 - **OD / COCO:** detector phía encoder tạo vùng cần bảo vệ; làm mờ nền ngoài vùng đó trước codec, rồi dùng một detector khác phía decoder để đo COCO mAP. COCO và Faster R-CNN xem [2, 5]. Đây **không** phải V2-C áp dụng sang ảnh.
 
 ## Kết quả AR được giữ trong `results/`
+
+**V4 trên holdout source-disjoint mới gồm 1.000 video: ĐẠT gate đặt trước qua H.264, nhưng chưa chứng minh chuyển giao sang `mc3_18`.** Cả hai analyzer chính phải có BD-rate Top-1 < −15% và BD-accuracy > 0 ở ít nhất một codec. H.264 đạt −22,11% (`r2plus1d_18`) và −23,63% (`r3d_18`); H.265 không đạt gate riêng codec. `mc3_18` có BD-rate +1,92% ở H.264 và −0,50% ở H.265, cả hai CI 95% chứa 0; Top-1 thấp hơn identity tại cả năm QP ở cả hai codec. V4 đã khóa trước khi chấm; `mc3_18` không tham gia fit/chọn policy. [Báo cáo V4](docs/RESULTS_HOLDOUT_V4.md), [gói record và provenance](results/paper_holdout_v4/README.md), [JSON H.264](results/paper_holdout_v4/h264_result.json) và [JSON H.265](results/paper_holdout_v4/h265_result.json) cho đủ số và CI. Tập vẫn thuộc Kinetics-400, chưa phải chuyển miền. Runtime toàn bộ selector V4: **CHƯA ĐO**.
+
+### V2-C trên holdout trước đó
 
 **Xác nhận trên holdout 1.000 source video mới: KHÔNG ĐẠT gate đặt trước.** H.264 đạt −19,70% trên `r2plus1d_18` nhưng chỉ −12,52% trên `r3d_18`; H.265 lần lượt là −13,53% và −9,08%. Gate yêu cầu **cả hai** analyzer có point estimate BD-rate Top-1 **< −15%** và BD-accuracy > 0 ở ít nhất một codec. Policy V2-C, tập ID và phép phân tích đã khóa trước khi chấm. [Báo cáo holdout](docs/RESULTS_HOLDOUT_CONFIRM.md), [JSON H.264](results/holdout_confirm/h264_result.json) và [JSON H.265](results/holdout_confirm/h265_result.json) có đủ CI 95%, đường cong, đối chứng và provenance.
 
@@ -24,7 +28,7 @@ Nghiên cứu [V3 chỉ trên DEV](results/v3_dev_policy/README.md) đã preregi
 
 [Oracle chẩn đoán trên DEV](results/v4_dev_oracle/README.md) dùng nhãn thật để chọn candidate không làm mất dự đoán đúng: BD-rate tham khảo đạt −27,39%/−26,54% ở H.264 và −18,12%/−15,68% ở H.265 trên hai analyzer. Đây **không phải policy triển khai được hoặc kết quả holdout**; nó chỉ cho thấy bộ sáu candidate có dư địa để nghiên cứu một selector không đọc nhãn.
 
-[Policy V4 trên FIT/CALIBRATION/DEV](results/v4_dev_policy/README.md) dùng hai mô hình xác suất đúng với 41 feature không nhãn cho mỗi codec. Cả hai codec được thăng cấp theo CALIBRATION; H.265 qua quy tắc go/no-go trên DEV, còn H.264 trượt guard same-QP của `r3d_18` (−2,00 điểm % so với ngưỡng ≥−1,00). V4 **chưa có holdout mới: CHƯA ĐO**. Không dùng kết quả holdout V2 đã công bố để fit hoặc chọn V4; [giao thức V4](docs/PREREGISTRATION_V4.md) khóa một tập xác nhận mới tách source ID.
+[Policy V4 trên FIT/CALIBRATION/DEV](results/v4_dev_policy/README.md) dùng hai mô hình xác suất đúng với 41 feature không nhãn cho mỗi codec. Cả hai codec được thăng cấp theo CALIBRATION; H.265 qua quy tắc go/no-go trên DEV, còn H.264 trượt guard same-QP của `r3d_18` trên DEV (−2,00 điểm % so với ngưỡng ≥−1,00). Theo [giao thức V4](docs/PREREGISTRATION_V4.md), điều kiện mở holdout là có **ít nhất một codec** qua go/no-go; holdout mới đã được chạy và báo đầy đủ cả hai codec ở trên. Không dùng holdout V2 để fit/chọn V4.
 
 ### Replication trên TEST cũ đã xem
 
@@ -65,11 +69,13 @@ Các JSON tổng hợp [H.264](results/dual_codec_search_v2_confirm_1000/h264_re
 ## Mã và tái lập
 
 - [Thiết kế và giới hạn nghiên cứu](docs/PAPER_VALIDATION_PLAN.md), [preregistration đã khóa](docs/PREREGISTRATION.md) và [báo cáo holdout](docs/RESULTS_HOLDOUT_CONFIRM.md): tách nguồn, gate, bootstrap ghép cặp và kết quả xác nhận âm tính.
+- [Preregistration V4](docs/PREREGISTRATION_V4.md), [kiểm toán split V4](docs/HOLDOUT_SPLIT_V4.md) và [báo cáo V4](docs/RESULTS_HOLDOUT_V4.md): policy, nguồn, gate và kết quả mới; [amendment kỹ thuật](docs/V4_HOLDOUT_TECHNICAL_AMENDMENT.md) ghi sự cố hash CRLF/LF trước lượt chạy hoàn tất.
 - [Policy và runner V2](ops/dual_codec_search_confirm_1000.py), [tạo panel Kinetics](ops/paper_ar_visual.py), [OD pilot và panel COCO](ops/probe_background_suppression.py).
+- [Runner và merge V4](ops/paper_holdout_v4.py), [gói V4](results/paper_holdout_v4/README.md).
 - [Runner holdout đã khóa](ops/paper_holdout_confirm.py), [gói record/provenance](ops/package_paper_holdout_confirm.py), [phân tích ablation](ops/paper_validation.py), [runner `mc3_18`](ops/paper_heldout_mc3.py), [runner thời gian chạy](ops/paper_runtime.py) và [baseline downscaling DEV](ops/paper_dev_downscale.py).
 - [Cell Kaggle AR](kaggle/paper_ar_visual_cell.sh), [cell Kaggle OD](kaggle/paper_coco_visual_cell.sh) và [công cụ tạo notebook riêng tư](ops/push_paper_visual.py). Cell trong repo này clone `munnn01/pre_updated_v2` tại commit được chỉ định. Hai notebook hoàn tất ở trên được chạy từ bản phát triển `test_pre` với cùng logic đánh giá; không được gọi là lượt chạy lại trên commit repo này.
 
-Kết quả này phù hợp để báo cáo như một **nghiên cứu xác nhận âm tính/replication**: policy tốt hơn downscale cố định trên nguồn Kinetics đã khóa, nhưng trượt gate hai analyzer, lợi ích trên `mc3_18` chưa rõ và overhead encoder cao. Chưa có bằng chứng chuyển miền sang dataset video khác hoặc chứng cứ OD toàn COCO val2017.
+V2-C là **nghiên cứu xác nhận âm tính/replication** trên gate hai analyzer; V4 là **xác nhận dương tính cho gate đó trên holdout source-disjoint mới**. V4 vẫn chưa chứng minh lợi ích trên analyzer độc lập `mc3_18`, chưa có số runtime đầy đủ và chưa có bằng chứng chuyển miền sang dataset video khác. OD chưa được xác nhận trên toàn COCO val2017.
 
 ## Tài liệu tham khảo
 

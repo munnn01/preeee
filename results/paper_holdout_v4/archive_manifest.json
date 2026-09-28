@@ -1,0 +1,45 @@
+{
+  "purpose": "Original output archives for four completed Kaggle V4 holdout shards; raw manifests and records were extracted without changing bytes.",
+  "evaluation_code_commit": "9b6805bf994bfc9e237049abf2adccec4f3f59cf",
+  "source_fingerprint": "b72321eecafe6f81368ae22e5352f04305094634aaca2a378bac12b7cc60822b",
+  "index_sha256": "995969ffdc943976400c67337ca3d27c95370f22040f64e2fa43169e08efe8e2",
+  "freeze_manifest_sha256": "c59d6e4fa4e7837e9f86cd418af0b1c1afcd75adae490ae4e8b3bc3eed45f06f",
+  "archives": [
+    {
+      "codec": "h264",
+      "shard": 0,
+      "account": "shungg05",
+      "notebook": "shungg05/paper-v4-h264-s0-9b6805b",
+      "file": "paper_holdout_v4_h264_shard0.tgz",
+      "bytes": 5946205,
+      "sha256": "0c05fbb8681c7b234eb2c6c50e6479adfaa0fe839d6062d416ff5d75275a12fc"
+    },
+    {
+      "codec": "h264",
+      "shard": 1,
+      "account": "dieulinhh",
+      "notebook": "dieulinhh/paper-v4-h264-s1-9b6805b",
+      "file": "paper_holdout_v4_h264_shard1.tgz",
+      "bytes": 5957410,
+      "sha256": "04f7996fe45adf0bd65a6de13d5ca9ec5040dae3a76637a19cf187089feae9b8"
+    },
+    {
+      "codec": "h265",
+      "shard": 0,
+      "account": "huolgggnuyen",
+      "notebook": "huolgggnuyen/paper-v4-h265-s0-9b6805b",
+      "file": "paper_holdout_v4_h265_shard0.tgz",
+      "bytes": 5953340,
+      "sha256": "31971eac7bfc6502e221a727bbd7fad8b9c5ed046dbb79309a4434ff496c6d8b"
+    },
+    {
+      "codec": "h265",
+      "shard": 1,
+      "account": "baooo25r",
+      "notebook": "baooo25r/paper-v4-h265-s1-9b6805b",
+      "file": "paper_holdout_v4_h265_shard1.tgz",
+      "bytes": 5968404,
+      "sha256": "f8cd209f96fdf8b7aaef0a03979dda0e277c7b5ef9652e202a5becae5b670c1f"
+    }
+  ]
+}

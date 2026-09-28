@@ -1,0 +1,85 @@
+{
+  "experiment": "v4_new_source_disjoint_holdout_package",
+  "preregistration_commit": "17b036c6fb5819e67751dfd3be83193eb1097be9",
+  "source_id_lock_commit": "969d2f2d71575e61e95ea2849f533d4a56e522fa",
+  "index_lock_commit": "78c1124d092d70ba11f3ed664194e4f747f5e3a8",
+  "evaluation_code_commit": "9b6805bf994bfc9e237049abf2adccec4f3f59cf",
+  "analysis_code_commit": "9b6805bf994bfc9e237049abf2adccec4f3f59cf",
+  "source_fingerprint": "b72321eecafe6f81368ae22e5352f04305094634aaca2a378bac12b7cc60822b",
+  "index_sha256": "995969ffdc943976400c67337ca3d27c95370f22040f64e2fa43169e08efe8e2",
+  "freeze_manifest_sha256": "c59d6e4fa4e7837e9f86cd418af0b1c1afcd75adae490ae4e8b3bc3eed45f06f",
+  "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+  "bootstrap_seed": 20260928,
+  "bootstrap_draws": 2000,
+  "shards": [
+    {
+      "codec": "h264",
+      "shard": 0,
+      "account": "shungg05",
+      "notebook": "shungg05/paper-v4-h264-s0-9b6805b",
+      "primary": {
+        "manifest_sha256": "069771f6fae9c81ce2b126c70d55039b4a9cc9f3abd67858872f89f6360168c9",
+        "records_sha256": "1d874cdd185cee235318b0bcdd29813656b2b0e2a8b8118d73003d685d75ba88",
+        "records_bytes": 14290156
+      },
+      "mc3": {
+        "manifest_sha256": "6ad03bf7661d489ee512f40016fff17768e7ca8a82062290a6fbc17e89e32287",
+        "records_sha256": "7b40d7894255d72904983c88118dba5b498aa6330a6e51a9039032945f36e3eb",
+        "records_bytes": 1035311
+      }
+    },
+    {
+      "codec": "h264",
+      "shard": 1,
+      "account": "dieulinhh",
+      "notebook": "dieulinhh/paper-v4-h264-s1-9b6805b",
+      "primary": {
+        "manifest_sha256": "edd542b35dcff374753540f87f59588921e29c1ca6949a71804422a6a2aecaa9",
+        "records_sha256": "dc8e7865883df12029c314e9c5caee2f98c6010e98dbe4fff2ce4455d3bf93c6",
+        "records_bytes": 14296575
+      },
+      "mc3": {
+        "manifest_sha256": "a150b70784b291cecd4f795f2d13f9f70fae453834096d81a2cb6aa89d2a08cc",
+        "records_sha256": "03314e5d789120bc327d4ea06f36d4bbb7160ab9fe0e4b4e9ff21c4600e1a08f",
+        "records_bytes": 1035348
+      }
+    },
+    {
+      "codec": "h265",
+      "shard": 0,
+      "account": "huolgggnuyen",
+      "notebook": "huolgggnuyen/paper-v4-h265-s0-9b6805b",
+      "primary": {
+        "manifest_sha256": "58e83e322fa957aa588299b53a65ba71fbea01dcf5e6675a749f2d47e0185da4",
+        "records_sha256": "cade244b261533dfba40e5e1274f3dcd554e791a45e606e9b93467e561c96143",
+        "records_bytes": 14292805
+      },
+      "mc3": {
+        "manifest_sha256": "1feb46e1f725e4435c019a36a81b5faada51b549d2ca9d23aa5f73dd1f146d6a",
+        "records_sha256": "cf026f79c90ff9ab5573040a1f97a3bfdd86d3911909015cb32cbaaa72a9bbae",
+        "records_bytes": 1037725
+      }
+    },
+    {
+      "codec": "h265",
+      "shard": 1,
+      "account": "baooo25r",
+      "notebook": "baooo25r/paper-v4-h265-s1-9b6805b",
+      "primary": {
+        "manifest_sha256": "f8f88affc56cdd5eabad5bf882b049fd67a5e6737c9e3b675a38dc23aa083d68",
+        "records_sha256": "13eec16b7b098ac30424b90612886941435c7e5941b6a3f2ca3e6023fa0e06a5",
+        "records_bytes": 14299709
+      },
+      "mc3": {
+        "manifest_sha256": "d837640b6029884383914a1cf45ef5bd0eaee3df0e8e62316b2380ba44d0dfc7",
+        "records_sha256": "c23bca5e88f8aa6edbc9ce257f5c732a013f9628004d26e4d5b3f1c0409e728c",
+        "records_bytes": 1037542
+      }
+    }
+  ],
+  "results": {
+    "h264": "9991b7cc027e4d551317e37ecf8c4d70f92cb9ee9a00e98f0d10927502fce2f4",
+    "h265": "4ad877538d08494de0eeec1954c5467f816e144a49d0559371b14a9b3c4a8814"
+  },
+  "merged_result_recomputation": "Independent local reruns of ops.paper_holdout_v4 merge from the same extracted Kaggle shard records matched both result JSON SHA-256 values byte-for-byte."
+}
