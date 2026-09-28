@@ -1,0 +1,40 @@
+{
+  "status": "metadata_only",
+  "source": "official CVDF Kinetics-400 validation",
+  "salt": "v6-h265-holdout-20260928",
+  "annotation_sha256": "358eaf47e7f80ebf9b17d49eb0635ad5e0fdab98a9cbd75ffdd2ee5d5e5b6944",
+  "archive_path_list_sha256": "7c75bab47da18ba747e8bdd826bec9139672336fd3431caa71ff563473080e77",
+  "legacy_inventories": [
+    {
+      "path": "kineticscleaned_source_inventory.json",
+      "sha256": "5b20994cb225eba604b0446cb166e19fbb118891aff787401eda4539cd03a045"
+    },
+    {
+      "path": "rohanmallick_kinetics_source_inventory.json",
+      "sha256": "4af8f090d153667e0e0db34f5ccfb5cc49c9370fc168ba8e456330424379bb62"
+    }
+  ],
+  "development_manifest_sha256": "c0d1b50d941c790803e1281a5634058f165aa7329ac2849825559635e17d6e67",
+  "development_source_count": 800,
+  "development_source_fingerprints": {
+    "fit": "4c12443af5c0ef44dc5143217ab00b146e0d9090607c49393487d5decd4e4bb1",
+    "calibration": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "dev": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258"
+  },
+  "v2_holdout_ids_sha256": "7f4d583812cd0bc20335aeaf2f62520ad8a9c32aa8c3f7d591df39c2a1852bc4",
+  "v2_holdout_source_count": 1000,
+  "v4_holdout_ids_sha256": "db5918598a0891094ab190e6c44c34377dc84d6852303e9ceb7dc8938295b223",
+  "v4_holdout_source_count": 1000,
+  "official_source_count": 19906,
+  "historical_source_count": 28625,
+  "official_historical_overlap": 0,
+  "official_development_overlap": 0,
+  "official_v2_holdout_overlap": 1000,
+  "official_v4_holdout_overlap": 1000,
+  "eligible_source_count": 17906,
+  "eligible_source_fingerprint": "bc35dc928aab382137b3c4d2991f2e182cb0b08c6582331e3f940025a2b3419b",
+  "candidate_limit": 2000,
+  "target": 1000,
+  "candidate_ids_fingerprint": "909f1ba64e0b2f9441b05d84f20aa287be9abf9b7fa97beb99aa749e64bd6141",
+  "code_commit": "67067adefeaddda326c9f9c3f6c7560acbc79a9b"
+}
