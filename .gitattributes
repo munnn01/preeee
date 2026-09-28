@@ -4,6 +4,7 @@ kaggle/dual_codec_search_cell.sh text eol=lf
 kaggle/paper_runtime_full_cell.sh text eol=lf
 kaggle/paper_holdout_confirm_cell.sh text eol=lf
 kaggle/paper_holdout_v4_cell.sh text eol=lf
+kaggle/v5_dev_agreement_cell.sh text eol=lf
 results/paper_mc3_v2_confirmed/** -text
 results/paper_downscale_dev/** -text
 results/holdout_confirm/** -text
@@ -16,4 +17,5 @@ results/od_coco_pilot/** -text
 configs/holdout_source_audit/** -text
 configs/v4_frozen/** -text
 configs/v4_holdout_source_audit/** -text
+configs/v5_dev_cache_manifest.json -text
 configs/paper_runtime_dev/** -text
