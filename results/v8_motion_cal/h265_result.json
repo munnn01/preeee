@@ -1,0 +1,1740 @@
+{
+  "experiment": "v8_motion_protect_h265_cal_pilot",
+  "scope": "reused CAL developmental pilot; no holdout",
+  "codec": "h265",
+  "n": 100,
+  "source_ids": [
+    "drawing/KlqOtHVy680.mp4",
+    "skydiving/f9EOD2dDBqM.mp4",
+    "sailing/WDHeqJpXULM.mp4",
+    "throwing ball/xGbNxfVMbwc.mp4",
+    "tasting food/pnl3fDsgcWg.mp4",
+    "robot dancing/Q663ls2_ye8.mp4",
+    "playing basketball/wVyqjAp53-0.mp4",
+    "salsa dancing/09Hbbin_TK0.mp4",
+    "sticking tongue out/aliUd2XxRt4.mp4",
+    "playing xylophone/Ya0ktENGbcM.mp4",
+    "contact juggling/Emyb51Yqso8.mp4",
+    "playing controller/DBoZI9w-uCM.mp4",
+    "moving furniture/UKf01D2yA58.mp4",
+    "hitting baseball/WNnCAmkMA80.mp4",
+    "grooming dog/KKwPbb1DtLc.mp4",
+    "cleaning pool/XROfW4F23Ew.mp4",
+    "driving car/RL2oAowHyGs.mp4",
+    "cleaning gutters/jFPnXwICOcc.mp4",
+    "windsurfing/QB4LO-jSG-c.mp4",
+    "riding mule/5X7u1YubmsU.mp4",
+    "cartwheeling/AK0oJ4VL04s.mp4",
+    "vault/f6tmkLN6RSU.mp4",
+    "swinging on something/9GO0EkwOUJc.mp4",
+    "high jump/PtOPYgaSkno.mp4",
+    "strumming guitar/KZOSyaJSiKk.mp4",
+    "playing accordion/IN7WqyKWE_M.mp4",
+    "krumping/hc3N2yWjZDM.mp4",
+    "egg hunting/naQIbLFk5rg.mp4",
+    "tying bow tie/hhIUBxu8DLM.mp4",
+    "dunking basketball/sEz8veqnYIk.mp4",
+    "cooking egg/kjUe2gV15vg.mp4",
+    "baby waking up/d6pV0wYqDI8.mp4",
+    "blowing nose/y8GXHamtTQU.mp4",
+    "presenting weather forecast/_cgxZmELFd8.mp4",
+    "sneezing/kG410JF5bXE.mp4",
+    "walking the dog/uPtSihGLLRY.mp4",
+    "holding snake/Lv4bRhErjOI.mp4",
+    "climbing ladder/jpT_2tWKcwE.mp4",
+    "golf chipping/XF_frSfzoCg.mp4",
+    "cleaning shoes/MBHULY7KpjU.mp4",
+    "eating carrots/z1aHTOclNfo.mp4",
+    "whistling/75WQhadVtf4.mp4",
+    "ski jumping/HjSIiq_QWZk.mp4",
+    "surfing water/8yQqSN3ajgc.mp4",
+    "beatboxing/6A1GUkCdQsM.mp4",
+    "tickling/GNNejmBRsjw.mp4",
+    "changing wheel/NjJhVBzmHDs.mp4",
+    "dancing charleston/b8Z7iFeRwZA.mp4",
+    "making snowman/ldry0BwNc_w.mp4",
+    "massaging legs/JIdyMkc_RpA.mp4",
+    "tasting beer/8_3-jVmTbL0.mp4",
+    "chopping wood/95qw4L-_VGM.mp4",
+    "playing recorder/KHVqcXbDArY.mp4",
+    "assembling computer/2QJp83GI2_g.mp4",
+    "hugging/ESiYmkavFVU.mp4",
+    "crying/TmsZYVhiCNU.mp4",
+    "zumba/n7j19ab8A6E.mp4",
+    "extinguishing fire/1adWmAnjKR8.mp4",
+    "eating hotdog/k4-p_qH537U.mp4",
+    "unloading truck/JgZQ5kj3F7o.mp4",
+    "snatch weight lifting/G0oc0vrmCeY.mp4",
+    "petting animal (not cat)/qur-3t7dtsc.mp4",
+    "snowboarding/SvN1aPQ87Yw.mp4",
+    "baking cookies/pKAkazfIXFw.mp4",
+    "eating chips/C6Ei8HR2hjI.mp4",
+    "ripping paper/cRoKp1r2Jl4.mp4",
+    "peeling potatoes/wpmwqVGMJVc.mp4",
+    "catching or throwing softball/t4-y8MPVGD8.mp4",
+    "milking cow/qSATczcffhU.mp4",
+    "playing harmonica/WgiDnf3u8zE.mp4",
+    "disc golfing/oRcXJg49eH8.mp4",
+    "shaving legs/3LjuAAYPRUo.mp4",
+    "golf driving/Hkv28b4vHu4.mp4",
+    "bandaging/HZadX9Gjmv4.mp4",
+    "making bed/Yrii6DwIdfI.mp4",
+    "applauding/I8j_EP0Hhbk.mp4",
+    "playing poker/i_Ohws7lDZI.mp4",
+    "tobogganing/QTW7_FIgNY0.mp4",
+    "shaking hands/6wD0Gf9w5DA.mp4",
+    "drinking/NVedGeVPc30.mp4",
+    "punching person (boxing)/1X_d9kWynQ0.mp4",
+    "doing laundry/fPRo-LAbQ0I.mp4",
+    "country line dancing/w7VDI5GrPUE.mp4",
+    "air drumming/gFI4lkq3rqk.mp4",
+    "doing aerobics/svSVrReLnf0.mp4",
+    "dodgeball/yzm0CEu2G8k.mp4",
+    "taking a shower/bAhChPIGz-s.mp4",
+    "rock climbing/hS0ugJFTMTw.mp4",
+    "shaking head/Fmk4DLj0YG0.mp4",
+    "playing piano/wPYR153pT9w.mp4",
+    "reading newspaper/Dh_1WmuYIRM.mp4",
+    "pumping gas/hLsiUrbYLg4.mp4",
+    "hockey stop/Zao7wLso2Hk.mp4",
+    "clay pottery making/fBYk9DMFPwk.mp4",
+    "writing/NDA_Rd8CVTA.mp4",
+    "spray painting/OlUjNPnzIZ4.mp4",
+    "swing dancing/ne4UIOFv9fM.mp4",
+    "jumpstyle dancing/j3s5s46NTT8.mp4",
+    "building cabinet/CywkZ1rq5-Q.mp4",
+    "juggling fire/_BDcWlv9xog.mp4"
+  ],
+  "source_fingerprint": "e4134a770101dad6c45e2caf028665349af302d27bd2e8af4427260a93e55f31",
+  "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+  "preregistration_commit": "cb259971bd2dc6f201eeab14fa7d7af7a04a627e",
+  "preregistration_sha256": "c30e07d5d7ec787fff42f5d7fbf880b089839768e862a606be1ad63b2fb4299c",
+  "analysis_code_commit": "209c70a9fd1efb4d62fb63c42537abd802a1eb68",
+  "bootstrap_seed": 20261005,
+  "bootstrap_draws": 2000,
+  "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+  "shard_manifests": [
+    {
+      "experiment": "v8_motion_protect_h265_cal_pilot",
+      "scope": "reused CAL; development only",
+      "codec": "h265",
+      "shard": 0,
+      "shards": 4,
+      "n": 25,
+      "source_ids": [
+        "drawing/KlqOtHVy680.mp4",
+        "tasting food/pnl3fDsgcWg.mp4",
+        "sticking tongue out/aliUd2XxRt4.mp4",
+        "moving furniture/UKf01D2yA58.mp4",
+        "driving car/RL2oAowHyGs.mp4",
+        "cartwheeling/AK0oJ4VL04s.mp4",
+        "strumming guitar/KZOSyaJSiKk.mp4",
+        "tying bow tie/hhIUBxu8DLM.mp4",
+        "blowing nose/y8GXHamtTQU.mp4",
+        "holding snake/Lv4bRhErjOI.mp4",
+        "eating carrots/z1aHTOclNfo.mp4",
+        "beatboxing/6A1GUkCdQsM.mp4",
+        "making snowman/ldry0BwNc_w.mp4",
+        "playing recorder/KHVqcXbDArY.mp4",
+        "zumba/n7j19ab8A6E.mp4",
+        "snatch weight lifting/G0oc0vrmCeY.mp4",
+        "eating chips/C6Ei8HR2hjI.mp4",
+        "milking cow/qSATczcffhU.mp4",
+        "golf driving/Hkv28b4vHu4.mp4",
+        "playing poker/i_Ohws7lDZI.mp4",
+        "punching person (boxing)/1X_d9kWynQ0.mp4",
+        "doing aerobics/svSVrReLnf0.mp4",
+        "shaking head/Fmk4DLj0YG0.mp4",
+        "hockey stop/Zao7wLso2Hk.mp4",
+        "swing dancing/ne4UIOFv9fM.mp4"
+      ],
+      "source_fingerprint": "e4134a770101dad6c45e2caf028665349af302d27bd2e8af4427260a93e55f31",
+      "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+      "preregistration_commit": "cb259971bd2dc6f201eeab14fa7d7af7a04a627e",
+      "preregistration_sha256": "c30e07d5d7ec787fff42f5d7fbf880b089839768e862a606be1ad63b2fb4299c",
+      "code_commit": "209c70a9fd1efb4d62fb63c42537abd802a1eb68",
+      "records_sha256": "09b6fb824a5affc3ee92affdf7f6c88c7146ebb9e692c22efe3a0839d3e53125",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "arms": [
+        "identity128",
+        "area112",
+        "blur040_128",
+        "motionprotect128"
+      ],
+      "analyzers": [
+        "r2plus1d_18",
+        "r3d_18",
+        "mc3_18"
+      ],
+      "bootstrap_seed": 20261005,
+      "bootstrap_draws": 2000,
+      "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    },
+    {
+      "experiment": "v8_motion_protect_h265_cal_pilot",
+      "scope": "reused CAL; development only",
+      "codec": "h265",
+      "shard": 1,
+      "shards": 4,
+      "n": 25,
+      "source_ids": [
+        "skydiving/f9EOD2dDBqM.mp4",
+        "robot dancing/Q663ls2_ye8.mp4",
+        "playing xylophone/Ya0ktENGbcM.mp4",
+        "hitting baseball/WNnCAmkMA80.mp4",
+        "cleaning gutters/jFPnXwICOcc.mp4",
+        "vault/f6tmkLN6RSU.mp4",
+        "playing accordion/IN7WqyKWE_M.mp4",
+        "dunking basketball/sEz8veqnYIk.mp4",
+        "presenting weather forecast/_cgxZmELFd8.mp4",
+        "climbing ladder/jpT_2tWKcwE.mp4",
+        "whistling/75WQhadVtf4.mp4",
+        "tickling/GNNejmBRsjw.mp4",
+        "massaging legs/JIdyMkc_RpA.mp4",
+        "assembling computer/2QJp83GI2_g.mp4",
+        "extinguishing fire/1adWmAnjKR8.mp4",
+        "petting animal (not cat)/qur-3t7dtsc.mp4",
+        "ripping paper/cRoKp1r2Jl4.mp4",
+        "playing harmonica/WgiDnf3u8zE.mp4",
+        "bandaging/HZadX9Gjmv4.mp4",
+        "tobogganing/QTW7_FIgNY0.mp4",
+        "doing laundry/fPRo-LAbQ0I.mp4",
+        "dodgeball/yzm0CEu2G8k.mp4",
+        "playing piano/wPYR153pT9w.mp4",
+        "clay pottery making/fBYk9DMFPwk.mp4",
+        "jumpstyle dancing/j3s5s46NTT8.mp4"
+      ],
+      "source_fingerprint": "e4134a770101dad6c45e2caf028665349af302d27bd2e8af4427260a93e55f31",
+      "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+      "preregistration_commit": "cb259971bd2dc6f201eeab14fa7d7af7a04a627e",
+      "preregistration_sha256": "c30e07d5d7ec787fff42f5d7fbf880b089839768e862a606be1ad63b2fb4299c",
+      "code_commit": "209c70a9fd1efb4d62fb63c42537abd802a1eb68",
+      "records_sha256": "1a714acfb9647f85b20dcd77d1e338ae9d22138dbb8e8b1e666bf36a92364bf0",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "arms": [
+        "identity128",
+        "area112",
+        "blur040_128",
+        "motionprotect128"
+      ],
+      "analyzers": [
+        "r2plus1d_18",
+        "r3d_18",
+        "mc3_18"
+      ],
+      "bootstrap_seed": 20261005,
+      "bootstrap_draws": 2000,
+      "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    },
+    {
+      "experiment": "v8_motion_protect_h265_cal_pilot",
+      "scope": "reused CAL; development only",
+      "codec": "h265",
+      "shard": 2,
+      "shards": 4,
+      "n": 25,
+      "source_ids": [
+        "sailing/WDHeqJpXULM.mp4",
+        "playing basketball/wVyqjAp53-0.mp4",
+        "contact juggling/Emyb51Yqso8.mp4",
+        "grooming dog/KKwPbb1DtLc.mp4",
+        "windsurfing/QB4LO-jSG-c.mp4",
+        "swinging on something/9GO0EkwOUJc.mp4",
+        "krumping/hc3N2yWjZDM.mp4",
+        "cooking egg/kjUe2gV15vg.mp4",
+        "sneezing/kG410JF5bXE.mp4",
+        "golf chipping/XF_frSfzoCg.mp4",
+        "ski jumping/HjSIiq_QWZk.mp4",
+        "changing wheel/NjJhVBzmHDs.mp4",
+        "tasting beer/8_3-jVmTbL0.mp4",
+        "hugging/ESiYmkavFVU.mp4",
+        "eating hotdog/k4-p_qH537U.mp4",
+        "snowboarding/SvN1aPQ87Yw.mp4",
+        "peeling potatoes/wpmwqVGMJVc.mp4",
+        "disc golfing/oRcXJg49eH8.mp4",
+        "making bed/Yrii6DwIdfI.mp4",
+        "shaking hands/6wD0Gf9w5DA.mp4",
+        "country line dancing/w7VDI5GrPUE.mp4",
+        "taking a shower/bAhChPIGz-s.mp4",
+        "reading newspaper/Dh_1WmuYIRM.mp4",
+        "writing/NDA_Rd8CVTA.mp4",
+        "building cabinet/CywkZ1rq5-Q.mp4"
+      ],
+      "source_fingerprint": "e4134a770101dad6c45e2caf028665349af302d27bd2e8af4427260a93e55f31",
+      "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+      "preregistration_commit": "cb259971bd2dc6f201eeab14fa7d7af7a04a627e",
+      "preregistration_sha256": "c30e07d5d7ec787fff42f5d7fbf880b089839768e862a606be1ad63b2fb4299c",
+      "code_commit": "209c70a9fd1efb4d62fb63c42537abd802a1eb68",
+      "records_sha256": "7b65ac324a767d296e9bc707884ef0e32411bd5c86b2b7b5f5bad9deb7a8d3dc",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "arms": [
+        "identity128",
+        "area112",
+        "blur040_128",
+        "motionprotect128"
+      ],
+      "analyzers": [
+        "r2plus1d_18",
+        "r3d_18",
+        "mc3_18"
+      ],
+      "bootstrap_seed": 20261005,
+      "bootstrap_draws": 2000,
+      "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    },
+    {
+      "experiment": "v8_motion_protect_h265_cal_pilot",
+      "scope": "reused CAL; development only",
+      "codec": "h265",
+      "shard": 3,
+      "shards": 4,
+      "n": 25,
+      "source_ids": [
+        "throwing ball/xGbNxfVMbwc.mp4",
+        "salsa dancing/09Hbbin_TK0.mp4",
+        "playing controller/DBoZI9w-uCM.mp4",
+        "cleaning pool/XROfW4F23Ew.mp4",
+        "riding mule/5X7u1YubmsU.mp4",
+        "high jump/PtOPYgaSkno.mp4",
+        "egg hunting/naQIbLFk5rg.mp4",
+        "baby waking up/d6pV0wYqDI8.mp4",
+        "walking the dog/uPtSihGLLRY.mp4",
+        "cleaning shoes/MBHULY7KpjU.mp4",
+        "surfing water/8yQqSN3ajgc.mp4",
+        "dancing charleston/b8Z7iFeRwZA.mp4",
+        "chopping wood/95qw4L-_VGM.mp4",
+        "crying/TmsZYVhiCNU.mp4",
+        "unloading truck/JgZQ5kj3F7o.mp4",
+        "baking cookies/pKAkazfIXFw.mp4",
+        "catching or throwing softball/t4-y8MPVGD8.mp4",
+        "shaving legs/3LjuAAYPRUo.mp4",
+        "applauding/I8j_EP0Hhbk.mp4",
+        "drinking/NVedGeVPc30.mp4",
+        "air drumming/gFI4lkq3rqk.mp4",
+        "rock climbing/hS0ugJFTMTw.mp4",
+        "pumping gas/hLsiUrbYLg4.mp4",
+        "spray painting/OlUjNPnzIZ4.mp4",
+        "juggling fire/_BDcWlv9xog.mp4"
+      ],
+      "source_fingerprint": "e4134a770101dad6c45e2caf028665349af302d27bd2e8af4427260a93e55f31",
+      "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+      "preregistration_commit": "cb259971bd2dc6f201eeab14fa7d7af7a04a627e",
+      "preregistration_sha256": "c30e07d5d7ec787fff42f5d7fbf880b089839768e862a606be1ad63b2fb4299c",
+      "code_commit": "209c70a9fd1efb4d62fb63c42537abd802a1eb68",
+      "records_sha256": "5e980869a13d0b6378b6bf31d914dade184827d7ee7bb053934fc724c9e766da",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "arms": [
+        "identity128",
+        "area112",
+        "blur040_128",
+        "motionprotect128"
+      ],
+      "analyzers": [
+        "r2plus1d_18",
+        "r3d_18",
+        "mc3_18"
+      ],
+      "bootstrap_seed": 20261005,
+      "bootstrap_draws": 2000,
+      "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    }
+  ],
+  "shard_records_sha256": [
+    "09b6fb824a5affc3ee92affdf7f6c88c7146ebb9e692c22efe3a0839d3e53125",
+    "1a714acfb9647f85b20dcd77d1e338ae9d22138dbb8e8b1e666bf36a92364bf0",
+    "7b65ac324a767d296e9bc707884ef0e32411bd5c86b2b7b5f5bad9deb7a8d3dc",
+    "5e980869a13d0b6378b6bf31d914dade184827d7ee7bb053934fc724c9e766da"
+  ],
+  "source_video_sha256": {
+    "drawing/KlqOtHVy680.mp4": "5f6519ca889d145a7def976d5676005f795bb07752922d83ec4165b43fbd623a",
+    "skydiving/f9EOD2dDBqM.mp4": "487dc8ed9f98333b7ef3326ae4fa854651137f24b7a5f66d84ca405ed242eba6",
+    "sailing/WDHeqJpXULM.mp4": "1a5a035230e6afdcee2e33fc3a648d3b1ec834dca0480356532480f839f2e574",
+    "throwing ball/xGbNxfVMbwc.mp4": "659200d6052b30c8d82393136fac7a8add18f8b08ecd1f37f455bea5b26e9146",
+    "tasting food/pnl3fDsgcWg.mp4": "76f139934688db8a9fc59aca9b6bf5b5f48e0271976c01a1c55c128fe2a3e4db",
+    "robot dancing/Q663ls2_ye8.mp4": "268de537d516a5dbfa3ebe8f5657eb338334ba2859c1c5b11d696e2f15ca8fa2",
+    "playing basketball/wVyqjAp53-0.mp4": "16652eb120b9391faed81a48f2c9bed127822b1dc6769401c3021d3d4607a5de",
+    "salsa dancing/09Hbbin_TK0.mp4": "d3161c5f9b3e90f67f71d01ab891f426daf782df6943b9c05869691158e528d5",
+    "sticking tongue out/aliUd2XxRt4.mp4": "a204cf7b1fd773579538f48f792a0be60874a7e6322bdafeed1f9677282b6556",
+    "playing xylophone/Ya0ktENGbcM.mp4": "6b9b4b944d3b95a70f3e9cd1fd49b96255a1767224b46a0f29113e7496901f0c",
+    "contact juggling/Emyb51Yqso8.mp4": "9eea03e3cbf41e17579d5d1dadbf8ff4da981fb9c2c52f3010877dab55ebc197",
+    "playing controller/DBoZI9w-uCM.mp4": "1d1f5ab5ec0d92b11c285396fdf55440d4851fdcc8f2ad867c8c53c9c70ff8cb",
+    "moving furniture/UKf01D2yA58.mp4": "87660d02de85537f80108deac03d8dcbeae5535c61748223aad3d45b09c3211e",
+    "hitting baseball/WNnCAmkMA80.mp4": "fd217f63f35852da15ee636206bfae40429bc8ae4e0cf9f4e83a94c2778f53f4",
+    "grooming dog/KKwPbb1DtLc.mp4": "72f9eff7b24d0ff35f8cc6dd3bae31962b1e40191de526d8debd9e80491f647e",
+    "cleaning pool/XROfW4F23Ew.mp4": "e18e40776478c959586170d41223540436d71e7d19fc267c9091cbe668bbc6d8",
+    "driving car/RL2oAowHyGs.mp4": "dd96da6521f9729632226b66c207a281b8b7c0a9b48eb9933ed596cc891baec2",
+    "cleaning gutters/jFPnXwICOcc.mp4": "c43949e1fc1056882f08afc12eeddb8a1582c2c09b6c7b17b428c981d0021601",
+    "windsurfing/QB4LO-jSG-c.mp4": "ee106a9d70b7fa49513bbe4fbffb098f25890382b2d9adb14c2971fe20385c01",
+    "riding mule/5X7u1YubmsU.mp4": "bc82aec2a1c858b9093c34b858f56eef982963fa959708823d33640b245e5fb9",
+    "cartwheeling/AK0oJ4VL04s.mp4": "8c77fb8fd0da62354d38ec53afe1504af3025afb4f8637565a4cc06e6847c31e",
+    "vault/f6tmkLN6RSU.mp4": "ec24319d6fef2997ead073416617f9bcbee525b053bb64b6501c30de876763ba",
+    "swinging on something/9GO0EkwOUJc.mp4": "17085604f5e87785465cfe1379e12311de07163b770f939252b86bf907e5f54d",
+    "high jump/PtOPYgaSkno.mp4": "01308b6162382e2d6e78e4fd52bf3995c8cd583ed6498012c0ac3a8f51433265",
+    "strumming guitar/KZOSyaJSiKk.mp4": "5a5b3e8a9ab57487a533d7577575ea40c0410677b7c26704bafc902d552082ec",
+    "playing accordion/IN7WqyKWE_M.mp4": "316afcf13d501ac140917360a5baaec52a281225de11ebe97c0940d8899d52d5",
+    "krumping/hc3N2yWjZDM.mp4": "6220da4eccf615aee1569754db7bc51ebe0b9a70fd53ba05a0aa78da3c192696",
+    "egg hunting/naQIbLFk5rg.mp4": "f8442d00119d6b3acfaf3b585d9ea1c9dda2b12cd19852a7a9518df7740a6de3",
+    "tying bow tie/hhIUBxu8DLM.mp4": "7ac06a8fe11e0d3332f6fe169e72be8358c46c8f5c9414cee8b9b732862446dd",
+    "dunking basketball/sEz8veqnYIk.mp4": "2dd7b21e82f84b9c0a83bcaecd45465feae6b3b49463d5022ecfae5bd37cd3d5",
+    "cooking egg/kjUe2gV15vg.mp4": "5e99ce6195f6429c9b3ed6b76053c2f1df24b1852d6a67060a33fb2f0d5539c7",
+    "baby waking up/d6pV0wYqDI8.mp4": "31d59953783f5c315916055f8a7718a4b06a1b04c1205727afad679742e88a22",
+    "blowing nose/y8GXHamtTQU.mp4": "27da0ebacda4c294c1ba240707c81e843f8c727cf152bde95fc334b2a8a33182",
+    "presenting weather forecast/_cgxZmELFd8.mp4": "e53460ee9a6adf1e314f25aefcf058e8a9cee897fd320c0377b750f0bb4b86d0",
+    "sneezing/kG410JF5bXE.mp4": "3606710df04762b8944f4968d4271790331b7c79ec3278daab9aa03a71780f28",
+    "walking the dog/uPtSihGLLRY.mp4": "b953a354bee5a8e5bbc9c4c1f1491a1a150c2e9bc5f2c01ed45875ab1643d043",
+    "holding snake/Lv4bRhErjOI.mp4": "a1589dfe40ba6937698faa69d2455d7da1265876b048163bdcc06a26ef1e1ef7",
+    "climbing ladder/jpT_2tWKcwE.mp4": "1dbe0c8115beb3c2e87ffd7dfd8d30ca77e5e35025445b145fa9361ad0f4210d",
+    "golf chipping/XF_frSfzoCg.mp4": "f90a2435603310bb23cf7a900156ec8e5e6fd7d348b44e97968d67c0586815a4",
+    "cleaning shoes/MBHULY7KpjU.mp4": "9c489739d2a9c409d469d1d8f19690febefb40c5a30443f7aef88eb4fc6faaca",
+    "eating carrots/z1aHTOclNfo.mp4": "cc6f1a526f7fb46b6d92da5736653390fba049adcba64fad2bd3fbd0b04dc01d",
+    "whistling/75WQhadVtf4.mp4": "9741adda2b26dd24875145a059d116520b9bf9eb18f0185e740ee2368b610cfc",
+    "ski jumping/HjSIiq_QWZk.mp4": "d6af4fbe122ccfbbab5392cb5d8e0f1947f895a229db0e9913ecd98eb5b118a9",
+    "surfing water/8yQqSN3ajgc.mp4": "9efeb9ac29ac6ea6215d6f22c8c1d7a760425f228362bbb6a53470dca8f9c65a",
+    "beatboxing/6A1GUkCdQsM.mp4": "b7357d44e934a7dc86913f11c68d7f2eb9b3c626e354c321144c6ea1272103f9",
+    "tickling/GNNejmBRsjw.mp4": "692d3d95d40ffc4b1693a31fd568e8b185cdc8afaed2624e94055f12d9c7f26e",
+    "changing wheel/NjJhVBzmHDs.mp4": "7d9ab8ad6117a08ec6196dece711dbced5f84b8530be0aecf084c93891e051bb",
+    "dancing charleston/b8Z7iFeRwZA.mp4": "bfef4b22d2455fce51f09b75f103ef68d805c85eccf4501c55f5ce82850bb4eb",
+    "making snowman/ldry0BwNc_w.mp4": "431ff1f8f052715cd29b12785023fe8f449d86a84e3ac8fd16ce0af8b01ca7aa",
+    "massaging legs/JIdyMkc_RpA.mp4": "04425710750bdca374b4ad677828d11b0e2069fc327497a84d30da7d8709f4c4",
+    "tasting beer/8_3-jVmTbL0.mp4": "72069162fcc4d24821e483af8f6da55982519df6d959bc5a811160958e620954",
+    "chopping wood/95qw4L-_VGM.mp4": "4b64dae36c788a653ef3cd672aab8fb15cf57e2ecbf96c1da4f290fe3ab7544e",
+    "playing recorder/KHVqcXbDArY.mp4": "cd922e273cfd4b134d56b8b95303d38bc425d670ab2cc3416e94a013751563e7",
+    "assembling computer/2QJp83GI2_g.mp4": "12868403300ed319aab53855bd9e88625d1fc46b20837fbd030fdd0ca10e74b5",
+    "hugging/ESiYmkavFVU.mp4": "d9efa86dfdf0cc18d71f94241c7e4c4c01ef558c6c3a0999882cb570d2d349ad",
+    "crying/TmsZYVhiCNU.mp4": "912f7918ba6079c4807b8c2e5d44471cea6d71d14b0ba142493ba85a764ecf2a",
+    "zumba/n7j19ab8A6E.mp4": "c795e15ed9d70d32a242bb2ab8eeef7a51d1a97d57d14f16a88c456b4b6cd526",
+    "extinguishing fire/1adWmAnjKR8.mp4": "a08b94456e56993f88ee87ece1cf9690a693bf393a0a8aa66c85c6e191a2e6c3",
+    "eating hotdog/k4-p_qH537U.mp4": "7c2737c021763a26c0e54aa3171929073056afb541a95d7dfa03854041609222",
+    "unloading truck/JgZQ5kj3F7o.mp4": "e0f3a42e0490a7f108cc16356f0c40d56663df0e152e0e19fc748c4918ab2d38",
+    "snatch weight lifting/G0oc0vrmCeY.mp4": "40c12a8184dedda2941f2f91a18c156288ec496b5f0ccd9d2376702c1a52e905",
+    "petting animal (not cat)/qur-3t7dtsc.mp4": "a40f5baabb9174d3fe9d766e9165338bb10299857670abfd03a329fe233a3968",
+    "snowboarding/SvN1aPQ87Yw.mp4": "e55b07e2ec821cfb8312f29d51cb67292fd396396cc8ed55aec80ed8e55c6a29",
+    "baking cookies/pKAkazfIXFw.mp4": "2adff6df618c6ca76a8d6d9c98536712ac6f612f7ba3efdf8e5f2dead76ce222",
+    "eating chips/C6Ei8HR2hjI.mp4": "6dffd3255108d61c0bb7b346e95d0cd546881595d60a41ee7e6ec05e6b0bc9ac",
+    "ripping paper/cRoKp1r2Jl4.mp4": "b0d1ff97bd0d820a18849708c3ecc4e11944fa64d880c371b26f3890145dec87",
+    "peeling potatoes/wpmwqVGMJVc.mp4": "435235f2698798f2502727bf7a93b0b35139c11d23c21e2c58e2a2a8c8fc5312",
+    "catching or throwing softball/t4-y8MPVGD8.mp4": "228379dbed45a6c34b7983692061b8e48db322ec226412453d179515d8824691",
+    "milking cow/qSATczcffhU.mp4": "88f9b7f0cf45a6bb2cf12385c4686061e5121d4aacf5f9f90b540095be71d933",
+    "playing harmonica/WgiDnf3u8zE.mp4": "2a3af6b727212c25b579ceba993a63f235892b9fa181835eb99c1efb7db55109",
+    "disc golfing/oRcXJg49eH8.mp4": "73f972d234cc4a678134a840b518f02258d7ce9dae4cde482506603763fdb3a1",
+    "shaving legs/3LjuAAYPRUo.mp4": "5001b6a7db22a57dcc795ee44e4f001a2316c1b52695de88d533ea2cd9cee497",
+    "golf driving/Hkv28b4vHu4.mp4": "7ad33566eff4a28089c03dbae230149d946d33e96048662074ad88d1cd817bf7",
+    "bandaging/HZadX9Gjmv4.mp4": "a9978869be6e5ccead065305e19b28d1370c7f82d75603b1f76c59b30dfab55f",
+    "making bed/Yrii6DwIdfI.mp4": "74ef8ecaf2eb031f5f011764a471bf542e9525380b63f4f85b10809500c14890",
+    "applauding/I8j_EP0Hhbk.mp4": "63111e439fb8220ec463b70dba5e2a4784abe355a72c5899b4a94fb803fe0838",
+    "playing poker/i_Ohws7lDZI.mp4": "71bc8271397846215d11307df4592bc84ccf6f065d960533aaad95abd360ae72",
+    "tobogganing/QTW7_FIgNY0.mp4": "79edac80b969da0ef2438b139839840fee71a6f672c2861874ead1b91f29e934",
+    "shaking hands/6wD0Gf9w5DA.mp4": "449bb931e00b9db927b5cf9a5a390cf36715963314ff1c6e80488baa24b405af",
+    "drinking/NVedGeVPc30.mp4": "9d946f2789e8be51f8a68831a16c962bd258670ad27fbc782b979964bf858d84",
+    "punching person (boxing)/1X_d9kWynQ0.mp4": "1248412ea35e7809ddca9c11ae836b6245a6e6c284e7928ebd1e3bb6e07c10df",
+    "doing laundry/fPRo-LAbQ0I.mp4": "17aa0187ebb2c917a1fd210537a280cad123595c42159e54b309283d9d3daed4",
+    "country line dancing/w7VDI5GrPUE.mp4": "99a5ab63a3bd5b1d5151659bcaacac9735efd2088df36571c211aa086db6bda5",
+    "air drumming/gFI4lkq3rqk.mp4": "89180608239314cd4bf77dc22c8de757c3f54cce92205abe64091936c65dd954",
+    "doing aerobics/svSVrReLnf0.mp4": "64b987e1501f1701eafd8146f678d818de6384bd2953c752c0431aa8a4b3787b",
+    "dodgeball/yzm0CEu2G8k.mp4": "3c1eeae9ca66e5d603588c166fa9ff9e7d5c229f08b13113de558ab4e0925ed2",
+    "taking a shower/bAhChPIGz-s.mp4": "90c43bd56b3250fb548a25e691ff591c8d1626190895d6a3be91e5c2af9ea4ee",
+    "rock climbing/hS0ugJFTMTw.mp4": "07ed9cfcd803530c67c65d7038c5a3d8b90c5e2254ae104895190da78cb0fa51",
+    "shaking head/Fmk4DLj0YG0.mp4": "42a63dd920fa66d5672e1994d90333956ee4668bc2e14c5de9bab47733bd947f",
+    "playing piano/wPYR153pT9w.mp4": "1476f6958f9e34dd6a1a9a7ceb036f8d12c0a601785a00ab08cbd3604371f59a",
+    "reading newspaper/Dh_1WmuYIRM.mp4": "7a172f515fba7f116800d6d404352774fb19f63631b96005590a1e070757352c",
+    "pumping gas/hLsiUrbYLg4.mp4": "ea987eb7f6fdb0d023a9c313eeaad4217c89ed44cbb3d71bc39851a06d3a1b80",
+    "hockey stop/Zao7wLso2Hk.mp4": "2e2b2c8a790083fc6d73475b16a067bbe035cb9ed60581c9edab719f107624f0",
+    "clay pottery making/fBYk9DMFPwk.mp4": "90b41e6283022df290f078366727e284d076b6fe9c51cb76ac6853427ef73d2e",
+    "writing/NDA_Rd8CVTA.mp4": "35d490c95e1c2f3975ffa4107e152f7f973bd20244904d63fae053d40ea302d1",
+    "spray painting/OlUjNPnzIZ4.mp4": "8c7e2e68d5d7355739232a5cf0633c5ab5af7861c8a7f6ba18cd4d1eb3d69334",
+    "swing dancing/ne4UIOFv9fM.mp4": "b0a359da80de47bd4aeea939b8f334e025504ec0150b1bd5d4bd7208b34954cc",
+    "jumpstyle dancing/j3s5s46NTT8.mp4": "5cce9db2e9be3cd46e48a90eb0736c8a6bcdcab197de86a3d8b24d7ef8c24c81",
+    "building cabinet/CywkZ1rq5-Q.mp4": "38e9a94985cae4bd88be68fa23f08aec56de68d66e59c8fb2e9106fd5bbcbf2f",
+    "juggling fire/_BDcWlv9xog.mp4": "806cfbe064b8e127371df77b8580157e2bc66dcb2ddcfa4842f10657542d850d"
+  },
+  "protected_mask_fraction": {
+    "mean": 0.4547134780883789,
+    "median": 0.45825958251953125
+  },
+  "comparisons": {
+    "motion_vs_identity": {
+      "r2plus1d_18": {
+        "anchor_arm": "identity128",
+        "trial_arm": "motionprotect128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2758502197265625,
+            "top1": 0.76
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.18113067626953125,
+            "top1": 0.65
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13008544921875,
+            "top1": 0.48
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10255706787109375,
+            "top1": 0.24
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0892626953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2777316284179687,
+            "top1": 0.67
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.179122314453125,
+            "top1": 0.55
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.12740997314453126,
+            "top1": 0.44
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1007562255859375,
+            "top1": 0.17
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0885284423828125,
+            "top1": 0.06
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 9.972504126151538,
+          "bd_accuracy_top1_pp": -6.79874713294171,
+          "min_same_qp_top1_gap_pp": -9.999999999999998
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              1.510340447432864,
+              17.45385099167939
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -11.40384282525139,
+              -2.046605957633885
+            ]
+          }
+        }
+      },
+      "r3d_18": {
+        "anchor_arm": "identity128",
+        "trial_arm": "motionprotect128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2758502197265625,
+            "top1": 0.7
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.18113067626953125,
+            "top1": 0.54
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13008544921875,
+            "top1": 0.39
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10255706787109375,
+            "top1": 0.21
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0892626953125,
+            "top1": 0.04
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2777316284179687,
+            "top1": 0.54
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.179122314453125,
+            "top1": 0.46
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.12740997314453126,
+            "top1": 0.28
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1007562255859375,
+            "top1": 0.19
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0885284423828125,
+            "top1": 0.04
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 12.1752755531938,
+          "bd_accuracy_top1_pp": -7.85546652268157,
+          "min_same_qp_top1_gap_pp": -15.999999999999993
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              3.4358624135755105,
+              20.79827730230448
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -12.270463591150977,
+              -3.5925139462744213
+            ]
+          }
+        }
+      },
+      "mc3_18": {
+        "anchor_arm": "identity128",
+        "trial_arm": "motionprotect128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2758502197265625,
+            "top1": 0.62
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.18113067626953125,
+            "top1": 0.53
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13008544921875,
+            "top1": 0.44
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10255706787109375,
+            "top1": 0.24
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0892626953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2777316284179687,
+            "top1": 0.55
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.179122314453125,
+            "top1": 0.45
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.12740997314453126,
+            "top1": 0.36
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1007562255859375,
+            "top1": 0.19
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0885284423828125,
+            "top1": 0.05
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 13.900844203634776,
+          "bd_accuracy_top1_pp": -6.685805253515677,
+          "min_same_qp_top1_gap_pp": -8.000000000000002
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              4.103908886450863,
+              24.35796646022017
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -11.55473261527719,
+              -2.3030162525456075
+            ]
+          }
+        }
+      }
+    },
+    "motion_vs_area112": {
+      "r2plus1d_18": {
+        "anchor_arm": "area112",
+        "trial_arm": "motionprotect128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.21518341064453125,
+            "top1": 0.68
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.151883544921875,
+            "top1": 0.62
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1169720458984375,
+            "top1": 0.41
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.09736602783203124,
+            "top1": 0.22
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08749542236328126,
+            "top1": 0.03
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2777316284179687,
+            "top1": 0.67
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.179122314453125,
+            "top1": 0.55
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.12740997314453126,
+            "top1": 0.44
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1007562255859375,
+            "top1": 0.17
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0885284423828125,
+            "top1": 0.06
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 12.862136880676122,
+          "bd_accuracy_top1_pp": -8.279436238505077,
+          "min_same_qp_top1_gap_pp": -6.999999999999995
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              3.0323696411040983,
+              20.783362940048715
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -13.435931155382617,
+              -3.1412027091498946
+            ]
+          }
+        }
+      },
+      "r3d_18": {
+        "anchor_arm": "area112",
+        "trial_arm": "motionprotect128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.21518341064453125,
+            "top1": 0.67
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.151883544921875,
+            "top1": 0.56
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1169720458984375,
+            "top1": 0.34
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.09736602783203124,
+            "top1": 0.14
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08749542236328126,
+            "top1": 0.04
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2777316284179687,
+            "top1": 0.54
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.179122314453125,
+            "top1": 0.46
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.12740997314453126,
+            "top1": 0.28
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1007562255859375,
+            "top1": 0.19
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0885284423828125,
+            "top1": 0.04
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 17.464570145688295,
+          "bd_accuracy_top1_pp": -12.172638556648142,
+          "min_same_qp_top1_gap_pp": -13.0
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              8.234050522601365,
+              28.193293968858075
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -17.532680379163942,
+              -6.826911227420068
+            ]
+          }
+        }
+      },
+      "mc3_18": {
+        "anchor_arm": "area112",
+        "trial_arm": "motionprotect128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.21518341064453125,
+            "top1": 0.62
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.151883544921875,
+            "top1": 0.46
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1169720458984375,
+            "top1": 0.41
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.09736602783203124,
+            "top1": 0.16
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08749542236328126,
+            "top1": 0.04
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2777316284179687,
+            "top1": 0.55
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.179122314453125,
+            "top1": 0.45
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.12740997314453126,
+            "top1": 0.36
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1007562255859375,
+            "top1": 0.19
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0885284423828125,
+            "top1": 0.05
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 12.788518768107515,
+          "bd_accuracy_top1_pp": -6.198792005367359,
+          "min_same_qp_top1_gap_pp": -6.999999999999995
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              4.585095069117411,
+              20.747162398077162
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -10.492194245909445,
+              -1.9622421488065096
+            ]
+          }
+        }
+      }
+    },
+    "motion_vs_uniform_blur": {
+      "r2plus1d_18": {
+        "anchor_arm": "blur040_128",
+        "trial_arm": "motionprotect128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2178753662109375,
+            "top1": 0.66
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.15286468505859374,
+            "top1": 0.5
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1176123046875,
+            "top1": 0.36
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.0979345703125,
+            "top1": 0.11
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08777496337890625,
+            "top1": 0.0
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2777316284179687,
+            "top1": 0.67
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.179122314453125,
+            "top1": 0.55
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.12740997314453126,
+            "top1": 0.44
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1007562255859375,
+            "top1": 0.17
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0885284423828125,
+            "top1": 0.06
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 0.5765374562829662,
+          "bd_accuracy_top1_pp": 0.26180018917233977,
+          "min_same_qp_top1_gap_pp": 1.0000000000000009
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -7.022140724390641,
+              8.000179380242113
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -4.316363079799889,
+              4.821157309714594
+            ]
+          }
+        }
+      },
+      "r3d_18": {
+        "anchor_arm": "blur040_128",
+        "trial_arm": "motionprotect128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2178753662109375,
+            "top1": 0.58
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.15286468505859374,
+            "top1": 0.42
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1176123046875,
+            "top1": 0.26
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.0979345703125,
+            "top1": 0.1
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08777496337890625,
+            "top1": 0.06
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2777316284179687,
+            "top1": 0.54
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.179122314453125,
+            "top1": 0.46
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.12740997314453126,
+            "top1": 0.28
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1007562255859375,
+            "top1": 0.19
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0885284423828125,
+            "top1": 0.04
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 4.140260525630102,
+          "bd_accuracy_top1_pp": -2.156973283074417,
+          "min_same_qp_top1_gap_pp": -3.9999999999999925
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -4.890110232958515,
+              13.0071093656876
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -6.697488338270742,
+              2.3344489057988818
+            ]
+          }
+        }
+      },
+      "mc3_18": {
+        "anchor_arm": "blur040_128",
+        "trial_arm": "motionprotect128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2178753662109375,
+            "top1": 0.51
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.15286468505859374,
+            "top1": 0.43
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1176123046875,
+            "top1": 0.33
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.0979345703125,
+            "top1": 0.14
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08777496337890625,
+            "top1": 0.05
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2777316284179687,
+            "top1": 0.55
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.179122314453125,
+            "top1": 0.45
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.12740997314453126,
+            "top1": 0.36
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1007562255859375,
+            "top1": 0.19
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0885284423828125,
+            "top1": 0.05
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 1.7107332484887827,
+          "bd_accuracy_top1_pp": -1.0955489824127282,
+          "min_same_qp_top1_gap_pp": 0.0
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -5.555375471095196,
+              11.134435167324119
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -5.101413778214264,
+              2.742708580161301
+            ]
+          }
+        }
+      }
+    },
+    "area112_vs_identity": {
+      "r2plus1d_18": {
+        "anchor_arm": "identity128",
+        "trial_arm": "area112",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2758502197265625,
+            "top1": 0.76
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.18113067626953125,
+            "top1": 0.65
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13008544921875,
+            "top1": 0.48
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10255706787109375,
+            "top1": 0.24
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0892626953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.21518341064453125,
+            "top1": 0.68
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.151883544921875,
+            "top1": 0.62
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1169720458984375,
+            "top1": 0.41
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.09736602783203124,
+            "top1": 0.22
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08749542236328126,
+            "top1": 0.03
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": -3.148249410092918,
+          "bd_accuracy_top1_pp": 2.5266355767243294,
+          "min_same_qp_top1_gap_pp": -7.9999999999999964
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -9.012260694447512,
+              2.9888416639900934
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -1.934305486635809,
+              7.03584798196378
+            ]
+          }
+        }
+      },
+      "r3d_18": {
+        "anchor_arm": "identity128",
+        "trial_arm": "area112",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2758502197265625,
+            "top1": 0.7
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.18113067626953125,
+            "top1": 0.54
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13008544921875,
+            "top1": 0.39
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10255706787109375,
+            "top1": 0.21
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0892626953125,
+            "top1": 0.04
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.21518341064453125,
+            "top1": 0.67
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.151883544921875,
+            "top1": 0.56
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1169720458984375,
+            "top1": 0.34
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.09736602783203124,
+            "top1": 0.14
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08749542236328126,
+            "top1": 0.04
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": -7.382153764480448,
+          "bd_accuracy_top1_pp": 5.657706770735223,
+          "min_same_qp_top1_gap_pp": -6.999999999999998
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -13.754421982773525,
+              -1.377730426156627
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              1.102020645900361,
+              10.401232373464266
+            ]
+          }
+        }
+      },
+      "mc3_18": {
+        "anchor_arm": "identity128",
+        "trial_arm": "area112",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2758502197265625,
+            "top1": 0.62
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.18113067626953125,
+            "top1": 0.53
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13008544921875,
+            "top1": 0.44
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10255706787109375,
+            "top1": 0.24
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0892626953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.21518341064453125,
+            "top1": 0.62
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.151883544921875,
+            "top1": 0.46
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1169720458984375,
+            "top1": 0.41
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.09736602783203124,
+            "top1": 0.16
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08749542236328126,
+            "top1": 0.04
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": -2.198326583557486,
+          "bd_accuracy_top1_pp": -0.09871978282867812,
+          "min_same_qp_top1_gap_pp": -7.999999999999999
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -7.737668417875835,
+              5.169134898292705
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -3.876586279696896,
+              3.591748099520878
+            ]
+          }
+        }
+      }
+    },
+    "uniform_blur_vs_identity": {
+      "r2plus1d_18": {
+        "anchor_arm": "identity128",
+        "trial_arm": "blur040_128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2758502197265625,
+            "top1": 0.76
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.18113067626953125,
+            "top1": 0.65
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13008544921875,
+            "top1": 0.48
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10255706787109375,
+            "top1": 0.24
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0892626953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2178753662109375,
+            "top1": 0.66
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.15286468505859374,
+            "top1": 0.5
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1176123046875,
+            "top1": 0.36
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.0979345703125,
+            "top1": 0.11
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08777496337890625,
+            "top1": 0.0
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 8.62106781676446,
+          "bd_accuracy_top1_pp": -6.105802003444901,
+          "min_same_qp_top1_gap_pp": -15.000000000000002
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              2.6059573732354884,
+              13.806830929862405
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -9.706438089759306,
+              -2.658949006364097
+            ]
+          }
+        }
+      },
+      "r3d_18": {
+        "anchor_arm": "identity128",
+        "trial_arm": "blur040_128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2758502197265625,
+            "top1": 0.7
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.18113067626953125,
+            "top1": 0.54
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13008544921875,
+            "top1": 0.39
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10255706787109375,
+            "top1": 0.21
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0892626953125,
+            "top1": 0.04
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2178753662109375,
+            "top1": 0.58
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.15286468505859374,
+            "top1": 0.42
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1176123046875,
+            "top1": 0.26
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.0979345703125,
+            "top1": 0.1
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08777496337890625,
+            "top1": 0.06
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 8.363399772675816,
+          "bd_accuracy_top1_pp": -4.5005250766048475,
+          "min_same_qp_top1_gap_pp": -13.0
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              0.6947515061332044,
+              15.52838293960122
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -9.119805453443586,
+              -0.13693444164332502
+            ]
+          }
+        }
+      },
+      "mc3_18": {
+        "anchor_arm": "identity128",
+        "trial_arm": "blur040_128",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2758502197265625,
+            "top1": 0.62
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.18113067626953125,
+            "top1": 0.53
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13008544921875,
+            "top1": 0.44
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10255706787109375,
+            "top1": 0.24
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0892626953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.2178753662109375,
+            "top1": 0.51
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.15286468505859374,
+            "top1": 0.43
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1176123046875,
+            "top1": 0.33
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.0979345703125,
+            "top1": 0.14
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.08777496337890625,
+            "top1": 0.05
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 9.461460354318586,
+          "bd_accuracy_top1_pp": -5.2787831922566575,
+          "min_same_qp_top1_gap_pp": -10.999999999999998
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              2.0078766145609235,
+              17.006139277251773
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -9.053168722225706,
+              -1.6743714968028875
+            ]
+          }
+        }
+      }
+    }
+  },
+  "go_no_go": false,
+  "primary_technical_target": false,
+  "original_confirmatory_gate": "NOT ASSESSED: CAL-only reused sources"
+}
