@@ -29,6 +29,13 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def prereg_bytes_match(rel: str, current: bytes, committed: bytes) -> bool:
+    """The plan is intentionally byte-pinned; Markdown allows Git line endings."""
+    if rel == "configs/v7_dev_proxy_plan.json":
+        return current == committed
+    return current.replace(b"\r\n", b"\n") == committed
+
+
 def verify_protocol() -> tuple[dict, str]:
     git = ["git", "-c", f"safe.directory={REPO.as_posix()}"]
     subprocess.run(git + ["merge-base", "--is-ancestor", PREREG_COMMIT, "HEAD"],
@@ -36,7 +43,7 @@ def verify_protocol() -> tuple[dict, str]:
     for rel in ("docs/PREREGISTRATION_V7_TRANSFER.md",
                 "configs/v7_dev_proxy_plan.json"):
         committed = subprocess.check_output(git + ["show", f"{PREREG_COMMIT}:{rel}"], cwd=REPO)
-        if (REPO / rel).read_bytes().replace(b"\r\n", b"\n") != committed:
+        if not prereg_bytes_match(rel, (REPO / rel).read_bytes(), committed):
             raise ValueError(f"V7 preregistration input changed: {rel}")
     if sha256(PLAN_PATH) != PLAN_SHA256:
         raise ValueError("V7 source plan SHA-256 changed")

@@ -1,0 +1,7 @@
+# V7 DEV technical amendment 001: byte comparison of locked plan
+
+The first two private V7 pixel jobs, `shungg05/v7-h265-pixel-cal-f75ae09` and `dieulinhh/v7-h265-pixel-dev-f75ae09`, both ended in ERROR at code commit `f75ae09547b56c0457d195c097392542fd0d6b2c`. Their logs report `ValueError: V7 preregistration input changed: configs/v7_dev_proxy_plan.json` from `verify_protocol()`. The CAL log SHA-256 is `dc02680e65970a043bac7d9ffcb4b313845041822d8b35956df199efb5cc08a5`; DEV log SHA-256 is `340fcd7050165940bd713a91aea478718c264ad518e0e5847571d856c819b0a9`. Both 126-byte tar outputs contain no proxy records. The failure occurred before planned video lookup/decoding and before any CAL or DEV policy metric was read by V7.
+
+The plan was committed with CRLF bytes under `-text` in `.gitattributes`. Its working-file and Git-blob SHA-256 are both the preregistered `5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2`. The first runner incorrectly normalized CRLF to LF before comparing this byte-pinned JSON to the committed blob. This amendment changes only that comparison: compare the plan's **exact bytes** to Git, while allowing CRLF/LF normalization for the Markdown preregistration. A regression test covers both cases.
+
+The plan, source IDs, proxy formula, eight-policy grid, thresholds, metric, seed and gate remain exactly as preregistered. The failed jobs contribute no measurements. Replacements must use a new pinned code commit and distinct Kaggle notebook slugs; only completed, hash-verified proxy records can enter the CAL/DEV runner.

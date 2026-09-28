@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 
 from ops.v7_dev_transfer import choose_v7, primary_feasible
-from ops.v7_pixel_proxy import proxy_metrics
+from ops.v7_pixel_proxy import prereg_bytes_match, proxy_metrics
 from ops.push_v7_pixel_proxy import payload
 from src.models.codec_search import CANDIDATES
 
@@ -57,3 +57,11 @@ def test_kaggle_payload_is_private_and_stage_pinned():
     assert metadata["dataset_sources"] == ["qktttttttttt/kineticscleaned"]
     with pytest.raises(ValueError):
         payload("a" * 40, "shungg05", "v7-pixel-test", "holdout")
+
+
+def test_byte_pinned_plan_does_not_normalize_crlf():
+    rel = "configs/v7_dev_proxy_plan.json"
+    assert prereg_bytes_match(rel, b"{\r\n}\r\n", b"{\r\n}\r\n")
+    assert not prereg_bytes_match(rel, b"{\n}\n", b"{\r\n}\r\n")
+    assert prereg_bytes_match("docs/PREREGISTRATION_V7_TRANSFER.md",
+                              b"a\r\nb\r\n", b"a\nb\n")
