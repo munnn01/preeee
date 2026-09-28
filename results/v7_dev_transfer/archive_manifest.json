@@ -1,0 +1,27 @@
+{
+  "purpose": "Original completed Kaggle V7 CAL/DEV pixel-proxy archives, without original source video bytes",
+  "code_commit": "2c0a29836101fced7a91b7ff136a8b929b6d7c2b",
+  "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+  "archives": [
+    {
+      "stage": "calibration",
+      "account": "shungg05",
+      "notebook": "shungg05/v7-h265-pixel-cal-2c0a298",
+      "notebook_url": "https://www.kaggle.com/code/shungg05/v7-h265-pixel-cal-2c0a298",
+      "file": "v7_pixel_calibration.tgz",
+      "bytes": 39025,
+      "sha256": "2302fd721fc2653b14d8db0cfd65c74020da53db16b0bb3f1ff023e9a21eac92",
+      "kernel_log_sha256": "35512396660e1ec41c35453eb72f21cadcc140477f13e8d47f6694bb94b7e2ea"
+    },
+    {
+      "stage": "dev",
+      "account": "dieulinhh",
+      "notebook": "dieulinhh/v7-h265-pixel-dev-2c0a298",
+      "notebook_url": "https://www.kaggle.com/code/dieulinhh/v7-h265-pixel-dev-2c0a298",
+      "file": "v7_pixel_dev.tgz",
+      "bytes": 39085,
+      "sha256": "c5a6ec0420be1dd261d0a3e8cde0d4e017853bccef1e3b6df5953054c9379a4f",
+      "kernel_log_sha256": "125da4093d7a842d59d2f3663d0161a0f2d6bb40f7f5fb26ca847248d23033ff"
+    }
+  ]
+}
