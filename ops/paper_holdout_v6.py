@@ -48,7 +48,11 @@ BASELINES = ("area96", "area112")
 LOCKED_CODE = ("ops/paper_holdout_v6.py", "ops/v6_dev_residual.py",
                "ops/v6_frozen.py", "ops/lock_v6_holdout.py",
                "ops/prepare_v6_holdout.py", "ops/dual_codec_search.py",
-               "ops/paper_heldout_mc3.py", "src/metrics/bd_rate.py")
+               "ops/paper_heldout_mc3.py", "ops/paper_holdout_confirm.py",
+               "ops/paper_validation.py", "ops/v4_frozen.py",
+               "src/models/dual_codec_search.py", "src/models/codec_search.py",
+               "src/tasks/action_recognition.py", "src/codecs/standard.py",
+               "src/metrics/bd_rate.py")
 
 
 def ready_index(index_path: Path, prereg_commit: str,
@@ -69,7 +73,7 @@ def ready_index(index_path: Path, prereg_commit: str,
     for rel, path in (("docs/PREREGISTRATION_V6_HOLDOUT.md", PREREG),
                       ("docs/HOLDOUT_SPLIT_V6.md", SPLIT),
                       (INDEX_REL, index_path),
-                      ("configs/v6_frozen/manifest.json", MANIFEST)):
+                      ("configs/v6_h265_frozen/manifest.json", MANIFEST)):
         if git("show", f"{prereg_commit}:{rel}") != path.read_bytes().replace(b"\r\n", b"\n"):
             raise ValueError(f"V6 protocol/index differs from commit: {rel}")
     for rel in LOCKED_CODE:
