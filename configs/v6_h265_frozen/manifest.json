@@ -1,0 +1,35 @@
+{
+  "experiment": "v6_h265_frozen_before_new_holdout",
+  "preregistration_commit": "385674ddf93d477d78f0b6b1b4abdff667eee7e5",
+  "development_preregistration_commit": "efdf5e3d7bd0889c6dc09bc05dc12c928ffb1159",
+  "development_analysis_commit": "db57f13fcc7acd72f5c7f90f316134ebaf1ec48f",
+  "development_result_path": "results/v6_dev_residual/results/h265_result.json",
+  "development_result_sha256": "371d1485edd2848fbc1a652fbd5220bc818514ee1afbad5c5bbea0ac6b88ebb9",
+  "codec": "h265",
+  "policy": {"mode": "V6", "minimum_expected_delta": -0.05, "feature_weight": 20.0},
+  "policy_digest": "a6f024ecdff0ffcdf3c82c4b44d3c90345e1505f36cc29aa9e0c3cfc7f0140df",
+  "v2_policy_path": "configs/dual_codec_search_v2_frozen/h265/frozen_policy.json",
+  "v2_policy_sha256_bytes": "0d39061a0b8de838c60553a6b112a40db4c64975ddea0f19137d6fda183fa2dc",
+  "v2_policy_sha256_git_blob": "10a97a207506791e6cdf40b6cf30d9521ff97ba3d34a9201dae198f777f3fc1c",
+  "v2_risk_path": "configs/dual_codec_search_v2_frozen/h265/risk_model.json",
+  "v2_risk_sha256_bytes": "bfe88bf3e523d45e0c566695843d1ee5d33731c5c2358e12a3cdc778d500ffeb",
+  "v2_risk_sha256_git_blob": "7b630bce3638f365048d8d2d4d918cf38d4c0f962a4370e875878e600f66c5c1",
+  "model_paths": {
+    "r2plus1d_18": {"harm": "results/v6_dev_residual/results/models/h265/r2plus1d_18_harm.joblib", "gain": "results/v6_dev_residual/results/models/h265/r2plus1d_18_gain.joblib"},
+    "r3d_18": {"harm": "results/v6_dev_residual/results/models/h265/r3d_18_harm.joblib", "gain": "results/v6_dev_residual/results/models/h265/r3d_18_gain.joblib"}
+  },
+  "model_sha256": {
+    "r2plus1d_18": {"harm": "7a6328c16b5ebf726a042ce5dc446dcc549e335135a74b8db6b3223be4ab7b4a", "gain": "cb5468336f339b2e6f5a3b3ed4f8de14237fa7c0fc93068e108e372a45d82c3f"},
+    "r3d_18": {"harm": "7a4e48f88890727dae5a2c70c1aa409136bc9134cbd9c2fce5b3f5a75daedd0d", "gain": "c5b5263f71ef7999941736720186546aa2bbeb89d6a58ec145a9ef96be051fd4"}
+  },
+  "design": {
+    "qps": [30, 35, 40, 45, 50],
+    "candidates": ["identity128", "area112", "area96", "area112_up128", "blur020_128", "blur040_128"],
+    "primary_analyzers": ["r2plus1d_18", "r3d_18"],
+    "transfer_analyzer": "mc3_18",
+    "frames": 16, "frame_size": 128, "temporal_stride": 2, "preset": "medium"
+  },
+  "bootstrap_seed": 20261001,
+  "bootstrap_draws": 2000,
+  "bootstrap_unit": "source video; QPs and arms paired"
+}
