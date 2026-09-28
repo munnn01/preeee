@@ -1,0 +1,59 @@
+{
+  "experiment": "v6_new_source_disjoint_holdout_package",
+  "protocol_preregistration_commit": "385674ddf93d477d78f0b6b1b4abdff667eee7e5",
+  "source_id_and_video_hash_lock_commit": "dd3f5a14708ca37a9db537d17ca23638a4dfc855",
+  "index_prereg_and_analysis_lock_commit": "de9d37866216649e978b263a3af1ad4ab9e5d6e7",
+  "analysis_code_commit": "de9d37866216649e978b263a3af1ad4ab9e5d6e7",
+  "source_fingerprint": "269998dbd77c69b5a990f637506d7e1f4f6af4f9e59c38058d000a44535ce918",
+  "index_sha256": "37d7ff5d0763b00f2e335e84012611345438d0ade3ffb216d6ada46542678ce3",
+  "freeze_manifest_sha256": "bedb316eacf9167a6db2b766c1b00aef5cf5dcaa333ae65e56c2333349e0eadb",
+  "policy_digest": "a6f024ecdff0ffcdf3c82c4b44d3c90345e1505f36cc29aa9e0c3cfc7f0140df",
+  "model_sha256": {
+    "r2plus1d_18": {
+      "harm": "7a6328c16b5ebf726a042ce5dc446dcc549e335135a74b8db6b3223be4ab7b4a",
+      "gain": "cb5468336f339b2e6f5a3b3ed4f8de14237fa7c0fc93068e108e372a45d82c3f"
+    },
+    "r3d_18": {
+      "harm": "7a4e48f88890727dae5a2c70c1aa409136bc9134cbd9c2fce5b3f5a75daedd0d",
+      "gain": "c5b5263f71ef7999941736720186546aa2bbeb89d6a58ec145a9ef96be051fd4"
+    }
+  },
+  "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+  "bootstrap_seed": 20261001,
+  "bootstrap_draws": 2000,
+  "result_file": "h265_result.json",
+  "result_sha256": "69d387c2c8fd7c6286228eda3bde211f32e9ca58ae82104dec41c7cb2654fdad",
+  "independent_recompute_sha256": "69d387c2c8fd7c6286228eda3bde211f32e9ca58ae82104dec41c7cb2654fdad",
+  "shards": [
+    {
+      "codec": "h265",
+      "shard": 0,
+      "notebook": "shungg05/v6-h265-confirm-s0-de9d378",
+      "primary": {
+        "manifest_sha256": "16ad792a5ef98041cd8206f42271a6f9a47faf1e90ee3ee7f11cbfbe04fd97c4",
+        "records_sha256": "4a299e0ed532b9744c9756b27e51eaf73148cbf1e3fd7b48edeaf5f557d0e0df",
+        "records_bytes": 14301961
+      },
+      "mc3": {
+        "manifest_sha256": "afb6e94c9a9839b2200c7f28bd9ed392dd2d58d067d9cb7c52037a20b5553f1d",
+        "records_sha256": "a0d44273da617c5e1505ffb913fcbe25445afae0e36d7a193dbb3de445e3eefa",
+        "records_bytes": 1549343
+      }
+    },
+    {
+      "codec": "h265",
+      "shard": 1,
+      "notebook": "shungg05/v6-h265-confirm-s1-de9d378",
+      "primary": {
+        "manifest_sha256": "bd585e07043e2903e61b78ae7f7a234fe256c5c68eee35cf380afb2c05077e19",
+        "records_sha256": "162dcd52dc9501eda5396dd3309d6fadc3c4c812aa9e1d1bc62ca4530b576ae3",
+        "records_bytes": 14297457
+      },
+      "mc3": {
+        "manifest_sha256": "c8afdcb87ba56d5a2c2bfef5428ec81e694e48005fa86de1817b8d67730ec50a",
+        "records_sha256": "e32781228fae285d8470116c30fe810812ed19f16bbf83e25fe5f00e7f3f6714",
+        "records_bytes": 1548089
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "purpose": "Original Kaggle output archives; four raw stage files per shard were extracted without editing bytes.",
+  "evaluation_code_commit": "de9d37866216649e978b263a3af1ad4ab9e5d6e7",
+  "source_fingerprint": "269998dbd77c69b5a990f637506d7e1f4f6af4f9e59c38058d000a44535ce918",
+  "index_sha256": "37d7ff5d0763b00f2e335e84012611345438d0ade3ffb216d6ada46542678ce3",
+  "freeze_manifest_sha256": "bedb316eacf9167a6db2b766c1b00aef5cf5dcaa333ae65e56c2333349e0eadb",
+  "private_input_dataset": "shungg05/v6-h265-holdout-locked",
+  "private_input_zip_sha256": "225c9e4a0a67a9a171fcfae03f2129756efdfa162e9b96e308a86b5c7cbaa555",
+  "archives": [
+    {
+      "codec": "h265",
+      "shard": 0,
+      "account": "shungg05",
+      "notebook": "shungg05/v6-h265-confirm-s0-de9d378",
+      "notebook_url": "https://www.kaggle.com/code/shungg05/v6-h265-confirm-s0-de9d378",
+      "file": "paper_holdout_v6_h265_shard0.tgz",
+      "bytes": 6047308,
+      "sha256": "e128ee56e35041e747762a19fd91a4dfae32c4a7b587a62f234f84301ddb3cd0"
+    },
+    {
+      "codec": "h265",
+      "shard": 1,
+      "account": "shungg05",
+      "notebook": "shungg05/v6-h265-confirm-s1-de9d378",
+      "notebook_url": "https://www.kaggle.com/code/shungg05/v6-h265-confirm-s1-de9d378",
+      "file": "paper_holdout_v6_h265_shard1.tgz",
+      "bytes": 6046419,
+      "sha256": "908faae877c12e49b7891bd5afe35c29143e7b5f19fed06a4f68f12f6c3d3767"
+    }
+  ]
+}
