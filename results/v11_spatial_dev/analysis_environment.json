@@ -1,0 +1,45 @@
+{
+  "kind": "v11_dev_merge_environment",
+  "provenance": {
+    "experiment": "v11_h265_frozen_reused_dev",
+    "code_commit": "91ba5721ad6dc21657bb0e8f675df344b5c6e7ad",
+    "code_fingerprint": "5eee253b68a62498eeaeb0b10bd8e463e60d9248145273f7f7286f257c0ad07f",
+    "preregistration_commit": "00951bd52efeb3c64feb62254cef2aa484431e60",
+    "preregistration_sha256": "2dda253a7297566bc97ac8f7800f4e6d20c49d8ad8e51c30a6147a7bfb5328c8",
+    "source_plan_sha256": "bb4b9aa245ff2d8b5f92cb1a45dedb65adfc8a664543878bb7b9cdb1486b421e",
+    "input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258",
+    "bootstrap_seed_if_dev": 20261008,
+    "bootstrap_draws_if_dev": 2000,
+    "bootstrap_unit_if_dev": "source video; QPs, arms, analyzers paired",
+    "scope": "reused DEV development; no TEST or holdout",
+    "calibration_commit": "49fb15f6de86f09c6c0a845098cbbf199c405c03",
+    "calibration_sha256": "280c926a65458a00b192ed1cd0a44e6b341ac6a4f049c96852d5b0e15a410a0e",
+    "policy": {
+      "tau": 0.0,
+      "slack": 0.05,
+      "qp_mode": "all"
+    },
+    "bootstrap_seed": 20261008,
+    "bootstrap_draws": 2000,
+    "bootstrap_unit": "source video; all QPs, arms and analyzers paired"
+  },
+  "result_sha256": "624f889efd3e21cef60cb6390b6a237e25f6b384f6887f0c02e73fe1d8514afe",
+  "python": "3.11.14",
+  "python_executable": "D:\\STUDY\\AI\\envs\\ten_env\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "2.4.6",
+  "bit_generator": "PCG64",
+  "resample_indices_c_order_little_endian_int64_sha256": "6ba6fcb07599974adb2c688b46fbfcefe7aa6cda3418489b99e5f0ee671a827c",
+  "resample_shape": [
+    2000,
+    200
+  ],
+  "resample_hash_scope": "Reconstructed from the unchanged merge expression/seed after merge; no extra metric calculation or experiment.",
+  "git_blob_sha256": {
+    "src/metrics/bd_rate.py": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+    "ops/v8_motion_pilot.py": "4c461954ed076f9a276c70f693cfcb3ce3ee054d1070529de5b1f379c497abc9",
+    "ops/v11_spatial_dev.py": "54cfbf3aec5d8f55be3dc118c6c4262355cda815377aacec30a3b73cd9ddc0e7"
+  },
+  "scope": "Local CPU merge/bootstrap environment; CUDA worker versions/weight hashes are in shard manifests and validation.json."
+}

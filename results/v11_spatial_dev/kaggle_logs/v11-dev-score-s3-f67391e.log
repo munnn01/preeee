@@ -1,0 +1,90 @@
+[{"stream_name":"stderr","time":8.582755687,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.583431277,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.58343782,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.583442154,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.286642682,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.286680804,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.286687869,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.286710334,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":350.109524592,"data":"{\n"}
+,{"stream_name":"stdout","time":350.109584207,"data":"  \"phase\": \"score\",\n"}
+,{"stream_name":"stdout","time":350.109591912,"data":"  \"sources\": 200,\n"}
+,{"stream_name":"stdout","time":350.109597607,"data":"  \"input_sha256\": \"2c48519cb06b7b4580302d629aa7267fe0e35e8fc6ca525d18fa39909114eca5\",\n"}
+,{"stream_name":"stdout","time":350.10960365,"data":"  \"code_commit\": \"f67391e22c2d9ec2d7be0d34bf307c7c02b5fd77\"\n"}
+,{"stream_name":"stdout","time":350.109609193,"data":"}\n"}
+,{"stream_name":"stdout","time":350.109614209,"data":"Downloading: \"https://download.pytorch.org/models/r2plus1d_18-91a641e6.pth\" to /root/.cache/torch/hub/checkpoints/r2plus1d_18-91a641e6.pth\n"}
+,{"stream_name":"stdout","time":350.109644483,"data":"\r  0%|          | 0.00/120M [00:00\u003c?, ?B/s]\r  6%|▌         | 7.00M/120M [00:00\u003c00:01, 73.2MB/s]\r 20%|██        | 24.4M/120M [00:00\u003c00:00, 137MB/s] \r 35%|███▍      | 41.9M/120M [00:00\u003c00:00, 158MB/s]\r 49%|████▉     | 59.2M/120M [00:00\u003c00:00, 167MB/s]\r 64%|██████▍   | 76.8M/120M [00:00\u003c00:00, 173MB/s]\r 78%|███████▊  | 93.9M/120M [00:00\u003c00:00, 175MB/s]\r 92%|█████████▏| 111M/120M [00:00\u003c00:00, 176MB/s] \r100%|██████████| 120M/120M [00:00\u003c00:00, 167MB/s]\n"}
+,{"stream_name":"stdout","time":350.109656873,"data":"Downloading: \"https://download.pytorch.org/models/r3d_18-b3b3357e.pth\" to /root/.cache/torch/hub/checkpoints/r3d_18-b3b3357e.pth\n"}
+,{"stream_name":"stdout","time":350.109671412,"data":"\r  0%|          | 0.00/127M [00:00\u003c?, ?B/s]\r  4%|▍         | 5.50M/127M [00:00\u003c00:02, 57.6MB/s]\r 17%|█▋        | 22.0M/127M [00:00\u003c00:00, 125MB/s] \r 30%|███       | 38.5M/127M [00:00\u003c00:00, 146MB/s]\r 43%|████▎     | 54.9M/127M [00:00\u003c00:00, 156MB/s]\r 56%|█████▌    | 71.4M/127M [00:00\u003c00:00, 161MB/s]\r 69%|██████▉   | 88.0M/127M [00:00\u003c00:00, 165MB/s]\r 82%|████████▏ | 104M/127M [00:00\u003c00:00, 167MB/s] \r 95%|█████████▍| 121M/127M [00:00\u003c00:00, 169MB/s]\r100%|██████████| 127M/127M [00:00\u003c00:00, 158MB/s]\n"}
+,{"stream_name":"stdout","time":350.109680721,"data":"Downloading: \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth\n"}
+,{"stream_name":"stdout","time":350.109688164,"data":"\r  0%|          | 0.00/44.7M [00:00\u003c?, ?B/s]\r 18%|█▊        | 8.25M/44.7M [00:00\u003c00:00, 86.1MB/s]\r 58%|█████▊    | 26.1M/44.7M [00:00\u003c00:00, 145MB/s] \r 99%|█████████▉| 44.1M/44.7M [00:00\u003c00:00, 165MB/s]\r100%|██████████| 44.7M/44.7M [00:00\u003c00:00, 154MB/s]\n"}
+,{"stream_name":"stdout","time":350.109704597,"data":"[V11 DEV score] shard=3 1/50\n"}
+,{"stream_name":"stdout","time":350.109709195,"data":"[V11 DEV score] shard=3 2/50\n"}
+,{"stream_name":"stdout","time":350.109712872,"data":"[V11 DEV score] shard=3 3/50\n"}
+,{"stream_name":"stdout","time":350.109716991,"data":"[V11 DEV score] shard=3 4/50\n"}
+,{"stream_name":"stdout","time":350.109721514,"data":"[V11 DEV score] shard=3 5/50\n"}
+,{"stream_name":"stdout","time":350.109725729,"data":"[V11 DEV score] shard=3 6/50\n"}
+,{"stream_name":"stdout","time":350.109729621,"data":"[V11 DEV score] shard=3 7/50\n"}
+,{"stream_name":"stdout","time":350.109734329,"data":"[V11 DEV score] shard=3 8/50\n"}
+,{"stream_name":"stdout","time":350.109738312,"data":"[V11 DEV score] shard=3 9/50\n"}
+,{"stream_name":"stdout","time":350.109742187,"data":"[V11 DEV score] shard=3 10/50\n"}
+,{"stream_name":"stdout","time":350.109745992,"data":"[V11 DEV score] shard=3 11/50\n"}
+,{"stream_name":"stdout","time":350.109750047,"data":"[V11 DEV score] shard=3 12/50\n"}
+,{"stream_name":"stdout","time":350.109753698,"data":"[V11 DEV score] shard=3 13/50\n"}
+,{"stream_name":"stdout","time":350.109757391,"data":"[V11 DEV score] shard=3 14/50\n"}
+,{"stream_name":"stdout","time":350.109761251,"data":"[V11 DEV score] shard=3 15/50\n"}
+,{"stream_name":"stdout","time":350.10976511,"data":"[V11 DEV score] shard=3 16/50\n"}
+,{"stream_name":"stdout","time":350.109768933,"data":"[V11 DEV score] shard=3 17/50\n"}
+,{"stream_name":"stdout","time":350.109772857,"data":"[V11 DEV score] shard=3 18/50\n"}
+,{"stream_name":"stdout","time":350.109776752,"data":"[V11 DEV score] shard=3 19/50\n"}
+,{"stream_name":"stdout","time":350.109780914,"data":"[V11 DEV score] shard=3 20/50\n"}
+,{"stream_name":"stdout","time":350.109785042,"data":"[V11 DEV score] shard=3 21/50\n"}
+,{"stream_name":"stdout","time":350.109788902,"data":"[V11 DEV score] shard=3 22/50\n"}
+,{"stream_name":"stdout","time":350.109792257,"data":"[V11 DEV score] shard=3 23/50\n"}
+,{"stream_name":"stdout","time":350.109796201,"data":"[V11 DEV score] shard=3 24/50\n"}
+,{"stream_name":"stdout","time":350.109799611,"data":"[V11 DEV score] shard=3 25/50\n"}
+,{"stream_name":"stdout","time":350.109803328,"data":"[V11 DEV score] shard=3 26/50\n"}
+,{"stream_name":"stdout","time":350.109806767,"data":"[V11 DEV score] shard=3 27/50\n"}
+,{"stream_name":"stdout","time":350.109810506,"data":"[V11 DEV score] shard=3 28/50\n"}
+,{"stream_name":"stdout","time":350.109814033,"data":"[V11 DEV score] shard=3 29/50\n"}
+,{"stream_name":"stdout","time":350.109817785,"data":"[V11 DEV score] shard=3 30/50\n"}
+,{"stream_name":"stdout","time":350.109821242,"data":"[V11 DEV score] shard=3 31/50\n"}
+,{"stream_name":"stdout","time":350.109824917,"data":"[V11 DEV score] shard=3 32/50\n"}
+,{"stream_name":"stdout","time":350.109836274,"data":"[V11 DEV score] shard=3 33/50\n"}
+,{"stream_name":"stdout","time":350.109840035,"data":"[V11 DEV score] shard=3 34/50\n"}
+,{"stream_name":"stdout","time":350.109843852,"data":"[V11 DEV score] shard=3 35/50\n"}
+,{"stream_name":"stdout","time":350.109847462,"data":"[V11 DEV score] shard=3 36/50\n"}
+,{"stream_name":"stdout","time":350.10985098,"data":"[V11 DEV score] shard=3 37/50\n"}
+,{"stream_name":"stdout","time":350.109854594,"data":"[V11 DEV score] shard=3 38/50\n"}
+,{"stream_name":"stdout","time":350.109858094,"data":"[V11 DEV score] shard=3 39/50\n"}
+,{"stream_name":"stdout","time":350.109861455,"data":"[V11 DEV score] shard=3 40/50\n"}
+,{"stream_name":"stdout","time":350.109870567,"data":"[V11 DEV score] shard=3 41/50\n"}
+,{"stream_name":"stdout","time":350.109874532,"data":"[V11 DEV score] shard=3 42/50\n"}
+,{"stream_name":"stdout","time":350.109878269,"data":"[V11 DEV score] shard=3 43/50\n"}
+,{"stream_name":"stdout","time":350.109882295,"data":"[V11 DEV score] shard=3 44/50\n"}
+,{"stream_name":"stdout","time":350.10988623,"data":"[V11 DEV score] shard=3 45/50\n"}
+,{"stream_name":"stdout","time":350.109890187,"data":"[V11 DEV score] shard=3 46/50\n"}
+,{"stream_name":"stdout","time":350.109893595,"data":"[V11 DEV score] shard=3 47/50\n"}
+,{"stream_name":"stdout","time":350.109897317,"data":"[V11 DEV score] shard=3 48/50\n"}
+,{"stream_name":"stdout","time":350.109900925,"data":"[V11 DEV score] shard=3 49/50\n"}
+,{"stream_name":"stdout","time":350.10990463,"data":"[V11 DEV score] shard=3 50/50\n"}
+,{"stream_name":"stdout","time":350.109908231,"data":"{\n"}
+,{"stream_name":"stdout","time":350.10991181,"data":"  \"shard\": 3,\n"}
+,{"stream_name":"stdout","time":350.109915738,"data":"  \"records\": 50\n"}
+,{"stream_name":"stdout","time":350.109919448,"data":"}\n"}
+,{"stream_name":"stdout","time":350.109923142,"data":"[done] V11 DEV phase=score shard=3\n"}
+,{"stream_name":"stdout","time":350.109927067,"data":"[exit] rc=0 phase=score shard=3\n"}
+,{"stream_name":"stderr","time":350.110717401,"data":"/kaggle/working/pre_processor/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":350.110737317,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":350.110741871,"data":"\n"}
+,{"stream_name":"stderr","time":350.110745307,"data":"/kaggle/working/pre_processor/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":350.110749026,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":352.912344845,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":352.912391937,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":353.121818575,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":353.121859669,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":353.83585156,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":354.15688993,"data":"[NbConvertApp] Writing 6645 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":356.768318293,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":357.26468979,"data":"[NbConvertApp] Writing 284621 bytes to __results__.html\n"}
+]

@@ -9,7 +9,7 @@ The [V11 preregistration](PREREGISTRATION_V11_112_RESIDUAL.md) is unchanged. CAL
 3. **Score:** four GPU notebooks read only the committed global selection and evaluate identity, area112, V2-C, V6, V11 with frozen `r2plus1d_18`, `r3d_18`, `mc3_18`. Shared streams are encoded/scored once per source-QP. Proxy streams must reproduce both pinned bpp and decoded-pixel SHA-256. Record model state hashes, predictions, ground truth, all trial counts and environment. No selection uses these scores.
 4. **Merge:** merge all source records first, build complete five-QP curves and calculate direct comparisons. Reuse the unchanged metric/bootstrap implementation from `ops.v8_motion_pilot.summarize`; all comparisons and analyzers use the same **2,000 whole-source draws**, numpy `default_rng(20261008)`. No averaging of shard BD-rate.
 
-**DEV outcomes and `mc3_18`: CHƯA ĐO** until complete score artifacts are validated. The first proxy jobs cannot report Top-1 or BD-rate. Timing is evaluation-only; full six-candidate selector overhead remains CHƯA ĐO.
+**DEV scoring is complete and validated: NO-GO.** [Final report](RESULTS_V11_DEV.md) and [result/audit package](../results/v11_spatial_dev/README.md) bind the four original scoring archives. MC3 fails both the CI upper and same-QP guard; stop before new holdout. The original proxy phase itself contains no analyzer outcome. Timing is evaluation-only; full six-candidate selector overhead and V11 new holdout remain CHƯA ĐO. Frozen policy, global choices, original gate and preregistration are unchanged.
 
 ## Commands
 

@@ -1,0 +1,188 @@
+{
+  "kind": "v11_dev_score_archive_inventory",
+  "provenance": {
+    "experiment": "v11_h265_frozen_reused_dev",
+    "code_commit": "91ba5721ad6dc21657bb0e8f675df344b5c6e7ad",
+    "code_fingerprint": "5eee253b68a62498eeaeb0b10bd8e463e60d9248145273f7f7286f257c0ad07f",
+    "preregistration_commit": "00951bd52efeb3c64feb62254cef2aa484431e60",
+    "preregistration_sha256": "2dda253a7297566bc97ac8f7800f4e6d20c49d8ad8e51c30a6147a7bfb5328c8",
+    "source_plan_sha256": "bb4b9aa245ff2d8b5f92cb1a45dedb65adfc8a664543878bb7b9cdb1486b421e",
+    "input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258",
+    "bootstrap_seed_if_dev": 20261008,
+    "bootstrap_draws_if_dev": 2000,
+    "bootstrap_unit_if_dev": "source video; QPs, arms, analyzers paired",
+    "scope": "reused DEV development; no TEST or holdout",
+    "calibration_commit": "49fb15f6de86f09c6c0a845098cbbf199c405c03",
+    "calibration_sha256": "280c926a65458a00b192ed1cd0a44e6b341ac6a4f049c96852d5b0e15a410a0e",
+    "policy": {
+      "tau": 0.0,
+      "slack": 0.05,
+      "qp_mode": "all"
+    },
+    "bootstrap_seed": 20261008,
+    "bootstrap_draws": 2000,
+    "bootstrap_unit": "source video; all QPs, arms and analyzers paired"
+  },
+  "dev_input_sha256": "2c48519cb06b7b4580302d629aa7267fe0e35e8fc6ca525d18fa39909114eca5",
+  "selection_sha256": "e0489ac9e39347bc31ac8c57f3bcc71f9f3d72580f3d5d25be8c1266171cab01",
+  "result_sha256": "624f889efd3e21cef60cb6390b6a237e25f6b384f6887f0c02e73fe1d8514afe",
+  "validation_sha256": "18e61be7d593a109f90cb9bd01af9910a064d1df824a65b969d1cf6e2fe3ab6c",
+  "diagnostics_sha256": "1077be86a2d287f5d233dcb05860039652678dd4da81534348e075e000f71398",
+  "guard_deficits_sha256": "5c9d586e11ed6dbc14b770f54a487c9c60db6b814b348f3d994bbc965f6a98c1",
+  "status_snapshot_sha256": "d6f7c3da46193a0d016781e4fff3ff89d92c5158b055c08bd28515e4e3d90f46",
+  "archives": [
+    {
+      "shard": 0,
+      "account": "shungg05",
+      "kaggle_url": "https://www.kaggle.com/code/shungg05/v11-dev-score-s0-f67391e",
+      "archive_sha256": "74625d65d819a9e17f19321233dfb21f4141b12f8a98ea4c86ba25f17730638b",
+      "archive_bytes": 78694,
+      "files": {
+        "manifest.sha256": {
+          "sha256": "9663bf7fda53a5e138bd089d5f7f678369c78d5fb4fbbde79454a296221d1f3c",
+          "bytes": 80
+        },
+        "manifest.json": {
+          "sha256": "78af3a347563c0a471358a0b591c4cdd0f4f85f4fa4e136062426be52faf24d0",
+          "bytes": 4293
+        },
+        "shard_records.jsonl": {
+          "sha256": "aae8721144aa3ca8b757f11b1141fb5555b704677792de7d79da146123afbf74",
+          "bytes": 656747
+        },
+        "run.log": {
+          "sha256": "e2c3286a0804fd5cbd71c4e59891e1ddbbb51bebdcd07b1c2c1fe425c689a022",
+          "bytes": 3253
+        }
+      },
+      "path": "archives/v11_dev_score_shard0.tgz",
+      "n": 50,
+      "trial_encode_decode_count": 618
+    },
+    {
+      "shard": 1,
+      "account": "dieulinhh",
+      "kaggle_url": "https://www.kaggle.com/code/dieulinhh/v11-dev-score-s1-f67391e",
+      "archive_sha256": "7d3b0ddd031f1e74cd4e278dd6ab0bf16f7c9bb00a2bcc982ce519fe51b4639e",
+      "archive_bytes": 77511,
+      "files": {
+        "manifest.json": {
+          "sha256": "f63732ab7e7230d7c36c173937af469ef1c0c4f16d7608d49ff8892970fa7bfd",
+          "bytes": 4290
+        },
+        "manifest.sha256": {
+          "sha256": "612dd178fa61b7d452b6a8fc6b0b49bc9d2420ef01ba5ea1809bb9573788b5f2",
+          "bytes": 80
+        },
+        "shard_records.jsonl": {
+          "sha256": "fe8b87bbd64af90ab2542f2882e62730fd32ac2482d5caf984352402f2ce38f0",
+          "bytes": 656917
+        },
+        "run.log": {
+          "sha256": "8629cf4c31bb1dd4a6402ae8bfab0f4b9c48b82509c9d53b489a14804248101d",
+          "bytes": 3127
+        }
+      },
+      "path": "archives/v11_dev_score_shard1.tgz",
+      "n": 50,
+      "trial_encode_decode_count": 606
+    },
+    {
+      "shard": 2,
+      "account": "huolgggnuyen",
+      "kaggle_url": "https://www.kaggle.com/code/huolgggnuyen/v11-dev-score-s2-f67391e",
+      "archive_sha256": "4ff7d76761859e606c6d2f03d36720d6296bf53673c90ab1cf121fd87320e57d",
+      "archive_bytes": 81893,
+      "files": {
+        "run.log": {
+          "sha256": "f8c5a3352c632a68b9e4ab14ac04bd8578162deafdab6ad76344905391dd38f1",
+          "bytes": 3385
+        },
+        "manifest.sha256": {
+          "sha256": "6dd68d716f2c8e51201cc455ad3f888ccc47071e47adb10de6260c8a783da473",
+          "bytes": 80
+        },
+        "manifest.json": {
+          "sha256": "619b0839b7f8e4d679ff7f0649d89bdc9b1a9eb39eba87fad5f3446cf9c30603",
+          "bytes": 4230
+        },
+        "shard_records.jsonl": {
+          "sha256": "163f3940061eca1b7c3f4a2ed1c0404a4c271d98cd351a40d5626b32263c10ff",
+          "bytes": 656675
+        }
+      },
+      "path": "archives/v11_dev_score_shard2.tgz",
+      "n": 50,
+      "trial_encode_decode_count": 652
+    },
+    {
+      "shard": 3,
+      "account": "baooo25r",
+      "kaggle_url": "https://www.kaggle.com/code/baooo25r/v11-dev-score-s3-f67391e",
+      "archive_sha256": "29b40f891b0da42e8b28fd79dcc5a90a5fe54a0ad59f89a7b71aff4dc5d6531f",
+      "archive_bytes": 78418,
+      "files": {
+        "manifest.json": {
+          "sha256": "ff32ad4ca004537a42d282937a2eb54b2b4f7c3071eeb1ab6f785cd759bf99a6",
+          "bytes": 4290
+        },
+        "manifest.sha256": {
+          "sha256": "d7d5549eba2bd0c2aec64a25c21f9256a014f17a126ec18a2cc6107b14fc15a2",
+          "bytes": 80
+        },
+        "shard_records.jsonl": {
+          "sha256": "12718c5eef2c42b4dd9fe66fc27a666e7b966a3275e898e9cf3566df9fb9cf35",
+          "bytes": 656627
+        },
+        "run.log": {
+          "sha256": "89ba7b8e06893c5cf5ce925f2d630bb3d75ee3464e4e6d401ddebd74bba6e9eb",
+          "bytes": 3389
+        }
+      },
+      "path": "archives/v11_dev_score_shard3.tgz",
+      "n": 50,
+      "trial_encode_decode_count": 617
+    }
+  ],
+  "kaggle_logs": [
+    {
+      "path": "kaggle_logs/v11-dev-score-s0-f67391e.log",
+      "sha256": "370c073ffaaca10441ac5bd09f61ae3e76316a2dccd3d4be4801580142dc9866",
+      "bytes": 10381
+    },
+    {
+      "path": "kaggle_logs/v11-dev-score-s1-f67391e.log",
+      "sha256": "e87424d11265cb05e9c2eddd3799ba2a1fab5392c9ede97bc8d4e0471c6ac272",
+      "bytes": 10250
+    },
+    {
+      "path": "kaggle_logs/v11-dev-score-s2-f67391e.log",
+      "sha256": "e86a10ae2c48403cfcb451b3ba4a96c6dc1248e0d99b8cab0863da7e0c97744e",
+      "bytes": 10533
+    },
+    {
+      "path": "kaggle_logs/v11-dev-score-s3-f67391e.log",
+      "sha256": "17db67b1c2e8b578ccc62a9d7f38b8d727989d7d6120477ca977e47070a0fe0e",
+      "bytes": 10526
+    }
+  ],
+  "review_helpers": [
+    {
+      "path": "review_helpers/check_download.py",
+      "sha256": "afb3ed3e101c743cb8984f156098bd7b89d9ccc50e0a0383105336043a6b27d2"
+    },
+    {
+      "path": "review_helpers/audit_merge.py",
+      "sha256": "ef00a614332b2ec8e86ced46a8019cfdaea26810a8915a301012d6d9fa965435"
+    },
+    {
+      "path": "review_helpers/diagnose.py",
+      "sha256": "c184f4f7e48886d7c7ca003dfdc58f703c64d8cc1fb6b0c3147bbf6461a0c05f"
+    },
+    {
+      "path": "review_helpers/package_results.py",
+      "sha256": "441f60e362afca409c9f417861f8a28c221c248572aa88f86adb65a958677e18"
+    }
+  ]
+}
