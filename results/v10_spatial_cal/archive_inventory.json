@@ -1,0 +1,131 @@
+{
+  "archive_count": 4,
+  "archives": [
+    {
+      "account": "shungg05",
+      "bytes": 230619,
+      "files": {
+        "manifest.json": {
+          "bytes": 3333,
+          "sha256": "d22693e570ae506dd7e8ec3c53a02bd8ac903a81004e3b9f197729ede2d336e4"
+        },
+        "manifest.sha256": {
+          "bytes": 80,
+          "sha256": "812b8438809c42b99ae831f165a8370904998ff31222494dbbf1467d7a4b388e"
+        },
+        "proxy_records.jsonl": {
+          "bytes": 353155,
+          "sha256": "073c6f634e3f768a8ac8df4e26f3f22ef1fefddc1c0bbb9462e5ccdc5f026479"
+        },
+        "run.log": {
+          "bytes": 5224,
+          "sha256": "483612e06c232510c320e23c82a43a1bc0c94d2d9c53b479266eb8f602461487"
+        },
+        "shard_records.jsonl": {
+          "bytes": 353155,
+          "sha256": "073c6f634e3f768a8ac8df4e26f3f22ef1fefddc1c0bbb9462e5ccdc5f026479"
+        }
+      },
+      "kaggle_url": "https://www.kaggle.com/code/shungg05/v10-spatial-cal-s0-df21c48",
+      "path": "archives/v10_calibration_shard0.tgz",
+      "sha256": "206b916b6302d131b89ec162a42c61abac7997b5358c3be08a2bfdb03d90164e",
+      "shard": 0
+    },
+    {
+      "account": "dieulinhh",
+      "bytes": 229221,
+      "files": {
+        "manifest.json": {
+          "bytes": 3395,
+          "sha256": "49ff89a95cf4e4a45744c9003c1131965548a635790506b1277727a87193de41"
+        },
+        "manifest.sha256": {
+          "bytes": 80,
+          "sha256": "63f73361c65ed1170061671bbf60846cd9762d71ab61a03d8569ab14219094d1"
+        },
+        "proxy_records.jsonl": {
+          "bytes": 353327,
+          "sha256": "6dd181ce8e035ced9e6078e80eb2494dc245cfd4b3ee2d06b50dc33cb39d204f"
+        },
+        "run.log": {
+          "bytes": 5286,
+          "sha256": "451bedf8b0609a892a076604f1c0f8760d40eea00d584f34a9a0c2518c8ed08b"
+        },
+        "shard_records.jsonl": {
+          "bytes": 353327,
+          "sha256": "6dd181ce8e035ced9e6078e80eb2494dc245cfd4b3ee2d06b50dc33cb39d204f"
+        }
+      },
+      "kaggle_url": "https://www.kaggle.com/code/dieulinhh/v10-spatial-cal-s1-df21c48",
+      "path": "archives/v10_calibration_shard1.tgz",
+      "sha256": "750da9a68c4315c64fe091893b0516182825612091196c7bbf9366b31d7026c0",
+      "shard": 1
+    },
+    {
+      "account": "huolgggnuyen",
+      "bytes": 231296,
+      "files": {
+        "manifest.json": {
+          "bytes": 3351,
+          "sha256": "85263544e87cd60933cde24ed276adb25c9fa9138af2ea2fecec56b2861342b1"
+        },
+        "manifest.sha256": {
+          "bytes": 80,
+          "sha256": "58c77be9d2ec86df43e007e8c58ed673c268e0572aaabf3dbb6c7c704e5f2f10"
+        },
+        "proxy_records.jsonl": {
+          "bytes": 353222,
+          "sha256": "19f53563ec6b5404651a9d20204315c4dcabf3d1da146b35ed539bf315d26476"
+        },
+        "run.log": {
+          "bytes": 5242,
+          "sha256": "a3b9a6419f85496278aa8729671a336c2536a3daa200c13947fefc9c5d18f235"
+        },
+        "shard_records.jsonl": {
+          "bytes": 353222,
+          "sha256": "19f53563ec6b5404651a9d20204315c4dcabf3d1da146b35ed539bf315d26476"
+        }
+      },
+      "kaggle_url": "https://www.kaggle.com/code/huolgggnuyen/v10-spatial-cal-s2-df21c48",
+      "path": "archives/v10_calibration_shard2.tgz",
+      "sha256": "3ecfc18cf281c5e7795adba4b3d2fc089a693f3ad9a74eeaff9ea2e6064a24a8",
+      "shard": 2
+    },
+    {
+      "account": "baooo25r",
+      "bytes": 228909,
+      "files": {
+        "manifest.json": {
+          "bytes": 3367,
+          "sha256": "2a610e95f9abb6376fec864962b80600b07b1ce0d8876883867e67d89ff96036"
+        },
+        "manifest.sha256": {
+          "bytes": 80,
+          "sha256": "54cb051f7e66f0187e89b47e16e0cc8d0d2b772fb3a6e370f74c28e794252412"
+        },
+        "proxy_records.jsonl": {
+          "bytes": 353349,
+          "sha256": "60dff7607df88216a8aefd3f26c067a2338142fef71a7fa13badd866e2680033"
+        },
+        "run.log": {
+          "bytes": 5258,
+          "sha256": "0667be46de017cfd2bc652f41f7eb5555d7e195436e35b955fc7b13bf4ab077c"
+        },
+        "shard_records.jsonl": {
+          "bytes": 353349,
+          "sha256": "60dff7607df88216a8aefd3f26c067a2338142fef71a7fa13badd866e2680033"
+        }
+      },
+      "kaggle_url": "https://www.kaggle.com/code/baooo25r/v10-spatial-cal-s3-df21c48",
+      "path": "archives/v10_calibration_shard3.tgz",
+      "sha256": "16b89fe1c9db3de3fd3ebc14fc5da119b506e387341c52b717e866fa5aa15006",
+      "shard": 3
+    }
+  ],
+  "code_commit": "df21c483602573b7cfc989725c1292b04a60533e",
+  "input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+  "kind": "v10_calibration_archive_inventory",
+  "preregistration_commit": "83e4e0209acf7d3994751522e354693e6b698787",
+  "result_sha256": "b074fe1f01b60f6103223e55c1e1afb0ab8ddfc8208dd5ac6da856c3b63d48d8",
+  "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721"
+}

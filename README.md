@@ -7,7 +7,7 @@ Repo này nghiên cứu can thiệp miền pixel **trước codec chuẩn** đ�
 
 ## Kết quả AR được giữ trong `results/`
 
-[V10 spatial gate](docs/V10_SPATIAL_GATE_DESIGN.md) đã có [dự thảo preregistration](docs/PREREGISTRATION_V10_SPATIAL_GATE.md), [source plan](configs/v10_spatial_plan.json), mã chọn stream theo QP và [runbook bốn shard](docs/V10_SPATIAL_GATE_RUNBOOK.md). Proxy gradient/Laplacian chỉ đọc pixel đã giải mã; CAL chọn tham số bằng hai analyzer chính, rồi freeze trước khi chấm DEV với mc3. **V10 CAL/DEV/holdout: CHƯA ĐO**; giao thức hiện còn draft. Kiểm toán CAL cũ phục vụ thiết kế không phải kết quả V10.
+[V10 spatial gate](docs/V10_SPATIAL_GATE_DESIGN.md) đã [preregister và khóa](docs/PREREGISTRATION_V10_SPATIAL_GATE.md) trước khi chạy bốn shard Kaggle CAL H.265. **NO-GO trên 200 nguồn CAL cũ:** 0/81 cấu hình đạt rate gate < −10% trên cả hai analyzer chính; cấu hình gần nhất chỉ đạt −6,15% (`r2plus1d_18`) và −3,97% (`r3d_18`). Theo quy tắc đã khóa, không chọn policy và dừng trước DEV. **`mc3_18`, V10 DEV và holdout mới: CHƯA ĐO.** [Báo cáo CAL](docs/RESULTS_V10_SPATIAL_GATE_CAL.md), [JSON gộp](configs/v10_spatial/frozen_calibration.json), [bốn archive và SHA-256](results/v10_spatial_cal/README.md).
 
 [V9 H.265 chroma-only trên 100 nguồn CAL cũ](docs/RESULTS_V9_CHROMA_CAL.md) **KHÔNG QUA** quy tắc phát triển đã khóa: BD-rate trực tiếp V9 so với V6 trên `mc3_18` là +2,56% (CI 95% [−3,60%; +8,85%]); hai analyzer chính của V9 so với identity chỉ đạt −1,90% và −5,77%, không đạt mục tiêu < −10%. Chỉnh chroma làm mất lợi ích V6 trên cả hai analyzer chính. Đây là tập CAL đã được dùng trong phát triển và `mc3_18` đã từng được xem; **V9 DEV và holdout mới CHƯA ĐO**. [JSON, archive và hash](results/v9_chroma_cal/README.md).
 

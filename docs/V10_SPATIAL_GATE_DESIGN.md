@@ -1,6 +1,6 @@
 # V10: spatial protection around frozen V2-C/V6 selection
 
-This design tests whether a bounded spatial penalty can retain V6's primary-analyzer gains while reducing transfer damage. It does not predict success. [Draft protocol](PREREGISTRATION_V10_SPATIAL_GATE.md) contains the full grid, source locks and stopping rules; V10 outcomes remain **CHƯA ĐO**.
+This design tests whether a bounded spatial penalty can retain V6 primary-analyzer gains while reducing transfer damage. [Locked protocol](PREREGISTRATION_V10_SPATIAL_GATE.md) contains the fixed grid, source locks and stopping rules. The [completed CAL evaluation](RESULTS_V10_SPATIAL_GATE_CAL.md) found 0/81 feasible configurations and stopped before DEV; mc3 and holdout remain **CHƯA ĐO**.
 
 ## What the architecture establishes
 
@@ -79,4 +79,4 @@ Four CAL proxy jobs run without analyzers. CAL selection joins the two-primary c
 
 All 30 trial encodes per source are recorded. Those trials already correspond to the six-stream selector family; their bpp must reproduce the pinned cache. This implementation reuses V2/V6 decisions from the committed cache to isolate the new guard. Its timing excludes the historical primary inference used to obtain those decisions and cannot be advertised as total deployment runtime. A future deployment benchmark must add that cost and measure peak memory on a named machine.
 
-This request produces a draft and executable audited pipeline. Approval/lock, fresh CAL proxy measurements, CAL selection, frozen DEV assessment and any new holdout remain subsequent steps. No new experiment is launched from a draft. [Runbook](V10_SPATIAL_GATE_RUNBOOK.md) gives the exact command sequence.
+The protocol and source plan were locked before fresh CAL proxy measurements. The CAL gate returned NO-GO, so no V10 policy was frozen and the DEV/holdout sequence was not executed. [Runbook](V10_SPATIAL_GATE_RUNBOOK.md) retains the exact conditional commands and stopping rule.

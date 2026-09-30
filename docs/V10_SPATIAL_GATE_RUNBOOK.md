@@ -1,6 +1,6 @@
 # V10 execution runbook
 
-Current state: draft protocol; no V10 CAL proxy extraction, selection, DEV assessment or holdout has run. The runner rejects the current `PREREGISTRATION_LOCKED: false` document. The historical CAL audit uses already measured V2 cache values and is not a V10 trial. Preserve existing artifacts and use new output folders.
+Current state: protocol locked at `83e4e0209acf7d3994751522e354693e6b698787`. Four Kaggle CAL shards are complete and validated; [CAL result](RESULTS_V10_SPATIAL_GATE_CAL.md) is **NO-GO, 0/81 feasible**, so the frozen `selected_policy` is null. Do not execute the conditional DEV steps below for V10. They remain as the preregistered procedure, not as work completed. DEV, mc3 and holdout are CHƯA ĐO.
 
 ## 1. Review and lock before measurements
 
