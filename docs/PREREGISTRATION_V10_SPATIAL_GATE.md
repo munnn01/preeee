@@ -1,8 +1,8 @@
-# V10 H.265 spatially guarded selector — draft preregistration
+# V10 H.265 spatially guarded selector — locked preregistration
 
-PREREGISTRATION_LOCKED: false
+PREREGISTRATION_LOCKED: true
 
-Status: draft for review, written before V10 implementation or measurement. Every V10 experimental CLI must refuse to run while this flag is false. Approval requires committing this document with the flag true, the unchanged source plan and the tested implementation before CAL collection. No Kaggle evaluation is authorized by this draft. V10 measured results, selected parameters and holdout: **CHƯA ĐO**.
+Status: locked for the user-requested V10 Kaggle deployment on 2026-09-30, before V10 CAL collection. The fixed source plan and tested implementation are committed. V10 measured results, selected parameters and holdout: **CHƯA ĐO**.
 
 ## Hypothesis, evidence and scope
 
