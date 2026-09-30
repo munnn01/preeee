@@ -1,0 +1,34 @@
+# V12-A: direct identity rescue by spatial detail
+
+PREREGISTRATION_LOCKED: true
+
+Commit this registration and exact inputs before implementation and any V12 measurements. This is a hypothesis motivated by the observed V11 failure; all V12 results are **CHƯA ĐO**. Previously observed MC3 outcomes motivated the research question, but no MC3 result, label or inference is used for fitting, threshold choice or CAL screening. No unseen-architecture claim is permitted.
+
+## Scope and immutable inputs
+
+Target repo `preeee`, direction `spatial`. H.265/libx265 medium, QPs 30/35/40/45/50. Exactly 200 reused CAL Kinetics-400 sources, source-ID fingerprint `ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721`. Each video SHA-256 and deterministic source order are in `configs/v12_lowqp/cal_input.json`, SHA-256 `db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d`; upstream commit `a02fdd250b5e04491f7d3619105ef79d0b6e64f8`. Centered 16-frame stride-2 uint8 RGB 128x128 clips; bytes normalized by the same 16*128*128 denominator. Existing six transforms are unchanged; no added blur, color transform or codec adjustment.
+
+Only historical primary CAL correctness is joined locally after proxy extraction. `cal_primary_outcomes.json` SHA-256 `35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d`; original CAL cache tree SHA-256 `3b0e4c62635b0c7efb52cb1c7cae180cdbaaae88b69233aa6e103ce150768ebc`. It contains no MC3 outcomes or other partitions. These are development outcomes, not new analyzer measurements. Worker selection/proxy functions never read outcome values. Protocol JSON SHA-256 `212103b207309ca25323bd0e0c00cbd8e8a85cd7a337a205c35c02a67acf784b`. Both directions use the same CAL sources and controls, so they are paired alternatives, not independent replications. Missing/hash-mismatched sources stop a shard; no replacements.
+
+## Mechanism and locked search
+
+Spatial proxy is exactly V11 D112: apply bilinear 112x112 align_corners=False and Kinetics RGB normalization to all 16 frames, then average symmetric normalized gradient and four-neighbor Laplacian squared error. Start from frozen V6 v. On allowed QPs only, consider **identity128 directly**, regardless of frozen V2 choice. Switch iff identity differs from v, relative proxy improvement (D(v)-D(identity))/max(D(v),1e-12) > tau_relative, and R(identity) <= (1+rate_slack)*R(v). Otherwise retain V6. Unique identity/V6/area112 streams are measured at every QP. No model or label is constructed/read in workers.
+
+Exactly **24** policies: tau_relative in {0,0.1,0.25,0.5}, rate_slack in {0.1,0.25,0.5}, QP modes {30,35} or {30,35,40}. QP 45/50 always retain V6. Strict improvement, ties retain V6; rank ties between eligible alternatives by fixed candidate order. Numeric policy functions accept only QP, candidate rate/proxy and frozen V6 choice. No outcome/class ID/third-analyzer signal enters them.
+
+For each grid point, join locked two-primary correctness, merge all source curves first, and apply unchanged BD metrics. CAL feasible iff **each primary** rate <−10%, BD-accuracy >0, worst same-QP gap >=−1.00 pp, rate at most frozen V6 CAL rate +2.00 pp, and mean proxy reduction vs V6 over the fixed 200*3 observations at QP 30/35/40 >1e−6. The +2 pp budget is a new CAL screening constraint; it does not replace either final engineering gate or original <−15% research gate. Rank by largest low-QP mean proxy reduction, then lower worse primary BD-rate, lower sum of primary rates, fewer switches, then (tau_relative,rate_slack,QP mode order). Publish the complete grid and all negative outcomes. If none qualifies, NO-GO and stop; no fallback grid expansion.
+
+After selecting one policy, calculate identity/V6/area112/selected-policy full-source curves and direct comparisons using the existing percentile bootstrap logic verbatim: **2,000 source-video draws**, numpy default_rng seed **20261009**, all five QPs, arms and primaries paired. Source upstream helper SHA-256 `4c461954ed076f9a276c70f693cfcb3ce3ee054d1070529de5b1f379c497abc9`; metric Git-blob SHA-256 `38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487`. Require >=1,900 valid BD-rate/BD-accuracy draws for selected/identity per primary; otherwise stop inconclusive. CAL intervals are descriptive after adaptive CAL choice and do not account for selection uncertainty. They are not confirmatory evidence or MC3 estimates. No bootstrap or metric change is authorized.
+
+## Execution, freeze and gates
+
+1. Commit preregistration/config/input/outcome hashes, then tested implementation. Four private notebooks, 50 disjoint CAL sources each. Save complete raw proxy/bpp/pixel hashes, all trial counts, timing scope, code/config/input/index fingerprints and environment; semantic direction also pins teacher checkpoint/state/layers/normalization/device.
+2. Validate all four manifests/raw records, source and decode identities, same worker code and teacher state. Merge once, publish all 24 configurations and chosen policy or NO-GO; preserve original archives and SHA-256 sidecars.
+3. Commit selected policy and all CAL choices before any future DEV scoring. This pilot has **no DEV, TEST, holdout or MC3 scoring command**. A later DEV implementation/data lock requires a separate committed protocol before evaluation; prefer fresh source-disjoint DEV because older DEV has already been viewed. Freeze ALL choices before constructing any of the three analyzers.
+4. Future developmental gate stays both primary rate <−10%; MC3 rate <0 with CI upper <=+1%; all BD-accuracies >0, worst same-QP gaps >=−1 pp, >=1,900 valid draws per rate/accuracy. Original gate stays both primaries <−15% and BD-accuracy >0 at one codec. A fresh source-disjoint holdout requires its own ID/hash/disjointness registration and commit before its single evaluation. Never reuse seen holdouts to select or confirm these policies.
+
+Full selector runtime (including frozen V6 selection costs), three-analyzer DEV, H.264 and new holdout remain **CHƯA ĐO**. Proxy timing here includes all pilot trial encodes/decodes and new proxy inference, but is not the entire six-trial V6 encoder overhead. OD is outside this AR pilot.
+
+## Literature basis and limits
+
+The semantic direction tests a proxy hypothesis inspired by [deep perceptual features, Zhang et al., CVPR 2018](https://arxiv.org/abs/1801.03924) and [feature-based machine-compression distortion, Fischer et al.](https://arxiv.org/abs/2112.08168). These papers do not establish that this selector improves MC3 action recognition. ResNet weight/normalization references: [official torchvision documentation](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet18.html). The spatial direction isolates the effect of identity rescue at low QPs using a cheap pixel proxy. Both are empirical screening hypotheses; success is CHƯA ĐO.
