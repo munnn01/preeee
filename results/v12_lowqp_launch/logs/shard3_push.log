@@ -1,0 +1,19 @@
+{
+  "generated": "trnhlng/v12a-spatial-cal-s3-17cc33f",
+  "payload_sha256": {
+    "notebook.ipynb": "111674877964ff431670b5d348ae59310d52fca197038518e38601b705bb5e63",
+    "kernel-metadata.json": "bab70b5ade189625f08627c7afd00f43d568e746321124fc48b44743d867eab4"
+  }
+}
+{
+  "new_destination_proof": {
+    "handle": "trnhlng/v12a-spatial-cal-s3-17cc33f",
+    "authenticated_owner": "trnhlng",
+    "owned_count": 10,
+    "pages": 1,
+    "owned_refs_sha256": "ba68773044ac5efacb5eeba98dfd39e207e62a8789b318d722ad8bde37c53da7",
+    "destination_absent": true
+  }
+}
+Kernel version 1 successfully pushed.  Please check progress at https://www.kaggle.com/code/trnhlng/v12a-spatial-cal-s3-17cc33f
+

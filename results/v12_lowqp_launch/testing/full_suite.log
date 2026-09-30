@@ -1,0 +1,29 @@
+........................................................................ [ 13%]
+........................................................................ [ 27%]
+........................................................................ [ 40%]
+........................................................................ [ 54%]
+........................................................................ [ 67%]
+........................................................................ [ 81%]
+........................................................................ [ 94%]
+............................                                             [100%]
+============================== warnings summary ===============================
+tests/test_sandwich.py::test_joint_gradients_reach_pre_and_post
+  C:\Users\Admin/.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+    warnings.warn("xFormers is not available (SwiGLU)")
+
+tests/test_sandwich.py::test_joint_gradients_reach_pre_and_post
+  C:\Users\Admin/.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\attention.py:33: UserWarning: xFormers is not available (Attention)
+    warnings.warn("xFormers is not available (Attention)")
+
+tests/test_sandwich.py::test_joint_gradients_reach_pre_and_post
+  C:\Users\Admin/.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\block.py:40: UserWarning: xFormers is not available (Block)
+    warnings.warn("xFormers is not available (Block)")
+
+tests/test_v4_frozen.py::test_frozen_manifest_matches_dev_run
+  D:\STUDY\AI\envs\ten_env\Lib\site-packages\joblib\externals\loky\backend\context.py:131: UserWarning: Could not find the number of physical cores for the following reason:
+  [WinError 2] The system cannot find the file specified
+  Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+532 passed, 4 warnings in 132.16s (0:02:12)

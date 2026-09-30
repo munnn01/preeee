@@ -1,0 +1,40 @@
+{
+  "direction": "spatial",
+  "provenance": {
+    "experiment": "v12_spatial_lowqp_h265_cal",
+    "direction": "spatial",
+    "repository_url": "https://github.com/munnn01/preeee.git",
+    "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+    "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+    "code_commit": "17cc33f81a1d685574dc1a11956b12f89b1b59ab",
+    "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+    "preregistration_commit": "1a734e9228644c1cf13deeb517995593d295fb8a",
+    "preregistration_sha256": "770b8843756b8c011cbd85ecc348187a8343495babeeca22a12f4f6d3b2d211e",
+    "protocol_sha256": "212103b207309ca25323bd0e0c00cbd8e8a85cd7a337a205c35c02a67acf784b",
+    "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+    "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+    "bootstrap_seed": 20261009,
+    "bootstrap_draws": 2000,
+    "teacher": null,
+    "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+    "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+  },
+  "account": "huolgggnuyen",
+  "shard": 2,
+  "n": 50,
+  "handle": "huolgggnuyen/v12a-spatial-cal-s2-17cc33f",
+  "url": "https://www.kaggle.com/code/huolgggnuyen/v12a-spatial-cal-s2-17cc33f",
+  "private": true,
+  "enable_gpu": false,
+  "dataset": "qktttttttttt/kineticscleaned",
+  "planned_unique_encode_decode_trials": 549,
+  "submission_exit_code": 1,
+  "submission_verified": false,
+  "push_log_sha256": "98cabb3feafa29237e71840c08a827f6d2ec278448a256c5658d187e1a0f3452",
+  "payload_sha256": {
+    "notebook.ipynb": "bc0296a7ea4343f6e127b527007f7ae319597fe0072d383479b55767d73daac7",
+    "kernel-metadata.json": "edd12256061916cd002c9c559276e6062c92f68fec3a0198a2e61ce11195b282"
+  }
+}

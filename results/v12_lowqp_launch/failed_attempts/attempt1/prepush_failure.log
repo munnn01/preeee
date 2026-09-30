@@ -1,0 +1,15 @@
+{
+  "generated": "huolgggnuyen/v12a-spatial-cal-s2-17cc33f",
+  "payload_sha256": {
+    "notebook.ipynb": "bc0296a7ea4343f6e127b527007f7ae319597fe0072d383479b55767d73daac7",
+    "kernel-metadata.json": "edd12256061916cd002c9c559276e6062c92f68fec3a0198a2e61ce11195b282"
+  }
+}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\STUDY\LAB\pre_processor\research\v12_lowqp\push.py", line 119, in <module>
+    main()
+  File "D:\STUDY\LAB\pre_processor\research\v12_lowqp\push.py", line 111, in main
+    raise RuntimeError('new kernel ownership/absence check failed: '+message) from None
+RuntimeError: new kernel ownership/absence check failed: credential owner does not match requested account

@@ -1,0 +1,19 @@
+{
+  "generated": "dieulinhh/v12a-spatial-cal-s1-17cc33f",
+  "payload_sha256": {
+    "notebook.ipynb": "8fffb2eafd41d811aef150a94d053b4dc6aa0d42e0ec182827542e0ed06175db",
+    "kernel-metadata.json": "ffa69da9ddf4bd0e19b4d3aa5b0211d8c32c5e20fd2d29f1ebbef4cd899d914e"
+  }
+}
+{
+  "new_destination_proof": {
+    "handle": "dieulinhh/v12a-spatial-cal-s1-17cc33f",
+    "authenticated_owner": "dieulinhh",
+    "owned_count": 29,
+    "pages": 1,
+    "owned_refs_sha256": "cd33e5a21673c3763ab7d6b20b258ea9b3ea2b37b4f068899e65e3ac4a0ada62",
+    "destination_absent": true
+  }
+}
+Kernel version 1 successfully pushed.  Please check progress at https://www.kaggle.com/code/dieulinhh/v12a-spatial-cal-s1-17cc33f
+

@@ -1,0 +1,18 @@
+{
+  "full_suite": {
+    "passed": 532,
+    "warnings": 4,
+    "implementation_commit_before_publisher_repair": "4107661d543878b5a17e1b5388307e0e9c8d5a32",
+    "log_sha256": "9ec9bd83300692fd2cd69017cbab54e2d56e03419d060053acbc49b169c44927",
+    "note": "Whole suite ran before publisher destination-check repair; no full-suite rerun claimed."
+  },
+  "final_v12_tests": {
+    "command": "python -B -m pytest tests/test_v12_lowqp.py -q -p no:cacheprovider",
+    "passed": 19,
+    "worker_code_commit": "17cc33f81a1d685574dc1a11956b12f89b1b59ab",
+    "exec_output_chunk_id": "84f612",
+    "output": "19 passed in 3.97s"
+  },
+  "metric_unchanged_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+  "bootstrap_unchanged_verbatim_snapshot_sha256": "4c461954ed076f9a276c70f693cfcb3ce3ee054d1070529de5b1f379c497abc9"
+}

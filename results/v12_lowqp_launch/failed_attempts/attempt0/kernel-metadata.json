@@ -1,0 +1,16 @@
+{
+  "id": "shungg05/v12a-spatial-cal-s0-4107661",
+  "title": "v12a-spatial-cal-s0-4107661",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "qktttttttttt/kineticscleaned"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}

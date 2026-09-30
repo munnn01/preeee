@@ -1,0 +1,16 @@
+{
+  "generated": "shungg05/v12a-spatial-cal-s0-4107661",
+  "payload_sha256": {
+    "notebook.ipynb": "bf856b8cdd4338cb13d00d6100095a3243740d961582d3f1f5b20d5ae1a3892e",
+    "kernel-metadata.json": "24af731ddbeb7c28d8fdfb09d58120c8f60bdd705e0719803738a7845592acdf"
+  }
+}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\STUDY\LAB\pre_processor\research\v12_lowqp\push.py", line 80, in <module>
+    main()
+  File "D:\STUDY\LAB\pre_processor\research\v12_lowqp\push.py", line 73, in main
+    raise RuntimeError('kernel status check failed; '+output)
+RuntimeError: kernel status check failed; Cannot access kernel 'shungg05/v12a-spatial-cal-s0-4107661' (Permission 'kernels.get' was denied). The most likely cause is a wrong kernel slug. The benchmark_task_slug returned by get_benchmark_leaderboard differs from the actual kernel slug — use the slug from the notebook URL (kaggle.com/code/owner/KERNEL-SLUG), not from the leaderboard. It can also occur if the notebook is private.
+
