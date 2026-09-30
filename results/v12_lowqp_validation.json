@@ -1,0 +1,50 @@
+{
+  "kind": "v12_result_validation",
+  "provenance": {
+    "experiment": "v12_spatial_lowqp_h265_cal",
+    "direction": "spatial",
+    "repository_url": "https://github.com/munnn01/preeee.git",
+    "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+    "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+    "code_commit": "47e4eb3dd4f7d8ed9619e0d2e6b20a3fcecc16cb",
+    "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+    "preregistration_commit": "1a734e9228644c1cf13deeb517995593d295fb8a",
+    "preregistration_sha256": "770b8843756b8c011cbd85ecc348187a8343495babeeca22a12f4f6d3b2d211e",
+    "protocol_sha256": "212103b207309ca25323bd0e0c00cbd8e8a85cd7a337a205c35c02a67acf784b",
+    "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+    "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+    "bootstrap_seed": 20261009,
+    "bootstrap_draws": 2000,
+    "teacher": null,
+    "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+    "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+  },
+  "calibration_result_sha256": "2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d",
+  "artifact_manifest_sha256": "5646871951359e51fc94373e691260f9b43a7b6faa178c8f91c8e497a7be7894",
+  "actual_bootstrap_draws": 2000,
+  "bootstrap_unit": "source video",
+  "bootstrap_seed": 20261009,
+  "audit": {
+    "artifact_hashes_verified": 39,
+    "unique_sources": 200,
+    "registered_grid_size": 24,
+    "common_decoded_stream_hash_checks": 2235,
+    "controls_match_between_directions": true,
+    "selected_choices_frozen": true,
+    "all_comparator_valid_draws": 2000,
+    "metric_and_bootstrap_changed": false,
+    "mc3_inference": false,
+    "holdout_inference": false,
+    "audit_exec_output_chunk_id": "9020af"
+  },
+  "tests": {
+    "command": "python -B -m pytest tests/test_v12_lowqp.py -q -p no:cacheprovider",
+    "passed": 19,
+    "elapsed_s": 8.28,
+    "exit_code": 0,
+    "exec_output_chunk_id": "c6f420",
+    "scope": "V12 policy/protocol/bootstrap/merge/publisher; full unrelated suite not rerun for artifact-only update"
+  }
+}

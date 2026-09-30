@@ -1,0 +1,20 @@
+{
+  "handle": "trnhlng/v12a-spatial-cal-s3-17cc33f",
+  "version_label": "v1",
+  "direction": "spatial",
+  "shard": 3,
+  "downloaded_at_utc": "2026-09-30T12:40:36.459286+00:00",
+  "archive": "v12_spatial_cal_shard3.tgz",
+  "bytes": 54714,
+  "archive_sha256": "1160b1a10665abfc75b1e2fc65e926e01588d454d013a3e674808b6de67a3a1c",
+  "server_log_sha256": "44d357397b92c9a16da59e523ddb0a02329dd84883efe22f06ac0670ccbc88ad",
+  "output_files_listed": 915,
+  "pages": 5,
+  "archive_members": [
+    "outputs/v12_spatial_cal/shard3/manifest.json",
+    "outputs/v12_spatial_cal/shard3/manifest.sha256",
+    "outputs/v12_spatial_cal/shard3/run.log",
+    "outputs/v12_spatial_cal/shard3/shard_records.jsonl"
+  ],
+  "extracted_folder": "D:\\STUDY\\LAB\\proxy_v3\\v12_dual_study\\assessment_20260930T123815Z\\spatial\\shard3\\extracted\\outputs\\v12_spatial_cal\\shard3"
+}

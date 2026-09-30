@@ -1,0 +1,55 @@
+[V12 spatial] shard=1 1/50 trials=13
+[V12 spatial] shard=1 2/50 trials=25
+[V12 spatial] shard=1 3/50 trials=36
+[V12 spatial] shard=1 4/50 trials=46
+[V12 spatial] shard=1 5/50 trials=56
+[V12 spatial] shard=1 6/50 trials=68
+[V12 spatial] shard=1 7/50 trials=78
+[V12 spatial] shard=1 8/50 trials=88
+[V12 spatial] shard=1 9/50 trials=100
+[V12 spatial] shard=1 10/50 trials=110
+[V12 spatial] shard=1 11/50 trials=121
+[V12 spatial] shard=1 12/50 trials=131
+[V12 spatial] shard=1 13/50 trials=141
+[V12 spatial] shard=1 14/50 trials=151
+[V12 spatial] shard=1 15/50 trials=163
+[V12 spatial] shard=1 16/50 trials=173
+[V12 spatial] shard=1 17/50 trials=185
+[V12 spatial] shard=1 18/50 trials=196
+[V12 spatial] shard=1 19/50 trials=208
+[V12 spatial] shard=1 20/50 trials=219
+[V12 spatial] shard=1 21/50 trials=229
+[V12 spatial] shard=1 22/50 trials=240
+[V12 spatial] shard=1 23/50 trials=253
+[V12 spatial] shard=1 24/50 trials=264
+[V12 spatial] shard=1 25/50 trials=277
+[V12 spatial] shard=1 26/50 trials=289
+[V12 spatial] shard=1 27/50 trials=302
+[V12 spatial] shard=1 28/50 trials=313
+[V12 spatial] shard=1 29/50 trials=323
+[V12 spatial] shard=1 30/50 trials=335
+[V12 spatial] shard=1 31/50 trials=346
+[V12 spatial] shard=1 32/50 trials=357
+[V12 spatial] shard=1 33/50 trials=368
+[V12 spatial] shard=1 34/50 trials=378
+[V12 spatial] shard=1 35/50 trials=388
+[V12 spatial] shard=1 36/50 trials=400
+[V12 spatial] shard=1 37/50 trials=413
+[V12 spatial] shard=1 38/50 trials=425
+[V12 spatial] shard=1 39/50 trials=436
+[V12 spatial] shard=1 40/50 trials=446
+[V12 spatial] shard=1 41/50 trials=456
+[V12 spatial] shard=1 42/50 trials=467
+[V12 spatial] shard=1 43/50 trials=479
+[V12 spatial] shard=1 44/50 trials=489
+[V12 spatial] shard=1 45/50 trials=501
+[V12 spatial] shard=1 46/50 trials=512
+[V12 spatial] shard=1 47/50 trials=522
+[V12 spatial] shard=1 48/50 trials=535
+[V12 spatial] shard=1 49/50 trials=546
+[V12 spatial] shard=1 50/50 trials=556
+{
+  "shard": 1,
+  "n": 50,
+  "trial_encode_decode_count": 556
+}

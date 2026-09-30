@@ -2,7 +2,7 @@
 
 ## Hướng V12 mới: spatial / CAL-only
 
-Đã gửi bốn notebook private Kaggle, snapshot API xác nhận **4/4 RUNNING**; [hồ sơ triển khai](docs/V12_KAGGLE_LAUNCH.md). [Pilot V12](docs/V12_LOWQP_RUNBOOK.md), preregistration đã commit trước code và phép đo. Chọn identity trực tiếp theo proxy chi tiết không gian ở QP 30–40; QP 45/50 giữ V6. Bốn shard dùng đúng 200 nguồn CAL cũ, chỉ chọn policy bằng hai analyzer chính. **V12 kết quả, MC3, DEV mới và holdout: CHƯA ĐO.** Gate nghiên cứu gốc <−15% không đổi. [Giao thức/hash/lưới/gate](docs/PREREGISTRATION_V12_SPATIAL_LOWQP.md). Các tài liệu và kết quả lịch sử dưới đây giữ nguyên phạm vi của từng nghiên cứu.
+Đã hoàn tất 4/4 shard, đủ 200 nguồn CAL cũ và 2235 trial encode/decode. [Kết quả V12](docs/RESULTS_V12_CAL.md): R2 BD-rate -13.43%, R3 -13.13% so với identity; PASS sàng lọc CAL, chưa đạt gate gốc −15%. Policy đã chọn và choices được freeze để chuẩn bị protocol DEV mới. **mc3_18, DEV mới, holdout và runtime đầy đủ: CHƯA ĐO.** CI trên CAL chỉ mô tả sau chọn policy. [Hồ sơ triển khai](docs/V12_KAGGLE_LAUNCH.md), [preregistration](docs/PREREGISTRATION_V12_SPATIAL_LOWQP.md). Các kết quả lịch sử giữ phạm vi riêng.
 
 
 Repo này nghiên cứu can thiệp miền pixel **trước codec chuẩn** để giảm bitrate mà vẫn giữ hiệu năng tác vụ. Hai đường đánh giá độc lập:

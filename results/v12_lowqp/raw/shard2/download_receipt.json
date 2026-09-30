@@ -1,0 +1,20 @@
+{
+  "handle": "baooo25r/v12a-spatial-cal-s2-17cc33f",
+  "version_label": "v1",
+  "direction": "spatial",
+  "shard": 2,
+  "downloaded_at_utc": "2026-09-30T12:40:38.009988+00:00",
+  "archive": "v12_spatial_cal_shard2.tgz",
+  "bytes": 53187,
+  "archive_sha256": "f2b8e58226a9ee8f0a331fc572812727e8db931b0484d15b633f0c61640b6bcb",
+  "server_log_sha256": "24c08984def906c119a3bb72c8c8efb682515db9af6687bd80b62f582aca11d1",
+  "output_files_listed": 915,
+  "pages": 5,
+  "archive_members": [
+    "outputs/v12_spatial_cal/shard2/manifest.json",
+    "outputs/v12_spatial_cal/shard2/manifest.sha256",
+    "outputs/v12_spatial_cal/shard2/run.log",
+    "outputs/v12_spatial_cal/shard2/shard_records.jsonl"
+  ],
+  "extracted_folder": "D:\\STUDY\\LAB\\proxy_v3\\v12_dual_study\\assessment_20260930T123815Z\\spatial\\shard2\\extracted\\outputs\\v12_spatial_cal\\shard2"
+}

@@ -1,0 +1,500 @@
+[{"stream_name":"stderr","time":9.820184228,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.820280851,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.820317816,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.820323779,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.678374656,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.678425781,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.678433041,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.678437974,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":287.503733558,"data":"{\n"}
+,{"stream_name":"stdout","time":287.50380868,"data":"  \"experiment\": \"v12_spatial_lowqp_h265_cal\",\n"}
+,{"stream_name":"stdout","time":287.503818067,"data":"  \"direction\": \"spatial\",\n"}
+,{"stream_name":"stdout","time":287.503824029,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":287.503830075,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":287.503836861,"data":"  \"scope\": \"reused CAL development only; no DEV/TEST/holdout or mc3 evaluation\",\n"}
+,{"stream_name":"stdout","time":287.50384305,"data":"  \"bootstrap_unit\": \"source video; all QPs, arms and primary analyzers paired\",\n"}
+,{"stream_name":"stdout","time":287.503849122,"data":"  \"code_commit\": \"17cc33f81a1d685574dc1a11956b12f89b1b59ab\",\n"}
+,{"stream_name":"stdout","time":287.503855181,"data":"  \"code_fingerprint\": \"694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331\",\n"}
+,{"stream_name":"stdout","time":287.503860975,"data":"  \"preregistration_commit\": \"1a734e9228644c1cf13deeb517995593d295fb8a\",\n"}
+,{"stream_name":"stdout","time":287.503866245,"data":"  \"preregistration_sha256\": \"770b8843756b8c011cbd85ecc348187a8343495babeeca22a12f4f6d3b2d211e\",\n"}
+,{"stream_name":"stdout","time":287.503871503,"data":"  \"protocol_sha256\": \"212103b207309ca25323bd0e0c00cbd8e8a85cd7a337a205c35c02a67acf784b\",\n"}
+,{"stream_name":"stdout","time":287.503876775,"data":"  \"cal_input_sha256\": \"db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d\",\n"}
+,{"stream_name":"stdout","time":287.503882087,"data":"  \"primary_outcomes_sha256\": \"35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d\",\n"}
+,{"stream_name":"stdout","time":287.503895425,"data":"  \"upstream_input_commit\": \"a02fdd250b5e04491f7d3619105ef79d0b6e64f8\",\n"}
+,{"stream_name":"stdout","time":287.503901663,"data":"  \"bootstrap_seed\": 20261009,\n"}
+,{"stream_name":"stdout","time":287.503911135,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":287.503914835,"data":"  \"teacher\": null,\n"}
+,{"stream_name":"stdout","time":287.503918289,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":287.503921962,"data":"  \"paired_metrics_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":287.503925739,"data":"}\n"}
+,{"stream_name":"stdout","time":287.503929148,"data":"[V12 spatial] shard=0 1/50 trials=11\n"}
+,{"stream_name":"stdout","time":287.503944507,"data":"[V12 spatial] shard=0 2/50 trials=21\n"}
+,{"stream_name":"stdout","time":287.503947577,"data":"[V12 spatial] shard=0 3/50 trials=33\n"}
+,{"stream_name":"stdout","time":287.503950169,"data":"[V12 spatial] shard=0 4/50 trials=46\n"}
+,{"stream_name":"stdout","time":287.503952836,"data":"[V12 spatial] shard=0 5/50 trials=57\n"}
+,{"stream_name":"stdout","time":287.503955426,"data":"[V12 spatial] shard=0 6/50 trials=67\n"}
+,{"stream_name":"stdout","time":287.50395798,"data":"[V12 spatial] shard=0 7/50 trials=77\n"}
+,{"stream_name":"stdout","time":287.503960606,"data":"[V12 spatial] shard=0 8/50 trials=87\n"}
+,{"stream_name":"stdout","time":287.503963309,"data":"[V12 spatial] shard=0 9/50 trials=97\n"}
+,{"stream_name":"stdout","time":287.503965872,"data":"[V12 spatial] shard=0 10/50 trials=107\n"}
+,{"stream_name":"stdout","time":287.503968546,"data":"[V12 spatial] shard=0 11/50 trials=117\n"}
+,{"stream_name":"stdout","time":287.503971129,"data":"[V12 spatial] shard=0 12/50 trials=128\n"}
+,{"stream_name":"stdout","time":287.503973909,"data":"[V12 spatial] shard=0 13/50 trials=139\n"}
+,{"stream_name":"stdout","time":287.503976536,"data":"[V12 spatial] shard=0 14/50 trials=150\n"}
+,{"stream_name":"stdout","time":287.503979081,"data":"[V12 spatial] shard=0 15/50 trials=160\n"}
+,{"stream_name":"stdout","time":287.503981653,"data":"[V12 spatial] shard=0 16/50 trials=173\n"}
+,{"stream_name":"stdout","time":287.503984286,"data":"[V12 spatial] shard=0 17/50 trials=184\n"}
+,{"stream_name":"stdout","time":287.50398692,"data":"[V12 spatial] shard=0 18/50 trials=195\n"}
+,{"stream_name":"stdout","time":287.503989522,"data":"[V12 spatial] shard=0 19/50 trials=206\n"}
+,{"stream_name":"stdout","time":287.503994688,"data":"[V12 spatial] shard=0 20/50 trials=216\n"}
+,{"stream_name":"stdout","time":287.503997457,"data":"[V12 spatial] shard=0 21/50 trials=226\n"}
+,{"stream_name":"stdout","time":287.503999989,"data":"[V12 spatial] shard=0 22/50 trials=236\n"}
+,{"stream_name":"stdout","time":287.504002557,"data":"[V12 spatial] shard=0 23/50 trials=249\n"}
+,{"stream_name":"stdout","time":287.504005104,"data":"[V12 spatial] shard=0 24/50 trials=259\n"}
+,{"stream_name":"stdout","time":287.504007675,"data":"[V12 spatial] shard=0 25/50 trials=272\n"}
+,{"stream_name":"stdout","time":287.504010239,"data":"[V12 spatial] shard=0 26/50 trials=284\n"}
+,{"stream_name":"stdout","time":287.504012808,"data":"[V12 spatial] shard=0 27/50 trials=296\n"}
+,{"stream_name":"stdout","time":287.50401538,"data":"[V12 spatial] shard=0 28/50 trials=309\n"}
+,{"stream_name":"stdout","time":287.504017955,"data":"[V12 spatial] shard=0 29/50 trials=320\n"}
+,{"stream_name":"stdout","time":287.504020526,"data":"[V12 spatial] shard=0 30/50 trials=331\n"}
+,{"stream_name":"stdout","time":287.504023073,"data":"[V12 spatial] shard=0 31/50 trials=343\n"}
+,{"stream_name":"stdout","time":287.504025622,"data":"[V12 spatial] shard=0 32/50 trials=355\n"}
+,{"stream_name":"stdout","time":287.504028186,"data":"[V12 spatial] shard=0 33/50 trials=365\n"}
+,{"stream_name":"stdout","time":287.504030737,"data":"[V12 spatial] shard=0 34/50 trials=375\n"}
+,{"stream_name":"stdout","time":287.504033317,"data":"[V12 spatial] shard=0 35/50 trials=386\n"}
+,{"stream_name":"stdout","time":287.504035874,"data":"[V12 spatial] shard=0 36/50 trials=399\n"}
+,{"stream_name":"stdout","time":287.504038464,"data":"[V12 spatial] shard=0 37/50 trials=411\n"}
+,{"stream_name":"stdout","time":287.504041026,"data":"[V12 spatial] shard=0 38/50 trials=421\n"}
+,{"stream_name":"stdout","time":287.504043579,"data":"[V12 spatial] shard=0 39/50 trials=433\n"}
+,{"stream_name":"stdout","time":287.504049285,"data":"[V12 spatial] shard=0 40/50 trials=443\n"}
+,{"stream_name":"stdout","time":287.504051998,"data":"[V12 spatial] shard=0 41/50 trials=454\n"}
+,{"stream_name":"stdout","time":287.504054548,"data":"[V12 spatial] shard=0 42/50 trials=465\n"}
+,{"stream_name":"stdout","time":287.504057112,"data":"[V12 spatial] shard=0 43/50 trials=476\n"}
+,{"stream_name":"stdout","time":287.504059665,"data":"[V12 spatial] shard=0 44/50 trials=486\n"}
+,{"stream_name":"stdout","time":287.50406226,"data":"[V12 spatial] shard=0 45/50 trials=498\n"}
+,{"stream_name":"stdout","time":287.504064961,"data":"[V12 spatial] shard=0 46/50 trials=511\n"}
+,{"stream_name":"stdout","time":287.504085628,"data":"[V12 spatial] shard=0 47/50 trials=525\n"}
+,{"stream_name":"stdout","time":287.504090195,"data":"[V12 spatial] shard=0 48/50 trials=537\n"}
+,{"stream_name":"stdout","time":287.504094834,"data":"[V12 spatial] shard=0 49/50 trials=548\n"}
+,{"stream_name":"stdout","time":287.504099129,"data":"[V12 spatial] shard=0 50/50 trials=562\n"}
+,{"stream_name":"stdout","time":287.504103973,"data":"{\n"}
+,{"stream_name":"stdout","time":287.504108869,"data":"  \"shard\": 0,\n"}
+,{"stream_name":"stdout","time":287.504113457,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":287.504118008,"data":"  \"trial_encode_decode_count\": 562\n"}
+,{"stream_name":"stdout","time":287.504121797,"data":"}\n"}
+,{"stream_name":"stdout","time":287.504125529,"data":"[done] V12 spatial CAL shard=0\n"}
+,{"stream_name":"stdout","time":287.504129622,"data":"[exit] rc=0 direction=spatial shard=0\n"}
+,{"stream_name":"stderr","time":287.505203723,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505231723,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":287.505237349,"data":"\n"}
+,{"stream_name":"stderr","time":287.505241593,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505271925,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":290.892516856,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":290.892553827,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":291.126811926,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":291.12685148,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":291.959107681,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":292.344149314,"data":"[NbConvertApp] Writing 7929 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":295.45391591,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":295.99646896,"data":"[NbConvertApp] Writing 285610 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":9.820184228,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.820280851,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.820317816,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.820323779,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.678374656,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.678425781,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.678433041,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.678437974,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":287.503733558,"data":"{\n"}
+,{"stream_name":"stdout","time":287.50380868,"data":"  \"experiment\": \"v12_spatial_lowqp_h265_cal\",\n"}
+,{"stream_name":"stdout","time":287.503818067,"data":"  \"direction\": \"spatial\",\n"}
+,{"stream_name":"stdout","time":287.503824029,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":287.503830075,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":287.503836861,"data":"  \"scope\": \"reused CAL development only; no DEV/TEST/holdout or mc3 evaluation\",\n"}
+,{"stream_name":"stdout","time":287.50384305,"data":"  \"bootstrap_unit\": \"source video; all QPs, arms and primary analyzers paired\",\n"}
+,{"stream_name":"stdout","time":287.503849122,"data":"  \"code_commit\": \"17cc33f81a1d685574dc1a11956b12f89b1b59ab\",\n"}
+,{"stream_name":"stdout","time":287.503855181,"data":"  \"code_fingerprint\": \"694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331\",\n"}
+,{"stream_name":"stdout","time":287.503860975,"data":"  \"preregistration_commit\": \"1a734e9228644c1cf13deeb517995593d295fb8a\",\n"}
+,{"stream_name":"stdout","time":287.503866245,"data":"  \"preregistration_sha256\": \"770b8843756b8c011cbd85ecc348187a8343495babeeca22a12f4f6d3b2d211e\",\n"}
+,{"stream_name":"stdout","time":287.503871503,"data":"  \"protocol_sha256\": \"212103b207309ca25323bd0e0c00cbd8e8a85cd7a337a205c35c02a67acf784b\",\n"}
+,{"stream_name":"stdout","time":287.503876775,"data":"  \"cal_input_sha256\": \"db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d\",\n"}
+,{"stream_name":"stdout","time":287.503882087,"data":"  \"primary_outcomes_sha256\": \"35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d\",\n"}
+,{"stream_name":"stdout","time":287.503895425,"data":"  \"upstream_input_commit\": \"a02fdd250b5e04491f7d3619105ef79d0b6e64f8\",\n"}
+,{"stream_name":"stdout","time":287.503901663,"data":"  \"bootstrap_seed\": 20261009,\n"}
+,{"stream_name":"stdout","time":287.503911135,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":287.503914835,"data":"  \"teacher\": null,\n"}
+,{"stream_name":"stdout","time":287.503918289,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":287.503921962,"data":"  \"paired_metrics_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":287.503925739,"data":"}\n"}
+,{"stream_name":"stdout","time":287.503929148,"data":"[V12 spatial] shard=0 1/50 trials=11\n"}
+,{"stream_name":"stdout","time":287.503944507,"data":"[V12 spatial] shard=0 2/50 trials=21\n"}
+,{"stream_name":"stdout","time":287.503947577,"data":"[V12 spatial] shard=0 3/50 trials=33\n"}
+,{"stream_name":"stdout","time":287.503950169,"data":"[V12 spatial] shard=0 4/50 trials=46\n"}
+,{"stream_name":"stdout","time":287.503952836,"data":"[V12 spatial] shard=0 5/50 trials=57\n"}
+,{"stream_name":"stdout","time":287.503955426,"data":"[V12 spatial] shard=0 6/50 trials=67\n"}
+,{"stream_name":"stdout","time":287.50395798,"data":"[V12 spatial] shard=0 7/50 trials=77\n"}
+,{"stream_name":"stdout","time":287.503960606,"data":"[V12 spatial] shard=0 8/50 trials=87\n"}
+,{"stream_name":"stdout","time":287.503963309,"data":"[V12 spatial] shard=0 9/50 trials=97\n"}
+,{"stream_name":"stdout","time":287.503965872,"data":"[V12 spatial] shard=0 10/50 trials=107\n"}
+,{"stream_name":"stdout","time":287.503968546,"data":"[V12 spatial] shard=0 11/50 trials=117\n"}
+,{"stream_name":"stdout","time":287.503971129,"data":"[V12 spatial] shard=0 12/50 trials=128\n"}
+,{"stream_name":"stdout","time":287.503973909,"data":"[V12 spatial] shard=0 13/50 trials=139\n"}
+,{"stream_name":"stdout","time":287.503976536,"data":"[V12 spatial] shard=0 14/50 trials=150\n"}
+,{"stream_name":"stdout","time":287.503979081,"data":"[V12 spatial] shard=0 15/50 trials=160\n"}
+,{"stream_name":"stdout","time":287.503981653,"data":"[V12 spatial] shard=0 16/50 trials=173\n"}
+,{"stream_name":"stdout","time":287.503984286,"data":"[V12 spatial] shard=0 17/50 trials=184\n"}
+,{"stream_name":"stdout","time":287.50398692,"data":"[V12 spatial] shard=0 18/50 trials=195\n"}
+,{"stream_name":"stdout","time":287.503989522,"data":"[V12 spatial] shard=0 19/50 trials=206\n"}
+,{"stream_name":"stdout","time":287.503994688,"data":"[V12 spatial] shard=0 20/50 trials=216\n"}
+,{"stream_name":"stdout","time":287.503997457,"data":"[V12 spatial] shard=0 21/50 trials=226\n"}
+,{"stream_name":"stdout","time":287.503999989,"data":"[V12 spatial] shard=0 22/50 trials=236\n"}
+,{"stream_name":"stdout","time":287.504002557,"data":"[V12 spatial] shard=0 23/50 trials=249\n"}
+,{"stream_name":"stdout","time":287.504005104,"data":"[V12 spatial] shard=0 24/50 trials=259\n"}
+,{"stream_name":"stdout","time":287.504007675,"data":"[V12 spatial] shard=0 25/50 trials=272\n"}
+,{"stream_name":"stdout","time":287.504010239,"data":"[V12 spatial] shard=0 26/50 trials=284\n"}
+,{"stream_name":"stdout","time":287.504012808,"data":"[V12 spatial] shard=0 27/50 trials=296\n"}
+,{"stream_name":"stdout","time":287.50401538,"data":"[V12 spatial] shard=0 28/50 trials=309\n"}
+,{"stream_name":"stdout","time":287.504017955,"data":"[V12 spatial] shard=0 29/50 trials=320\n"}
+,{"stream_name":"stdout","time":287.504020526,"data":"[V12 spatial] shard=0 30/50 trials=331\n"}
+,{"stream_name":"stdout","time":287.504023073,"data":"[V12 spatial] shard=0 31/50 trials=343\n"}
+,{"stream_name":"stdout","time":287.504025622,"data":"[V12 spatial] shard=0 32/50 trials=355\n"}
+,{"stream_name":"stdout","time":287.504028186,"data":"[V12 spatial] shard=0 33/50 trials=365\n"}
+,{"stream_name":"stdout","time":287.504030737,"data":"[V12 spatial] shard=0 34/50 trials=375\n"}
+,{"stream_name":"stdout","time":287.504033317,"data":"[V12 spatial] shard=0 35/50 trials=386\n"}
+,{"stream_name":"stdout","time":287.504035874,"data":"[V12 spatial] shard=0 36/50 trials=399\n"}
+,{"stream_name":"stdout","time":287.504038464,"data":"[V12 spatial] shard=0 37/50 trials=411\n"}
+,{"stream_name":"stdout","time":287.504041026,"data":"[V12 spatial] shard=0 38/50 trials=421\n"}
+,{"stream_name":"stdout","time":287.504043579,"data":"[V12 spatial] shard=0 39/50 trials=433\n"}
+,{"stream_name":"stdout","time":287.504049285,"data":"[V12 spatial] shard=0 40/50 trials=443\n"}
+,{"stream_name":"stdout","time":287.504051998,"data":"[V12 spatial] shard=0 41/50 trials=454\n"}
+,{"stream_name":"stdout","time":287.504054548,"data":"[V12 spatial] shard=0 42/50 trials=465\n"}
+,{"stream_name":"stdout","time":287.504057112,"data":"[V12 spatial] shard=0 43/50 trials=476\n"}
+,{"stream_name":"stdout","time":287.504059665,"data":"[V12 spatial] shard=0 44/50 trials=486\n"}
+,{"stream_name":"stdout","time":287.50406226,"data":"[V12 spatial] shard=0 45/50 trials=498\n"}
+,{"stream_name":"stdout","time":287.504064961,"data":"[V12 spatial] shard=0 46/50 trials=511\n"}
+,{"stream_name":"stdout","time":287.504085628,"data":"[V12 spatial] shard=0 47/50 trials=525\n"}
+,{"stream_name":"stdout","time":287.504090195,"data":"[V12 spatial] shard=0 48/50 trials=537\n"}
+,{"stream_name":"stdout","time":287.504094834,"data":"[V12 spatial] shard=0 49/50 trials=548\n"}
+,{"stream_name":"stdout","time":287.504099129,"data":"[V12 spatial] shard=0 50/50 trials=562\n"}
+,{"stream_name":"stdout","time":287.504103973,"data":"{\n"}
+,{"stream_name":"stdout","time":287.504108869,"data":"  \"shard\": 0,\n"}
+,{"stream_name":"stdout","time":287.504113457,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":287.504118008,"data":"  \"trial_encode_decode_count\": 562\n"}
+,{"stream_name":"stdout","time":287.504121797,"data":"}\n"}
+,{"stream_name":"stdout","time":287.504125529,"data":"[done] V12 spatial CAL shard=0\n"}
+,{"stream_name":"stdout","time":287.504129622,"data":"[exit] rc=0 direction=spatial shard=0\n"}
+,{"stream_name":"stderr","time":287.505203723,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505231723,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":287.505237349,"data":"\n"}
+,{"stream_name":"stderr","time":287.505241593,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505271925,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":290.892516856,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":290.892553827,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":291.126811926,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":291.12685148,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":291.959107681,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":292.344149314,"data":"[NbConvertApp] Writing 7929 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":295.45391591,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":295.99646896,"data":"[NbConvertApp] Writing 285610 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":9.820184228,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.820280851,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.820317816,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.820323779,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.678374656,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.678425781,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.678433041,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.678437974,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":287.503733558,"data":"{\n"}
+,{"stream_name":"stdout","time":287.50380868,"data":"  \"experiment\": \"v12_spatial_lowqp_h265_cal\",\n"}
+,{"stream_name":"stdout","time":287.503818067,"data":"  \"direction\": \"spatial\",\n"}
+,{"stream_name":"stdout","time":287.503824029,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":287.503830075,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":287.503836861,"data":"  \"scope\": \"reused CAL development only; no DEV/TEST/holdout or mc3 evaluation\",\n"}
+,{"stream_name":"stdout","time":287.50384305,"data":"  \"bootstrap_unit\": \"source video; all QPs, arms and primary analyzers paired\",\n"}
+,{"stream_name":"stdout","time":287.503849122,"data":"  \"code_commit\": \"17cc33f81a1d685574dc1a11956b12f89b1b59ab\",\n"}
+,{"stream_name":"stdout","time":287.503855181,"data":"  \"code_fingerprint\": \"694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331\",\n"}
+,{"stream_name":"stdout","time":287.503860975,"data":"  \"preregistration_commit\": \"1a734e9228644c1cf13deeb517995593d295fb8a\",\n"}
+,{"stream_name":"stdout","time":287.503866245,"data":"  \"preregistration_sha256\": \"770b8843756b8c011cbd85ecc348187a8343495babeeca22a12f4f6d3b2d211e\",\n"}
+,{"stream_name":"stdout","time":287.503871503,"data":"  \"protocol_sha256\": \"212103b207309ca25323bd0e0c00cbd8e8a85cd7a337a205c35c02a67acf784b\",\n"}
+,{"stream_name":"stdout","time":287.503876775,"data":"  \"cal_input_sha256\": \"db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d\",\n"}
+,{"stream_name":"stdout","time":287.503882087,"data":"  \"primary_outcomes_sha256\": \"35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d\",\n"}
+,{"stream_name":"stdout","time":287.503895425,"data":"  \"upstream_input_commit\": \"a02fdd250b5e04491f7d3619105ef79d0b6e64f8\",\n"}
+,{"stream_name":"stdout","time":287.503901663,"data":"  \"bootstrap_seed\": 20261009,\n"}
+,{"stream_name":"stdout","time":287.503911135,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":287.503914835,"data":"  \"teacher\": null,\n"}
+,{"stream_name":"stdout","time":287.503918289,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":287.503921962,"data":"  \"paired_metrics_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":287.503925739,"data":"}\n"}
+,{"stream_name":"stdout","time":287.503929148,"data":"[V12 spatial] shard=0 1/50 trials=11\n"}
+,{"stream_name":"stdout","time":287.503944507,"data":"[V12 spatial] shard=0 2/50 trials=21\n"}
+,{"stream_name":"stdout","time":287.503947577,"data":"[V12 spatial] shard=0 3/50 trials=33\n"}
+,{"stream_name":"stdout","time":287.503950169,"data":"[V12 spatial] shard=0 4/50 trials=46\n"}
+,{"stream_name":"stdout","time":287.503952836,"data":"[V12 spatial] shard=0 5/50 trials=57\n"}
+,{"stream_name":"stdout","time":287.503955426,"data":"[V12 spatial] shard=0 6/50 trials=67\n"}
+,{"stream_name":"stdout","time":287.50395798,"data":"[V12 spatial] shard=0 7/50 trials=77\n"}
+,{"stream_name":"stdout","time":287.503960606,"data":"[V12 spatial] shard=0 8/50 trials=87\n"}
+,{"stream_name":"stdout","time":287.503963309,"data":"[V12 spatial] shard=0 9/50 trials=97\n"}
+,{"stream_name":"stdout","time":287.503965872,"data":"[V12 spatial] shard=0 10/50 trials=107\n"}
+,{"stream_name":"stdout","time":287.503968546,"data":"[V12 spatial] shard=0 11/50 trials=117\n"}
+,{"stream_name":"stdout","time":287.503971129,"data":"[V12 spatial] shard=0 12/50 trials=128\n"}
+,{"stream_name":"stdout","time":287.503973909,"data":"[V12 spatial] shard=0 13/50 trials=139\n"}
+,{"stream_name":"stdout","time":287.503976536,"data":"[V12 spatial] shard=0 14/50 trials=150\n"}
+,{"stream_name":"stdout","time":287.503979081,"data":"[V12 spatial] shard=0 15/50 trials=160\n"}
+,{"stream_name":"stdout","time":287.503981653,"data":"[V12 spatial] shard=0 16/50 trials=173\n"}
+,{"stream_name":"stdout","time":287.503984286,"data":"[V12 spatial] shard=0 17/50 trials=184\n"}
+,{"stream_name":"stdout","time":287.50398692,"data":"[V12 spatial] shard=0 18/50 trials=195\n"}
+,{"stream_name":"stdout","time":287.503989522,"data":"[V12 spatial] shard=0 19/50 trials=206\n"}
+,{"stream_name":"stdout","time":287.503994688,"data":"[V12 spatial] shard=0 20/50 trials=216\n"}
+,{"stream_name":"stdout","time":287.503997457,"data":"[V12 spatial] shard=0 21/50 trials=226\n"}
+,{"stream_name":"stdout","time":287.503999989,"data":"[V12 spatial] shard=0 22/50 trials=236\n"}
+,{"stream_name":"stdout","time":287.504002557,"data":"[V12 spatial] shard=0 23/50 trials=249\n"}
+,{"stream_name":"stdout","time":287.504005104,"data":"[V12 spatial] shard=0 24/50 trials=259\n"}
+,{"stream_name":"stdout","time":287.504007675,"data":"[V12 spatial] shard=0 25/50 trials=272\n"}
+,{"stream_name":"stdout","time":287.504010239,"data":"[V12 spatial] shard=0 26/50 trials=284\n"}
+,{"stream_name":"stdout","time":287.504012808,"data":"[V12 spatial] shard=0 27/50 trials=296\n"}
+,{"stream_name":"stdout","time":287.50401538,"data":"[V12 spatial] shard=0 28/50 trials=309\n"}
+,{"stream_name":"stdout","time":287.504017955,"data":"[V12 spatial] shard=0 29/50 trials=320\n"}
+,{"stream_name":"stdout","time":287.504020526,"data":"[V12 spatial] shard=0 30/50 trials=331\n"}
+,{"stream_name":"stdout","time":287.504023073,"data":"[V12 spatial] shard=0 31/50 trials=343\n"}
+,{"stream_name":"stdout","time":287.504025622,"data":"[V12 spatial] shard=0 32/50 trials=355\n"}
+,{"stream_name":"stdout","time":287.504028186,"data":"[V12 spatial] shard=0 33/50 trials=365\n"}
+,{"stream_name":"stdout","time":287.504030737,"data":"[V12 spatial] shard=0 34/50 trials=375\n"}
+,{"stream_name":"stdout","time":287.504033317,"data":"[V12 spatial] shard=0 35/50 trials=386\n"}
+,{"stream_name":"stdout","time":287.504035874,"data":"[V12 spatial] shard=0 36/50 trials=399\n"}
+,{"stream_name":"stdout","time":287.504038464,"data":"[V12 spatial] shard=0 37/50 trials=411\n"}
+,{"stream_name":"stdout","time":287.504041026,"data":"[V12 spatial] shard=0 38/50 trials=421\n"}
+,{"stream_name":"stdout","time":287.504043579,"data":"[V12 spatial] shard=0 39/50 trials=433\n"}
+,{"stream_name":"stdout","time":287.504049285,"data":"[V12 spatial] shard=0 40/50 trials=443\n"}
+,{"stream_name":"stdout","time":287.504051998,"data":"[V12 spatial] shard=0 41/50 trials=454\n"}
+,{"stream_name":"stdout","time":287.504054548,"data":"[V12 spatial] shard=0 42/50 trials=465\n"}
+,{"stream_name":"stdout","time":287.504057112,"data":"[V12 spatial] shard=0 43/50 trials=476\n"}
+,{"stream_name":"stdout","time":287.504059665,"data":"[V12 spatial] shard=0 44/50 trials=486\n"}
+,{"stream_name":"stdout","time":287.50406226,"data":"[V12 spatial] shard=0 45/50 trials=498\n"}
+,{"stream_name":"stdout","time":287.504064961,"data":"[V12 spatial] shard=0 46/50 trials=511\n"}
+,{"stream_name":"stdout","time":287.504085628,"data":"[V12 spatial] shard=0 47/50 trials=525\n"}
+,{"stream_name":"stdout","time":287.504090195,"data":"[V12 spatial] shard=0 48/50 trials=537\n"}
+,{"stream_name":"stdout","time":287.504094834,"data":"[V12 spatial] shard=0 49/50 trials=548\n"}
+,{"stream_name":"stdout","time":287.504099129,"data":"[V12 spatial] shard=0 50/50 trials=562\n"}
+,{"stream_name":"stdout","time":287.504103973,"data":"{\n"}
+,{"stream_name":"stdout","time":287.504108869,"data":"  \"shard\": 0,\n"}
+,{"stream_name":"stdout","time":287.504113457,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":287.504118008,"data":"  \"trial_encode_decode_count\": 562\n"}
+,{"stream_name":"stdout","time":287.504121797,"data":"}\n"}
+,{"stream_name":"stdout","time":287.504125529,"data":"[done] V12 spatial CAL shard=0\n"}
+,{"stream_name":"stdout","time":287.504129622,"data":"[exit] rc=0 direction=spatial shard=0\n"}
+,{"stream_name":"stderr","time":287.505203723,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505231723,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":287.505237349,"data":"\n"}
+,{"stream_name":"stderr","time":287.505241593,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505271925,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":290.892516856,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":290.892553827,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":291.126811926,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":291.12685148,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":291.959107681,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":292.344149314,"data":"[NbConvertApp] Writing 7929 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":295.45391591,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":295.99646896,"data":"[NbConvertApp] Writing 285610 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":9.820184228,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.820280851,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.820317816,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.820323779,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.678374656,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.678425781,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.678433041,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.678437974,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":287.503733558,"data":"{\n"}
+,{"stream_name":"stdout","time":287.50380868,"data":"  \"experiment\": \"v12_spatial_lowqp_h265_cal\",\n"}
+,{"stream_name":"stdout","time":287.503818067,"data":"  \"direction\": \"spatial\",\n"}
+,{"stream_name":"stdout","time":287.503824029,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":287.503830075,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":287.503836861,"data":"  \"scope\": \"reused CAL development only; no DEV/TEST/holdout or mc3 evaluation\",\n"}
+,{"stream_name":"stdout","time":287.50384305,"data":"  \"bootstrap_unit\": \"source video; all QPs, arms and primary analyzers paired\",\n"}
+,{"stream_name":"stdout","time":287.503849122,"data":"  \"code_commit\": \"17cc33f81a1d685574dc1a11956b12f89b1b59ab\",\n"}
+,{"stream_name":"stdout","time":287.503855181,"data":"  \"code_fingerprint\": \"694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331\",\n"}
+,{"stream_name":"stdout","time":287.503860975,"data":"  \"preregistration_commit\": \"1a734e9228644c1cf13deeb517995593d295fb8a\",\n"}
+,{"stream_name":"stdout","time":287.503866245,"data":"  \"preregistration_sha256\": \"770b8843756b8c011cbd85ecc348187a8343495babeeca22a12f4f6d3b2d211e\",\n"}
+,{"stream_name":"stdout","time":287.503871503,"data":"  \"protocol_sha256\": \"212103b207309ca25323bd0e0c00cbd8e8a85cd7a337a205c35c02a67acf784b\",\n"}
+,{"stream_name":"stdout","time":287.503876775,"data":"  \"cal_input_sha256\": \"db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d\",\n"}
+,{"stream_name":"stdout","time":287.503882087,"data":"  \"primary_outcomes_sha256\": \"35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d\",\n"}
+,{"stream_name":"stdout","time":287.503895425,"data":"  \"upstream_input_commit\": \"a02fdd250b5e04491f7d3619105ef79d0b6e64f8\",\n"}
+,{"stream_name":"stdout","time":287.503901663,"data":"  \"bootstrap_seed\": 20261009,\n"}
+,{"stream_name":"stdout","time":287.503911135,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":287.503914835,"data":"  \"teacher\": null,\n"}
+,{"stream_name":"stdout","time":287.503918289,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":287.503921962,"data":"  \"paired_metrics_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":287.503925739,"data":"}\n"}
+,{"stream_name":"stdout","time":287.503929148,"data":"[V12 spatial] shard=0 1/50 trials=11\n"}
+,{"stream_name":"stdout","time":287.503944507,"data":"[V12 spatial] shard=0 2/50 trials=21\n"}
+,{"stream_name":"stdout","time":287.503947577,"data":"[V12 spatial] shard=0 3/50 trials=33\n"}
+,{"stream_name":"stdout","time":287.503950169,"data":"[V12 spatial] shard=0 4/50 trials=46\n"}
+,{"stream_name":"stdout","time":287.503952836,"data":"[V12 spatial] shard=0 5/50 trials=57\n"}
+,{"stream_name":"stdout","time":287.503955426,"data":"[V12 spatial] shard=0 6/50 trials=67\n"}
+,{"stream_name":"stdout","time":287.50395798,"data":"[V12 spatial] shard=0 7/50 trials=77\n"}
+,{"stream_name":"stdout","time":287.503960606,"data":"[V12 spatial] shard=0 8/50 trials=87\n"}
+,{"stream_name":"stdout","time":287.503963309,"data":"[V12 spatial] shard=0 9/50 trials=97\n"}
+,{"stream_name":"stdout","time":287.503965872,"data":"[V12 spatial] shard=0 10/50 trials=107\n"}
+,{"stream_name":"stdout","time":287.503968546,"data":"[V12 spatial] shard=0 11/50 trials=117\n"}
+,{"stream_name":"stdout","time":287.503971129,"data":"[V12 spatial] shard=0 12/50 trials=128\n"}
+,{"stream_name":"stdout","time":287.503973909,"data":"[V12 spatial] shard=0 13/50 trials=139\n"}
+,{"stream_name":"stdout","time":287.503976536,"data":"[V12 spatial] shard=0 14/50 trials=150\n"}
+,{"stream_name":"stdout","time":287.503979081,"data":"[V12 spatial] shard=0 15/50 trials=160\n"}
+,{"stream_name":"stdout","time":287.503981653,"data":"[V12 spatial] shard=0 16/50 trials=173\n"}
+,{"stream_name":"stdout","time":287.503984286,"data":"[V12 spatial] shard=0 17/50 trials=184\n"}
+,{"stream_name":"stdout","time":287.50398692,"data":"[V12 spatial] shard=0 18/50 trials=195\n"}
+,{"stream_name":"stdout","time":287.503989522,"data":"[V12 spatial] shard=0 19/50 trials=206\n"}
+,{"stream_name":"stdout","time":287.503994688,"data":"[V12 spatial] shard=0 20/50 trials=216\n"}
+,{"stream_name":"stdout","time":287.503997457,"data":"[V12 spatial] shard=0 21/50 trials=226\n"}
+,{"stream_name":"stdout","time":287.503999989,"data":"[V12 spatial] shard=0 22/50 trials=236\n"}
+,{"stream_name":"stdout","time":287.504002557,"data":"[V12 spatial] shard=0 23/50 trials=249\n"}
+,{"stream_name":"stdout","time":287.504005104,"data":"[V12 spatial] shard=0 24/50 trials=259\n"}
+,{"stream_name":"stdout","time":287.504007675,"data":"[V12 spatial] shard=0 25/50 trials=272\n"}
+,{"stream_name":"stdout","time":287.504010239,"data":"[V12 spatial] shard=0 26/50 trials=284\n"}
+,{"stream_name":"stdout","time":287.504012808,"data":"[V12 spatial] shard=0 27/50 trials=296\n"}
+,{"stream_name":"stdout","time":287.50401538,"data":"[V12 spatial] shard=0 28/50 trials=309\n"}
+,{"stream_name":"stdout","time":287.504017955,"data":"[V12 spatial] shard=0 29/50 trials=320\n"}
+,{"stream_name":"stdout","time":287.504020526,"data":"[V12 spatial] shard=0 30/50 trials=331\n"}
+,{"stream_name":"stdout","time":287.504023073,"data":"[V12 spatial] shard=0 31/50 trials=343\n"}
+,{"stream_name":"stdout","time":287.504025622,"data":"[V12 spatial] shard=0 32/50 trials=355\n"}
+,{"stream_name":"stdout","time":287.504028186,"data":"[V12 spatial] shard=0 33/50 trials=365\n"}
+,{"stream_name":"stdout","time":287.504030737,"data":"[V12 spatial] shard=0 34/50 trials=375\n"}
+,{"stream_name":"stdout","time":287.504033317,"data":"[V12 spatial] shard=0 35/50 trials=386\n"}
+,{"stream_name":"stdout","time":287.504035874,"data":"[V12 spatial] shard=0 36/50 trials=399\n"}
+,{"stream_name":"stdout","time":287.504038464,"data":"[V12 spatial] shard=0 37/50 trials=411\n"}
+,{"stream_name":"stdout","time":287.504041026,"data":"[V12 spatial] shard=0 38/50 trials=421\n"}
+,{"stream_name":"stdout","time":287.504043579,"data":"[V12 spatial] shard=0 39/50 trials=433\n"}
+,{"stream_name":"stdout","time":287.504049285,"data":"[V12 spatial] shard=0 40/50 trials=443\n"}
+,{"stream_name":"stdout","time":287.504051998,"data":"[V12 spatial] shard=0 41/50 trials=454\n"}
+,{"stream_name":"stdout","time":287.504054548,"data":"[V12 spatial] shard=0 42/50 trials=465\n"}
+,{"stream_name":"stdout","time":287.504057112,"data":"[V12 spatial] shard=0 43/50 trials=476\n"}
+,{"stream_name":"stdout","time":287.504059665,"data":"[V12 spatial] shard=0 44/50 trials=486\n"}
+,{"stream_name":"stdout","time":287.50406226,"data":"[V12 spatial] shard=0 45/50 trials=498\n"}
+,{"stream_name":"stdout","time":287.504064961,"data":"[V12 spatial] shard=0 46/50 trials=511\n"}
+,{"stream_name":"stdout","time":287.504085628,"data":"[V12 spatial] shard=0 47/50 trials=525\n"}
+,{"stream_name":"stdout","time":287.504090195,"data":"[V12 spatial] shard=0 48/50 trials=537\n"}
+,{"stream_name":"stdout","time":287.504094834,"data":"[V12 spatial] shard=0 49/50 trials=548\n"}
+,{"stream_name":"stdout","time":287.504099129,"data":"[V12 spatial] shard=0 50/50 trials=562\n"}
+,{"stream_name":"stdout","time":287.504103973,"data":"{\n"}
+,{"stream_name":"stdout","time":287.504108869,"data":"  \"shard\": 0,\n"}
+,{"stream_name":"stdout","time":287.504113457,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":287.504118008,"data":"  \"trial_encode_decode_count\": 562\n"}
+,{"stream_name":"stdout","time":287.504121797,"data":"}\n"}
+,{"stream_name":"stdout","time":287.504125529,"data":"[done] V12 spatial CAL shard=0\n"}
+,{"stream_name":"stdout","time":287.504129622,"data":"[exit] rc=0 direction=spatial shard=0\n"}
+,{"stream_name":"stderr","time":287.505203723,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505231723,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":287.505237349,"data":"\n"}
+,{"stream_name":"stderr","time":287.505241593,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505271925,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":290.892516856,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":290.892553827,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":291.126811926,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":291.12685148,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":291.959107681,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":292.344149314,"data":"[NbConvertApp] Writing 7929 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":295.45391591,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":295.99646896,"data":"[NbConvertApp] Writing 285610 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":9.820184228,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.820280851,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.820317816,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.820323779,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.678374656,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.678425781,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.678433041,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.678437974,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":287.503733558,"data":"{\n"}
+,{"stream_name":"stdout","time":287.50380868,"data":"  \"experiment\": \"v12_spatial_lowqp_h265_cal\",\n"}
+,{"stream_name":"stdout","time":287.503818067,"data":"  \"direction\": \"spatial\",\n"}
+,{"stream_name":"stdout","time":287.503824029,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":287.503830075,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":287.503836861,"data":"  \"scope\": \"reused CAL development only; no DEV/TEST/holdout or mc3 evaluation\",\n"}
+,{"stream_name":"stdout","time":287.50384305,"data":"  \"bootstrap_unit\": \"source video; all QPs, arms and primary analyzers paired\",\n"}
+,{"stream_name":"stdout","time":287.503849122,"data":"  \"code_commit\": \"17cc33f81a1d685574dc1a11956b12f89b1b59ab\",\n"}
+,{"stream_name":"stdout","time":287.503855181,"data":"  \"code_fingerprint\": \"694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331\",\n"}
+,{"stream_name":"stdout","time":287.503860975,"data":"  \"preregistration_commit\": \"1a734e9228644c1cf13deeb517995593d295fb8a\",\n"}
+,{"stream_name":"stdout","time":287.503866245,"data":"  \"preregistration_sha256\": \"770b8843756b8c011cbd85ecc348187a8343495babeeca22a12f4f6d3b2d211e\",\n"}
+,{"stream_name":"stdout","time":287.503871503,"data":"  \"protocol_sha256\": \"212103b207309ca25323bd0e0c00cbd8e8a85cd7a337a205c35c02a67acf784b\",\n"}
+,{"stream_name":"stdout","time":287.503876775,"data":"  \"cal_input_sha256\": \"db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d\",\n"}
+,{"stream_name":"stdout","time":287.503882087,"data":"  \"primary_outcomes_sha256\": \"35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d\",\n"}
+,{"stream_name":"stdout","time":287.503895425,"data":"  \"upstream_input_commit\": \"a02fdd250b5e04491f7d3619105ef79d0b6e64f8\",\n"}
+,{"stream_name":"stdout","time":287.503901663,"data":"  \"bootstrap_seed\": 20261009,\n"}
+,{"stream_name":"stdout","time":287.503911135,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":287.503914835,"data":"  \"teacher\": null,\n"}
+,{"stream_name":"stdout","time":287.503918289,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":287.503921962,"data":"  \"paired_metrics_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":287.503925739,"data":"}\n"}
+,{"stream_name":"stdout","time":287.503929148,"data":"[V12 spatial] shard=0 1/50 trials=11\n"}
+,{"stream_name":"stdout","time":287.503944507,"data":"[V12 spatial] shard=0 2/50 trials=21\n"}
+,{"stream_name":"stdout","time":287.503947577,"data":"[V12 spatial] shard=0 3/50 trials=33\n"}
+,{"stream_name":"stdout","time":287.503950169,"data":"[V12 spatial] shard=0 4/50 trials=46\n"}
+,{"stream_name":"stdout","time":287.503952836,"data":"[V12 spatial] shard=0 5/50 trials=57\n"}
+,{"stream_name":"stdout","time":287.503955426,"data":"[V12 spatial] shard=0 6/50 trials=67\n"}
+,{"stream_name":"stdout","time":287.50395798,"data":"[V12 spatial] shard=0 7/50 trials=77\n"}
+,{"stream_name":"stdout","time":287.503960606,"data":"[V12 spatial] shard=0 8/50 trials=87\n"}
+,{"stream_name":"stdout","time":287.503963309,"data":"[V12 spatial] shard=0 9/50 trials=97\n"}
+,{"stream_name":"stdout","time":287.503965872,"data":"[V12 spatial] shard=0 10/50 trials=107\n"}
+,{"stream_name":"stdout","time":287.503968546,"data":"[V12 spatial] shard=0 11/50 trials=117\n"}
+,{"stream_name":"stdout","time":287.503971129,"data":"[V12 spatial] shard=0 12/50 trials=128\n"}
+,{"stream_name":"stdout","time":287.503973909,"data":"[V12 spatial] shard=0 13/50 trials=139\n"}
+,{"stream_name":"stdout","time":287.503976536,"data":"[V12 spatial] shard=0 14/50 trials=150\n"}
+,{"stream_name":"stdout","time":287.503979081,"data":"[V12 spatial] shard=0 15/50 trials=160\n"}
+,{"stream_name":"stdout","time":287.503981653,"data":"[V12 spatial] shard=0 16/50 trials=173\n"}
+,{"stream_name":"stdout","time":287.503984286,"data":"[V12 spatial] shard=0 17/50 trials=184\n"}
+,{"stream_name":"stdout","time":287.50398692,"data":"[V12 spatial] shard=0 18/50 trials=195\n"}
+,{"stream_name":"stdout","time":287.503989522,"data":"[V12 spatial] shard=0 19/50 trials=206\n"}
+,{"stream_name":"stdout","time":287.503994688,"data":"[V12 spatial] shard=0 20/50 trials=216\n"}
+,{"stream_name":"stdout","time":287.503997457,"data":"[V12 spatial] shard=0 21/50 trials=226\n"}
+,{"stream_name":"stdout","time":287.503999989,"data":"[V12 spatial] shard=0 22/50 trials=236\n"}
+,{"stream_name":"stdout","time":287.504002557,"data":"[V12 spatial] shard=0 23/50 trials=249\n"}
+,{"stream_name":"stdout","time":287.504005104,"data":"[V12 spatial] shard=0 24/50 trials=259\n"}
+,{"stream_name":"stdout","time":287.504007675,"data":"[V12 spatial] shard=0 25/50 trials=272\n"}
+,{"stream_name":"stdout","time":287.504010239,"data":"[V12 spatial] shard=0 26/50 trials=284\n"}
+,{"stream_name":"stdout","time":287.504012808,"data":"[V12 spatial] shard=0 27/50 trials=296\n"}
+,{"stream_name":"stdout","time":287.50401538,"data":"[V12 spatial] shard=0 28/50 trials=309\n"}
+,{"stream_name":"stdout","time":287.504017955,"data":"[V12 spatial] shard=0 29/50 trials=320\n"}
+,{"stream_name":"stdout","time":287.504020526,"data":"[V12 spatial] shard=0 30/50 trials=331\n"}
+,{"stream_name":"stdout","time":287.504023073,"data":"[V12 spatial] shard=0 31/50 trials=343\n"}
+,{"stream_name":"stdout","time":287.504025622,"data":"[V12 spatial] shard=0 32/50 trials=355\n"}
+,{"stream_name":"stdout","time":287.504028186,"data":"[V12 spatial] shard=0 33/50 trials=365\n"}
+,{"stream_name":"stdout","time":287.504030737,"data":"[V12 spatial] shard=0 34/50 trials=375\n"}
+,{"stream_name":"stdout","time":287.504033317,"data":"[V12 spatial] shard=0 35/50 trials=386\n"}
+,{"stream_name":"stdout","time":287.504035874,"data":"[V12 spatial] shard=0 36/50 trials=399\n"}
+,{"stream_name":"stdout","time":287.504038464,"data":"[V12 spatial] shard=0 37/50 trials=411\n"}
+,{"stream_name":"stdout","time":287.504041026,"data":"[V12 spatial] shard=0 38/50 trials=421\n"}
+,{"stream_name":"stdout","time":287.504043579,"data":"[V12 spatial] shard=0 39/50 trials=433\n"}
+,{"stream_name":"stdout","time":287.504049285,"data":"[V12 spatial] shard=0 40/50 trials=443\n"}
+,{"stream_name":"stdout","time":287.504051998,"data":"[V12 spatial] shard=0 41/50 trials=454\n"}
+,{"stream_name":"stdout","time":287.504054548,"data":"[V12 spatial] shard=0 42/50 trials=465\n"}
+,{"stream_name":"stdout","time":287.504057112,"data":"[V12 spatial] shard=0 43/50 trials=476\n"}
+,{"stream_name":"stdout","time":287.504059665,"data":"[V12 spatial] shard=0 44/50 trials=486\n"}
+,{"stream_name":"stdout","time":287.50406226,"data":"[V12 spatial] shard=0 45/50 trials=498\n"}
+,{"stream_name":"stdout","time":287.504064961,"data":"[V12 spatial] shard=0 46/50 trials=511\n"}
+,{"stream_name":"stdout","time":287.504085628,"data":"[V12 spatial] shard=0 47/50 trials=525\n"}
+,{"stream_name":"stdout","time":287.504090195,"data":"[V12 spatial] shard=0 48/50 trials=537\n"}
+,{"stream_name":"stdout","time":287.504094834,"data":"[V12 spatial] shard=0 49/50 trials=548\n"}
+,{"stream_name":"stdout","time":287.504099129,"data":"[V12 spatial] shard=0 50/50 trials=562\n"}
+,{"stream_name":"stdout","time":287.504103973,"data":"{\n"}
+,{"stream_name":"stdout","time":287.504108869,"data":"  \"shard\": 0,\n"}
+,{"stream_name":"stdout","time":287.504113457,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":287.504118008,"data":"  \"trial_encode_decode_count\": 562\n"}
+,{"stream_name":"stdout","time":287.504121797,"data":"}\n"}
+,{"stream_name":"stdout","time":287.504125529,"data":"[done] V12 spatial CAL shard=0\n"}
+,{"stream_name":"stdout","time":287.504129622,"data":"[exit] rc=0 direction=spatial shard=0\n"}
+,{"stream_name":"stderr","time":287.505203723,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505231723,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":287.505237349,"data":"\n"}
+,{"stream_name":"stderr","time":287.505241593,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":287.505271925,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":290.892516856,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":290.892553827,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":291.126811926,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":291.12685148,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":291.959107681,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":292.344149314,"data":"[NbConvertApp] Writing 7929 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":295.45391591,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":295.99646896,"data":"[NbConvertApp] Writing 285610 bytes to __results__.html\n"}
+]

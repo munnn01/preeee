@@ -1,0 +1,55 @@
+[V12 spatial] shard=0 1/50 trials=11
+[V12 spatial] shard=0 2/50 trials=21
+[V12 spatial] shard=0 3/50 trials=33
+[V12 spatial] shard=0 4/50 trials=46
+[V12 spatial] shard=0 5/50 trials=57
+[V12 spatial] shard=0 6/50 trials=67
+[V12 spatial] shard=0 7/50 trials=77
+[V12 spatial] shard=0 8/50 trials=87
+[V12 spatial] shard=0 9/50 trials=97
+[V12 spatial] shard=0 10/50 trials=107
+[V12 spatial] shard=0 11/50 trials=117
+[V12 spatial] shard=0 12/50 trials=128
+[V12 spatial] shard=0 13/50 trials=139
+[V12 spatial] shard=0 14/50 trials=150
+[V12 spatial] shard=0 15/50 trials=160
+[V12 spatial] shard=0 16/50 trials=173
+[V12 spatial] shard=0 17/50 trials=184
+[V12 spatial] shard=0 18/50 trials=195
+[V12 spatial] shard=0 19/50 trials=206
+[V12 spatial] shard=0 20/50 trials=216
+[V12 spatial] shard=0 21/50 trials=226
+[V12 spatial] shard=0 22/50 trials=236
+[V12 spatial] shard=0 23/50 trials=249
+[V12 spatial] shard=0 24/50 trials=259
+[V12 spatial] shard=0 25/50 trials=272
+[V12 spatial] shard=0 26/50 trials=284
+[V12 spatial] shard=0 27/50 trials=296
+[V12 spatial] shard=0 28/50 trials=309
+[V12 spatial] shard=0 29/50 trials=320
+[V12 spatial] shard=0 30/50 trials=331
+[V12 spatial] shard=0 31/50 trials=343
+[V12 spatial] shard=0 32/50 trials=355
+[V12 spatial] shard=0 33/50 trials=365
+[V12 spatial] shard=0 34/50 trials=375
+[V12 spatial] shard=0 35/50 trials=386
+[V12 spatial] shard=0 36/50 trials=399
+[V12 spatial] shard=0 37/50 trials=411
+[V12 spatial] shard=0 38/50 trials=421
+[V12 spatial] shard=0 39/50 trials=433
+[V12 spatial] shard=0 40/50 trials=443
+[V12 spatial] shard=0 41/50 trials=454
+[V12 spatial] shard=0 42/50 trials=465
+[V12 spatial] shard=0 43/50 trials=476
+[V12 spatial] shard=0 44/50 trials=486
+[V12 spatial] shard=0 45/50 trials=498
+[V12 spatial] shard=0 46/50 trials=511
+[V12 spatial] shard=0 47/50 trials=525
+[V12 spatial] shard=0 48/50 trials=537
+[V12 spatial] shard=0 49/50 trials=548
+[V12 spatial] shard=0 50/50 trials=562
+{
+  "shard": 0,
+  "n": 50,
+  "trial_encode_decode_count": 562
+}
