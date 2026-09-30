@@ -1,0 +1,38 @@
+{
+  "kind": "v11_dev_launch_verification",
+  "provenance": {
+    "experiment": "v11_h265_frozen_reused_dev",
+    "code_commit": "4ec110533b4b9dee64c93699a6ff60b637c9e7b9",
+    "code_fingerprint": "5eee253b68a62498eeaeb0b10bd8e463e60d9248145273f7f7286f257c0ad07f",
+    "preregistration_commit": "00951bd52efeb3c64feb62254cef2aa484431e60",
+    "preregistration_sha256": "2dda253a7297566bc97ac8f7800f4e6d20c49d8ad8e51c30a6147a7bfb5328c8",
+    "source_plan_sha256": "bb4b9aa245ff2d8b5f92cb1a45dedb65adfc8a664543878bb7b9cdb1486b421e",
+    "input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258",
+    "bootstrap_seed_if_dev": 20261008,
+    "bootstrap_draws_if_dev": 2000,
+    "bootstrap_unit_if_dev": "source video; QPs, arms, analyzers paired",
+    "scope": "reused DEV development; no TEST or holdout",
+    "calibration_commit": "49fb15f6de86f09c6c0a845098cbbf199c405c03",
+    "calibration_sha256": "280c926a65458a00b192ed1cd0a44e6b341ac6a4f049c96852d5b0e15a410a0e",
+    "policy": {
+      "tau": 0.0,
+      "slack": 0.05,
+      "qp_mode": "all"
+    },
+    "bootstrap_seed": 20261008,
+    "bootstrap_draws": 2000,
+    "bootstrap_unit": "source video; all QPs, arms and analyzers paired"
+  },
+  "test_code_commit": "5e1b007164a670510ed2d9b9ee8372b843e3610e",
+  "dev_input_sha256": "2c48519cb06b7b4580302d629aa7267fe0e35e8fc6ca525d18fa39909114eca5",
+  "pytest": {
+    "command": "python -B -m pytest -q -p no:cacheprovider --basetemp D:/STUDY/LAB/proxy_v3/v11_pytest_full_20260930_r1",
+    "passed": 519,
+    "warnings": 3,
+    "exit_code": 0,
+    "log_file": "pytest.log",
+    "log_sha256": "326e8b26ed508dfa927e1dabd55b127ff2a9a93f55196f5692a3ac395aaa8d9b"
+  },
+  "scope": "code/input verification; not scientific DEV metrics"
+}

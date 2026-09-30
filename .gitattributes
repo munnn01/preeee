@@ -31,3 +31,5 @@ results/v7_mc3_dev/** -text
 configs/v11_spatial/** -text
 results/v11_spatial_cal/** -text
 kaggle/v11_spatial_dev_cell.sh text eol=lf
+results/v11_spatial_dev_launch/** -text
+results/v11_spatial_dev_launch/pytest.log binary
