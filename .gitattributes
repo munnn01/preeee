@@ -28,3 +28,5 @@ results/v7_dev_transfer/** -text
 kaggle/v7_mc3_dev_cell.sh text eol=lf
 configs/v7_mc3_dev_selection.json -text
 results/v7_mc3_dev/** -text
+configs/v11_spatial/** -text
+results/v11_spatial_cal/** -text

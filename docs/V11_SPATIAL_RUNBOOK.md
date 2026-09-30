@@ -1,6 +1,6 @@
 # V11 H.265 analyzer-grid CAL runbook
 
-The [locked protocol](PREREGISTRATION_V11_112_RESIDUAL.md) is commit `00951bd52efeb3c64feb62254cef2aa484431e60`. V11 CAL, DEV, `mc3_18` and holdout are **CHƯA ĐO** until validated artifacts say otherwise. The source plan and V2/V6 choices are reused development inputs; this run cannot establish independent confirmation.
+The [locked protocol](PREREGISTRATION_V11_112_RESIDUAL.md) is commit `00951bd52efeb3c64feb62254cef2aa484431e60`. [V11 CAL is complete](RESULTS_V11_SPATIAL_CAL.md): 29/36 policies are feasible and `tau=0, slack=0.05, qp_mode=all` is selected. The complete [frozen calibration](../configs/v11_spatial/frozen_calibration.json) must be committed before DEV preparation. V11 DEV, `mc3_18`, CI and holdout remain **CHƯA ĐO**. The source plan and V2/V6 choices are reused development inputs; this run cannot establish independent confirmation.
 
 The worker uses the 200 committed CAL source IDs and byte hashes, four shards of 50, H.265 medium and five QPs. It re-encodes only the unique identity/V2/V6 choices per source–QP. `ops.v11_spatial_cal` refuses uncommitted changes to code, changed source/input hashes and a repeated calibration result. It records distance at the analyzers' 112-pixel input grid before reading any classifier correctness.
 
