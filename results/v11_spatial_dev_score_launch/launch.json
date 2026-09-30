@@ -1,0 +1,116 @@
+{
+  "kind": "v11_kaggle_dev_score_launch_receipt",
+  "provenance": {
+    "experiment": "v11_h265_frozen_reused_dev",
+    "code_commit": "f67391e22c2d9ec2d7be0d34bf307c7c02b5fd77",
+    "code_fingerprint": "5eee253b68a62498eeaeb0b10bd8e463e60d9248145273f7f7286f257c0ad07f",
+    "preregistration_commit": "00951bd52efeb3c64feb62254cef2aa484431e60",
+    "preregistration_sha256": "2dda253a7297566bc97ac8f7800f4e6d20c49d8ad8e51c30a6147a7bfb5328c8",
+    "source_plan_sha256": "bb4b9aa245ff2d8b5f92cb1a45dedb65adfc8a664543878bb7b9cdb1486b421e",
+    "input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "source_fingerprint": "6221e93ef728bbd63b9d7b6d9c734297fc028fe608aab34f7783449ac2918258",
+    "bootstrap_seed_if_dev": 20261008,
+    "bootstrap_draws_if_dev": 2000,
+    "bootstrap_unit_if_dev": "source video; QPs, arms, analyzers paired",
+    "scope": "reused DEV development; no TEST or holdout",
+    "calibration_commit": "49fb15f6de86f09c6c0a845098cbbf199c405c03",
+    "calibration_sha256": "280c926a65458a00b192ed1cd0a44e6b341ac6a4f049c96852d5b0e15a410a0e",
+    "policy": {
+      "tau": 0.0,
+      "slack": 0.05,
+      "qp_mode": "all"
+    },
+    "bootstrap_seed": 20261008,
+    "bootstrap_draws": 2000,
+    "bootstrap_unit": "source video; all QPs, arms and analyzers paired"
+  },
+  "dev_input_sha256": "2c48519cb06b7b4580302d629aa7267fe0e35e8fc6ca525d18fa39909114eca5",
+  "selection_sha256": "e0489ac9e39347bc31ac8c57f3bcc71f9f3d72580f3d5d25be8c1266171cab01",
+  "selection_commit": "f67391e22c2d9ec2d7be0d34bf307c7c02b5fd77",
+  "scope": "one evaluation on reused DEV; no tuning or holdout",
+  "n": 200,
+  "phase": "score",
+  "shards": 4,
+  "n_per_shard": 50,
+  "analyzers": [
+    "r2plus1d_18",
+    "r3d_18",
+    "mc3_18"
+  ],
+  "arms": [
+    "identity",
+    "area112",
+    "v2",
+    "v6",
+    "v11"
+  ],
+  "bd_rate": "CHƯA ĐO",
+  "ci95": "CHƯA ĐO",
+  "holdout": "CHƯA ĐO",
+  "jobs": [
+    {
+      "shard": 0,
+      "account": "shungg05",
+      "handle": "shungg05/v11-dev-score-s0-f67391e",
+      "url": "https://www.kaggle.com/code/shungg05/v11-dev-score-s0-f67391e",
+      "private": true,
+      "enable_gpu": true,
+      "dataset": "qktttttttttt/kineticscleaned",
+      "planned_unique_encode_decode_trials": 618,
+      "submission_exit_code": 0,
+      "submission_verified": true,
+      "payload_sha256": {
+        "kernel-metadata.json": "da8c856bdc60457146d9cf2afd61c290ea2ef20357176e06c30ffb8ad5e012a0",
+        "notebook.ipynb": "53a650ac7fa321ade4238b4bf2b2fb9ba5408eb0248cb7f76d884fd1cd0e2d9d"
+      }
+    },
+    {
+      "shard": 1,
+      "account": "dieulinhh",
+      "handle": "dieulinhh/v11-dev-score-s1-f67391e",
+      "url": "https://www.kaggle.com/code/dieulinhh/v11-dev-score-s1-f67391e",
+      "private": true,
+      "enable_gpu": true,
+      "dataset": "qktttttttttt/kineticscleaned",
+      "planned_unique_encode_decode_trials": 606,
+      "submission_exit_code": 0,
+      "submission_verified": true,
+      "payload_sha256": {
+        "kernel-metadata.json": "99477ce5204395ea8cf6ac214c58d913e2993878508b71bc7f71a6f810327a5f",
+        "notebook.ipynb": "86791989637dda377c4b06c08a4ecf7e57537604164830d5ba4061391ada2c26"
+      }
+    },
+    {
+      "shard": 2,
+      "account": "huolgggnuyen",
+      "handle": "huolgggnuyen/v11-dev-score-s2-f67391e",
+      "url": "https://www.kaggle.com/code/huolgggnuyen/v11-dev-score-s2-f67391e",
+      "private": true,
+      "enable_gpu": true,
+      "dataset": "qktttttttttt/kineticscleaned",
+      "planned_unique_encode_decode_trials": 652,
+      "submission_exit_code": 0,
+      "submission_verified": true,
+      "payload_sha256": {
+        "kernel-metadata.json": "e00ba6697523933aa50c66c860dbe36f6a70d9d31f6915cdb98ca38653b809c0",
+        "notebook.ipynb": "551de2df61449bfc7777a0e1f41b3fd7441591b2be14cedebfc792ffadbb6c73"
+      }
+    },
+    {
+      "shard": 3,
+      "account": "baooo25r",
+      "handle": "baooo25r/v11-dev-score-s3-f67391e",
+      "url": "https://www.kaggle.com/code/baooo25r/v11-dev-score-s3-f67391e",
+      "private": true,
+      "enable_gpu": true,
+      "dataset": "qktttttttttt/kineticscleaned",
+      "planned_unique_encode_decode_trials": 617,
+      "submission_exit_code": 0,
+      "submission_verified": true,
+      "payload_sha256": {
+        "kernel-metadata.json": "a0e51de52a3c6ce5ce263fe0f62fd3fc3607fe522dc510fecd5a636d24873d73",
+        "notebook.ipynb": "641ec558249037578ecb11bd35bb648d415842e317eadea93ceb3395da4c570a"
+      }
+    }
+  ]
+}

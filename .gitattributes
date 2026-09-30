@@ -34,3 +34,4 @@ kaggle/v11_spatial_dev_cell.sh text eol=lf
 results/v11_spatial_dev_launch/** -text
 results/v11_spatial_dev_launch/pytest.log binary
 results/v11_spatial_dev_proxy/** -text
+results/v11_spatial_dev_score_launch/** -text
