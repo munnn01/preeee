@@ -10,7 +10,7 @@ def fixture_source(i=0):
     expected={'bpp':.5,'coded_bytes':16384,'decoded_sha256':study.sha(clip.tobytes())}
     arms={'identity':'identity128','v6':'identity128','area112':'area112','v12a':'identity128','v12b':'identity128'}
     source={'sequence_id':f'drawing/source{i}.mp4','source_sha256':f'{i+1:064x}',
-        'measurements':[{'qp':q,'arms':dict(arms),'streams':{n:dict(expected) for n in set(arms.values())}} for q in study.QPS]}
+        'measurements':[{'qp':q,'arms':dict(arms),'streams':{n:dict(expected) for n in dict.fromkeys(arms.values())}} for q in study.QPS]}
     return source,clip
 
 def fixture_index():

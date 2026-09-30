@@ -53,3 +53,9 @@ results/v12_mc3_audit/** -text
 results/v12_mc3_audit/**/*.log binary
 research/v12_mc3_audit/*.py text eol=lf
 kaggle/v12_mc3_cal_cell.sh text eol=lf
+
+results/v12_mc3_audit_validation.* -text
+docs/RESULTS_V12_MC3_CAL.md -text
+docs/PREREGISTRATION_V12_MC3_CAL_AUDIT.md text eol=lf
+
+results/v12_mc3_audit/*.patch binary

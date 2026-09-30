@@ -2,7 +2,7 @@
 
 ## Hướng V12 mới: spatial / CAL-only
 
-Đã hoàn tất 4/4 shard, đủ 200 nguồn CAL cũ và 2235 trial encode/decode. [Kết quả V12](docs/RESULTS_V12_CAL.md): R2 BD-rate -13.43%, R3 -13.13% so với identity; PASS sàng lọc CAL, chưa đạt gate gốc −15%. Policy đã chọn và choices được freeze để chuẩn bị protocol DEV mới. **mc3_18, DEV mới, holdout và runtime đầy đủ: CHƯA ĐO.** CI trên CAL chỉ mô tả sau chọn policy. [Hồ sơ triển khai](docs/V12_KAGGLE_LAUNCH.md), [preregistration](docs/PREREGISTRATION_V12_SPATIAL_LOWQP.md). Các kết quả lịch sử giữ phạm vi riêng.
+Đã hoàn tất 4/4 shard, đủ 200 nguồn CAL cũ và 2235 trial encode/decode. [Kết quả V12](docs/RESULTS_V12_CAL.md): R2 BD-rate -13.43%, R3 -13.13% so với identity; PASS sàng lọc CAL, chưa đạt gate gốc −15%. Policy đã chọn và choices được freeze để chuẩn bị protocol DEV mới. **mc3_18 đã đo sau freeze trên cùng CAL:** BD-rate -2.37 [-6.13; +1.54]% so với identity; worst same-QP gap -7.00 pp; component `FAIL_ON_REUSED_CAL`. [Audit cả hai policy](docs/RESULTS_V12_MC3_CAL.md). **DEV mới, holdout và runtime đầy đủ: CHƯA ĐO.** CI trên CAL chỉ mô tả sau chọn policy. [Hồ sơ triển khai](docs/V12_KAGGLE_LAUNCH.md), [preregistration](docs/PREREGISTRATION_V12_SPATIAL_LOWQP.md). Các kết quả lịch sử giữ phạm vi riêng.
 
 
 Repo này nghiên cứu can thiệp miền pixel **trước codec chuẩn** để giảm bitrate mà vẫn giữ hiệu năng tác vụ. Hai đường đánh giá độc lập:
