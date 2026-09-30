@@ -1,0 +1,1250 @@
+{
+  "experiment": "v9_chroma_h265_reused_cal_development",
+  "scope": "reused CAL development; no holdout",
+  "codec": "h265",
+  "n": 100,
+  "source_ids": [
+    "dining/iaVV1WWhfhg.mp4",
+    "peeling apples/ZHdeQ89E8KU.mp4",
+    "kicking field goal/6X65rDxz53Q.mp4",
+    "playing drums/tqTkn3j20jQ.mp4",
+    "sanding floor/oZ9UwmX-MVI.mp4",
+    "waiting in line/PBOAfjN-DrM.mp4",
+    "massaging back/mwnoVPgcnX8.mp4",
+    "celebrating/_HKhaJVitzs.mp4",
+    "cutting nails/FuVDNyrMXeQ.mp4",
+    "riding or walking with horse/pf9Tc5YNi9Y.mp4",
+    "cutting pineapple/O1I26doEtyA.mp4",
+    "bouncing on trampoline/ThdQfXxuz5o.mp4",
+    "dancing ballet/Yvzznqd8us4.mp4",
+    "diving cliff/xKy_QjZcUrE.mp4",
+    "wrapping present/B-pfXigqV2g.mp4",
+    "decorating the christmas tree/uct6Kj4slJE.mp4",
+    "playing saxophone/WPxLQojk8VY.mp4",
+    "tying tie/1ofynNksJRU.mp4",
+    "unboxing/8WZgCIyJCsE.mp4",
+    "pole vault/J6vJkEmlcq8.mp4",
+    "paragliding/JzRX5mRgw-s.mp4",
+    "shearing sheep/i6cVA9oL5VQ.mp4",
+    "playing trumpet/csKSWZhEhc8.mp4",
+    "tossing salad/eS0VEVdsvzE.mp4",
+    "drinking beer/RwbxBReVTsM.mp4",
+    "sign language interpreting/HWpJ4NrPuCY.mp4",
+    "swinging legs/s0v42-dlYtQ.mp4",
+    "playing monopoly/It4fxOKOgzU.mp4",
+    "checking tires/wapXIrDBaGE.mp4",
+    "setting table/e5VyoLOCgdk.mp4",
+    "sword fighting/WUOjDFFtdG4.mp4",
+    "playing ukulele/U2HGi973484.mp4",
+    "climbing tree/AP22W9Pqh8c.mp4",
+    "long jump/0tYkTCg2Amc.mp4",
+    "cooking sausages/DEqCw2RsNow.mp4",
+    "playing organ/NgiN-oQWikA.mp4",
+    "sniffing/3-7QwxrwmGI.mp4",
+    "sled dog racing/VaY7BySowEY.mp4",
+    "riding elephant/eyy3Toepdjg.mp4",
+    "hammer throw/JmmVd5rvAlU.mp4",
+    "applying cream/AGoBiL-sAxQ.mp4",
+    "using segway/QsZY2aUPbHM.mp4",
+    "playing badminton/YQd99xdGfwo.mp4",
+    "dancing gangnam style/npCi4BSqpXo.mp4",
+    "opening bottle/EFHUN77fI50.mp4",
+    "wrestling/yxHlLD2cWZE.mp4",
+    "frying vegetables/kOjoXnSoOi8.mp4",
+    "tossing coin/FchGbtAztWU.mp4",
+    "stretching arm/Nm-V0s09iRs.mp4",
+    "playing flute/h-Fz3FHTSq8.mp4",
+    "fixing hair/fc5RP57i7kc.mp4",
+    "watering plants/sJiw94Di_28.mp4",
+    "canoeing or kayaking/lkWJMLRJqZE.mp4",
+    "sharpening pencil/EAKivCM1Flg.mp4",
+    "juggling soccer ball/lrh5DsDjwyg.mp4",
+    "blowing out candles/984q0X_Y_pg.mp4",
+    "riding a bike/-TdSou0hyEM.mp4",
+    "shot put/X9wr5yppQaw.mp4",
+    "running on treadmill/SUA3Sc3Dv8w.mp4",
+    "arm wrestling/U66ZtV7Wei8.mp4",
+    "cheerleading/YXdCI8Emrk0.mp4",
+    "eating burger/E6J5jEMe35E.mp4",
+    "triple jump/p77EXI-aGck.mp4",
+    "blasting sand/KhW_6Iq8_Ao.mp4",
+    "tango dancing/sWNM6MqA3uo.mp4",
+    "eating watermelon/4QYRUXBhMR0.mp4",
+    "snowkiting/421i19AgwFg.mp4",
+    "busking/loZuAgxuNlQ.mp4",
+    "feeding goats/Xbp0O5e5juo.mp4",
+    "surfing crowd/jlbp7rmYe3Q.mp4",
+    "faceplanting/Ac9ahp2WJk8.mp4",
+    "picking fruit/ghKzyNWc0oo.mp4",
+    "brush painting/aBhJS6YfQC4.mp4",
+    "folding napkins/UYHDNcjqYmY.mp4",
+    "answering questions/Jt-ac6pstmM.mp4",
+    "high kick/SxcxmC48JC8.mp4",
+    "situp/z-RxZpo9-y4.mp4",
+    "weaving basket/xgXS5yBMmjQ.mp4",
+    "brushing teeth/RgMyTxZc5Q0.mp4",
+    "belly dancing/c35uT8EvBq4.mp4",
+    "squat/kJs6lmgZUG8.mp4",
+    "drop kicking/JYW8N71Gbyc.mp4",
+    "feeding fish/vluYkRp1Bi8.mp4",
+    "getting a tattoo/hs81dVKvvdw.mp4",
+    "cracking neck/M6y00QezNvA.mp4",
+    "ice climbing/_mON4dx4W8A.mp4",
+    "skiing slalom/X71UPCwu0ZU.mp4",
+    "shredding paper/xx5D9F4txc8.mp4",
+    "skiing (not slalom or crosscountry)/DmIGwaH73TY.mp4",
+    "pushing car/tAT6EZTY3ys.mp4",
+    "playing harp/JKr0hKPBFsg.mp4",
+    "pumping fist/1Icc2-uIth4.mp4",
+    "smoking/7jss2WKmWQ8.mp4",
+    "texting/bIZKOUSNmm8.mp4",
+    "abseiling/95Rc1DynjV0.mp4",
+    "making a cake/5OMgAZTeZl8.mp4",
+    "snorkeling/Vq4ewl2b4t0.mp4",
+    "giving or receiving award/hPYbspQqIHo.mp4",
+    "water skiing/5IsNM4lh4es.mp4",
+    "tapping guitar/2bxSRBpPksE.mp4"
+  ],
+  "source_fingerprint": "3c31de5d56807dbbe2560a8b98c2bc43c2f46e3294cf2dd4248d5449b5a60992",
+  "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+  "source_video_sha256": {
+    "dining/iaVV1WWhfhg.mp4": "ed9c1207febd8af48e60cae6a3790319eb3e38b53c020445be14a29b512a19bb",
+    "peeling apples/ZHdeQ89E8KU.mp4": "1976a21cbbccaa6e63f015126baaf43338e28f51b0a508c0240907db0f4e07d5",
+    "kicking field goal/6X65rDxz53Q.mp4": "1e9cf05ed500e406108b5e53fd01b6438e5e991dbe335a28103e0550697d1cc6",
+    "playing drums/tqTkn3j20jQ.mp4": "62fdd4e20e0490f796651f197292133d17e6d63f21af4216691bc10629e4b3e2",
+    "sanding floor/oZ9UwmX-MVI.mp4": "9da706b70fbe181373e38d9725f3f9ecc589acf0b167e20532fb565cd798f7c5",
+    "waiting in line/PBOAfjN-DrM.mp4": "279d7f149f551ee86769cb8fd9ea619738027e6b2694d2ef30bdb76c7b5ca016",
+    "massaging back/mwnoVPgcnX8.mp4": "f0266186301fdbef893ff31205677fd3f421961237804c8154748fc0793c4f9e",
+    "celebrating/_HKhaJVitzs.mp4": "5ce9b1d861f243a3372ab4e66fac566b58ad354a38f0514cd278738208f210de",
+    "cutting nails/FuVDNyrMXeQ.mp4": "a83331b237aae1d331a5c803c92788adeb8d9e0fa6e56f8547e31c8b7af3020f",
+    "riding or walking with horse/pf9Tc5YNi9Y.mp4": "828fd905623c63de5ea381666bb153b10d523bd17e1e9cae595b808bfe4a7575",
+    "cutting pineapple/O1I26doEtyA.mp4": "2e722ba8e11f5d4d60e31aefb3ecf8d9d36e0d48a837e4bd8dc7ff921a56608a",
+    "bouncing on trampoline/ThdQfXxuz5o.mp4": "2771d0355cc86d115284fa989804d05608787fe521996d7f3b918cf277178ca8",
+    "dancing ballet/Yvzznqd8us4.mp4": "9196c27436e6a7441e7ef8f7d501aa9331c4103abe381dee871a47aa39eed29b",
+    "diving cliff/xKy_QjZcUrE.mp4": "1327a69b1e2edc1265aa8b9ad4b780025c39f143de9f407e4e9e1ffeb2ba83a7",
+    "wrapping present/B-pfXigqV2g.mp4": "c835a830f387aa34f28561927cf12df44960e174ccc967d35b801c41912e3894",
+    "decorating the christmas tree/uct6Kj4slJE.mp4": "0da21d65c462b52f9f5d3479a369b723294a0dc8348eefcd263294b52aab4eca",
+    "playing saxophone/WPxLQojk8VY.mp4": "6dbe79d80f8350e93e90f7ef8e21275ea08d5530e76984822639b85b8e37ce6f",
+    "tying tie/1ofynNksJRU.mp4": "abbe81fb9ac71888e39eea3c8f4b17a50b7e2073feb723b7ae11d3baf7cedc08",
+    "unboxing/8WZgCIyJCsE.mp4": "bfba57f22135517b6ea813cc79e12af6dce0a6b38768d06207f1668af18262d2",
+    "pole vault/J6vJkEmlcq8.mp4": "2e381bef4765d7ac50bada7ab475d5665b0991949531a32825b4ae8b91379011",
+    "paragliding/JzRX5mRgw-s.mp4": "76fbee3da31db7d0a4b6ca6579c61c1103df97e56299aaea2f6c825b588dbe2b",
+    "shearing sheep/i6cVA9oL5VQ.mp4": "a79b1999bb5ed453d0d0b5ff153ccc4aa0f2bc9eac49e3e6c83f3aec87f5cffc",
+    "playing trumpet/csKSWZhEhc8.mp4": "6d4fe041819d1c70cb2c8230616894e20f6cccfe9d857153876c009ebbdc377e",
+    "tossing salad/eS0VEVdsvzE.mp4": "21243c627fbeb563e5e94fecb03ea525f2ccf61d0fae32635b8d9932f34be1ab",
+    "drinking beer/RwbxBReVTsM.mp4": "958129fa16a18d839a00dd5673806c229f383128dfda561fe667eee455e70a7d",
+    "sign language interpreting/HWpJ4NrPuCY.mp4": "80f4f7f1b9e4698a90d3fb224f5179def79e3a94b16c8b7184424f96fac34914",
+    "swinging legs/s0v42-dlYtQ.mp4": "b8d4ae1fdaa1a0c066051bf5b24597aad79ca9bb40367b612be181a4ef667251",
+    "playing monopoly/It4fxOKOgzU.mp4": "2182b9fea6a80df3740dba3fa8c3ed234b47200cca6a779840f4b596c9f0feaf",
+    "checking tires/wapXIrDBaGE.mp4": "4ec7b6b50acd04b10d1715554c89feb91ddbc927c8204b52d963a5cc71eb5bce",
+    "setting table/e5VyoLOCgdk.mp4": "09afcea08d5f28ea74fd8f27b63526bca1399be6e07d8512434f0557b46279c2",
+    "sword fighting/WUOjDFFtdG4.mp4": "910f1fa3da9b95d61a4e60194408f47b3e73b8d5d52d6cf9857db56b6790b32b",
+    "playing ukulele/U2HGi973484.mp4": "c56da53b2301d0b16d1787a2c35640e65c92e451acb5791a372eca1f722449e5",
+    "climbing tree/AP22W9Pqh8c.mp4": "cc8ba72002e4ad76a63a1229f494e0ef78e887e976552a265156d5097d3114a5",
+    "long jump/0tYkTCg2Amc.mp4": "5fee73b0db979448b7f01fe824b58b1c942269474820c1d46387ad2c8c7ec729",
+    "cooking sausages/DEqCw2RsNow.mp4": "e13c7cf3ec0956d93121b1ff5a85ace258a53470270506e60594c4ca5cafd809",
+    "playing organ/NgiN-oQWikA.mp4": "e04e3ffb9f85a322b5fa244ad577aa688c5ce43ec52f40f09b2b7241d56a4b29",
+    "sniffing/3-7QwxrwmGI.mp4": "ea3a5895da0188579ea5f966451c20db139f3eff4309f7d5ea1cbed01a5cc883",
+    "sled dog racing/VaY7BySowEY.mp4": "aabda649403d32f17c0dc39bcb56b94ffc2875c111704ddc6d993d63739f2668",
+    "riding elephant/eyy3Toepdjg.mp4": "9688850202438524b8a866753c1a92d31ed4d90b7c7c8b32821a37c24a3e7749",
+    "hammer throw/JmmVd5rvAlU.mp4": "987ad8fa37f6173b3270c442c051a817e3f9173e9e36c95061cd834bba49fdd7",
+    "applying cream/AGoBiL-sAxQ.mp4": "ae728285c206dfb35f08bf4a32dad2dd7c33462f782eb530c3ece4a42bbebacf",
+    "using segway/QsZY2aUPbHM.mp4": "474cf341709ac17f23df538e631466ab197eb2ecc4fb58c81aace5ec307ae68f",
+    "playing badminton/YQd99xdGfwo.mp4": "5f84d566d198ce39ae83bb64ee5a1f72ae23df56b2cb290729d38b82235e6655",
+    "dancing gangnam style/npCi4BSqpXo.mp4": "3b6752e062925694898c0544631d6e8f8028f70c187d8031bd46ece216dbba52",
+    "opening bottle/EFHUN77fI50.mp4": "71c38a9a20a4d2b08d970263d415a7e53fe01a2b5331ae149b5ecfb72c6dbf04",
+    "wrestling/yxHlLD2cWZE.mp4": "d6841e33a54383feb8e9b9647e6464421a7ef88887d506ef9411913075de5173",
+    "frying vegetables/kOjoXnSoOi8.mp4": "4e8a48a7665963113f70904251df6917bc4d50148114ec6b51779ebea0bb35e6",
+    "tossing coin/FchGbtAztWU.mp4": "7e508a0e2ab886513939059775d59d28e3c65f7a0c6d9c8ab9d78994a71bd8d8",
+    "stretching arm/Nm-V0s09iRs.mp4": "7d7c7f38b1c2b3317ad7d3239a1a2a02083499787ccc21ad8ef2f6dad9907558",
+    "playing flute/h-Fz3FHTSq8.mp4": "f38db849b8cb8c2cb8a8b1b2abeb6c7dbf565d01a49126fa925ffac40b93ddec",
+    "fixing hair/fc5RP57i7kc.mp4": "35e1e673ab22c561cba433a1bf85f15fa902add49fd4cdd0cd680a379cb79793",
+    "watering plants/sJiw94Di_28.mp4": "96375ec4645709bc2387e58b6eb706a2ad423036b8f104b6793762745cdf9dfa",
+    "canoeing or kayaking/lkWJMLRJqZE.mp4": "b9d250709a8dae77bcbd73c6e2dca89bdf6d4ee011b2f5667258de7b62610f94",
+    "sharpening pencil/EAKivCM1Flg.mp4": "8952f3d95cded1e953293bd731a610a3ce3e1f221a4ef7c999204438e4e05062",
+    "juggling soccer ball/lrh5DsDjwyg.mp4": "bafc4e8d039d4e14e6ff8f3e2226a000504805547129d4c378c932a6e782c042",
+    "blowing out candles/984q0X_Y_pg.mp4": "a88704d3b14912ab48ae475530ff45d839eb5819e4f3b2d0ac8cb8363b6ddbaa",
+    "riding a bike/-TdSou0hyEM.mp4": "47fba21d40aaf83681a5736bf9a35176dba3b3a101e2f553ff71135523475d08",
+    "shot put/X9wr5yppQaw.mp4": "2e3db3652f553d7537fe1a35ee2f382e145df5eb867698566ec8b31681b80d0c",
+    "running on treadmill/SUA3Sc3Dv8w.mp4": "e260e72307a7387ab7f1fccbf881981912cec2c4c0a5db3ef3eec95718c94b72",
+    "arm wrestling/U66ZtV7Wei8.mp4": "a8616e649abc3c765a4304fda610c14dd089c335d95bc908f60089cd28158f1f",
+    "cheerleading/YXdCI8Emrk0.mp4": "edd8c97cd693b94f8a1cd552302f9dafbe110722bcc6e43d8d26656415b434ab",
+    "eating burger/E6J5jEMe35E.mp4": "0e8afeccf86510901c6bd9d3d4247582a4663504adf1e36d3ea15db703204470",
+    "triple jump/p77EXI-aGck.mp4": "f61890b761faf9a8c58e065a64ad1873f59be41e4d51788b682ea8070b727ce4",
+    "blasting sand/KhW_6Iq8_Ao.mp4": "a3b515490485bd638a2ed91b4a137a546afd392db55765ebc03b691ff273ba38",
+    "tango dancing/sWNM6MqA3uo.mp4": "909e05f293c92621509405b72230df39f13a4f943dca1f0d1cf0b42f02f8a29f",
+    "eating watermelon/4QYRUXBhMR0.mp4": "f99e4f447c86eb3d0d2dcbb4021786fb51cce0964a16885f42987e89e886622d",
+    "snowkiting/421i19AgwFg.mp4": "0c5a38b2b856acef93cab3db664cdcb404c7ac36bdf1982114ef23db65edd039",
+    "busking/loZuAgxuNlQ.mp4": "f1d24c925440292d626fddf2e57c40fd2b92ad849b61992bd88a5f8c796dc7ab",
+    "feeding goats/Xbp0O5e5juo.mp4": "b15890986708748c4ea1faa2aa006f48bad7c5bcc76af867f6912253ebd3f3a6",
+    "surfing crowd/jlbp7rmYe3Q.mp4": "5d763846123b3788bdc4383b0be0e667d5b79d418935d9876eed196bf8d4cf9a",
+    "faceplanting/Ac9ahp2WJk8.mp4": "bc5397a0f0d055ce76f37bed99d227601bdf5bbd314c3bf4042298c67be03503",
+    "picking fruit/ghKzyNWc0oo.mp4": "656e8ef97f7b5bad4f928b0faf8c272dcbbcc68f7e036353f8abd314d5b83347",
+    "brush painting/aBhJS6YfQC4.mp4": "dc9acf080efd874131759facb9028216203378e154fb5fd353ba08423c122429",
+    "folding napkins/UYHDNcjqYmY.mp4": "cdb008e7f1a38ae2d5a05566c3de1b9d0030eb6e07741fa16a2d43d35175fcbb",
+    "answering questions/Jt-ac6pstmM.mp4": "127b542f9b898fc5d0879a19fe1a0905a127b403755fe3808ce54e0ccc5b4820",
+    "high kick/SxcxmC48JC8.mp4": "cc14cb39a4d37abb6c7c361cff2ed8098126bd76187d767af1c7b2e50ae06be6",
+    "situp/z-RxZpo9-y4.mp4": "b98ea7baf1a35e636b7009ca10aaa0df2a0abd3f42c79539f4ec7ab50ef4e092",
+    "weaving basket/xgXS5yBMmjQ.mp4": "9de6617a50d310ed7989144a0185b6bd563689321f4480106a67964bfce61fd0",
+    "brushing teeth/RgMyTxZc5Q0.mp4": "664bee4da5b405e232af7aa72bc1befd3c6919e65a41240d95a469ab76d20f03",
+    "belly dancing/c35uT8EvBq4.mp4": "9d515d771a6f7e3d1d404eddf49f7ae515a6e3914ec639ea60b4c8b2c129583a",
+    "squat/kJs6lmgZUG8.mp4": "bea2c4290a1ca9fad262abd19595604c0d3cf0f423745eaf3fce11bb89ad275e",
+    "drop kicking/JYW8N71Gbyc.mp4": "55afcb4e852a6fd86ae3829ff9fe689fb2bd56e0d01e3f3aaa20b94b1f033fb5",
+    "feeding fish/vluYkRp1Bi8.mp4": "4544c6feb78d343bf50af7aa87bf0a2a88b1d0a1eaf644264412e10701c82f42",
+    "getting a tattoo/hs81dVKvvdw.mp4": "489b21917492dbad7d47c4a679041abe40ebe4f830b483bd890bfef46882b9ee",
+    "cracking neck/M6y00QezNvA.mp4": "dd1986a6461432f6532dff2e26bccc84a667f5f324948aad55ba32b776ae678a",
+    "ice climbing/_mON4dx4W8A.mp4": "3accb925993895c6e8a22a72c48395ce71d3b7e169bacf8d075715e8291dc62a",
+    "skiing slalom/X71UPCwu0ZU.mp4": "b7b7cb83f8beb8cd77bacfb24fe2c4d613d15c6cc7aaa29ca151f59b65ba38d3",
+    "shredding paper/xx5D9F4txc8.mp4": "fa303a847af317a088e605d32d8cf68b8c1ded8394e77d1bb5c9ffd8791d35da",
+    "skiing (not slalom or crosscountry)/DmIGwaH73TY.mp4": "3e46aeb8b7c7af28418233d054ccfbb9b14632517e676aef0902aa274f1ba883",
+    "pushing car/tAT6EZTY3ys.mp4": "b58274ce3120e253ef3cf48eefea956831b0b6743f00fffaca1575f9304e7e46",
+    "playing harp/JKr0hKPBFsg.mp4": "d6ae6716fba395ca62177c1366f4d68b23c5ff6bfde40a33f97f8739e89fa889",
+    "pumping fist/1Icc2-uIth4.mp4": "bb8a03c1ef33eaad214ece37d80a7049d200ee1f3c87f5f3416a71eadf27842b",
+    "smoking/7jss2WKmWQ8.mp4": "b355f2554bec0bb73ed5bdf690ca58d8f230069c1d6d0b603ce7ca258de6a230",
+    "texting/bIZKOUSNmm8.mp4": "5849d9e67a664df2ee29279dc40e7b51de61f324eedb4dc7b64b7cd46208a435",
+    "abseiling/95Rc1DynjV0.mp4": "454adc9d8842588ba960015de30fa7a5f937b3ea5520ba26c388c1fe7e6509b2",
+    "making a cake/5OMgAZTeZl8.mp4": "118417f50d735330b586bc32008a9b80f919e2d316579ea45fb480dd690e97d9",
+    "snorkeling/Vq4ewl2b4t0.mp4": "1a2d18ae9a1f32a70ab5bc51e94ed5178bef08251a032f3cd214251bf1c2a0c7",
+    "giving or receiving award/hPYbspQqIHo.mp4": "45e803d95a4662bab908e04170a2a339e6d7459f110aa0e95eae7e2c66404a97",
+    "water skiing/5IsNM4lh4es.mp4": "7edc0741ee17680e927cb2ffd4c513ee3cb0f92741d801c58b5ab8d3bfb2a33b",
+    "tapping guitar/2bxSRBpPksE.mp4": "2053748ac94fcda2bcb1ccc73f8ee0048ef6a963891fbc882a524fb6f92ade78"
+  },
+  "selection_sha256": "625abf5e964dfe969ea491e1aae530689bab2031757075542166905d21d05f24",
+  "preregistration_commit": "56485c739e257de74b1e40d658ec77302973fd03",
+  "preregistration_sha256": "0646a1e70747328debaec0a792bee53dce383a69e2289543ad7e5613ce40e906",
+  "analysis_code_commit": "f7872f249e48e2d8f793f3315323f81cec7baf25",
+  "bootstrap_seed": 20261006,
+  "bootstrap_draws": 2000,
+  "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+  "shard_manifests": [
+    {
+      "experiment": "v9_chroma_h265_reused_cal_development",
+      "scope": "reused CAL development only",
+      "codec": "h265",
+      "shard": 0,
+      "shards": 4,
+      "n": 25,
+      "source_ids": [
+        "dining/iaVV1WWhfhg.mp4",
+        "sanding floor/oZ9UwmX-MVI.mp4",
+        "cutting nails/FuVDNyrMXeQ.mp4",
+        "dancing ballet/Yvzznqd8us4.mp4",
+        "playing saxophone/WPxLQojk8VY.mp4",
+        "paragliding/JzRX5mRgw-s.mp4",
+        "drinking beer/RwbxBReVTsM.mp4",
+        "checking tires/wapXIrDBaGE.mp4",
+        "climbing tree/AP22W9Pqh8c.mp4",
+        "sniffing/3-7QwxrwmGI.mp4",
+        "applying cream/AGoBiL-sAxQ.mp4",
+        "opening bottle/EFHUN77fI50.mp4",
+        "stretching arm/Nm-V0s09iRs.mp4",
+        "canoeing or kayaking/lkWJMLRJqZE.mp4",
+        "riding a bike/-TdSou0hyEM.mp4",
+        "cheerleading/YXdCI8Emrk0.mp4",
+        "tango dancing/sWNM6MqA3uo.mp4",
+        "feeding goats/Xbp0O5e5juo.mp4",
+        "brush painting/aBhJS6YfQC4.mp4",
+        "situp/z-RxZpo9-y4.mp4",
+        "squat/kJs6lmgZUG8.mp4",
+        "cracking neck/M6y00QezNvA.mp4",
+        "skiing (not slalom or crosscountry)/DmIGwaH73TY.mp4",
+        "smoking/7jss2WKmWQ8.mp4",
+        "snorkeling/Vq4ewl2b4t0.mp4"
+      ],
+      "source_fingerprint": "3c31de5d56807dbbe2560a8b98c2bc43c2f46e3294cf2dd4248d5449b5a60992",
+      "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+      "selection_sha256": "625abf5e964dfe969ea491e1aae530689bab2031757075542166905d21d05f24",
+      "preregistration_commit": "56485c739e257de74b1e40d658ec77302973fd03",
+      "preregistration_sha256": "0646a1e70747328debaec0a792bee53dce383a69e2289543ad7e5613ce40e906",
+      "code_commit": "f7872f249e48e2d8f793f3315323f81cec7baf25",
+      "records_sha256": "0a77b816f0232334b1d26059784868900295c60a978aa0b6c7d640e8c0e9beac",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "arms": [
+        "identity",
+        "v6",
+        "v9"
+      ],
+      "analyzers": [
+        "r2plus1d_18",
+        "r3d_18",
+        "mc3_18"
+      ],
+      "bootstrap_seed": 20261006,
+      "bootstrap_draws": 2000,
+      "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    },
+    {
+      "experiment": "v9_chroma_h265_reused_cal_development",
+      "scope": "reused CAL development only",
+      "codec": "h265",
+      "shard": 1,
+      "shards": 4,
+      "n": 25,
+      "source_ids": [
+        "peeling apples/ZHdeQ89E8KU.mp4",
+        "waiting in line/PBOAfjN-DrM.mp4",
+        "riding or walking with horse/pf9Tc5YNi9Y.mp4",
+        "diving cliff/xKy_QjZcUrE.mp4",
+        "tying tie/1ofynNksJRU.mp4",
+        "shearing sheep/i6cVA9oL5VQ.mp4",
+        "sign language interpreting/HWpJ4NrPuCY.mp4",
+        "setting table/e5VyoLOCgdk.mp4",
+        "long jump/0tYkTCg2Amc.mp4",
+        "sled dog racing/VaY7BySowEY.mp4",
+        "using segway/QsZY2aUPbHM.mp4",
+        "wrestling/yxHlLD2cWZE.mp4",
+        "playing flute/h-Fz3FHTSq8.mp4",
+        "sharpening pencil/EAKivCM1Flg.mp4",
+        "shot put/X9wr5yppQaw.mp4",
+        "eating burger/E6J5jEMe35E.mp4",
+        "eating watermelon/4QYRUXBhMR0.mp4",
+        "surfing crowd/jlbp7rmYe3Q.mp4",
+        "folding napkins/UYHDNcjqYmY.mp4",
+        "weaving basket/xgXS5yBMmjQ.mp4",
+        "drop kicking/JYW8N71Gbyc.mp4",
+        "ice climbing/_mON4dx4W8A.mp4",
+        "pushing car/tAT6EZTY3ys.mp4",
+        "texting/bIZKOUSNmm8.mp4",
+        "giving or receiving award/hPYbspQqIHo.mp4"
+      ],
+      "source_fingerprint": "3c31de5d56807dbbe2560a8b98c2bc43c2f46e3294cf2dd4248d5449b5a60992",
+      "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+      "selection_sha256": "625abf5e964dfe969ea491e1aae530689bab2031757075542166905d21d05f24",
+      "preregistration_commit": "56485c739e257de74b1e40d658ec77302973fd03",
+      "preregistration_sha256": "0646a1e70747328debaec0a792bee53dce383a69e2289543ad7e5613ce40e906",
+      "code_commit": "f7872f249e48e2d8f793f3315323f81cec7baf25",
+      "records_sha256": "b985140959496d9ba3a17e0cb02bf6c6339d974a20da805c796e145ef705518a",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "arms": [
+        "identity",
+        "v6",
+        "v9"
+      ],
+      "analyzers": [
+        "r2plus1d_18",
+        "r3d_18",
+        "mc3_18"
+      ],
+      "bootstrap_seed": 20261006,
+      "bootstrap_draws": 2000,
+      "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    },
+    {
+      "experiment": "v9_chroma_h265_reused_cal_development",
+      "scope": "reused CAL development only",
+      "codec": "h265",
+      "shard": 2,
+      "shards": 4,
+      "n": 25,
+      "source_ids": [
+        "kicking field goal/6X65rDxz53Q.mp4",
+        "massaging back/mwnoVPgcnX8.mp4",
+        "cutting pineapple/O1I26doEtyA.mp4",
+        "wrapping present/B-pfXigqV2g.mp4",
+        "unboxing/8WZgCIyJCsE.mp4",
+        "playing trumpet/csKSWZhEhc8.mp4",
+        "swinging legs/s0v42-dlYtQ.mp4",
+        "sword fighting/WUOjDFFtdG4.mp4",
+        "cooking sausages/DEqCw2RsNow.mp4",
+        "riding elephant/eyy3Toepdjg.mp4",
+        "playing badminton/YQd99xdGfwo.mp4",
+        "frying vegetables/kOjoXnSoOi8.mp4",
+        "fixing hair/fc5RP57i7kc.mp4",
+        "juggling soccer ball/lrh5DsDjwyg.mp4",
+        "running on treadmill/SUA3Sc3Dv8w.mp4",
+        "triple jump/p77EXI-aGck.mp4",
+        "snowkiting/421i19AgwFg.mp4",
+        "faceplanting/Ac9ahp2WJk8.mp4",
+        "answering questions/Jt-ac6pstmM.mp4",
+        "brushing teeth/RgMyTxZc5Q0.mp4",
+        "feeding fish/vluYkRp1Bi8.mp4",
+        "skiing slalom/X71UPCwu0ZU.mp4",
+        "playing harp/JKr0hKPBFsg.mp4",
+        "abseiling/95Rc1DynjV0.mp4",
+        "water skiing/5IsNM4lh4es.mp4"
+      ],
+      "source_fingerprint": "3c31de5d56807dbbe2560a8b98c2bc43c2f46e3294cf2dd4248d5449b5a60992",
+      "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+      "selection_sha256": "625abf5e964dfe969ea491e1aae530689bab2031757075542166905d21d05f24",
+      "preregistration_commit": "56485c739e257de74b1e40d658ec77302973fd03",
+      "preregistration_sha256": "0646a1e70747328debaec0a792bee53dce383a69e2289543ad7e5613ce40e906",
+      "code_commit": "f7872f249e48e2d8f793f3315323f81cec7baf25",
+      "records_sha256": "0d7936a57c93999cf0eb63cf397b71020556f970433fcefb32be276557d55ae6",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "arms": [
+        "identity",
+        "v6",
+        "v9"
+      ],
+      "analyzers": [
+        "r2plus1d_18",
+        "r3d_18",
+        "mc3_18"
+      ],
+      "bootstrap_seed": 20261006,
+      "bootstrap_draws": 2000,
+      "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    },
+    {
+      "experiment": "v9_chroma_h265_reused_cal_development",
+      "scope": "reused CAL development only",
+      "codec": "h265",
+      "shard": 3,
+      "shards": 4,
+      "n": 25,
+      "source_ids": [
+        "playing drums/tqTkn3j20jQ.mp4",
+        "celebrating/_HKhaJVitzs.mp4",
+        "bouncing on trampoline/ThdQfXxuz5o.mp4",
+        "decorating the christmas tree/uct6Kj4slJE.mp4",
+        "pole vault/J6vJkEmlcq8.mp4",
+        "tossing salad/eS0VEVdsvzE.mp4",
+        "playing monopoly/It4fxOKOgzU.mp4",
+        "playing ukulele/U2HGi973484.mp4",
+        "playing organ/NgiN-oQWikA.mp4",
+        "hammer throw/JmmVd5rvAlU.mp4",
+        "dancing gangnam style/npCi4BSqpXo.mp4",
+        "tossing coin/FchGbtAztWU.mp4",
+        "watering plants/sJiw94Di_28.mp4",
+        "blowing out candles/984q0X_Y_pg.mp4",
+        "arm wrestling/U66ZtV7Wei8.mp4",
+        "blasting sand/KhW_6Iq8_Ao.mp4",
+        "busking/loZuAgxuNlQ.mp4",
+        "picking fruit/ghKzyNWc0oo.mp4",
+        "high kick/SxcxmC48JC8.mp4",
+        "belly dancing/c35uT8EvBq4.mp4",
+        "getting a tattoo/hs81dVKvvdw.mp4",
+        "shredding paper/xx5D9F4txc8.mp4",
+        "pumping fist/1Icc2-uIth4.mp4",
+        "making a cake/5OMgAZTeZl8.mp4",
+        "tapping guitar/2bxSRBpPksE.mp4"
+      ],
+      "source_fingerprint": "3c31de5d56807dbbe2560a8b98c2bc43c2f46e3294cf2dd4248d5449b5a60992",
+      "source_plan_sha256": "5b0a32d1d0a1759b50232f0c297ee35ee5cfe0cfdf00c53b587781baa5afebc2",
+      "selection_sha256": "625abf5e964dfe969ea491e1aae530689bab2031757075542166905d21d05f24",
+      "preregistration_commit": "56485c739e257de74b1e40d658ec77302973fd03",
+      "preregistration_sha256": "0646a1e70747328debaec0a792bee53dce383a69e2289543ad7e5613ce40e906",
+      "code_commit": "f7872f249e48e2d8f793f3315323f81cec7baf25",
+      "records_sha256": "1562acc1be91223d15ec20b0543243d270fef942cf94174af4dc41b63045090c",
+      "qps": [
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "arms": [
+        "identity",
+        "v6",
+        "v9"
+      ],
+      "analyzers": [
+        "r2plus1d_18",
+        "r3d_18",
+        "mc3_18"
+      ],
+      "bootstrap_seed": 20261006,
+      "bootstrap_draws": 2000,
+      "bootstrap_unit": "source video; all QPs, arms and analyzers paired",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128",
+        "opencv": "4.13.0",
+        "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+      },
+      "device": "cuda"
+    }
+  ],
+  "shard_records_sha256": [
+    "0a77b816f0232334b1d26059784868900295c60a978aa0b6c7d640e8c0e9beac",
+    "b985140959496d9ba3a17e0cb02bf6c6339d974a20da805c796e145ef705518a",
+    "0d7936a57c93999cf0eb63cf397b71020556f970433fcefb32be276557d55ae6",
+    "1562acc1be91223d15ec20b0543243d270fef942cf94174af4dc41b63045090c"
+  ],
+  "y_roundtrip_mae": {
+    "mean": 0.010502318090322068,
+    "max": 0.24189376831054688
+  },
+  "comparisons": {
+    "V6_vs_identity": {
+      "r2plus1d_18": {
+        "anchor_arm": "identity",
+        "trial_arm": "v6",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.3173095703125,
+            "top1": 0.72
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.204093017578125,
+            "top1": 0.66
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1424151611328125,
+            "top1": 0.54
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1086187744140625,
+            "top1": 0.3
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0920098876953125,
+            "top1": 0.08
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.240213623046875,
+            "top1": 0.75
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16913970947265625,
+            "top1": 0.73
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13085845947265626,
+            "top1": 0.56
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10480926513671875,
+            "top1": 0.39
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09104248046875,
+            "top1": 0.13
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": -12.772303318187006,
+          "bd_accuracy_top1_pp": 9.704313986529876,
+          "min_same_qp_top1_gap_pp": 2.0000000000000018
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -17.853701851290307,
+              -7.245853743903281
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              6.942714868041017,
+              12.691914006208343
+            ]
+          }
+        }
+      },
+      "r3d_18": {
+        "anchor_arm": "identity",
+        "trial_arm": "v6",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.3173095703125,
+            "top1": 0.76
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.204093017578125,
+            "top1": 0.62
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1424151611328125,
+            "top1": 0.48
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1086187744140625,
+            "top1": 0.26
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0920098876953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.240213623046875,
+            "top1": 0.76
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16913970947265625,
+            "top1": 0.66
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13085845947265626,
+            "top1": 0.54
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10480926513671875,
+            "top1": 0.32
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09104248046875,
+            "top1": 0.1
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": -14.653278257639602,
+          "bd_accuracy_top1_pp": 9.752455881757614,
+          "min_same_qp_top1_gap_pp": 0.0
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -18.864646656355497,
+              -10.23371045472596
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              6.731227175143995,
+              12.949167999709216
+            ]
+          }
+        }
+      },
+      "mc3_18": {
+        "anchor_arm": "identity",
+        "trial_arm": "v6",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.3173095703125,
+            "top1": 0.69
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.204093017578125,
+            "top1": 0.64
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1424151611328125,
+            "top1": 0.5
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1086187744140625,
+            "top1": 0.35
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0920098876953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.240213623046875,
+            "top1": 0.65
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16913970947265625,
+            "top1": 0.51
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13085845947265626,
+            "top1": 0.5
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10480926513671875,
+            "top1": 0.29
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09104248046875,
+            "top1": 0.1
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 1.3373199668482938,
+          "bd_accuracy_top1_pp": -2.4663876761358132,
+          "min_same_qp_top1_gap_pp": -13.0
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -4.8942366236793236,
+              8.066200446364638
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -6.350192375775646,
+              1.3058271797648593
+            ]
+          }
+        }
+      }
+    },
+    "V9_vs_identity": {
+      "r2plus1d_18": {
+        "anchor_arm": "identity",
+        "trial_arm": "v9",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.3173095703125,
+            "top1": 0.72
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.204093017578125,
+            "top1": 0.66
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1424151611328125,
+            "top1": 0.54
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1086187744140625,
+            "top1": 0.3
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0920098876953125,
+            "top1": 0.08
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.23879425048828126,
+            "top1": 0.68
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16856842041015624,
+            "top1": 0.63
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1305194091796875,
+            "top1": 0.48
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10463470458984375,
+            "top1": 0.33
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09097686767578125,
+            "top1": 0.07
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": -1.8953888735611213,
+          "bd_accuracy_top1_pp": 1.581374081504754,
+          "min_same_qp_top1_gap_pp": -6.000000000000005
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -8.576014081404976,
+              5.4414610147690325
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -2.440688041396467,
+              5.626072150373217
+            ]
+          }
+        }
+      },
+      "r3d_18": {
+        "anchor_arm": "identity",
+        "trial_arm": "v9",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.3173095703125,
+            "top1": 0.76
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.204093017578125,
+            "top1": 0.62
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1424151611328125,
+            "top1": 0.48
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1086187744140625,
+            "top1": 0.26
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0920098876953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.23879425048828126,
+            "top1": 0.7
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16856842041015624,
+            "top1": 0.57
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1305194091796875,
+            "top1": 0.48
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10463470458984375,
+            "top1": 0.28
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09097686767578125,
+            "top1": 0.07
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": -5.767467523938253,
+          "bd_accuracy_top1_pp": 3.196956192367302,
+          "min_same_qp_top1_gap_pp": -6.000000000000005
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -12.247415119005383,
+              -0.3722707555433505
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -0.7801676203214156,
+              7.30775822827929
+            ]
+          }
+        }
+      },
+      "mc3_18": {
+        "anchor_arm": "identity",
+        "trial_arm": "v9",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.3173095703125,
+            "top1": 0.69
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.204093017578125,
+            "top1": 0.64
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1424151611328125,
+            "top1": 0.5
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.1086187744140625,
+            "top1": 0.35
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.0920098876953125,
+            "top1": 0.09
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.23879425048828126,
+            "top1": 0.63
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16856842041015624,
+            "top1": 0.55
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1305194091796875,
+            "top1": 0.45
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10463470458984375,
+            "top1": 0.23
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09097686767578125,
+            "top1": 0.08
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 3.781410611806302,
+          "bd_accuracy_top1_pp": -3.181947210077421,
+          "min_same_qp_top1_gap_pp": -11.999999999999996
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -2.1565319898465094,
+              9.846543103412587
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -6.251209982280754,
+              -0.2101948857919711
+            ]
+          }
+        }
+      }
+    },
+    "V9_vs_V6": {
+      "r2plus1d_18": {
+        "anchor_arm": "v6",
+        "trial_arm": "v9",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.240213623046875,
+            "top1": 0.75
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16913970947265625,
+            "top1": 0.73
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13085845947265626,
+            "top1": 0.56
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10480926513671875,
+            "top1": 0.39
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09104248046875,
+            "top1": 0.13
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.23879425048828126,
+            "top1": 0.68
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16856842041015624,
+            "top1": 0.63
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1305194091796875,
+            "top1": 0.48
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10463470458984375,
+            "top1": 0.33
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09097686767578125,
+            "top1": 0.07
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 10.030013837216266,
+          "bd_accuracy_top1_pp": -8.115189964456627,
+          "min_same_qp_top1_gap_pp": -9.999999999999998
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              4.556216918050498,
+              17.334796215685728
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -11.554291876292206,
+              -4.991990283641643
+            ]
+          }
+        }
+      },
+      "r3d_18": {
+        "anchor_arm": "v6",
+        "trial_arm": "v9",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.240213623046875,
+            "top1": 0.76
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16913970947265625,
+            "top1": 0.66
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13085845947265626,
+            "top1": 0.54
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10480926513671875,
+            "top1": 0.32
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09104248046875,
+            "top1": 0.1
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.23879425048828126,
+            "top1": 0.7
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16856842041015624,
+            "top1": 0.57
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1305194091796875,
+            "top1": 0.48
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10463470458984375,
+            "top1": 0.28
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09097686767578125,
+            "top1": 0.07
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 8.892128939003797,
+          "bd_accuracy_top1_pp": -6.5219204656846745,
+          "min_same_qp_top1_gap_pp": -9.000000000000007
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              3.2428329781833445,
+              15.12036901227781
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -10.396979510778813,
+              -2.813867946547602
+            ]
+          }
+        }
+      },
+      "mc3_18": {
+        "anchor_arm": "v6",
+        "trial_arm": "v9",
+        "anchor_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.240213623046875,
+            "top1": 0.65
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16913970947265625,
+            "top1": 0.51
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.13085845947265626,
+            "top1": 0.5
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10480926513671875,
+            "top1": 0.29
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09104248046875,
+            "top1": 0.1
+          }
+        },
+        "trial_curve": {
+          "30": {
+            "n": 100,
+            "bpp": 0.23879425048828126,
+            "top1": 0.63
+          },
+          "35": {
+            "n": 100,
+            "bpp": 0.16856842041015624,
+            "top1": 0.55
+          },
+          "40": {
+            "n": 100,
+            "bpp": 0.1305194091796875,
+            "top1": 0.45
+          },
+          "45": {
+            "n": 100,
+            "bpp": 0.10463470458984375,
+            "top1": 0.23
+          },
+          "50": {
+            "n": 100,
+            "bpp": 0.09097686767578125,
+            "top1": 0.08
+          }
+        },
+        "metrics": {
+          "bd_rate_top1_pct": 2.564924320229678,
+          "bd_accuracy_top1_pp": -0.7135303070904027,
+          "min_same_qp_top1_gap_pp": -5.999999999999997
+        },
+        "bootstrap": {
+          "bd_rate_top1_pct": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -3.6031065008034924,
+              8.854955725120433
+            ]
+          },
+          "bd_accuracy_top1_pp": {
+            "valid_draws": 2000,
+            "requested_draws": 2000,
+            "ci95": [
+              -3.998698782906308,
+              2.7298271316371046
+            ]
+          }
+        }
+      }
+    }
+  },
+  "go_no_go": false,
+  "original_confirmatory_gate": "NOT ASSESSED: reused CAL sources"
+}
