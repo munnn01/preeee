@@ -1,5 +1,10 @@
 # pre_processor — nén hướng nhiệm vụ cho Action Recognition và Object Detection
 
+## Hướng V12 mới: spatial / CAL-only
+
+Đang triển khai [pilot V12](docs/V12_LOWQP_RUNBOOK.md), preregistration đã commit trước code và phép đo. Chọn identity trực tiếp theo proxy chi tiết không gian ở QP 30–40; QP 45/50 giữ V6. Bốn shard dùng đúng 200 nguồn CAL cũ, chỉ chọn policy bằng hai analyzer chính. **V12 kết quả, MC3, DEV mới và holdout: CHƯA ĐO.** Gate nghiên cứu gốc <−15% không đổi. [Giao thức/hash/lưới/gate](docs/PREREGISTRATION_V12_SPATIAL_LOWQP.md). Các tài liệu và kết quả lịch sử dưới đây giữ nguyên phạm vi của từng nghiên cứu.
+
+
 Repo này nghiên cứu can thiệp miền pixel **trước codec chuẩn** để giảm bitrate mà vẫn giữ hiệu năng tác vụ. Hai đường đánh giá độc lập:
 
 - **AR / Kinetics:** chọn một trong sáu biểu diễn clip bằng policy đã khóa; mã hóa H.264 hoặc H.265, giải mã, rồi đo Top-1 bằng hai mạng `r2plus1d_18` và `r3d_18` đóng băng, cùng `mc3_18` độc lập. Kinetics và họ mạng video này được mô tả trong [1, 3]; phiên bản trọng số dùng qua TorchVision xem [4].
